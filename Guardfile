@@ -1,14 +1,14 @@
-ignore(%r{^build/*/.*\.(js|css)$})
+ignore(%r{^sphinx/build/*/.*\.(js|css)$})
 
 # Update bundle
 guard :bundler do
   watch('Gemfile')
 end
 
-# Generate docs
+# Generate sphinx docs
 guard 'shell' do
   watch(%r{.*\.rst$}) do |m|
-    `make html`
+    `cd sphinx && make html`
   end
 end
 
