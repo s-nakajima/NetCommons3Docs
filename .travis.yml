@@ -1,8 +1,14 @@
 language: php
 
+php:
+  - 5.4
+  - 5.5
+
 before_script:
-  - sudo easy_install sphinx
-  - sudo easy_install sphinxcontrib-phpdomain
+  - sudo apt-get update
+#  - sudo easy_install sphinx
+#  - sudo easy_install sphinxcontrib-phpdomain
+  - sudo pip install sphinx
   - mkdir -p build/logs
   - pear channel-discover pear.phpdoc.org
   - pear install phpdoc/phpDocumentor
