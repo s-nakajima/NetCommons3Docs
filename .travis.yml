@@ -4,9 +4,11 @@ php:
   - 5.4
   - 5.5
 
+before_install:
+  - sudo easy_install -U sphinx sphinxcontrib-phpdomain
+
 before_script:
   - mkdir -p build/logs
-  - easy_install -U sphinx sphinxcontrib-phpdomain
   - pear channel-discover pear.phpdoc.org
   - pear install phpdoc/phpDocumentor
   - phpenv rehash
