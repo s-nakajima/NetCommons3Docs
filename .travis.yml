@@ -1,0 +1,26 @@
+language: php
+
+php:
+  - 5.4
+  - 5.5
+
+before_script:
+  - mkdir -p build/logs
+  - pear channel-discover pear.phpdoc.org
+  - pear install phpdoc/phpDocumentor
+  - phpenv rehash
+  - set +H
+
+script:
+  - cd $TRAVIS_BUILD_DIR && make html
+
+notifications:
+  email:
+    recipients:
+      - kteraguchi@gmail.com
+      - nekoget@gmail.com
+      - nii@m0n0m0n0.com
+      - ryu818@gmail.com
+      - yuta.kohigo@gmail.com
+    on_success: never  # default: change
+    on_failure: always # default: always

@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gem 'bundler'
+gem 'rake'
 
 group :development, :test do
   gem 'guard'
