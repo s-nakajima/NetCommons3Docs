@@ -4,13 +4,11 @@ php:
   - 5.4
   - 5.5
 
-before_install:
-  - sudo apt-get update
-  - sudo apt-get install python-setuptools
+before_script:
+  - sudo aptitude update
+  - sudo aptitude install python-setuptools
   - sudo easy_install sphinx
   - sudo easy_install sphinxcontrib-phpdomain
-
-before_script:
   - mkdir -p build/logs
   - pear channel-discover pear.phpdoc.org
   - pear install phpdoc/phpDocumentor
@@ -24,5 +22,6 @@ notifications:
   email:
     recipients:
       - netcommons3@googlegroups.com
+      - nii@m0n0m0n0.com
     on_success: never  # default: change
     on_failure: always # default: always
