@@ -5,8 +5,10 @@ php:
   - 5.5
 
 before_install:
+  - sudo apt-get update
   - sudo apt-get install python-setuptools
-  - sudo easy_install sphinx sphinxcontrib-phpdomain
+  - sudo easy_install sphinx
+  - sudo easy_install sphinxcontrib-phpdomain
 
 before_script:
   - mkdir -p build/logs
