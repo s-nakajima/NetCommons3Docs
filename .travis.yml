@@ -6,7 +6,7 @@ php:
 
 before_install:
   - sudo apt-get install python-setuptools
-  - sudo easy_install -U sphinx sphinxcontrib-phpdomain
+  - sudo easy_install sphinx sphinxcontrib-phpdomain
 
 before_script:
   - mkdir -p build/logs
