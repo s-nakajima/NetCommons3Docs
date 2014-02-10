@@ -9,4 +9,6 @@ group :development, :test do
   gem 'guard-livereload'
   gem 'guard-shell'
   gem 'libnotify'
+  gem 'travis'
+  gem 'travis-lint'
 end

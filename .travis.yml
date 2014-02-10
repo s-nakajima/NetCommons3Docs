@@ -17,10 +17,6 @@ script:
 notifications:
   email:
     recipients:
-      - kteraguchi@gmail.com
-      - nekoget@gmail.com
-      - nii@m0n0m0n0.com
-      - ryu818@gmail.com
-      - yuta.kohigo@gmail.com
+      - netcommons3@googlegroups.com
     on_success: never  # default: change
     on_failure: always # default: always
