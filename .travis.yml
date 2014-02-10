@@ -1,9 +1,5 @@
 language: php
 
-php:
-  - 5.4
-  - 5.5
-
 before_script:
   - sudo easy_install sphinx
   - sudo easy_install sphinxcontrib-phpdomain
@@ -20,6 +16,5 @@ notifications:
   email:
     recipients:
       - netcommons3@googlegroups.com
-      - nii@m0n0m0n0.com
     on_success: never  # default: change
     on_failure: always # default: always
