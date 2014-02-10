@@ -12,7 +12,7 @@ before_script:
   - set +H
 
 script:
-  - cd $TRAVIS_BUILD_DIR && make html
+  - cd $TRAVIS_BUILD_DIR/sphinx && make html
 
 notifications:
   email:
