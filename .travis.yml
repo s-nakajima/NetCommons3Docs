@@ -6,7 +6,7 @@ php:
 
 before_script:
   - sudo apt-get update
-#  - sudo easy_install sphinx
+  - sudo easy_install sphinx
 #  - sudo easy_install sphinxcontrib-phpdomain
   - sudo pip install sphinx
   - mkdir -p build/logs
