@@ -20,22 +20,7 @@ CREATE  TABLE IF NOT EXISTS `nc3`.`access_counters` (
   PRIMARY KEY (`id`) ,
   INDEX `fk_access_counters_blocks1_idx` (`block_id` ASC) ,
   INDEX `fk_access_counters_users1_idx` (`created_user_id` ASC) ,
-  INDEX `fk_access_counters_users2_idx` (`modified_user_id` ASC) ,
-  CONSTRAINT `fk_access_counters_blocks1`
-    FOREIGN KEY (`block_id` )
-    REFERENCES `nc3`.`blocks` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_access_counters_users1`
-    FOREIGN KEY (`created_user_id` )
-    REFERENCES `nc3`.`users` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_access_counters_users2`
-    FOREIGN KEY (`modified_user_id` )
-    REFERENCES `nc3`.`users` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  INDEX `fk_access_counters_users2_idx` (`modified_user_id` ASC) )
 ENGINE = InnoDB;
 
 
@@ -45,7 +30,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `nc3`.`access_counters_languages` ;
 
 CREATE  TABLE IF NOT EXISTS `nc3`.`access_counters_languages` (
-  `id` INT(11) NOT NULL ,
+  `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `access_counter_id` INT(11) NOT NULL ,
   `language_id` INT(11) NOT NULL ,
   `status_id` INT(3) NOT NULL DEFAULT 1 COMMENT '1: for Publish    2: for PublishRequest    3: for Draft    4: for Reject\n' ,
@@ -61,27 +46,7 @@ CREATE  TABLE IF NOT EXISTS `nc3`.`access_counters_languages` (
   INDEX `fk_access_counters_languages_users1_idx` (`created_user_id` ASC) ,
   INDEX `fk_access_counters_languages_users2_idx` (`modified_user_id` ASC) ,
   INDEX `fk_access_counters_languages_languages1_idx` (`language_id` ASC) ,
-  INDEX `fk_access_counters_languages_access_counters1_idx` (`access_counter_id` ASC) ,
-  CONSTRAINT `fk_access_counters_languages_users1`
-    FOREIGN KEY (`created_user_id` )
-    REFERENCES `nc3`.`users` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_access_counters_languages_users2`
-    FOREIGN KEY (`modified_user_id` )
-    REFERENCES `nc3`.`users` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_access_counters_languages_languages1`
-    FOREIGN KEY (`language_id` )
-    REFERENCES `nc3`.`languages` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_access_counters_languages_access_counters1`
-    FOREIGN KEY (`access_counter_id` )
-    REFERENCES `nc3`.`access_counters` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  INDEX `fk_access_counters_languages_access_counters1_idx` (`access_counter_id` ASC) )
 ENGINE = InnoDB;
 
 
@@ -106,27 +71,7 @@ CREATE  TABLE IF NOT EXISTS `nc3`.`access_counters_logs` (
   INDEX `fk_access_counters_users1_idx` (`created_user_id` ASC) ,
   INDEX `fk_access_counters_users2_idx` (`modified_user_id` ASC) ,
   INDEX `idx_access_counters_logs1_accesslog` (`block_id` ASC, `access_ip_address` ASC, `access_date` ASC) ,
-  INDEX `fk_access_counters_logs_languages1_idx` (`language_id` ASC) ,
-  CONSTRAINT `fk_access_counters_blocks10`
-    FOREIGN KEY (`block_id` )
-    REFERENCES `nc3`.`blocks` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_access_counters_users10`
-    FOREIGN KEY (`created_user_id` )
-    REFERENCES `nc3`.`users` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_access_counters_users20`
-    FOREIGN KEY (`modified_user_id` )
-    REFERENCES `nc3`.`users` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_access_counters_logs_languages1`
-    FOREIGN KEY (`language_id` )
-    REFERENCES `nc3`.`languages` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  INDEX `fk_access_counters_logs_languages1_idx` (`language_id` ASC) )
 ENGINE = InnoDB;
 
 USE `nc3` ;
