@@ -20,12 +20,12 @@ CakePHPコーディング規約の準ずる
 * CakePHP規約 : http://book.cakephp.org/2.0/ja/contributing/cakephp-coding-conventions.html
 
 * チェックツールにて構文チェックを行う。
-	* phpcs : http://pear.php.net/package/PHP_CodeSniffer/
+	* phpcs: http://pear.php.net/package/PHP_CodeSniffer/
 		phpcs(PHP CodeSniffer)は、規約に沿っているかコードをチェックするもの。今回は、CakePHPの規約に沿っているかチェックする
 
 		* cakephp: https://github.com/cakephp/cakephp-codesniffer
 
-	* 例外 : 命名規則
+	* 例外: 命名規則
 		プラグイン内のclass名について、プラグイン名から始まる名称とする。
 
 
