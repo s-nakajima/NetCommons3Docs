@@ -17,7 +17,7 @@ PHPコーディング規約
 CakePHPコーディング規約の準ずる
 ========================================
 
-* CakePHP規約 : http://book.cakephp.org/2.0/ja/contributing/cakephp-coding-conventions.html
+* CakePHP規約: http://book.cakephp.org/2.0/ja/contributing/cakephp-coding-conventions.html
 
 * チェックツールにて構文チェックを行う。
 	* phpcs: http://pear.php.net/package/PHP_CodeSniffer/
@@ -39,9 +39,9 @@ NetCommons3本体およびプラグインで実装されるphpコードはユニ
 コメントの記述
 ========================================
 
-| 全てのコメントは英語で書かれ、コードのコメントブロックを明確な方法で記述する。コメントはphpDocumentorタグを含めることができます.
+| 全てのコメントは英語で書かれ、コードのコメントブロックを明確な方法で記述する。コメントはphpDocumentorタグを含めることができる。
 
-| phpDocumentor : http://phpdoc.org/
+| phpDocumentor: http://phpdoc.org/
 
 | NC3コアプログラムとして、以下のフォーマットに合わせて記述する。
 
@@ -240,6 +240,6 @@ http://getbootstrap.com/css/
 プラグイン独自のCSSを使用する場合
 ========================================
 
-必ず、(プラグイン名)-ｘｘｘｘとプラグイン名をプレフィックスに付ける
+必ず、(プラグイン名)-ｘｘｘｘとプラグイン名をプレフィックスに付ける。
 
 	（例） helloworlds-width
