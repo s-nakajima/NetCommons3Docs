@@ -12,3 +12,4 @@
 	common/index
 	admin/index
 	general/index
+	etc/index

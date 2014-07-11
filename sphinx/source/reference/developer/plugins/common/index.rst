@@ -7,7 +7,6 @@
 
 .. toctree::
 	:glob:
-..	:maxdepth: 2
-	:maxdepth: 1
+	:maxdepth: 2
 
 	*/index
