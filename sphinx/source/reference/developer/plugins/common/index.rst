@@ -1,5 +1,5 @@
 ##########################
- プラグイン
+ 共通プラグイン
 ##########################
 
 .. contents:: 目次
@@ -7,8 +7,7 @@
 
 .. toctree::
 	:glob:
-	:maxdepth: 2
+..	:maxdepth: 2
+	:maxdepth: 1
 
-	common/index
-	admin/index
-	general/index
+	*/index
