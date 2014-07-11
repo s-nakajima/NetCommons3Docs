@@ -1,12 +1,12 @@
 ##########################
-プラグイン
+ 共通機能
 ##########################
 
 .. contents:: 目次
 	:local:
 
 .. toctree::
-	:maxdepth: 2
-	:numbered:
+	:glob:
+..	:hidden:
 
-	plugins/AccessCounters/index
+	index
