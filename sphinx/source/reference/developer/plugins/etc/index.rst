@@ -1,5 +1,5 @@
 ##########################
- プラグイン
+ その他プラグイン
 ##########################
 
 .. contents:: 目次
@@ -7,8 +7,7 @@
 
 .. toctree::
 	:glob:
-	:maxdepth: 2
+..	:maxdepth: 2
+	:maxdepth: 1
 
-	admin/index
-	etc/index
-	general/index
+	*/index

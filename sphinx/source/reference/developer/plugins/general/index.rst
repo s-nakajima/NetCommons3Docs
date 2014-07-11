@@ -1,5 +1,5 @@
 ##########################
- プラグイン
+ 一般プラグイン
 ##########################
 
 .. contents:: 目次
@@ -9,6 +9,4 @@
 	:glob:
 	:maxdepth: 2
 
-	admin/index
-	etc/index
-	general/index
+	*/index

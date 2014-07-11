@@ -8,5 +8,10 @@
 .. toctree::
 	:glob:
 	:maxdepth: 2
+	:numbered:
 
-	*/index
+	conventions/index
+	environments/index
+	ERD/index
+	plugins/index
+	functions/index
