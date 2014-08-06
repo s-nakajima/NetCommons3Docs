@@ -4,21 +4,15 @@
    contain the root `toctree` directive.
 
 Welcome to NetCommons3's documentation!
-=======================================
-
-目次:
-
-.. toctree::
-   :glob:
-   :titlesonly:
-   :maxdepth: 2
-
-   reference/*
+###########################################
 
 目次
-==================
+***************
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. toctree::
+	:glob:
+	:titlesonly:
+	:maxdepth: 2
 
+	reference/developer/*
+	reference/glossary
