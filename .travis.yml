@@ -11,10 +11,10 @@ before_script:
   - . ./pre.sh
 
 script:
-  - . tools/build/app/cakephp/travis/main.sh
+  - . ./main.sh
 
 after_script:
-  - . tools/build/app/cakephp/travis/post.sh
+  - . ./post.sh
 
 notifications:
   email:
