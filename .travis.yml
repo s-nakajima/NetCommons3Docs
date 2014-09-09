@@ -3,22 +3,17 @@ language: php
 php:
   - 5.4
   - 5.5
+  - 5.6
 
 before_script:
-  - sudo apt-get install graphviz
-  - sudo pip install sphinx
-  - mkdir -p build/logs
-  - pear channel-discover pear.phpdoc.org
-  - pear install phpdoc/phpDocumentor
-  - phpenv rehash
-  - set +H
+  - export CLASS_DOC_SOURCE_URI=https://github.com/NetCommons3/NetCommons3.git
+  - . tools/build/app/cakephp/travis/pre.sh
 
 script:
-  - cd $TRAVIS_BUILD_DIR/sphinx && make html
-  - cd $TRAVIS_BUILD_DIR && git clone https://github.com/NetCommons3/NetCommons3.git
-  - cd NetCommons3 && cp tools/build/app/cakephp/composer.json . && hhvm `which composer` update
-  - export APP_ROOT=$TRAVIS_BUILD_DIR/NetCommons3/app
-  - cd $TRAVIS_BUILD_DIR && phpdoc -d $APP_ROOT -t $TRAVIS_BUILD_DIR/phpdoc/ -i "$APP_ROOT/Plugin/DebugKit/*,$APP_ROOT/Plugin/Migrations/*,$APP_ROOT/Plugin/MobileDetect/*,$APP_ROOT/Config/*,$APP_ROOT/Plugin/Public/*,$APP_ROOT/Test/*"
+  - . tools/build/app/cakephp/travis/main.sh
+
+after_script:
+  - . tools/build/app/cakephp/travis/post.sh
 
 notifications:
   email:
