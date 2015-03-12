@@ -11,7 +11,7 @@ before_script:
   - . ./pre.sh
 
 script:
-  - . ./main.sh
+  - travis_wait . ./main.sh
 
 after_script:
   - . ./post.sh
