@@ -1,0 +1,1538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project title="API Documentation" version="2.8.5">
+  <partials/>
+  <file path="Model/BlocksAppModel.php" generated-path="Model.BlocksAppModel.html" hash="a2287e429889176ed1af7085faf62e65" package="Default">
+    <docblock line="0">
+      <description>BlocksApp Model</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Noriko Arai" link="mailto:arai@nii.ac.jp"/>
+      <tag name="author" line="0" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
+      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
+      <tag name="copyright" line="0" description="Copyright 2014, NetCommons Project"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="20" package="NetCommons\Blocks\Model">
+      <extends>\AppModel</extends>
+      <name>BlocksAppModel</name>
+      <full_name>\BlocksAppModel</full_name>
+      <docblock line="20">
+        <description>BlocksApp Model</description>
+        <long-description></long-description>
+        <tag name="author" line="20" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+        <tag name="package" line="20" description="NetCommons\Blocks\Model"/>
+      </docblock>
+    </class>
+    <source>eJyVUMFKxDAUvOcr3q1alkTFUy3ada9aBK97CdnQpE3zQpLSFfHfjW1de1BYL2Ey897MY8oHpxxheU4gh0eDogtb5+AZD9Ik6out+BAVeqjR6w5h67mGkqe3slpTLmjr7tdzrwqV1FDzjre651DaBQWFQ1KqpufaUIH9vGa07UDF6ArGxnGkVsak9WgDRd9ALeNu/sKLx1aKuGwJaYP8e5EtEzQe49rkaaYnE4HuzetGRdid0M3V9e3m91RGSCqnKIYgw0WW4FRTtoFsBpd35Lwq/1uR46LjjVxdtZ8D9t/ujAjDQ/jJnQSQxyjtIcCJeCfkg3wCdsKnYA==</source>
+  </file>
+  <file path="Model/Block.php" generated-path="Model.Block.html" hash="60e8e9a71e56d9b33ba21b7e734c89fb" package="Default">
+    <docblock line="0">
+      <description>Block Model</description>
+      <long-description></long-description>
+      <tag name="property" line="0" description="" type="\Language" variable="$Language">
+        <type>\Language</type>
+      </tag>
+      <tag name="property" line="0" description="" type="\Room" variable="$Room">
+        <type>\Room</type>
+      </tag>
+      <tag name="property" line="0" description="" type="\Frame" variable="$Frame">
+        <type>\Frame</type>
+      </tag>
+      <tag name="author" line="0" description="Noriko Arai" link="mailto:arai@nii.ac.jp"/>
+      <tag name="author" line="0" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
+      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
+      <tag name="copyright" line="0" description="Copyright 2014, NetCommons Project"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="24" package="NetCommons\Blocks\Model">
+      <extends>\BlocksAppModel</extends>
+      <name>Block</name>
+      <full_name>\Block</full_name>
+      <docblock line="24">
+        <description>Block Model</description>
+        <long-description></long-description>
+        <tag name="author" line="24" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+        <tag name="package" line="24" description="NetCommons\Blocks\Model"/>
+        <tag name="inherited_from" description="\BlocksAppModel" refers="\BlocksAppModel" link="/classes/BlocksAppModel.html"/>
+      </docblock>
+      <constant namespace="" line="32" package="NetCommons\Blocks\Model">
+        <name>TYPE_PRIVATE</name>
+        <full_name>\Block::TYPE_PRIVATE</full_name>
+        <value>'0'</value>
+        <docblock line="32">
+          <description>Block type</description>
+          <long-description></long-description>
+          <tag name="var" line="32" description="" type="integer" variable="">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </constant>
+      <constant namespace="" line="33" package="NetCommons\Blocks\Model">
+        <name>TYPE_PUBLIC</name>
+        <full_name>\Block::TYPE_PUBLIC</full_name>
+        <value>'1'</value>
+        <docblock line="33">
+          <description>Block type</description>
+          <long-description></long-description>
+          <tag name="var" line="33" description="" type="integer" variable="">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </constant>
+      <constant namespace="" line="34" package="NetCommons\Blocks\Model">
+        <name>TYPE_LIMITED</name>
+        <full_name>\Block::TYPE_LIMITED</full_name>
+        <value>'2'</value>
+        <docblock line="34">
+          <description>Block type</description>
+          <long-description></long-description>
+          <tag name="var" line="34" description="" type="integer" variable="">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </constant>
+      <constant namespace="" line="42" package="NetCommons\Blocks\Model">
+        <name>NOT_NEED_APPROVAL</name>
+        <full_name>\Block::NOT_NEED_APPROVAL</full_name>
+        <value>'0'</value>
+        <docblock line="42">
+          <description>Approval type</description>
+          <long-description></long-description>
+          <tag name="var" line="42" description="" type="integer" variable="">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </constant>
+      <constant namespace="" line="43" package="NetCommons\Blocks\Model">
+        <name>NEED_APPROVAL</name>
+        <full_name>\Block::NEED_APPROVAL</full_name>
+        <value>'1'</value>
+        <docblock line="43">
+          <description>Approval type</description>
+          <long-description></long-description>
+          <tag name="var" line="43" description="" type="integer" variable="">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </constant>
+      <constant namespace="" line="44" package="NetCommons\Blocks\Model">
+        <name>NEED_COMMENT_APPROVAL</name>
+        <full_name>\Block::NEED_COMMENT_APPROVAL</full_name>
+        <value>'2'</value>
+        <docblock line="44">
+          <description>Approval type</description>
+          <long-description></long-description>
+          <tag name="var" line="44" description="" type="integer" variable="">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </constant>
+      <property static="false" visibility="public" namespace="" line="51" package="NetCommons\Blocks\Model">
+        <name>$actsAs</name>
+        <full_name>\Block::actsAs</full_name>
+        <default>array('NetCommons.OriginalKey')</default>
+        <docblock line="51">
+          <description>use behaviors</description>
+          <long-description></long-description>
+          <tag name="var" line="51" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="" line="60" package="NetCommons\Blocks\Model">
+        <name>$validate</name>
+        <full_name>\Block::validate</full_name>
+        <default>array()</default>
+        <docblock line="60">
+          <description>Validation rules</description>
+          <long-description></long-description>
+          <tag name="var" line="60" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="" line="69" package="NetCommons\Blocks\Model">
+        <name>$belongsTo</name>
+        <full_name>\Block::belongsTo</full_name>
+        <default>array('Language' =&gt; array('className' =&gt; 'M17n.Language', 'foreignKey' =&gt; 'language_id', 'conditions' =&gt; '', 'fields' =&gt; '', 'order' =&gt; ''), 'Room' =&gt; array('className' =&gt; 'Rooms.Room', 'foreignKey' =&gt; 'room_id', 'conditions' =&gt; '', 'fields' =&gt; '', 'order' =&gt; ''))</default>
+        <docblock line="69">
+          <description>belongsTo associations</description>
+          <long-description></long-description>
+          <tag name="var" line="69" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="" line="91" package="NetCommons\Blocks\Model">
+        <name>$hasMany</name>
+        <full_name>\Block::hasMany</full_name>
+        <default>array('Frame' =&gt; array('className' =&gt; 'Frames.Frame', 'foreignKey' =&gt; 'block_id', 'dependent' =&gt; false, 'conditions' =&gt; '', 'fields' =&gt; '', 'order' =&gt; '', 'limit' =&gt; '', 'offset' =&gt; '', 'exclusive' =&gt; '', 'finderQuery' =&gt; '', 'counterQuery' =&gt; ''))</default>
+        <docblock line="91">
+          <description>hasMany associations</description>
+          <long-description></long-description>
+          <tag name="var" line="91" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="116" package="NetCommons\Blocks\Model">
+        <name>beforeValidate</name>
+        <full_name>\Block::beforeValidate()</full_name>
+        <docblock line="116">
+          <description>Called during validation operations, before validation. Please note that custom
+validation rules can be defined in $validate.</description>
+          <long-description></long-description>
+          <tag name="param" line="116" description="&lt;p&gt;Options passed from Model::save().&lt;/p&gt;" type="array" variable="$options">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="116" description="True if validate operation should continue, false to abort" type="boolean">
+            <type>boolean</type>
+          </tag>
+          <tag name="link" line="116" description="http://book.cakephp.org/2.0/en/models/callback-methods.html#beforevalidate" link="http://book.cakephp.org/2.0/en/models/callback-methods.html#beforevalidate"/>
+          <tag name="see" line="116" description="" link="\Model::save()"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+    </class>
+    <source>eJztVltv4kYUfoZfcaSmMolYexNVqkSzaUiWqlGB0CyNVGklNLEPeII9486MIaja/97j8Z2QjbrNY198Ofc5l+/M+c9JmHS9k5MunMBVJP01TGSAEf1mlMtEyQSV2cGYiVXKVghH5VebfydlDEfZs03/RbGYlOyrNMpSE0oFU6n4WsJQMQ7njJ6XgnOX+e5jctGU+xTKEDlM2Zo98pjBuSi+dChT4lyuYsYj15dxrhZxsYbQmGTgedvt1hVoiBdLoV2pVjBFc53/wkzJR/RNoeWj0PiyoldIuObJNI2Mc7I14stkp/gqNHBdfZ29P/2hf9ir1+0Ok2QwSDXqnmPTr4lgK+D0oaC4+f/xT92vFOobc5Uwf51VtQ7vc+70c2nd6/oR07rwiU8GRVD8VbHC33uhmV1SVXvDFHCRH7fjkwfT7XTmf85Gi9ndzf1wPoIP4Lx3+hX1j6vxzXVGPK2J45vJzXz0MaOeOXUiKAAlNyx63eH0dr6YjkYfF8PZ7O72fjiuvT4jn9bk69vJZDSdt9jNAKhy8IAh23CpdDMAphTb5SEk6QO1Dhwx3+ihJguW1yMXTp1295a6hQsW/YY7p9tpFPueRTxghksBKo3wNS+bXBwrP5mpjufNQ4Sh1tLn1pamsCO5BQo9OwEK8BWSWgBbbkJgUQSJ1Jo/RAhr3Ok+UH/RYU3IDBlGENKAQAxIw2eCTIDCWG4wqALPHIiVnktgDb+vhF8rNfNUYo4DHy5qcsexrTklaLEMZ3L6o3Ar2b4VWUqFfCWytFqZqGAveFBIUIsE3MaWS5SKHKOgTZIqQFVQiHCcUZ0M816JKxPRrhU8HJQi1lsE1GqckOkJE7t/k/1SpZl7C92vHNDKaDcXPXzEhwwY6jMGmBCQoDCWu2SRxv9y+JwS8ZibtsxyqbFNwic/SjXf4J59ikb9nqLatei+TIVpM54l+pqmhcYgSBUXK9jU85rtwDzvfZqGLCMNrguzCJm2k1TMlZ9qky/Qzd7QlzMWIAVKvrioJ92tljUt0TivEhzJJB/z2+KdUMFIcaloT1vQHgw0zX7v2LW6Ck2qyIWUEcxVisCXUEFJdQ7I1khEEy+F4SLFfl45MDTjD1KVm7Tev2Rv7fpsjXTNsEv0zH3vofDiLALt+ZS5B1pB72IkeAm0G5o4+i5PVend2tSI7ahbfbtMhW/DyzULxMRelYQKC49pVXU6Rybk+t1FAyp/pQU5GMSoVthrtHkTLNoT0HFESuLc36d3nKxgDWolaOEiE6BR0SWYLRYBSaBZFDeNbO3fCBsZAepfKWrjVpqe51DC5HYUJ2a3NziWm2lwhcEhHk1sc9jA8+CTkUmz1diSWh2y5Niuq1SlyFs/XxGO1R1ns9ZUph4oBYBuIk6aBPl3NQTWXn6W/Fnh3v+5ffPckmnxHLg9j5IrzRU19vo560B+S9nS6F6KdUKYZ5a9Q6ku4I2LJDXwvc5SnZfErgJdXXDBxnlce/haKQr+C8UouN9WjkL5DQtCFstT2TclYA967OWsU4Av4TctxMHgBRQj2c6X7pfuP/4gCkI=</source>
+  </file>
+  <file path="Model/Behavior/BlockRolePermissionBehavior.php" generated-path="Model.Behavior.BlockRolePermissionBehavior.html" hash="f0b0dd9b86126a38cb441e6ab2cf57c5" package="Default">
+    <docblock line="0">
+      <description>BlockRolePermission Behavior</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Noriko Arai" link="mailto:arai@nii.ac.jp"/>
+      <tag name="author" line="0" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
+      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
+      <tag name="copyright" line="0" description="Copyright 2014, NetCommons Project"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="20" package="NetCommons\Blocks\Model\Behavior">
+      <extends>\ModelBehavior</extends>
+      <name>BlockRolePermissionBehavior</name>
+      <full_name>\BlockRolePermissionBehavior</full_name>
+      <docblock line="20">
+        <description>BlockRolePermission Behavior</description>
+        <long-description></long-description>
+        <tag name="author" line="20" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+        <tag name="package" line="20" description="NetCommons\Blocks\Model\Behavior"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="32" package="NetCommons\Blocks\Model\Behavior">
+        <name>beforeValidate</name>
+        <full_name>\BlockRolePermissionBehavior::beforeValidate()</full_name>
+        <docblock line="32">
+          <description>beforeValidate is called before a model is validated, you can use this callback to
+add behavior validation rules into a models validate array. Returning false
+will allow you to make the validation fail.</description>
+          <long-description></long-description>
+          <tag name="param" line="32" description="&lt;p&gt;Model using this behavior&lt;/p&gt;" type="\Model" variable="$model">
+            <type>\Model</type>
+          </tag>
+          <tag name="param" line="32" description="&lt;p&gt;Options passed from Model::save().&lt;/p&gt;" type="array" variable="$options">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="32" description="False or null will abort the operation. Any other result will continue." type="mixed">
+            <type>mixed</type>
+          </tag>
+          <tag name="see" line="32" description="" link="\Model::save()"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$model</name>
+          <default></default>
+          <type>\Model</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="61" package="NetCommons\Blocks\Model\Behavior">
+        <name>afterSave</name>
+        <full_name>\BlockRolePermissionBehavior::afterSave()</full_name>
+        <docblock line="61">
+          <description>afterSave is called after a model is saved.</description>
+          <long-description></long-description>
+          <tag name="param" line="61" description="&lt;p&gt;Model using this behavior&lt;/p&gt;" type="\Model" variable="$model">
+            <type>\Model</type>
+          </tag>
+          <tag name="param" line="61" description="&lt;p&gt;True if this save created a new record&lt;/p&gt;" type="boolean" variable="$created">
+            <type>boolean</type>
+          </tag>
+          <tag name="param" line="61" description="&lt;p&gt;Options passed from Model::save().&lt;/p&gt;" type="array" variable="$options">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="61" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+          <tag name="throws" line="61" description="" type="\InternalErrorException">
+            <type>\InternalErrorException</type>
+          </tag>
+          <tag name="see" line="61" description="" link="\Model::save()"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$model</name>
+          <default></default>
+          <type>\Model</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$created</name>
+          <default></default>
+          <type>boolean</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+    </class>
+    <source>eJy9Vdtu00AQfU6+YpAqxa6CA4gnt5SWqggkWhBFvLSo2tiTeBt719pdJ41Q/53ZixOnchE38eJ4d+acmTkzEx++rot6ONnfH8I+vClltvgsS/yEquJacyngDRZsyaUiu3U5Zo0ppIILqfhCwoliHA4ZPY8F5wnLktv6qOt3WcgCOVywBbvlFYNDEd50IRuyHM8rxsskk5WHlVwsoDCmTieT1WqVCDRkq6TQiVRzuEBz6o/wSclbzExAZSg0Pg6cBI/E3JkuyQd/7UgyWa8VnxcGTjdvL549fznujzoZDk/qOk0bjToancscy1ar0Rj8xSg+GP6BuL8rWs2yBZtjJ89rF01fuyyuO2Emw6xkWvdl03oB3hkUuYadmuD7ppIpzqTCr6zkOTMIXEPGyhLzYAAGlUVawzI45WNYy4b8BJBeYIoAmlLmYKRlZbklCMECzmqkmhI1cGFkS7ylBaYUWyfwGU2jBBdzmLHSt3PFyxIogly5yISu2MJGxi75zOrYql/THFe+atjzJfhDoy21S3q6lbIFuBxgT9aWUcPH8FuTzKTJTMnAmaaaLTGKE4dVLmWo+B05vbVZA9UtGsrapz6Vyrh0ZY3KZZvAiViDpDsFCnVTGu+aSWG4aNATa8TdeK7rg7qZ0g7ArBGZq3y3iVG36vG2mFe+uiiOqf+DAZ9B9IT6qtFE3vfpEcHZ1ahnnkbfAmoQajWqwQM63w/p0cJLyXIXXEc+lAX00sGrI/AGnfTZx4SM7cINBrY0lhWwm2R76AE/PSIhmP4GTMNevbkO+fuyfwpvJ/KciXXUZQgUm3q3w3emlFRW4ne012laoZpj9Jjb+JfCb9zjAxc0CO+Wwt3ct/LvtuR+s9tsZlBd0tx01trddbfazlX+t2szlZL8M2oU/T3AF0oESGfnbfmhtTAQuKJ5z6TK/9XW2djubAolVxreC6pQsNKJd3aXoWP7nXXa6PZwk0IZ/2Wn+se+n+ePJ92q8HDKx3A1ajfA7ambuE2uAyez62O/0tHNTR6N6JN9E77Z9gvausIlqiUNoIOM4rh3kGkoUJg03fbh8Q7EfuLvhz8AhcwCVg==</source>
+  </file>
+  <file path="Model/Behavior/BlockBehavior.php" generated-path="Model.Behavior.BlockBehavior.html" hash="1f7a94e37f50cc9f60a498d855de0ee4" package="Default">
+    <docblock line="0">
+      <description>Block Behavior</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Noriko Arai" link="mailto:arai@nii.ac.jp"/>
+      <tag name="author" line="0" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
+      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
+      <tag name="copyright" line="0" description="Copyright 2014, NetCommons Project"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="20" package="NetCommons\Blocks\Model\Behavior">
+      <extends>\ModelBehavior</extends>
+      <name>BlockBehavior</name>
+      <full_name>\BlockBehavior</full_name>
+      <docblock line="20">
+        <description>Block Behavior</description>
+        <long-description></long-description>
+        <tag name="author" line="20" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+        <tag name="package" line="20" description="NetCommons\Blocks\Model\Behavior"/>
+      </docblock>
+      <constant namespace="" line="27" package="NetCommons\Blocks\Model\Behavior">
+        <name>NAME_LENGTH</name>
+        <full_name>\BlockBehavior::NAME_LENGTH</full_name>
+        <value>50</value>
+        <docblock line="27">
+          <description>Max length of content</description>
+          <long-description></long-description>
+          <tag name="var" line="27" description="" type="integer" variable="">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </constant>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="36" package="NetCommons\Blocks\Model\Behavior">
+        <name>setup</name>
+        <full_name>\BlockBehavior::setup()</full_name>
+        <docblock line="36">
+          <description>Setup this behavior with the specified configuration settings.</description>
+          <long-description></long-description>
+          <tag name="param" line="36" description="&lt;p&gt;Model using this behavior&lt;/p&gt;" type="\Model" variable="$model">
+            <type>\Model</type>
+          </tag>
+          <tag name="param" line="36" description="&lt;p&gt;Configuration settings for $model&lt;/p&gt;" type="array" variable="$config">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="36" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$model</name>
+          <default></default>
+          <type>\Model</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$config</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="53" package="NetCommons\Blocks\Model\Behavior">
+        <name>beforeValidate</name>
+        <full_name>\BlockBehavior::beforeValidate()</full_name>
+        <docblock line="53">
+          <description>beforeValidate is called before a model is validated, you can use this callback to
+add behavior validation rules into a models validate array. Returning false
+will allow you to make the validation fail.</description>
+          <long-description></long-description>
+          <tag name="param" line="53" description="&lt;p&gt;Model using this behavior&lt;/p&gt;" type="\Model" variable="$model">
+            <type>\Model</type>
+          </tag>
+          <tag name="param" line="53" description="&lt;p&gt;Options passed from Model::save().&lt;/p&gt;" type="array" variable="$options">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="53" description="False or null will abort the operation. Any other result will continue." type="mixed">
+            <type>mixed</type>
+          </tag>
+          <tag name="see" line="53" description="" link="\Model::save()"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$model</name>
+          <default></default>
+          <type>\Model</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="" line="90" package="NetCommons\Blocks\Model\Behavior">
+        <name>__setRecursiveBlockField</name>
+        <full_name>\BlockBehavior::__setRecursiveBlockField()</full_name>
+        <docblock line="90">
+          <description>Set block field</description>
+          <long-description></long-description>
+          <tag name="param" line="90" description="&lt;p&gt;Model using this behavior&lt;/p&gt;" type="\Model" variable="$model">
+            <type>\Model</type>
+          </tag>
+          <tag name="param" line="90" description="&lt;p&gt;&amp;$data Model data&lt;/p&gt;" type="array" variable="">
+            <type>array</type>
+          </tag>
+          <tag name="param" line="90" description="&lt;p&gt;Update field&lt;/p&gt;" type="string" variable="$field">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="90" description="&lt;p&gt;Recursive key&lt;/p&gt;" type="string" variable="$key">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="90" description="&lt;p&gt;Update value&lt;/p&gt;" type="string" variable="$value">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="90" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$model</name>
+          <default></default>
+          <type>\Model</type>
+        </argument>
+        <argument line="0" by_reference="true">
+          <name>$data</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$field</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$value</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="" line="115" package="NetCommons\Blocks\Model\Behavior">
+        <name>__saveBlock</name>
+        <full_name>\BlockBehavior::__saveBlock()</full_name>
+        <docblock line="115">
+          <description>savePrepare</description>
+          <long-description></long-description>
+          <tag name="param" line="115" description="&lt;p&gt;Model using this behavior&lt;/p&gt;" type="\Model" variable="$model">
+            <type>\Model</type>
+          </tag>
+          <tag name="param" line="115" description="&lt;p&gt;Frame data&lt;/p&gt;" type="array" variable="$frame">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="115" description="" type="void">
+            <type>void</type>
+          </tag>
+          <tag name="throws" line="115" description="" type="\InternalErrorException">
+            <type>\InternalErrorException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$model</name>
+          <default></default>
+          <type>\Model</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$frame</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="147" package="NetCommons\Blocks\Model\Behavior">
+        <name>beforeSave</name>
+        <full_name>\BlockBehavior::beforeSave()</full_name>
+        <docblock line="147">
+          <description>beforeSave is called before a model is saved. Returning false from a beforeSave callback
+will abort the save operation.</description>
+          <long-description></long-description>
+          <tag name="param" line="147" description="&lt;p&gt;Model using this behavior&lt;/p&gt;" type="\Model" variable="$model">
+            <type>\Model</type>
+          </tag>
+          <tag name="param" line="147" description="&lt;p&gt;Options passed from Model::save().&lt;/p&gt;" type="array" variable="$options">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="147" description="False if the operation should abort. Any other result will continue." type="mixed">
+            <type>mixed</type>
+          </tag>
+          <tag name="see" line="147" description="" link="\Model::save()"/>
+          <tag name="throws" line="147" description="" type="\InternalErrorException">
+            <type>\InternalErrorException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$model</name>
+          <default></default>
+          <type>\Model</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="201" package="NetCommons\Blocks\Model\Behavior">
+        <name>getBlockConditions</name>
+        <full_name>\BlockBehavior::getBlockConditions()</full_name>
+        <docblock line="201">
+          <description>Get conditions</description>
+          <long-description></long-description>
+          <tag name="param" line="201" description="&lt;p&gt;Model using this behavior&lt;/p&gt;" type="\Model" variable="$model">
+            <type>\Model</type>
+          </tag>
+          <tag name="param" line="201" description="&lt;p&gt;Model::find conditions default value&lt;/p&gt;" type="array" variable="$conditions">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="201" description="Conditions data" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$model</name>
+          <default></default>
+          <type>\Model</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$conditions</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="218" package="NetCommons\Blocks\Model\Behavior">
+        <name>getBlockConditionById</name>
+        <full_name>\BlockBehavior::getBlockConditionById()</full_name>
+        <docblock line="218">
+          <description>Get condition by Block.id</description>
+          <long-description></long-description>
+          <tag name="param" line="218" description="&lt;p&gt;Model using this behavior&lt;/p&gt;" type="\Model" variable="$model">
+            <type>\Model</type>
+          </tag>
+          <tag name="param" line="218" description="&lt;p&gt;Model::find conditions default value&lt;/p&gt;" type="array" variable="$conditions">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="218" description="Conditions data" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$model</name>
+          <default></default>
+          <type>\Model</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$conditions</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="235" package="NetCommons\Blocks\Model\Behavior">
+        <name>deleteBlock</name>
+        <full_name>\BlockBehavior::deleteBlock()</full_name>
+        <docblock line="235">
+          <description>Delete block.</description>
+          <long-description></long-description>
+          <tag name="param" line="235" description="&lt;p&gt;Model using this behavior&lt;/p&gt;" type="\Model" variable="$model">
+            <type>\Model</type>
+          </tag>
+          <tag name="param" line="235" description="&lt;p&gt;blocks.key&lt;/p&gt;" type="string" variable="$blockKey">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="235" description="" type="void">
+            <type>void</type>
+          </tag>
+          <tag name="throws" line="235" description="" type="\InternalErrorException">
+            <type>\InternalErrorException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$model</name>
+          <default></default>
+          <type>\Model</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$blockKey</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+    </class>
+    <source>eJzNWVtv28gVfpZ+xSzgRlIgU9lg+yJHbhyvszGapEaSFlg4gTAWR9LEFElwSMtGESC2F71hgT41i0Xf2n1qgWJR9G17+TFqtsi/6JlzOOSQIhUndtAChk1yzm3O9ZvxrR+F07DZu369ya6zO14wOmR3xJQfySCCL/rjbZ7E0yBiD4NIHgZsK+KS3eLw+7YvpcNHzvNw06Z7PA2mQrKH/JA/lzPObvnpk5oGCazcnsy49JxRMCM2T/qHbBrHYb/Xm8/nji9iWJsFvnKCaMIeinibXtleFDwXozjlGglfiXrGXkrhxMexLeQ+fUYhoyA8ieRkGrPt7OnmjY8/6VZr7TWbW2HY7ydKqHbrQeAKz/iq1WX0odXZaF7Ine/qppCPDvlEWJY9RfnqKep9aqnpNUceV4r0m+9MHMfCdxUr2M1+nln7gB8zT/iTeMqCMRsFPpDHxugjHjHpkxMasKbAp1sPdob3dx5+9uQeG7Af3sj3/VjEScjiqVTswOiZS5AbTwVToRjJsRSuVjGWkyTisQx8pkQcS3+iHKMyhBybkbVsbYZ/6CVRQFcUbzHwKOInbI2EQ1yrdLAxWEQykTMCgyOfHQXSpR2GyQGkDxsn/sgwJmHbtqWbqRiQynanA85sNNa0YeubmaoBuwch7fdnIpqIdmk1kwJZ02jIMWt/xKSC1TLhfssLuIsGqNazVFVZV5EoN0zLftGEHxOgAwEOED/jnnR5LEAjG3HPg5DQAuOM/A0LRymR22UnQQJ0PvhfkPc10wGkJYsDLZW7bh7vlE87L0o8oXT2BEZwLpZMdNgjjICO65h7VJ1z6XkMNARz1AzcM34oMIcs4WNdJFeTMkGoJSr2k/RvCDUEPhlHQSqz31f8SLQ7jp00M3kMRHe11Qz27SdgNZl+EEQxmhuEghLQYVv+CQvgW8QioRIvJlJdbNJPBAlWQhT1VedkMYjl5DSbKWVnIcWQdn0T2Pl+C5tFnlrp7uIoEZQ+KfMK1v0WmTiMT0KRS9JcF6Fng8GAWla//+TzPegtuw92n+x8mopp9HprJXYdGcxzOQs9UNBurUMfrqbCIqgSEgdvF6FpSMALJnSgyaLEX+ELUttlNcuWSONeQ5kXcZtip6lSTjbYZPSoHPrShdUOSjL8+B27Qk2IK4hNPap21omqKSCpdqIoiJRpQSlVebnc92rIcv/UqdmwshF7Q5aOxRR9YY8fdoCjF8aM515Jc7iGKZEy6EeLQsWRFrCG2thPQ+xrRnWZ6FCcQLMbJZGSR4LBWwUN+CARRhC+1EypSB6hLtMShkMIeiYdPXpX21FqDrSZbmpxF43qpmrzNiHVkAxqUzloqlJ7WNEZNHVVB9Df1zenXJFhZIIhbFia9mlJ1yZZlhVLWblug3w0ZVQtQ2BWBZMZV7jFm8WpWeusrIfmMoq+upk5a2my6oa9FwmIp7iaoTSGZ8Hu4u8s74qZwG7H0yiYK7YLkC3yuYeVs3M8EjgD6nOFp9suzw7UmaKZ6u4VBcFsKF3snES+30IbC4sb9QI87k8SgLO1QgoEGxeaPj6ydti1a3VN11BgGvR6r19+szj9cnF6tjiD398uXp7++x+/W5ydLU6/Wpz+aXH6RdM0fEt3GXKlMlOhnlRAAz2MK8wZAFUd2F7oJRPpPw49WS9hw26nlYaDoNkBFuVsLt142taP4TDmE1X0CRmAJQQGPOt02Y0uYFhv3O9bqJ2y1xpob1OuIIn8eNweDt12Czus0uceOub8QLVAD0KR1ucz956E985GebaVAQD6RZcsKtj1xx4ctYIIzli+KyI1gtLOtkbEHUyGXo/0L07/8p+vv3vz5V8zbLNGrX9QHiwIpSrN6NJcMSHEYmK+mNfUE20fDpvD9LSpfWBIYfhER4DukCVzQM3+tZFobfZlYxmlPwa7VyJ0vTF3CUETbOW2EAPXc3CdIVQtw4Kp/y94GiJawM9Mn41hxqLh7w+mL9YwK+G2duSloXbW5HRvKwFuPTn8uN+31JUVLVfVuyPGRmoEruKjcuhLjidXNL3Kw+iyMav5sm30etj9oZZf//bV639+pXdGcy+vYjRufXMsfffOya670qP5WdoeZR+isC90osKBVJ5vWPc43C4R/6oumKObbLyXBvuG5XO1OP/F4vzvi/NXi/M/f//7v33/6tuS81bZvIICQteGYdGpafwGHjRK8aUujWJNWy7vFsR3Cd/ruQFbX5x9tzg/X5z/Su9eoz9TiSkUtCxAYRleJOIUHdpYVYN0fRpNN2bQqeksKRJ9JyxpGQFZlfkpA9/1bqJ4XU6THrBvUYUzOHf2u6VjPrQ+g8MX+MmVuHZld3mpPNPKdRuw1DBXjLkeAEuHJZKwbVEShq5o8BMRozNy4ooLPyOmfOlXWLIPvuV+7NjAVnff7SQiF0NSQvu5ny47sNzpWnwGVVfwPIKlJXoLWlWw7OGqo1eRq1PYHqVc6kLre32k2cEJ3d048moO3P+roONw+RBxrw5dtvZesX6PqH0qPAHHQGwLl8V55r4Chf0YeiZNI8fcarzPMbUUHxfNrTylGq3Fg6qFPvYviYKemUmJDIvzX+pBefavHKNU5IU90tKDB57FmMNajqnFzHQdQjwkk+OWDy065dstfaiE9m2lVGQGAMpb/5g2k9tDavJ3A+qqtvPr37z5+pt86BcNIP9veV7blvbBD0yZT3bd8jQnV5UGeUarh3n6Yg30j8owMsG7Nb0tHOwNci2lgJMNZ+1EfZ9PtbmKiqCOUaypsyutK/eOdWFc80+mZm4rhvFR4Ik9Ec0ApILC5VoordN2V2J3SlzMpjev/vDm5R9xQWOxpbSqOhYYodZN9Lb+j6UoB9siLMS7wKJjjv/wNKg0PQ0O0qvhpStIJLYuIXM4ll9EZjLKXHlFkIvL63m5FzIkS9GOjWvpPvMixuGkvnrrllpSjXlQQaTzQ6e1zuwXzf8C/8aOWg==</source>
+  </file>
+  <file path="Model/BlockRolePermission.php" generated-path="Model.BlockRolePermission.html" hash="825b6309af00e7dd18aa3316d87687c9" package="Default">
+    <docblock line="0">
+      <description>BlockRolePermission Model</description>
+      <long-description></long-description>
+      <tag name="property" line="0" description="" type="\RolesRoom" variable="$RolesRoom">
+        <type>\RolesRoom</type>
+      </tag>
+      <tag name="author" line="0" description="Noriko Arai" link="mailto:arai@nii.ac.jp"/>
+      <tag name="author" line="0" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
+      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
+      <tag name="copyright" line="0" description="Copyright 2014, NetCommons Project"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="22" package="NetCommons\Blocks\Model">
+      <extends>\BlocksAppModel</extends>
+      <name>BlockRolePermission</name>
+      <full_name>\BlockRolePermission</full_name>
+      <docblock line="22">
+        <description>BlockRolePermission Model</description>
+        <long-description></long-description>
+        <tag name="author" line="22" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+        <tag name="package" line="22" description="NetCommons\Blocks\Model"/>
+        <tag name="inherited_from" description="\BlocksAppModel" refers="\BlocksAppModel" link="/classes/BlocksAppModel.html"/>
+      </docblock>
+      <constant namespace="" line="30" package="NetCommons\Blocks\Model">
+        <name>VALUE_DISUSE</name>
+        <full_name>\BlockRolePermission::VALUE_DISUSE</full_name>
+        <value>'0'</value>
+        <docblock line="30">
+          <description>Value</description>
+          <long-description></long-description>
+          <tag name="var" line="30" description="" type="integer" variable="">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </constant>
+      <constant namespace="" line="31" package="NetCommons\Blocks\Model">
+        <name>VALUE_USE</name>
+        <full_name>\BlockRolePermission::VALUE_USE</full_name>
+        <value>'1'</value>
+        <docblock line="31">
+          <description>Value</description>
+          <long-description></long-description>
+          <tag name="var" line="31" description="" type="integer" variable="">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </constant>
+      <property static="false" visibility="public" namespace="" line="38" package="NetCommons\Blocks\Model">
+        <name>$validate</name>
+        <full_name>\BlockRolePermission::validate</full_name>
+        <default>array()</default>
+        <docblock line="38">
+          <description>Validation rules</description>
+          <long-description></long-description>
+          <tag name="var" line="38" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="" line="47" package="NetCommons\Blocks\Model">
+        <name>$belongsTo</name>
+        <full_name>\BlockRolePermission::belongsTo</full_name>
+        <default>array('RolesRoom' =&gt; array('className' =&gt; 'RolesRoom', 'foreignKey' =&gt; 'roles_room_id', 'conditions' =&gt; '', 'fields' =&gt; '', 'order' =&gt; ''))</default>
+        <docblock line="47">
+          <description>belongsTo associations</description>
+          <long-description></long-description>
+          <tag name="var" line="47" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="66" package="NetCommons\Blocks\Model">
+        <name>beforeValidate</name>
+        <full_name>\BlockRolePermission::beforeValidate()</full_name>
+        <docblock line="66">
+          <description>Called during validation operations, before validation. Please note that custom
+validation rules can be defined in $validate.</description>
+          <long-description></long-description>
+          <tag name="param" line="66" description="&lt;p&gt;Options passed from Model::save().&lt;/p&gt;" type="array" variable="$options">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="66" description="True if validate operation should continue, false to abort" type="boolean">
+            <type>boolean</type>
+          </tag>
+          <tag name="link" line="66" description="http://book.cakephp.org/2.0/en/models/callback-methods.html#beforevalidate" link="http://book.cakephp.org/2.0/en/models/callback-methods.html#beforevalidate"/>
+          <tag name="see" line="66" description="" link="\Model::save()"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+    </class>
+    <source>eJztVktv1EgQPtu/oqSN5Exk7IA4mRASQqRFhGxEAiekUY9dM+643e3tbs8wQvx3yt22x0NgF+3uYQ9cPO2qrx791cNz8qIpmzA9OgrhCF4KlVfvlMAb1DU3hisJb1WBgpSd/qzRqkFtt9CBzDulajgYjwOItbZUGq6V5pWCc804nDB6nknOE5Yn983pFHdbqhI5XLOK3fOawYnsT6ZULWnOVjXjIslV7c0ElxWU1jZZmm42m0SiJV2tpEmUXsE12gv/Cjda3WNue6scpcEfG6Y9IrGf7NTJlRc7J7lqtpqvSgsX4+nJ8eOn8fejpmF43jRZ1ho0h5Ej15DAMRrF0EsS/z57Fv50Gf4hcw3LK7bCSbIffQofB+9pmAtmzHczwE8WZdHrxnvA5zHtD0y0OKS4Zhq49CwEOYWyYRB8OL96fzl/9fr2/e0lPIfoOIpHaS96HD2bOuQFs11w3VKTTX0zrdnWe2/aBdUODtYejuTGaQ87SoM0vSsRzo1ROXe+DCxQqA2UbI10RAm5RjIrYMNtCUwIaBRdeSEQKtyaGIhs6hxbMkuOEaSyIBELssiZJBegsVZrLMbEuwByZe4UsEncv0l/ZzTkT9xE43RF8Px0Jw8iV6hrVqNTTHCxUy+VRr6Sb3Dr9brTzzUB5rzoMVSWgrvUPGYw5SiKfZHSBepeQoJZGEza9YIoIy6KVnO5gvWuaN2u8FePiZIuo4k2gRuBzDg6e3Lz1li3RqZOXOUHogtcckmxuNyVOxmXEy2Z2lMEB6rxtf6j/22ILTJcalpZrnGzzFADHM4SZ6vRtppCKCXgTrcIfAljP433gG6wBJVdSctlizEsmehagwq9UNo+2E/kr0pyViEtWbdkniTHKcq07jIwaU7MLWgoH9VIPVaYpLS1+M1TNUR3Pg3iftZ7rbNsZe7S85b92ODhSMI4EDMa1yA4sCU3j04n8/I7rYwsq1GvyGpfG0+bbr+L9jsyiGRLHnj+rZzMqIYT6QicxT2gRmNoMznMfF4QAu28X87dpnwtXTo0aH+2aGyysyQG1eaybqzvc1ePQdehuUafqKWq9oo0jWh47MQA0hRurWqmjceWFjV0ZLgeHE2V9IPgt0bkbK94ze3UmDpiAABt6qhtCn8eR8L589fwz2jRLdZ51U/sHrHKvhRMVj/B7ID8Re2U2mb8jP3i9r/mdt199h/Q2m1SZA/ofsjqAPz3pNIl/4JW0u4R+43u/8fszP19CfovE33cUNos+8GKJ2zwJfwSfgWUrpj8</source>
+  </file>
+  <file path="Controller/Component/BlockTabsComponent.php" generated-path="Controller.Component.BlockTabsComponent.html" hash="bfb52d2262d6f4b530df9df82b62d617" package="Default">
+    <docblock line="0">
+      <description>BlockTabs Component</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Noriko Arai" link="mailto:arai@nii.ac.jp"/>
+      <tag name="author" line="0" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
+      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
+      <tag name="copyright" line="0" description="Copyright 2014, NetCommons Project"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="19" package="NetCommons\Blocks\Controller\Component">
+      <extends>\Component</extends>
+      <name>BlockTabsComponent</name>
+      <full_name>\BlockTabsComponent</full_name>
+      <docblock line="19">
+        <description>BlockTabs Component</description>
+        <long-description></long-description>
+        <tag name="author" line="19" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+        <tag name="package" line="19" description="NetCommons\Blocks\Controller\Component"/>
+      </docblock>
+      <constant namespace="" line="26" package="NetCommons\Blocks\Controller\Component">
+        <name>MAIN_TAB_BLOCK_INDEX</name>
+        <full_name>\BlockTabsComponent::MAIN_TAB_BLOCK_INDEX</full_name>
+        <value>'block_index'</value>
+        <docblock line="26">
+          <description>Const of main tab</description>
+          <long-description></long-description>
+          <tag name="var" line="26" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </constant>
+      <constant namespace="" line="27" package="NetCommons\Blocks\Controller\Component">
+        <name>MAIN_TAB_FRAME_SETTING</name>
+        <full_name>\BlockTabsComponent::MAIN_TAB_FRAME_SETTING</full_name>
+        <value>'frame_settings'</value>
+        <docblock line="27">
+          <description>Const of main tab</description>
+          <long-description></long-description>
+          <tag name="var" line="27" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </constant>
+      <constant namespace="" line="28" package="NetCommons\Blocks\Controller\Component">
+        <name>MAIN_TAB_PERMISSION</name>
+        <full_name>\BlockTabsComponent::MAIN_TAB_PERMISSION</full_name>
+        <value>'role_permissions'</value>
+        <docblock line="28">
+          <description>Const of main tab</description>
+          <long-description></long-description>
+          <tag name="var" line="28" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </constant>
+      <constant namespace="" line="35" package="NetCommons\Blocks\Controller\Component">
+        <name>BLOCK_TAB_SETTING</name>
+        <full_name>\BlockTabsComponent::BLOCK_TAB_SETTING</full_name>
+        <value>'block_settings'</value>
+        <docblock line="35">
+          <description>Const of main tab</description>
+          <long-description></long-description>
+          <tag name="var" line="35" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </constant>
+      <constant namespace="" line="36" package="NetCommons\Blocks\Controller\Component">
+        <name>BLOCK_TAB_PERMISSION</name>
+        <full_name>\BlockTabsComponent::BLOCK_TAB_PERMISSION</full_name>
+        <value>'role_permissions'</value>
+        <docblock line="36">
+          <description>Const of main tab</description>
+          <long-description></long-description>
+          <tag name="var" line="36" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </constant>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="45" package="NetCommons\Blocks\Controller\Component">
+        <name>startup</name>
+        <full_name>\BlockTabsComponent::startup()</full_name>
+        <docblock line="45">
+          <description>Called after the Controller::beforeFilter() and before the controller action</description>
+          <long-description></long-description>
+          <tag name="param" line="45" description="&lt;p&gt;Controller with components to startup&lt;/p&gt;" type="\Controller" variable="$controller">
+            <type>\Controller</type>
+          </tag>
+          <tag name="return" line="45" description="" type="void">
+            <type>void</type>
+          </tag>
+          <tag name="throws" line="45" description="" type="\ForbiddenException">
+            <type>\ForbiddenException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$controller</name>
+          <default></default>
+          <type>\Controller</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="59" package="NetCommons\Blocks\Controller\Component">
+        <name>beforeRender</name>
+        <full_name>\BlockTabsComponent::beforeRender()</full_name>
+        <docblock line="59">
+          <description>Called before the Controller::beforeRender(), and before
+the view class is loaded, and before Controller::render()</description>
+          <long-description></long-description>
+          <tag name="param" line="59" description="&lt;p&gt;Controller with components to beforeRender&lt;/p&gt;" type="\Controller" variable="$controller">
+            <type>\Controller</type>
+          </tag>
+          <tag name="return" line="59" description="" type="void">
+            <type>void</type>
+          </tag>
+          <tag name="link" line="59" description="http://book.cakephp.org/2.0/en/controllers/components.html#Component::beforeRender" link="http://book.cakephp.org/2.0/en/controllers/components.html#Component::beforeRender"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$controller</name>
+          <default></default>
+          <type>\Controller</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="" line="81" package="NetCommons\Blocks\Controller\Component">
+        <name>__setMainTabs</name>
+        <full_name>\BlockTabsComponent::__setMainTabs()</full_name>
+        <docblock line="81">
+          <description>Set main tabs</description>
+          <long-description></long-description>
+          <tag name="param" line="81" description="&lt;p&gt;Controller with components to beforeRender&lt;/p&gt;" type="\Controller" variable="$controller">
+            <type>\Controller</type>
+          </tag>
+          <tag name="return" line="81" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$controller</name>
+          <default></default>
+          <type>\Controller</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="" line="139" package="NetCommons\Blocks\Controller\Component">
+        <name>__setBlockTabs</name>
+        <full_name>\BlockTabsComponent::__setBlockTabs()</full_name>
+        <docblock line="139">
+          <description>Set block tabs</description>
+          <long-description></long-description>
+          <tag name="param" line="139" description="&lt;p&gt;Controller with components to beforeRender&lt;/p&gt;" type="\Controller" variable="$controller">
+            <type>\Controller</type>
+          </tag>
+          <tag name="return" line="139" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$controller</name>
+          <default></default>
+          <type>\Controller</type>
+        </argument>
+      </method>
+    </class>
+    <source>eJztV81u4zYQPstPwaLByg680nbRk5Om+WlSGN14F3EKFEgCg5Zoi2uZFEgqTlrsofE79NBbgR562e2hD9CHMQr0MUpSf5StOM7GaXMoECgS+XHm4wxnPnr7yyiIau7mZg1sgv2QeqNT2OfggI4jShARcljN7MJYBJSBDmV4RMEegxhsQ/ncJRg70HPeRjsmrhvQAGHQgSP4Fo8h2CbpGw9oLGd2h2OIQ8ej42RZiMkIBEJELdedTCYOQULOjSnhDmVD0EHiIPkEbxh9izyRrvIQ4ej2hW6KcMSVMI28Soa1EY9G1wwPAyE3nb29fPHZ581qr25tL4parZgjXrfzMNlNID+IYDQMEbMbW7XVY3rfWEXQG8EhMuidayf8vGBwbjpza14IOS+o5JMAXQlEfIMb+CFnLq1xAegASPcECNjPeF9CBrhgmAy1ccvTwOO9dqd3urff23/1+uCbXrvz1eF34Atg95XXHiY+urKbNcuycuDRyd7xYa97eHra7nytoAMGx6jHkRDSNp9Dvzk8OW53u+3XHQWV20S9CLEx5hxL//bWx/JO6CoPBpOEdJlJAVydCpTJ8AEcCMSACBAoMtRq9dGAMnSEQzlZbwBIfJAMaaSXIwH0hLSb7SKSZTc2DIENA2oMT7AIpJU0rxwIKjcPmYgjbYYhETMCLin29bcIGJ1wcERZH/s+IodXHopSvzJWUdyXtQQGMdFkMlP1ah4NeYwsCw9A/ROASQ8yBq/rdnJKHf1PFoyBf74ToFCGkDeSlVbV3NmFinbJyJbEvqvJv7mAG3FcjPiJPPEq4k0j5GqtQl9iNAFJtWAOQgp95Ju4kjmWGlpDZkxmlekxG2Sf0pHjwRGSrVt3uZfOCxcRt/DG3cK8E4hx+Gle4OUoVCe3FKdlGXbd2fSn2fT9bDqd3fw++/HDbPrL7ObX2fSP2c2fcqo4BFzWUn1DBJg/38nK6sxWFaoakn2RJT7Zd5JX+UhX9FQpHqfgukljq7ZA4+/f3v/14efVCPSzlrgSg7yBzlEwDmAXibzv8Mc/GCp5DF9CgYrslYO1LH0bPhrAOBTfspDL2krKVMWAo3DQalV39B0DZ9lRGA8xsdVwqWb1lmWA0/mLZgIvIHpJmwxCKatUFhOXCYlDyPD3qL7UUgM4wO7pxKWN2bKTDqlN2obSWKmiYF9PHcSM6QpgCPp1+0jNOXKuocHJc27ncxL1NPZeJZPlGCAfi3WFwBS7p7H/RJwXZHd9cbCyS0slWHeBuaAlfWgjy0leTKo5WKqCoReAZf0PQA42RuhaB1P2jrQZZc0rldBk5tmzQlTViJTS2w03gWAxypqbtQR5pmxdlKnLBZqU5qQHdFMsdnqm5i80YIlhhdERKndjo/0kmJymOgSYxMhwqVbeKSOJmTM7ZqH8KM5Nvv0FlwVolU0sWE4JfiQ/oySWczSB9+JpLnwY17SulvPMQPfimC26/XylUGm1+NEj3bZayVL5WnWYCg03e4ratZ2a13Rk+WTeFrVcN4L/WsyLe8fql7H0FiSvZNlF6A61r/gd9ITafVV7r1ybHaZ/o+svRO5/rXw8rTSu6msWS8PyXWppQNcslyXLj6yXC77WJ5h3m15JhW43szbJXM3FA9k+WDTvNv04qlklmppLd6lyvqv9A+1VPpg=</source>
+  </file>
+  <file path="Controller/BlocksAppController.php" generated-path="Controller.BlocksAppController.html" hash="b3be0b16a42ed61b4a643c6954f2dde6" package="Default">
+    <docblock line="0">
+      <description>BlocksApp Controller</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Noriko Arai" link="mailto:arai@nii.ac.jp"/>
+      <tag name="author" line="0" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
+      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
+      <tag name="copyright" line="0" description="Copyright 2014, NetCommons Project"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="20" package="NetCommons\Blocks\Controller">
+      <extends>\AppController</extends>
+      <name>BlocksAppController</name>
+      <full_name>\BlocksAppController</full_name>
+      <docblock line="20">
+        <description>BlocksApp Controller</description>
+        <long-description></long-description>
+        <tag name="author" line="20" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+        <tag name="package" line="20" description="NetCommons\Blocks\Controller"/>
+      </docblock>
+    </class>
+    <source>eJyVULFOwzAQ3f0VtwWiyi6IKUQlbVcUIbF2sYwVO3F8lu0oRYh/x5CgpBIMXax3793dO7/yySlHWJ4TyOFgUHRh7xwc0UaPxkif+G+p4kNU6KFGrzuEvecaSp7eympNuaCt2637XhUqqaHmHW91z6G0MwoKh6RUTc+1oQL7acxo24GK0RWMjeNIrYxJ69EGir6BWsbjVMKLx1aKOE8JaYP8f5DNHTSe43rJ80T/LBHo3r1uVEy//kX327uHzd+ujJCUUFEMQYabLMElq2wD2aq6fSRXJHttYo6LjjdydeRpcjldWDAiDA9huWBRQZ6jtG8BLtkP8km+AOrPtrs=</source>
+  </file>
+  <file path="View/Helper/BlockRolePermissionFormHelper.php" generated-path="View.Helper.BlockRolePermissionFormHelper.html" hash="9c6b7493df061ef27a1987a30e441d61" package="Default">
+    <docblock line="0">
+      <description>BlockRolePermissionForm Helper</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Noriko Arai" link="mailto:arai@nii.ac.jp"/>
+      <tag name="author" line="0" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
+      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
+      <tag name="copyright" line="0" description="Copyright 2014, NetCommons Project"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="19" package="NetCommons\Blocks\View\Helper">
+      <extends>\FormHelper</extends>
+      <name>BlockRolePermissionFormHelper</name>
+      <full_name>\BlockRolePermissionFormHelper</full_name>
+      <docblock line="19">
+        <description>BlockRolePermissionForm Helper</description>
+        <long-description></long-description>
+        <tag name="package" line="19" description="NetCommons\Blocks\View\Helper"/>
+      </docblock>
+      <property static="false" visibility="public" namespace="" line="26" package="NetCommons\Blocks\View\Helper">
+        <name>$helpers</name>
+        <full_name>\BlockRolePermissionFormHelper::helpers</full_name>
+        <default>array('Form')</default>
+        <docblock line="26">
+          <description>Other helpers used by FormHelper</description>
+          <long-description></long-description>
+          <tag name="var" line="26" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="36" package="NetCommons\Blocks\View\Helper">
+        <name>checkboxBlockRolePermission</name>
+        <full_name>\BlockRolePermissionFormHelper::checkboxBlockRolePermission()</full_name>
+        <docblock line="36">
+          <description>Outputs room roles radio</description>
+          <long-description></long-description>
+          <tag name="param" line="36" description="&lt;p&gt;Name attribute of the RADIO&lt;/p&gt;" type="string" variable="$fieldName">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="36" description="&lt;p&gt;The HTML attributes of the select element.&lt;/p&gt;" type="array" variable="$attributes">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="36" description="Formatted RADIO element" type="string">
+            <type>string</type>
+          </tag>
+          <tag name="link" line="36" description="http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#options-for-select-checkbox-and-radio-inputs" link="http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#options-for-select-checkbox-and-radio-inputs"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$fieldName</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$attributes</name>
+          <default>array('inline' =&gt; true)</default>
+          <type>array</type>
+        </argument>
+      </method>
+    </class>
+    <source>eJytVd9v2zYQfrb+iltmVFZgSW2xJ9fxknUYUqxNiq7oS2wEtHS2GFOkRlKOjSH/+476ZTlNthXrCyEf7767++47evpzkRVefHrqwSn8IlSy+aQEfkSdc2O4kr8pncMligI1eTinc1baTGm4UppvFFxoxmHK6DyXnEcsie6KWd/vj0xlyOGKbdgdzxlMZfNlMlXSzfk6Z1xEicrrMMHlBjJri0kc39/fRxIt3eVKmkjpNVyhfVv/hI9a3WFim6gEpcHnA+PGI7I72wd5X5srkEQVe83XmYW33dfrl69+Gj+dNfa8i6KYTEqDZuQ7pmqi/DH4Xzjex83P4I33bQwXLNmwNfayzqtAM3ew88459hLBjHkOtfYD3FmUqYGe6a+uoGub0e+sMhugTlJY7nuubUlbpoFpzfZV2kFRLolPGLaBZ/VlzUK/4evSFqU1oJXK6RBInyzl6tCqZjkYq7lcw3DFUaRXLKfW3cEs2ZelRVAroELh08Wv7657cVVSGHZ+Bj6T1+XnD++hZ2uCDQqaG9CZo7RRBaPRllq2+V3xFEccVIla169kuVRqEyVsg7Q7lbZeRy9jlHGiNIaCLzXTHE3ckBOvCDbKbC5+VIWl2ZiQLGFdTphkmGyWahcymYYVNSGXjrIjolelTFwotO5PjHx0oG98xEk3HC6pC/ThbAZWlxgEJITBQHBjR8NcpSgorujwAgrEXSHoYuRHJOoDPg14MBi6lsjH92ncgwFfwegHoFAkNJtxE85unVzDmcY/SzQ2nKXMsps60+Kml2nRVDJoxlEhuxQPXpcnokTTlG+hkvzZiSM1rBs6mfnOmSzIkgy+OTswA0Onzd9x77ipvpuK6q4qy42/ZaJEfwEvXrSWFd9h6i8a50GipOWyRFdOXXy/elMw2Zbfjd2gk7JV+mQ2jZ1H3cw/db3Wqiyapo8LfFROh9Ew4vQdzjKepthXC0RA86WzI8EZeOpXY/6fMNXO37r1v/1OiEsn/dsN7r8L2kEHDVwztmZVSd+X9E81meSo1ziqF6nK6tNYqlVaMWFw3NoMWwqagbsY0TshguPROLfgaD2D/hibrDcHoMMwuzu5DhN6FDakRJJH9elegtEQt/RajWHuV10eOnONzv324p1cuZdH6cmEXnXu0oxaSoLaNfAbKp5lt9Xvv/Jb78y4ay144z2PKtgSxX+GzB5t+pbOL0wTQ5XofNryJmxBpBEckRk8Xq6Yxliv0oP35IX31bNECnnw/gaeMOKz</source>
+  </file>
+  <file path="View/Helper/BlockHelper.php" generated-path="View.Helper.BlockHelper.html" hash="39990eab9dc6dbea832f8c41b540d088" package="Default">
+    <docblock line="0">
+      <description>Block Helper</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Noriko Arai" link="mailto:arai@nii.ac.jp"/>
+      <tag name="author" line="0" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
+      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
+      <tag name="copyright" line="0" description="Copyright 2014, NetCommons Project"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="20" package="NetCommons\Blocks\View\Helper">
+      <extends>\AppHelper</extends>
+      <name>BlockHelper</name>
+      <full_name>\BlockHelper</full_name>
+      <docblock line="20">
+        <description>Block Helper</description>
+        <long-description></long-description>
+        <tag name="author" line="20" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+        <tag name="package" line="20" description="NetCommons\Blocks\View\Helper"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="28" package="NetCommons\Blocks\View\Helper">
+        <name>mainTabs</name>
+        <full_name>\BlockHelper::mainTabs()</full_name>
+        <docblock line="28">
+          <description>Output main tabs</description>
+          <long-description></long-description>
+          <tag name="param" line="28" description="&lt;p&gt;Active tab&lt;/p&gt;" type="string" variable="$active">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="28" description="HTML tags" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$active</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="41" package="NetCommons\Blocks\View\Helper">
+        <name>blockTabs</name>
+        <full_name>\BlockHelper::blockTabs()</full_name>
+        <docblock line="41">
+          <description>Output block tabs</description>
+          <long-description></long-description>
+          <tag name="param" line="41" description="&lt;p&gt;Active tab&lt;/p&gt;" type="string" variable="$active">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="41" description="HTML tags" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$active</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+    </class>
+    <source>eJy1UcFu2zAMPdtfwUMBJ0Fqb8NOWZYl66WHLhvQopdlKBSNsxXbkiDRTYui/z5acoOg2IC1wC4SSfHxPT3OP9nKpsVkksIEPjdG1nCOjUXHeV9aio4q42BtnKoNrJxQMBd8LrVSuZD5zi6O+y4rU6GCtajFTrUC5nqIfGU6flmWrVBNLk0bYY3SNVREdlYU+/0+10j81hrtc+NKWCOdxRS+ObNDSQNKovb4d2AxdOR0R8dDLmI5DJHG3jtVVgRnh+jdm7fvp39mLdJ0Ze1s1nn0o4zD6FM2hexa4b4Y0vGH9B/sfKlNVshalHikbBOm+03PvTlwFKlshPeROlYB7wj1Tw8HyfBwkPi1I9sRMJkGElv/JNPyilvw5JQu4URIUrcIq3hxX+hxSJ3TT03nV18u+Kn0QUViuy2vAH51mkFGB4YrJhgNw8YsIkmGESdUKX+6uOn/crrABlvUNMriD/MeetOLY6uFc+J+xMgkCxX4uHiGvuXzWjj/PfNIxMp61uzHNGAid0TFmMtjXlny+NySbVjef/UkULzSlIB9jSsBePkyax7T36RSWJA=</source>
+  </file>
+  <file path="View/Helper/BlockFormHelper.php" generated-path="View.Helper.BlockFormHelper.html" hash="11879df7bc53c6819e6ead4d894400d2" package="Default">
+    <docblock line="0">
+      <description>BlockForm Helper</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Noriko Arai" link="mailto:arai@nii.ac.jp"/>
+      <tag name="author" line="0" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
+      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
+      <tag name="copyright" line="0" description="Copyright 2014, NetCommons Project"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="19" package="NetCommons\Blocks\View\Helper">
+      <extends>\FormHelper</extends>
+      <name>BlockFormHelper</name>
+      <full_name>\BlockFormHelper</full_name>
+      <docblock line="19">
+        <description>BlockForm Helper</description>
+        <long-description></long-description>
+        <tag name="package" line="19" description="NetCommons\Blocks\View\Helper"/>
+      </docblock>
+      <property static="false" visibility="public" namespace="" line="26" package="NetCommons\Blocks\View\Helper">
+        <name>$helpers</name>
+        <full_name>\BlockFormHelper::helpers</full_name>
+        <default>array('NetCommonsForm')</default>
+        <docblock line="26">
+          <description>Other helpers used by FormHelper</description>
+          <long-description></long-description>
+          <tag name="var" line="26" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="36" package="NetCommons\Blocks\View\Helper">
+        <name>displayFrame</name>
+        <full_name>\BlockFormHelper::displayFrame()</full_name>
+        <docblock line="36">
+          <description>Output setting display frame radio</description>
+          <long-description></long-description>
+          <tag name="param" line="36" description="&lt;p&gt;Name attribute of the RADIO&lt;/p&gt;" type="string" variable="$fieldName">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="36" description="&lt;p&gt;Block.id&lt;/p&gt;" type="integer" variable="$blockId">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="36" description="Formatted RADIO element" type="string">
+            <type>string</type>
+          </tag>
+          <tag name="link" line="36" description="http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#options-for-select-checkbox-and-radio-inputs" link="http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#options-for-select-checkbox-and-radio-inputs"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$fieldName</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$blockId</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+      </method>
+    </class>
+    <source>eJyFUk1v2zAMPce/gsACOCliuyt26pKsXYdiBYZ02ICdepFlJlJtS4JELw2G/vfRdj4cbMMugvQe+Ug+cf7BKRdlFxcRXMDHysry3voaPmPl0DPWwjeiIWU9rKzXpYVbLzTMBZ83RutUyPTZLYdx35VVqGElSvGsawFzs78FZRtmbja10FUqbd2nVdqUoIjcdZZtt9vUIDFXWxNS6zewQrrrn/DV22eUtM+SaAL+OzHbR6T0QkORLz3ciUjrdl5vFMHd8XZ1+fbd7O9Vsyi6de76ugkYJnHrVG9UPIP4h8Zttn9O30f/89QJWYoNDuo8daHhqRV6OgZnkaxECCedngF8ITRFgAH061j0kRS/VQcH4G4LyHeD0EMTP4UH4b3YdYVGrsnZMxgfEhc9OYlPTbYaw/EeG3INQUAibTZQ6OAqsYO1FzWCF4W2p4EZg0C+jRuvNVbFqg3qDkGM5w0h2DVw8/Dt9tPD4yBPG4Jx3nrwUPRepLroeI/UeHMQbvtjMR64UwCssEZDf+xZbm2ZSlEir3+3LFfpZYYmk9ZjUuncC68xZHsnsjXLporq6o11pNmHhJEksLqkRCqUZW5fEmGKpJs50YZdCWeurhsj29SDR/etRZOTEbPjfFP+ydFoP9eYlA7J8vwHkmVX5iy7/6qjR4slxPH0ALPeKFa6KNDctylxy69FFXDWUdZI7rHs4Dg0ea1pMo17zmySIclbx0YvyDd4CuCZRF5hcRYTMzvlXRm9RtFr9BvsU3Ef</source>
+  </file>
+  <file path="Test/Case/Model/BlockDeleteBlockTest.php" generated-path="Test.Case.Model.BlockDeleteBlockTest.html" hash="4c49c9adc30e82ef62306f0421298436" package="Default">
+    <docblock line="0">
+      <description>Block Test Case</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Noriko Arai" link="mailto:arai@nii.ac.jp"/>
+      <tag name="author" line="0" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
+      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
+      <tag name="copyright" line="0" description="Copyright 2014, NetCommons Project"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="21" package="NetCommons\Blocks\Test\Case\Model">
+      <extends>\YACakeTestCase</extends>
+      <name>BlockDeleteBlockTest</name>
+      <full_name>\BlockDeleteBlockTest</full_name>
+      <docblock line="21">
+        <description>Block Test Case</description>
+        <long-description></long-description>
+        <tag name="author" line="21" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+        <tag name="package" line="21" description="NetCommons\Blocks\Test\Case\Model"/>
+      </docblock>
+      <property static="false" visibility="public" namespace="" line="28" package="NetCommons\Blocks\Test\Case\Model">
+        <name>$fixtures</name>
+        <full_name>\BlockDeleteBlockTest::fixtures</full_name>
+        <default>array('plugin.blocks.block', 'plugin.blocks.block_role_permission')</default>
+        <docblock line="28">
+          <description>Fixtures</description>
+          <long-description></long-description>
+          <tag name="var" line="28" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="38" package="NetCommons\Blocks\Test\Case\Model">
+        <name>setUp</name>
+        <full_name>\BlockDeleteBlockTest::setUp()</full_name>
+        <docblock line="38">
+          <description>setUp method</description>
+          <long-description></long-description>
+          <tag name="return" line="38" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="49" package="NetCommons\Blocks\Test\Case\Model">
+        <name>tearDown</name>
+        <full_name>\BlockDeleteBlockTest::tearDown()</full_name>
+        <docblock line="49">
+          <description>tearDown method</description>
+          <long-description></long-description>
+          <tag name="return" line="49" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="61" package="NetCommons\Blocks\Test\Case\Model">
+        <name>testDeleteBlock</name>
+        <full_name>\BlockDeleteBlockTest::testDeleteBlock()</full_name>
+        <docblock line="61">
+          <description>Expect delete block</description>
+          <long-description></long-description>
+          <tag name="return" line="61" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="90" package="NetCommons\Blocks\Test\Case\Model">
+        <name>testFailOnDeleteAll</name>
+        <full_name>\BlockDeleteBlockTest::testFailOnDeleteAll()</full_name>
+        <docblock line="90">
+          <description>Expect Block-&gt;deleteBlock() fail on Block-&gt;deleteAll()
+e.g.) connection error</description>
+          <long-description></long-description>
+          <tag name="return" line="90" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="108" package="NetCommons\Blocks\Test\Case\Model">
+        <name>testFailOnFrameUpdateAll</name>
+        <full_name>\BlockDeleteBlockTest::testFailOnFrameUpdateAll()</full_name>
+        <docblock line="108">
+          <description>Expect Block-&gt;deleteBlock() fail on Frame-&gt;updateAll()
+e.g.) connection error</description>
+          <long-description></long-description>
+          <tag name="return" line="108" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="126" package="NetCommons\Blocks\Test\Case\Model">
+        <name>testFailOnBlockRolePermissionDeleteAll</name>
+        <full_name>\BlockDeleteBlockTest::testFailOnBlockRolePermissionDeleteAll()</full_name>
+        <docblock line="126">
+          <description>Expect Block-&gt;deleteBlock() fail on BlockRolePermission-&gt;deleteAll()
+e.g.) connection error</description>
+          <long-description></long-description>
+          <tag name="return" line="126" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJzNVk1v00AQPSe/Yg+VbFet3SJOaRta+iFV0FK1FAmpUrW1J8k2zq7ZXTeJUA+0EgjEgSsnhITgBj+qqoB/wXrXduw2KYnUCi6Jd2Zn9r2ZN2svPohaUdWbnq6iafQwZH4bPQUh0SoWoEyJdRnHssU42mactBla4ZigRax+lykhLvbd46he3LfXYi0gaBu38THpYLRI0yfRYrHyLDc7mISuzzomLCS0jVpSRjXP63a7LgWpfB1Ghct4E22DXDVLtMPZMfgyjfKBChgd6KU7XNmTxSSPjVkn8VnU56TZUnzzp3tz8/dnhp/qVasrUVSrxQKEbelqWTPIPAh3iwUQWs5Ccc/zlVXchqSiSUGTzYPEbmLei4mEJGi8Hkxa2wj7bdyEAp0Dg/YgOeEgOeFA49bs/BALYRCsQQgS9KPGAj0JNBCoTAi9zHFvkJ6MOYgM8AnmCHOO+zpzJYqPVD/QVCPdhpaM165WKlYUxk1C3SNTxyNT1xGOQ85COIyAd4gQhNFkY6F8AuR+hDqgqhVkUDioIyk6YSQogWnE1JcqhQmyHcWmUokwByprtdS2oExTskXEbN10ZgmtJlXahSYRkvdrNUKJtDMNGE0UozY47sCoKO0Urv7TUac5EQmYr7EunZRLFpfSiZXUpV1koMGVzPr4pIYD9oMsJVDrvUhNAgq0OJDuxxVgNyITsiCrFKDnTek8j6CvqmSZHs9bCwXXZpDIpchhtt4gNLCtUFVTDVWuJM9TouHgx1yQE7DQUh3Nzs9kDp/RgCRQhPaYKKsNfb3MYThmv+MYDPrH8y7fvvv98cvlm68/P7y+/P7p1+f3BmEJVVCgN8hXynNx/uri7NvF+fnF2Y9iBqUO4HL9RYxDYc/NDKXrs5he4zua8KSMFeWU+sIYyLRqbhmZ6T4JBrZDBVbYuQ6cYVCv6XNINxzUUBcjUjIsOVfC0HaSSHCbroMUKgpGrcA545OJe0Od8ISuDRJnAjcFUxNn8EGw3vMhSuJsa5NK4BSH68l5ud0qiubK/ZMumyC3lGGDcX2BX7mCslZYOU/LKbc1rQNoSCK7CzDt21ltZ+vm7iklyVxdohimQaY8z3AYg91QKoHS7Nw03+NNz2QNToUZRwG+kwbr/PuD7Lfb5ex9MarLpVdG3uWc7NUup8UYq8uFJP9/l/V6V30L7OSfAnc41ENOu7M5/5sCinNehjTG1E+ih38+9afVPzgu8iQ=</source>
+  </file>
+  <file path="Test/Case/Model/BlockTest.php" generated-path="Test.Case.Model.BlockTest.html" hash="950a6be9b4b7045fd1a7476c2c92168a" package="Default">
+    <docblock line="0">
+      <description>Block Test Case</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Noriko Arai" link="mailto:arai@nii.ac.jp"/>
+      <tag name="author" line="0" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
+      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
+      <tag name="copyright" line="0" description="Copyright 2014, NetCommons Project"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="21" package="NetCommons\Blocks\Test\Case\Model">
+      <extends>\YACakeTestCase</extends>
+      <name>BlockTest</name>
+      <full_name>\BlockTest</full_name>
+      <docblock line="21">
+        <description>Block Test Case</description>
+        <long-description></long-description>
+        <tag name="author" line="21" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+        <tag name="package" line="21" description="NetCommons\Blocks\Test\Case\Model"/>
+      </docblock>
+      <property static="false" visibility="public" namespace="" line="28" package="NetCommons\Blocks\Test\Case\Model">
+        <name>$fixtures</name>
+        <full_name>\BlockTest::fixtures</full_name>
+        <default>array('plugin.blocks.block')</default>
+        <docblock line="28">
+          <description>Fixtures</description>
+          <long-description></long-description>
+          <tag name="var" line="28" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="37" package="NetCommons\Blocks\Test\Case\Model">
+        <name>setUp</name>
+        <full_name>\BlockTest::setUp()</full_name>
+        <docblock line="37">
+          <description>setUp method</description>
+          <long-description></long-description>
+          <tag name="return" line="37" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="47" package="NetCommons\Blocks\Test\Case\Model">
+        <name>tearDown</name>
+        <full_name>\BlockTest::tearDown()</full_name>
+        <docblock line="47">
+          <description>tearDown method</description>
+          <long-description></long-description>
+          <tag name="return" line="47" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="58" package="NetCommons\Blocks\Test\Case\Model">
+        <name>testCreateSave</name>
+        <full_name>\BlockTest::testCreateSave()</full_name>
+        <docblock line="58">
+          <description>testCreateSave</description>
+          <long-description></long-description>
+          <tag name="return" line="58" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="83" package="NetCommons\Blocks\Test\Case\Model">
+        <name>testUpdateSave</name>
+        <full_name>\BlockTest::testUpdateSave()</full_name>
+        <docblock line="83">
+          <description>testUpdateSave</description>
+          <long-description></long-description>
+          <tag name="return" line="83" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="104" package="NetCommons\Blocks\Test\Case\Model">
+        <name>testSaveByFrameIdNoFrame</name>
+        <full_name>\BlockTest::testSaveByFrameIdNoFrame()</full_name>
+        <docblock line="104">
+          <description>testSaveByFrameIdNoFrame</description>
+          <long-description></long-description>
+          <tag name="return" line="104" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="119" package="NetCommons\Blocks\Test\Case\Model">
+        <name>testSaveByFrameId</name>
+        <full_name>\BlockTest::testSaveByFrameId()</full_name>
+        <docblock line="119">
+          <description>testSaveByFrameId</description>
+          <long-description></long-description>
+          <tag name="return" line="119" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="134" package="NetCommons\Blocks\Test\Case\Model">
+        <name>testSaveByFrameIdNewBlock</name>
+        <full_name>\BlockTest::testSaveByFrameIdNewBlock()</full_name>
+        <docblock line="134">
+          <description>testSaveByFrameIdNewBlock</description>
+          <long-description></long-description>
+          <tag name="return" line="134" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="186" package="NetCommons\Blocks\Test\Case\Model">
+        <name>testValidateBlock</name>
+        <full_name>\BlockTest::testValidateBlock()</full_name>
+        <docblock line="186">
+          <description>Expect Block-&gt;validateBlock() to return true on validation success</description>
+          <long-description></long-description>
+          <tag name="return" line="186" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="203" package="NetCommons\Blocks\Test\Case\Model">
+        <name>testValidateBlockError</name>
+        <full_name>\BlockTest::testValidateBlockError()</full_name>
+        <docblock line="203">
+          <description>Expect Block-&gt;validateBlock() to return true on validation error</description>
+          <long-description></long-description>
+          <tag name="return" line="203" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJzVV21v2kgQ/gy/Yj9EsokSu1T3JTThkuYSXXXXqLo0lU5NFG3sCWwwu+7uOoBO/e+dfTHYBAiEy53KBzCz8/o8s8Nw+Gvez5vx7m6T7JL3mUgG5DMoTU6pAhQZ6TEtdF9IciEkGwhyIikjhxTfjzljEU2ih7xb1bvsiz4wckEH9IENKTnk/kn1RYEnx70hZVmUiKEzyxgfkL7WeSeOR6NRxEHj2VBwFQnZIxegT91X8kmKB0i0t0qAK1huGHuNSI911cmfTmydJCKfSNbrY73Tp7dv2r/sLY4aN5sned7pFApUGFi0gj3iHlT0UaSQBa13VZ2/T07pAAyiBlCjPHMcGfFlwTQYo/U42BTbnCYD2oNKOdcu22sT4dpEuLZ52+qSjCrlMrAJwFgDTxWpV0H+mSZ7zsa6kKDKLB+pJFRKOrHuGnlxhySQnXuvRo7cadhsNII8K3qMR3cOvDsHZrNRgUKBvsrJELDytIwgAT1x8ihYWotxX/BEM8GdUdjCJBuNnErgutPxsnco2tF9pva7DuUjcmoq/gt6TGk56XQYZzos+XT8Gqvv05Q0UPmbGPFNsyrtfGIFNqAOq7mYsmcJz9TnoiMDEqiGS/oIc8FXRq/a+Rzi2JB6CUqhSqczktiIYXCCfRZdKZARS7Fd2xa0OLZvO5akr77xb6psxnEjyCjvFdhst2hJjrrk7Z4/kEIMS2G7FHI6BCsJ6tkFTsHH3cGuKTKNoapg7XeVqcPlU8vQKSGnIPWJSe53qv6ASRjYary3aQVlkKVWA5isafZZFhBiE2XAw3n9r9bPTYt0yRucAGdS4k12uu6yReZ8aR1n3wqaqTBkXLeeuh6KlN0zSG9x4MjgZkbZBj4Si/5TF+t2CS+y7GmnXuXpizp1Zvdanbq6F2fx6724dUN6Ep7ij/kY1Ke9AVaRsBTDtIMVfK7TDvNeaxrVANuxbfB6PzmXCOWH9ELYh814X+Rh2gG+ehybZ+Mcf40hPRsnkBvjMPjANUhOM1vnVF6/UffOLxZ8cHCwJqHTbMLSfCm35wgtlHw8g84WsMzwmNXT/ver+QlH56puhJHV3aYdvYuF+L82AeWi6X3vkVziHL+V4VSgEcLWs5QsJPKJt8rJem4XM/0iv6/eClbRSKz58oaI42dbou7KNQb+mLx0UMVx1bzcT/3XHuiPKDgX0i7rcyvqnv91C0yTBS3nrVHvP7DJqHLnpHwStlpWr7HfdctsaV9KRyzLSn2H0BeaIT/3ZtS1qjnP3YUFpay6AHH83xBmP16LMOt8BWH2XEX2YzVhVuWnIcxhRrzNI82YWZ7KWakF8VSZK0+QFa9h/6kVSYKbxmZT+ctcBD+NUUSf2/I2+39iholdCe1Od9te739JHQCb1tIZb4fdwo1hC1Bh9TV5FtLK3XgprgHFV/A/g7tgH/ve/AGFuc0t</source>
+  </file>
+  <file path="Test/Case/Model/BlockRolePermissionTest.php" generated-path="Test.Case.Model.BlockRolePermissionTest.html" hash="ead61fb695b8f7fa05fea8a60595ed98" package="Default">
+    <docblock line="0">
+      <description>BlockRolePermission Test Case</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Noriko Arai" link="mailto:arai@nii.ac.jp"/>
+      <tag name="author" line="0" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
+      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
+      <tag name="copyright" line="0" description="Copyright 2014, NetCommons Project"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="21" package="NetCommons\Blocks\Test\Case\Model">
+      <extends>\YACakeTestCase</extends>
+      <name>BlockRolePermissionTest</name>
+      <full_name>\BlockRolePermissionTest</full_name>
+      <docblock line="21">
+        <description>BlockRolePermission Test Case</description>
+        <long-description></long-description>
+        <tag name="author" line="21" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+        <tag name="package" line="21" description="NetCommons\Blocks\Test\Case\Model"/>
+      </docblock>
+      <property static="false" visibility="public" namespace="" line="28" package="NetCommons\Blocks\Test\Case\Model">
+        <name>$fixtures</name>
+        <full_name>\BlockRolePermissionTest::fixtures</full_name>
+        <default>array('plugin.blocks.block_role_permission')</default>
+        <docblock line="28">
+          <description>Fixtures</description>
+          <long-description></long-description>
+          <tag name="var" line="28" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="37" package="NetCommons\Blocks\Test\Case\Model">
+        <name>setUp</name>
+        <full_name>\BlockRolePermissionTest::setUp()</full_name>
+        <docblock line="37">
+          <description>setUp method</description>
+          <long-description></long-description>
+          <tag name="return" line="37" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="47" package="NetCommons\Blocks\Test\Case\Model">
+        <name>tearDown</name>
+        <full_name>\BlockRolePermissionTest::tearDown()</full_name>
+        <docblock line="47">
+          <description>tearDown method</description>
+          <long-description></long-description>
+          <tag name="return" line="47" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="58" package="NetCommons\Blocks\Test\Case\Model">
+        <name>testValidateBlockRolePermissions</name>
+        <full_name>\BlockRolePermissionTest::testValidateBlockRolePermissions()</full_name>
+        <docblock line="58">
+          <description>Expect BlockRolePermission-&gt;validateBlockRolePermissions() to return true on validation success</description>
+          <long-description></long-description>
+          <tag name="return" line="58" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="78" package="NetCommons\Blocks\Test\Case\Model">
+        <name>testValidateBlockRolePermissionsError</name>
+        <full_name>\BlockRolePermissionTest::testValidateBlockRolePermissionsError()</full_name>
+        <docblock line="78">
+          <description>Expect BlockRolePermission-&gt;validateBlockRolePermissions() to return true on validation error</description>
+          <long-description></long-description>
+          <tag name="return" line="78" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJzVU11P2zAUfU5+xX2olIJKMqY9BehgHTwxhIBNmlQJmeTSmCS25Q/aauK/z3bSkrLAxjRN20s+ru/HOece778XhQiT7e0QtuFDxbPygld4jrKmSlHO4AqVhglRaBNcziExuuASzrikJYcjSSjsE/s8ZJTGJIvvxLibd1nwAimckZLc0ZrAPmu/VMGNPTmc1YRWccbrpqyirIRCa5EmyXw+jxlqe1ZzpmIuZ3CGetL8wrnkd5jptipDpvD5wqTNiPVCd5ucNmHfJONiKemssHzXX2/f7L4b9U9NwvBIiDQ1CtUw6tEuGkETVvEnnmMVbe11K74eTUiJTl8nr0t+HBO78KWhGl3R7+zntboLkpVkhh2q0wb71E2YuglTz8IzzyqiVB8eDwcXGlmuYJMhfFsTOaELbSSqFeZ7IoFISZa+eSDMjV0XDG7bNDhoTodhEESiMjPK4ptGWP+6lhbDtegIHwYd2RTqzwJqtLrkq4kSbWcG95zmGzNvDcu009UXDbcs6CAQRCLTadrG9mxooAuqdsZ9GzmAiVPnAmdUablMU8qoHq6c0OcT1/FhDVcjkR/5nL0W8aquBW2srfXweZxOoEdqj8UbWI4Xwpq9b9E743tS0Zxo7DlUFoPm0ELW0iBYgG2BV9dkGSr1hNuL5JT+8vJARzpJBjaDdA2TJEHv5YSD8UZSENHcB3dHq4CzlbLm4vX1D2eN8Upc+nh0yiXWQIUyNeS8shdQUQ3ErjBal4jN4b9UYzUz6NOdim14y7+8Dy1he0FMpS3l53f9k2V5zdp2Tc+mk3UxSn1lBw/bKX/HHSgll3/OG8eu3f9okH/KBiekUk988BB+B/Zpoog=</source>
+  </file>
+  <file path="Test/Case/AllBlocksTest.php" generated-path="Test.Case.AllBlocksTest.html" hash="6cc97c63a2d96f77eaa53522f0944e19" package="Default">
+    <docblock line="0">
+      <description>Blocks All Test Case</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Noriko Arai" link="mailto:arai@nii.ac.jp"/>
+      <tag name="author" line="0" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
+      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
+      <tag name="copyright" line="0" description="Copyright 2014, NetCommons Project"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="19" package="NetCommons\Blocks\Test\Case">
+      <extends>\CakeTestSuite</extends>
+      <name>AllBlocksTest</name>
+      <full_name>\AllBlocksTest</full_name>
+      <docblock line="19">
+        <description>Blocks All Test Case</description>
+        <long-description></long-description>
+        <tag name="author" line="19" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+        <tag name="package" line="19" description="NetCommons\Blocks\Test\Case"/>
+        <tag name="codeCoverageIgnore" line="19" description=""/>
+      </docblock>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="26" package="NetCommons\Blocks\Test\Case">
+        <name>suite</name>
+        <full_name>\AllBlocksTest::suite()</full_name>
+        <docblock line="26">
+          <description>All test suite</description>
+          <long-description></long-description>
+          <tag name="return" line="26" description="" type="\CakeTestSuite">
+            <type>\CakeTestSuite</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJyVUc1u2zAMPsdPwUMGO1lnr8VOWdYlSy8DimCYe1s2Q1NYW7EjCRJdtxj67qNst0iB7dCLRJH8fkgtP9vKRtl8HsEcvjRG1h7WTQM36Ak2wiPnQ2klWqqMg61xqjawdkLBUvC50kqlQqYHe3nal1emQgVbUYuDOgpY6jHylWm5siqPQjWpNMcB1ihdQ0VkF1nWdV2qkbh2NNqnxpWwRdoMT/jmzAEljSiJ2uP/gdnYkdI9nZJcD+meRBr74FRZ8bzP0cX78w9n/1bNoles67VrsELWosQT5d2gsgsKu1EheN7jxtyh4+avpTYOe2eyEb43NIB6V3hPqPee3dUYEnmrCOHP8xTBPoVGHwpP/h1S6/RLUC8xse1vXip4EsTXbaslKaMHdDJj4slkapu2VBo+gXVYFg5tIyQmcfaLxZIfu+7n21lgnWbxGcTTcz6LYnO9zvOimH0MBD0b4zV2Lz0k3jql6TaJg+83/DGDVJjAM88oPTuheXcp9vtAcKUcf6FxD99Rts6rO0wC98CwWFhBVfKEhxTigIk5uMrDK+w+7mnH3QzsnHiMHqO/xxwTbA==</source>
+  </file>
+  <file path="Test/Fixture/BlockRolePermissionFixture.php" generated-path="Test.Fixture.BlockRolePermissionFixture.html" hash="ec30ed815c995197fcfe8914947a6a2c" package="Default">
+    <docblock line="0">
+      <description>BlockRolePermissionFixture</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Noriko Arai" link="mailto:arai@nii.ac.jp"/>
+      <tag name="author" line="0" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
+      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
+      <tag name="copyright" line="0" description="Copyright 2014, NetCommons Project"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="18" package="NetCommons\Blocks\Test\Fixture">
+      <extends>\CakeTestFixture</extends>
+      <name>BlockRolePermissionFixture</name>
+      <full_name>\BlockRolePermissionFixture</full_name>
+      <docblock line="18">
+        <description>BlockRolePermissionFixture</description>
+        <long-description></long-description>
+        <tag name="author" line="18" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+        <tag name="package" line="18" description="NetCommons\Blocks\Test\Fixture"/>
+      </docblock>
+      <property static="false" visibility="public" namespace="" line="25" package="NetCommons\Blocks\Test\Fixture">
+        <name>$fields</name>
+        <full_name>\BlockRolePermissionFixture::fields</full_name>
+        <default>array('id' =&gt; array('type' =&gt; 'integer', 'null' =&gt; false, 'default' =&gt; null, 'key' =&gt; 'primary'), 'roles_room_id' =&gt; array('type' =&gt; 'integer', 'null' =&gt; false, 'default' =&gt; null), 'block_key' =&gt; array('type' =&gt; 'string', 'null' =&gt; false, 'default' =&gt; null, 'collate' =&gt; 'utf8_general_ci', 'charset' =&gt; 'utf8'), 'permission' =&gt; array('type' =&gt; 'string', 'null' =&gt; false, 'default' =&gt; null, 'collate' =&gt; 'utf8_general_ci', 'comment' =&gt; 'Permission name
+e.g.) create_content,  post_top_article', 'charset' =&gt; 'utf8'), 'value' =&gt; array('type' =&gt; 'boolean', 'null' =&gt; false, 'default' =&gt; null), 'created_user' =&gt; array('type' =&gt; 'integer', 'null' =&gt; true, 'default' =&gt; null), 'created' =&gt; array('type' =&gt; 'datetime', 'null' =&gt; true, 'default' =&gt; null), 'modified_user' =&gt; array('type' =&gt; 'integer', 'null' =&gt; true, 'default' =&gt; null), 'modified' =&gt; array('type' =&gt; 'datetime', 'null' =&gt; true, 'default' =&gt; null), 'indexes' =&gt; array('PRIMARY' =&gt; array('column' =&gt; 'id', 'unique' =&gt; 1)), 'tableParameters' =&gt; array('charset' =&gt; 'utf8', 'collate' =&gt; 'utf8_general_ci', 'engine' =&gt; 'InnoDB'))</default>
+        <docblock line="25">
+          <description>Fields</description>
+          <long-description></long-description>
+          <tag name="var" line="25" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="" line="47" package="NetCommons\Blocks\Test\Fixture">
+        <name>$records</name>
+        <full_name>\BlockRolePermissionFixture::records</full_name>
+        <default>array(array('id' =&gt; 1, 'roles_room_id' =&gt; 1, 'block_key' =&gt; 'Lorem ipsum dolor sit amet', 'permission' =&gt; 'Lorem ipsum dolor sit amet', 'value' =&gt; 1, 'created_user' =&gt; 1, 'created' =&gt; '2014-10-10 13:44:57', 'modified_user' =&gt; 1, 'modified' =&gt; '2014-10-10 13:44:57'), array('id' =&gt; '100', 'roles_room_id' =&gt; 4, 'block_key' =&gt; 'block_100', 'permission' =&gt; 'content_creatable', 'value' =&gt; true), array('id' =&gt; '101', 'roles_room_id' =&gt; 2, 'block_key' =&gt; 'block_100', 'permission' =&gt; 'content_publishable', 'value' =&gt; true), array('id' =&gt; '102', 'roles_room_id' =&gt; 3, 'block_key' =&gt; 'block_100', 'permission' =&gt; 'content_publishable', 'value' =&gt; true))</default>
+        <docblock line="47">
+          <description>Records</description>
+          <long-description></long-description>
+          <tag name="var" line="47" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+    </class>
+    <source>eJy9VVtP2zAUfm5+hR8mZUVd0kCnTQwYlwkJiSHU7WUSUuQ6p4mJYwdfoNW0/z4ncduUtlA2hBRF8bl85zsXnxx8LbPSC3d2PLSDTpkg+VAwuAZZUKWo4Od0oo0Eq60MjrHRmZDoSkiaC3QiMUUH2L6POaUBJsFtedS2+5GJDCi6wjm+pQVGB9x9qUwYqzlOC0xZQETRuDHKc5RpXe6H4cPDQ8BBW10huAqETNEV6LPmiK6luAWinRcBrmCzY+gsAj3RbZDLRlyDEFFOJU0zjc7mX7v9aNBbHzX0Xly0lxajxCTHKbTi39Sx1M1PUPpmEST0CMNKPcEEwUQDTxQ6wzlU3jP573ka5xRYomaU77FEWEo8reE7pRnZEqJ349oIHTa6916n49PER4dHTuDraQn12adcQwrS7yGfG8Zq4RgzBVaQwBgbpmtZpbSiHKaNXyltReTU7/YqdGmzUbEUoohfI1ADOqrqFM8irgAqLSlPtyVOBGNYO1ejx5/jFDhIzGJCKwySYalAL/Qus3LeozdhYQcIuGOxGA/EcQEeBGnQRUSCRYiJsPXkuodQKZSOtShjLDUlDJ7K5h4zA+sTGQnbQ8xf0J+GSRIbZdu6dc+1NM9CrkdLrErTAraHK0RC7V14VYozzNfiSHkCE1AtOCvt+NfDi+8nw1/tKHZ4TMEd7aSKYDi9c/2MutatQdR4ZHeLXfcFaJBqCWJlLrYYSuAp5U59wbn4durbYN0v8500BCLks0tJNlbtrdTK162NqFefVveJUyzvBP9SSCgQLZUpUCKY3d6KalQl7jf2j67v8w6LG+Iirkz5sryBrf5AH6K+fVC0tz8Y7H/85PBWRzBaVmwGaBpq32F4ju8UKpmxjVhbNj/q9/1NpRusLV1zXPg9rpRbMHGdZzVRKwWqx3o2dWs5RRs57f4Xp3qkVPaPrHY3stp7E1bVzfnj/QX6lO9H</source>
+  </file>
+  <file path="Test/Fixture/BlockFixture.php" generated-path="Test.Fixture.BlockFixture.html" hash="fc945280f675a8ebe9dc03b5c751ac01" package="Default">
+    <docblock line="0">
+      <description>BlockFixture</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Noriko Arai" link="mailto:arai@nii.ac.jp"/>
+      <tag name="author" line="0" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
+      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
+      <tag name="copyright" line="0" description="Copyright 2014, NetCommons Project"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="18" package="NetCommons\Blocks\Test\Fixture">
+      <extends>\CakeTestFixture</extends>
+      <name>BlockFixture</name>
+      <full_name>\BlockFixture</full_name>
+      <docblock line="18">
+        <description>BlockFixture</description>
+        <long-description></long-description>
+        <tag name="author" line="18" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+        <tag name="package" line="18" description="NetCommons\Blocks\Test\Fixture"/>
+      </docblock>
+      <property static="false" visibility="public" namespace="" line="25" package="NetCommons\Blocks\Test\Fixture">
+        <name>$fields</name>
+        <full_name>\BlockFixture::fields</full_name>
+        <default>array('id' =&gt; array('type' =&gt; 'integer', 'null' =&gt; false, 'default' =&gt; null, 'key' =&gt; 'primary'), 'language_id' =&gt; array('type' =&gt; 'integer', 'null' =&gt; false, 'default' =&gt; null, 'length' =&gt; 6), 'room_id' =&gt; array('type' =&gt; 'integer', 'null' =&gt; true, 'default' =&gt; null), 'plugin_key' =&gt; array('type' =&gt; 'string', 'null' =&gt; true, 'default' =&gt; null, 'collate' =&gt; 'utf8_general_ci', 'comment' =&gt; 'Key of the plugin.', 'charset' =&gt; 'utf8'), 'key' =&gt; array('type' =&gt; 'string', 'null' =&gt; false, 'default' =&gt; null, 'collate' =&gt; 'utf8_general_ci', 'comment' =&gt; 'Key of the block.', 'charset' =&gt; 'utf8'), 'name' =&gt; array('type' =&gt; 'string', 'null' =&gt; false, 'default' =&gt; null, 'collate' =&gt; 'utf8_general_ci', 'comment' =&gt; 'Name of the block.', 'charset' =&gt; 'utf8'), 'public_type' =&gt; array('type' =&gt; 'integer', 'null' =&gt; false, 'default' =&gt; '1', 'length' =&gt; 4, 'comment' =&gt; ''), 'from' =&gt; array('type' =&gt; 'datetime', 'null' =&gt; true, 'default' =&gt; null, 'comment' =&gt; 'Datetime display frame from.'), 'to' =&gt; array('type' =&gt; 'datetime', 'null' =&gt; true, 'default' =&gt; null, 'comment' =&gt; 'Datetime display frame to.'), 'created_user' =&gt; array('type' =&gt; 'integer', 'null' =&gt; true, 'default' =&gt; null), 'created' =&gt; array('type' =&gt; 'datetime', 'null' =&gt; true, 'default' =&gt; null), 'modified_user' =&gt; array('type' =&gt; 'integer', 'null' =&gt; true, 'default' =&gt; null), 'modified' =&gt; array('type' =&gt; 'datetime', 'null' =&gt; true, 'default' =&gt; null), 'indexes' =&gt; array('PRIMARY' =&gt; array('column' =&gt; 'id', 'unique' =&gt; 1)), 'tableParameters' =&gt; array('charset' =&gt; 'utf8', 'collate' =&gt; 'utf8_general_ci', 'engine' =&gt; 'InnoDB'))</default>
+        <docblock line="25">
+          <description>Fields</description>
+          <long-description></long-description>
+          <tag name="var" line="25" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="" line="50" package="NetCommons\Blocks\Test\Fixture">
+        <name>$records</name>
+        <full_name>\BlockFixture::records</full_name>
+        <default>array(array('id' =&gt; 1, 'language_id' =&gt; 2, 'room_id' =&gt; 1, 'plugin_key' =&gt; 'blocks', 'key' =&gt; 'block_1', 'created_user' =&gt; 1, 'created' =&gt; '2014-06-18 02:06:22', 'modified_user' =&gt; 1, 'modified' =&gt; '2014-06-18 02:06:22'), array('id' =&gt; 2, 'language_id' =&gt; 2, 'room_id' =&gt; 2, 'plugin_key' =&gt; 'blocks', 'key' =&gt; 'block_2', 'created_user' =&gt; 2, 'created' =&gt; '2014-06-18 02:06:22', 'modified_user' =&gt; 2, 'modified' =&gt; '2014-06-18 02:06:22'), array('id' =&gt; 3, 'language_id' =&gt; 2, 'room_id' =&gt; 3, 'plugin_key' =&gt; 'blocks', 'key' =&gt; 'block_3', 'created_user' =&gt; 3, 'created' =&gt; '2014-06-18 02:06:22', 'modified_user' =&gt; 3, 'modified' =&gt; '2014-06-18 02:06:22'), array('id' =&gt; 4, 'language_id' =&gt; 2, 'room_id' =&gt; 4, 'plugin_key' =&gt; 'blocks', 'key' =&gt; 'block_4', 'created_user' =&gt; 4, 'created' =&gt; '2014-06-18 02:06:22', 'modified_user' =&gt; 4, 'modified' =&gt; '2014-06-18 02:06:22'), array('id' =&gt; 5, 'language_id' =&gt; 2, 'room_id' =&gt; 1, 'plugin_key' =&gt; 'blocks', 'key' =&gt; 'block_5', 'created_user' =&gt; 5, 'created' =&gt; '2014-06-18 02:06:22', 'modified_user' =&gt; 5, 'modified' =&gt; '2014-06-18 02:06:22'), array('id' =&gt; 6, 'language_id' =&gt; 2, 'room_id' =&gt; 6, 'plugin_key' =&gt; 'blocks', 'key' =&gt; 'block_6', 'created_user' =&gt; 6, 'created' =&gt; '2014-06-18 02:06:22', 'modified_user' =&gt; 6, 'modified' =&gt; '2014-06-18 02:06:22'), array('id' =&gt; 7, 'language_id' =&gt; 2, 'room_id' =&gt; 7, 'plugin_key' =&gt; 'blocks', 'key' =&gt; 'block_7', 'created_user' =&gt; 7, 'created' =&gt; '2014-06-18 02:06:22', 'modified_user' =&gt; 7, 'modified' =&gt; '2014-06-18 02:06:22'), array('id' =&gt; 8, 'language_id' =&gt; 2, 'room_id' =&gt; 8, 'plugin_key' =&gt; 'blocks', 'key' =&gt; 'block_8', 'created_user' =&gt; 8, 'created' =&gt; '2014-06-18 02:06:22', 'modified_user' =&gt; 8, 'modified' =&gt; '2014-06-18 02:06:22'), array('id' =&gt; 9, 'language_id' =&gt; 2, 'room_id' =&gt; 9, 'plugin_key' =&gt; 'blocks', 'key' =&gt; 'block_9', 'created_user' =&gt; 9, 'created' =&gt; '2014-06-18 02:06:22', 'modified_user' =&gt; 9, 'modified' =&gt; '2014-06-18 02:06:22'), array('id' =&gt; 10, 'language_id' =&gt; 2, 'room_id' =&gt; 10, 'plugin_key' =&gt; 'blocks', 'key' =&gt; 'block_10', 'created_user' =&gt; 10, 'created' =&gt; '2014-06-18 02:06:22', 'modified_user' =&gt; 10, 'modified' =&gt; '2014-06-18 02:06:22'), array('id' =&gt; '100', 'language_id' =&gt; '2', 'room_id' =&gt; '1', 'plugin_key' =&gt; 'faqs', 'key' =&gt; 'block_100'), array('id' =&gt; '101', 'language_id' =&gt; '2', 'room_id' =&gt; '1', 'plugin_key' =&gt; 'faqs', 'key' =&gt; 'block_101'), array('id' =&gt; '102', 'language_id' =&gt; '2', 'room_id' =&gt; '2', 'plugin_key' =&gt; 'faqs', 'key' =&gt; 'block_102'), array('id' =&gt; '121', 'language_id' =&gt; '2', 'room_id' =&gt; '1', 'plugin_key' =&gt; 'edumap', 'key' =&gt; 'block_121'), array('id' =&gt; '122', 'language_id' =&gt; '2', 'room_id' =&gt; '1', 'plugin_key' =&gt; 'edumap', 'key' =&gt; 'block_122'), array('id' =&gt; '123', 'language_id' =&gt; '2', 'room_id' =&gt; '2', 'plugin_key' =&gt; 'edumap', 'key' =&gt; 'block_123'), array('id' =&gt; '141', 'language_id' =&gt; '2', 'room_id' =&gt; '1', 'plugin_key' =&gt; 'iframes', 'key' =&gt; 'block_141'), array('id' =&gt; '142', 'language_id' =&gt; '2', 'room_id' =&gt; '1', 'plugin_key' =&gt; 'iframes', 'key' =&gt; 'block_142'), array('id' =&gt; '143', 'language_id' =&gt; '2', 'room_id' =&gt; '2', 'plugin_key' =&gt; 'iframes', 'key' =&gt; 'block_143'), array('id' =&gt; '161', 'language_id' =&gt; '2', 'room_id' =&gt; '1', 'plugin_key' =&gt; 'access_counters', 'key' =&gt; 'block_161'), array('id' =&gt; '162', 'language_id' =&gt; '2', 'room_id' =&gt; '1', 'plugin_key' =&gt; 'access_counters', 'key' =&gt; 'block_162'), array('id' =&gt; '163', 'language_id' =&gt; '2', 'room_id' =&gt; '2', 'plugin_key' =&gt; 'access_counters', 'key' =&gt; 'block_163'), array('id' =&gt; '181', 'language_id' =&gt; '2', 'room_id' =&gt; '1', 'plugin_key' =&gt; 'rss_readers', 'key' =&gt; 'block_181'), array('id' =&gt; '182', 'language_id' =&gt; '2', 'room_id' =&gt; '1', 'plugin_key' =&gt; 'rss_readers', 'key' =&gt; 'block_182'), array('id' =&gt; '183', 'language_id' =&gt; '2', 'room_id' =&gt; '2', 'plugin_key' =&gt; 'rss_readers', 'key' =&gt; 'block_183'), array('id' =&gt; '186', 'language_id' =&gt; '2', 'room_id' =&gt; '1', 'plugin_key' =&gt; 'rss_readers', 'key' =&gt; 'block_186'), array('id' =&gt; '191', 'language_id' =&gt; '2', 'room_id' =&gt; '1', 'plugin_key' =&gt; 'topics', 'key' =&gt; 'block_191'), array('id' =&gt; '192', 'language_id' =&gt; '2', 'room_id' =&gt; '1', 'to' =&gt; '2000-01-01 00:00:00', 'plugin_key' =&gt; 'topics', 'key' =&gt; 'block_192'), array('id' =&gt; '193', 'language_id' =&gt; '2', 'room_id' =&gt; '2', 'plugin_key' =&gt; 'topics', 'key' =&gt; 'block_193'), array('id' =&gt; '196', 'language_id' =&gt; '2', 'room_id' =&gt; '1', 'plugin_key' =&gt; 'topics', 'key' =&gt; 'block_196'))</default>
+        <docblock line="50">
+          <description>Records</description>
+          <long-description></long-description>
+          <tag name="var" line="50" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+    </class>
+    <source>eJy9WGFvqzYU/dz8Cn+YxFq1CRBKSNf31r6+Vaq2VVX2vkyqFLnggBuwqW3WRtP++wyYPkhLgMCrFEXh2r7nnHuuweT81ziIR5OjoxE4Al9C6q6v8YtIGJLXaegCJiKgDNxShtcUXDKIwTmU3xcE4zF0x4/x5/K8vwIaIAxu4Ro+4giCc6J+8YAmcuTCjyAOxy6N8mUhJmsQCBGfTSbPz89jgoQciyjhY8p8cIvEVX4J7hh9RK5Qq1xEOKpfOFEzxuJFlJP8kYezJC6NNwz7gQBXr79M3bCO30edjFqUqav8GLpr6KMS4n2Wnd9/Q1zcfweZjNwQcl7BBuhFIOJxcAXXKJ1fxP99pXqNUejxguQ/kAHIGNxkCQ/i5EGWCfy0yiaBT/nYz6ODAw17Gvj0WQU0sYlRdq1hIpCPmHYMNJKEYRZcwZAjGfDQCiahyGLpoAyt0SZfFzNZA7bRDo/T7CEkfiJlLweCCRHxRZBF7ByBURp1yi5Y8l7yPFscJj4my0LNm4RcMEz8NvlkyKVhCIVamYiVs/QRQQyGSxdr2XgUIZIv0X5HG0BXQAQI5CTG2ZQAMo7E9xSqrl0I7ijnvgwf0t7cSZDACH04w1sJ2p5ivimWr8z27k3N0KqtaW0TU4grRqP3oTypUWBZsradVUr+Va0FHuZxCDdgxdI6pGBjBSzoh8EKWoC6DMkp3jLhsobDbE+Vsr+YPF1EPSxviYNSLHIOxRETD70gXkonowfa3eLmz8vF32UUuVWSiCjaXoqQEPyU5MjGoVymmgE+hOgOpm4JxHglxZut0mILyr7HRA3fEEK/ftEk2OEvr4+mBXIpa3w2sXxW+eFU0qvu8MZxdrX9WDHzcPlZoGZu3dC17LbAtXywGl0aKvymcY1KPF+Snh9OdPvEcIBunun2mWmq5W+7yqgO1CcoPHor3Gwt3Owu3KwTbvYUbvYXPm0tfNpd+LRO+LSn8Gl/4VZr4VZ34VadcKuncKu/8NMfucdP64Sf9hR+2l+43Vq43V24XSfc7inc7i981lr4rLvwWZ3wWU/hs/7CndbCne7CnTrhTk/hTn/h89bC592Fz+uEz3sKn/cXbujt7276HkcYvfYMo/c9xOjd1MvvyeQaPqnX2XeroRl6QXi7IFrBpFwSrTiibddkBZ9qK5Ij1PghGRg/nIHRwMDsxMDcg4FZMMhc+c1LIhjvNsYcpiwog6qhZTYUxuxWmP04mA0cpoOYs5vDtGLPTfYmzXf7Yw3jD86xaohZDQZZwxjUQKLBIWsYhxpIVC26dF3E+RVNSPoKvdspexinYAa5dBVmDU+7wTF7GMdakmlwzh7GuZZkqg4uOF8g6DW65wzjHpMEWY5Xw89pcM4ZxrkWRBpcc4ZxrQWRaQMR+6MqYlda5xuNsdvQNvNh2kZkUDW05g0dM9+vY9SfxfJop+snuiE/QNfPss9eLBvaaT5MO+3m0NBJ82E6aTeHUhOlf47+N/ofP0Oy/w==</source>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="NetCommons" full_name="NetCommons">
+    <package name="Blocks" full_name="NetCommons\Blocks">
+      <package name="Controller" full_name="NetCommons\Blocks\Controller">
+        <package name="Component" full_name="NetCommons\Blocks\Controller\Component"/>
+      </package>
+      <package name="Model" full_name="NetCommons\Blocks\Model">
+        <package name="Behavior" full_name="NetCommons\Blocks\Model\Behavior"/>
+      </package>
+      <package name="Test" full_name="NetCommons\Blocks\Test">
+        <package name="Case" full_name="NetCommons\Blocks\Test\Case">
+          <package name="Model" full_name="NetCommons\Blocks\Test\Case\Model"/>
+        </package>
+        <package name="Fixture" full_name="NetCommons\Blocks\Test\Fixture"/>
+      </package>
+      <package name="View" full_name="NetCommons\Blocks\View">
+        <package name="Helper" full_name="NetCommons\Blocks\View\Helper"/>
+      </package>
+    </package>
+  </package>
+  <package name="global" full_name="global"/>
+  <namespace name="global" full_name="global"/>
+  <deprecated count="0"/>
+</project>
