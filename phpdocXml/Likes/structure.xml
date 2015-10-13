@@ -6130,7 +6130,7 @@ e.g.) packagist', 'charset' =&gt; 'utf8'), 'weight' =&gt; array('type' =&gt; 'in
     </class>
     <source>eJzlVU1rE0EYPie/Yg6BzZY0acVTP2KlpiCYKLa3WmTcnWSn2Z1ZZ2bTFCnYLKiV9ir0JK2CoFDBm1/4Y5bS5l84O7PdbJtEIuhBPARm33nej+d533mzcMN3/HxlaioPpkADiWXqeZTwW8hFAq0hLqQ9vlqCgXAoA6sOdRAGDdiGm9iDYIEkJ+7QQN4stTyI3bJFvapyczFpA0cIf65S2draKhMkLJ2iTFkrkxHcY3QTWSLxshDhaLxjJUGURVdkg9zRZhXEov42wy1HgOX0dG1m9nppdNZKPn/T9+fmAo540RhA6tRGbqzEMuTIKIHMVTk2rwZYIMOcz/9FFX1otWELZUI/yBzTKhQLy4WcjywCoK5AxM5eXiIHnqQclB0Q6KGLyjuQAcgY3FZJcj6jQuqGbFB46MXghsSCRWAYAyHqSJK1J46i0CPCaALR7kkUPot6n6PwxUU0HzLo6XigYEMBweney/7h2yh8HoXfot6PYZTUhloYCkyJ4sgTl7PjL+fvD2SS/qvj/tM3UXisgnzQfkVFESxWgUWJjWNvbqrgcVY5Qx1sIwayH7pqhWFIBIyADsV2Qjt4JOcXNANixaGAkA3Q+KKiURpV5yIggeuaskm5XCGpBxSEg/l0ddCCeXWrhc9cp9pKWXO5SiWV8vTk9fnR/unegdJ3N+q9i8Iw6n2Mw1g0IGIQRSedrjYxsYuGupTPQesj4TmDIStgHHeQESs1PVtS1oFiyqzxRhttq0/Fd/1KBuhiyDfWFWjDjMOYpiKmYVIbxESDitrjALq8OCP1UuWYih1uguKwflq4XJMyBC1nFAJAnuhev+h2IdNu7T+sysBjvDTjxBmWJ5NRIzTzibhL1E4+/o1qcSwfQzxwR3Q0GRg9fMNKr7FADqZ2NtMB+pdm5b8dlF9NSTwoV1dsrWshPw5aY4yyCRbu2eHX/v6nUQuXC4ZJC8g+WW2tU12e1JpJdus4sN5eKfoo6n2PBy3cm2Tj3iWXOfzuBr7qn27klEcpW+Yf2ccDL6u9Qtl9Ve2KbJx8dl425XD6rD9Hotb11f9pyqFo3CYCMQJdxSa1G9lHMnYPyAnZyf8EE21xFQ==</source>
   </file>
-  <file path="Plugin/Likes/Model/Behavior/LikeBehavior.php" generated-path="Plugin.Likes.Model.Behavior.LikeBehavior.html" hash="2a8f57a52ee016c9e6e64cf2cf3ee4c9" package="Default">
+  <file path="Plugin/Likes/Model/Behavior/LikeBehavior.php" generated-path="Plugin.Likes.Model.Behavior.LikeBehavior.html" hash="b5f0d45eae7b4a5bfab941e8f4d04e1d" package="Default">
     <docblock line="0">
       <description>Like Behavior</description>
       <long-description></long-description>
@@ -6140,53 +6140,83 @@ e.g.) packagist', 'charset' =&gt; 'utf8'), 'weight' =&gt; array('type' =&gt; 'in
       <tag name="copyright" line="0" description="Copyright 2014, NetCommons Project"/>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <class final="false" abstract="false" namespace="" line="17" package="NetCommons\Likes\Model\Behavior">
+    <class final="false" abstract="false" namespace="" line="49" package="NetCommons\Likes\Model\Behavior">
       <extends>\ModelBehavior</extends>
       <name>LikeBehavior</name>
       <full_name>\LikeBehavior</full_name>
-      <docblock line="17">
+      <docblock line="49">
         <description>Like Behavior</description>
-        <long-description></long-description>
-        <tag name="author" line="17" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
-        <tag name="package" line="17" description="NetCommons\Likes\Model\Behavior"/>
+        <long-description>使用するプラグインのコンテンツモデルにLikeモデル、LikesUserモデルの
+アソシエーションを設定します。&lt;br&gt;
+fieldオプションの指定がない場合は全データを取得しますが、&lt;br&gt;
+fieldオプションを個別に指定する場合は、Likeモデルのfieldも明示的に指定してください。&lt;br&gt;
+
+#### ContentModel
+```
+class BbsArticle extends BbsesAppModel {
+	public $actsAs = array(
+		'Likes.Like'
+	)
+}
+```
+#### ContentController
+```
+$bbsArticle = $this-&gt;BbsArticle-&gt;find('list');
+```
+#### ResultSample
+```
+$bbsArticle = array(
+	'BbsArticle' =&gt; array(...),
+	'Likes' =&gt; array(
+		'id' =&gt; '999',
+		'plugin_key' =&gt; 'abcdefg',
+		'block_key' =&gt; 'abcdefg',
+		'content_key' =&gt; 'abcdefg',
+		'like_count' =&gt; '9',
+		'unlike_count' =&gt; '9',
+	)
+)
+```</long-description>
+        <tag name="author" line="49" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+        <tag name="package" line="49" description="NetCommons\Likes\Model\Behavior"/>
       </docblock>
-      <property static="false" visibility="private" namespace="" line="24" package="NetCommons\Likes\Model\Behavior">
+      <property static="false" visibility="private" namespace="" line="56" package="NetCommons\Likes\Model\Behavior">
         <name>$__model</name>
         <full_name>\LikeBehavior::__model</full_name>
         <default></default>
-        <docblock line="24">
+        <docblock line="56">
           <description>Model name</description>
           <long-description></long-description>
-          <tag name="var" line="24" description="" type="array" variable="">
+          <tag name="var" line="56" description="" type="array" variable="">
             <type>array</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="" line="31" package="NetCommons\Likes\Model\Behavior">
+      <property static="false" visibility="private" namespace="" line="63" package="NetCommons\Likes\Model\Behavior">
         <name>$__field</name>
         <full_name>\LikeBehavior::__field</full_name>
         <default></default>
-        <docblock line="31">
+        <docblock line="63">
           <description>Key field name</description>
           <long-description></long-description>
-          <tag name="var" line="31" description="" type="array" variable="">
+          <tag name="var" line="63" description="" type="array" variable="">
             <type>array</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="40" package="NetCommons\Likes\Model\Behavior">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="72" package="NetCommons\Likes\Model\Behavior">
         <name>setup</name>
         <full_name>\LikeBehavior::setup()</full_name>
-        <docblock line="40">
+        <docblock line="72">
           <description>SetUp behavior</description>
           <long-description></long-description>
-          <tag name="param" line="40" description="&lt;p&gt;instance of model&lt;/p&gt;" type="object" variable="$model">
+          <tag name="param" line="72" description="&lt;p&gt;instance of model&lt;/p&gt;" type="object" variable="$model">
             <type>object</type>
           </tag>
-          <tag name="param" line="40" description="&lt;p&gt;array of configuration settings.&lt;/p&gt;" type="array" variable="$config">
+          <tag name="param" line="72" description="&lt;p&gt;array of configuration settings.&lt;/p&gt;" type="array" variable="$config">
             <type>array</type>
           </tag>
-          <tag name="return" line="40" description="" type="void">
+          <tag name="return" line="72" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -6201,20 +6231,20 @@ e.g.) packagist', 'charset' =&gt; 'utf8'), 'weight' =&gt; array('type' =&gt; 'in
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="66" package="NetCommons\Likes\Model\Behavior">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="98" package="NetCommons\Likes\Model\Behavior">
         <name>beforeFind</name>
         <full_name>\LikeBehavior::beforeFind()</full_name>
-        <docblock line="66">
+        <docblock line="98">
           <description>beforeFind can be used to cancel find operations, or modify the query that will be executed.</description>
           <long-description>By returning null/false you can abort a find. By returning an array you can modify/replace the query
 that is going to be run.</long-description>
-          <tag name="param" line="66" description="&lt;p&gt;Model using this behavior&lt;/p&gt;" type="\Model" variable="$model">
+          <tag name="param" line="98" description="&lt;p&gt;Model using this behavior&lt;/p&gt;" type="\Model" variable="$model">
             <type>\Model</type>
           </tag>
-          <tag name="param" line="66" description="&lt;p&gt;Data used to execute this query, i.e. conditions, order, etc.&lt;/p&gt;" type="array" variable="$query">
+          <tag name="param" line="98" description="&lt;p&gt;Data used to execute this query, i.e. conditions, order, etc.&lt;/p&gt;" type="array" variable="$query">
             <type>array</type>
           </tag>
-          <tag name="return" line="66" description="False or null will abort the operation. You can return an array to replace the&#10;  $query that will be eventually run." type="boolean|array">
+          <tag name="return" line="98" description="False or null will abort the operation. You can return an array to replace the&#10;  $query that will be eventually run." type="boolean|array">
             <type>boolean</type>
             <type>array</type>
           </tag>
@@ -6231,7 +6261,7 @@ that is going to be run.</long-description>
         </argument>
       </method>
     </class>
-    <source>eJy1VsFuJDUQPWe+opCi7Z5o0g2I0+xOWG1gxUIIiLAHlCwjT3dNjzM9dq/tTjKCHLI3PgIhxD9w4XOC+A7ssrun0zthAxKXSbv8ql75VZWdJx9Xi2qQ7u0NYA+O+BLhGS7YBZfKGpztKavNQio4WcgFcjhmS3bOVwyeiPClF7K2O0+LFeNlksnVAbmVXCxhYUw1TtPLy8tEoLF7Kyl0IlUBx2gO/RK+VvIcMxO8MhQa73dMAyIxV6Yb5MibKUgmq7XixcLAYfv14fsffDTazpoO/o/zVyxbsgI7lGcuvD77UuZYnnVY0kFWMq2JvTEDXhkUuQZCt9Yf2lTJDoKtsMnzgilgSrE1hdypFL9gBmF3Ol057OPW9Qtcw5xjmT/QnbAb9xM0LyuY9VSqmGIrkDOnKewSI3ChDRMZgpwDWTpIooLdTIo5L8LKwvy6VsxwKUCjMVwUOiFHhaZWAi4kz0OO9cx2A8xrkTXwuoq9Mj6FUcsw8RzxcGhF3Nnhc4i5tg5xAJxG5BC9CoCdXbPgev8gqGf9+8DHFnUNWNpuvceBPvYPnMoEHmwnJn23EPsadYgD8F7ixiFa4jpqGa3eKMx47NXp6TK0sOu2tDOcS4XPucghY8IuodaYg5FumdlDzd2WrNDXR4/A9qQNyOdrMAuE1zUq98UMXPKydAHwCrPaYE4lfLYGX0RbVBB1WaZz5o6xljURsplUBhjRJHfRbpeapMF62lRhVTLbYi2946EMuIZCOlebvk1E1SK526zdRgmLWpOD1bPb4L2e9af8hBnWyhNO6T1pfwQ8wcT1c85brXJUI7DX2Z1+nklZ/uhDPyc1rKZOGy+hl8SdrpU9ge+CBiFCq43NpKOHI4Em3btFubAdUbOyXDeybJmmTTP0R4oi+m5tepxuzgkcuovsGyy4Nmo9HnPBTRzRtZe438i12x0f/VKjercjwZy3c99o6oaDkjmNNkY/IH7Opn7ot4GGMJlMgPovDF5Q04Pb8bF0Zb0irnCDNOHfgzDIITqNn+4M8saTjpLsRW+N7gbSj7Itgc/sYzMer1AVGMeUzbDZHfnspnb0ddyRaEjppim9Ln/9/Ouff/x+e/Pm9ua325tfbt/89PlXL47b41QKi2lhOyiO0u8d/ixJI7oqiGIIjx7BFhQVpwf9R0kfJF7P7kQM+g02u+d2wO3m6au2Os43MmxWYgSTA+j22v4B2UcEYSVneguE7B5i1pUPEh19+vzbyBs7LeS2NqQ7vsZVWRdcuDLQ/gsxL+2LKNV4XAs7/jqzMxU3lB48pMj99yOBKInsb+92t2YnhftLfDYf+4+CIUKKM7Q/YVDKpjiH3Ynp6EQRuHsy2jomzmnKcwrWtvphrfwjopDlcURAi2mLtYXpNNrEtNekcjFdme4L9dZovCOmRq2tjQ5OcdkST7zN3h+5H9P/3CvE8YCGCbh/2TXbztbI3R+Z68H14G9LRrJh</source>
+    <source>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</source>
   </file>
   <file path="Plugin/NetCommons/Test/Fixture/TrackablesUserFixture.php" generated-path="Plugin.NetCommons.Test.Fixture.TrackablesUserFixture.html" hash="9dfe10b087190500cfd72dc235c0da62" package="Default">
     <docblock line="0">
