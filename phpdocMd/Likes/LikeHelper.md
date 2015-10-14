@@ -3,8 +3,10 @@ LikeHelper
 
 Like Helper
 
-Add your application-wide methods in the class below, your helpers
-will inherit them.
+イイネ！、ヤダネ！の画面表示機能を提供します。
+* イイネ！、ヤダネ！使用設定表示:[settingメソッド](#setting)
+* イイネ！、ヤダネ！表示のみ（クリックできない）:[displayメソッド](#display)
+* イイネ！、ヤダネ！ボタン表示:[buttonsメソッド](#buttons)
 
 
 * Class name: LikeHelper
@@ -56,7 +58,15 @@ Overridden in subclasses.
 
 Output use like setting element
 
+イイネ！、ヤダネ！使用設定HTMLを返します。<br>
+使用有無のフィールド名を指定してください。<br>
+(フィールド名は、use_like,use_unlike固定で良いのでは？)
 
+#### Sample code
+##### template file(ctp file)
+```
+<?php echo $this->Like->setting('BbsSetting.use_like', 'BbsSetting.use_unlike');
+```
 
 * Visibility: **public**
 
@@ -74,7 +84,15 @@ Output use like setting element
 
 Output like and unlike display element
 
+イイネ！、ヤダネ！表示HTMLを返します。(表示のみでクリックできません)<br>
+設定データ配列、コンテンツデータ配列を指定してください。<br>
+設定データ配列のuse_like,use_unlikeを判断し、コンテンツデータ配列のLike.unlike_countを表示します。
 
+#### Sample code
+##### template file(ctp file)
+```
+<?php echo $this->Like->buttons($bbsSetting, $bbsArticle); ?>
+```
 
 * Visibility: **public**
 
@@ -92,7 +110,16 @@ Output like and unlike display element
 
 Output like and unlike buttons element
 
+イイネ！、ヤダネ！ボタンHTMLを返します。<br>
+コンテンツモデル名、設定データ配列、コンテンツデータ配列を指定してください。<br>
+設定データ配列のuse_like,use_unlikeを判断し、コンテンツデータ配列のLike.unlike_countを表示します。
+コンテンツデータ配列のコンテンツモデル名.keyでカウントデータを更新します。
 
+#### Sample code
+##### template file(ctp file)
+```
+<?php echo $this->Like->buttons('BbsArticle', $bbsSetting, $bbsArticle); ?>
+```
 
 * Visibility: **public**
 
@@ -102,22 +129,5 @@ Output like and unlike buttons element
 * $setting **array** - &lt;p&gt;Array of use like setting data.&lt;/p&gt;
 * $content **array** - &lt;p&gt;Array of content data with like count.&lt;/p&gt;
 * $attributes **array** - &lt;p&gt;Array of attributes and HTML arguments.&lt;/p&gt;
-
-
-
-### __displayDiv
-
-    array LikeHelper::__displayDiv(array $attributes, array $defaultClass)
-
-Get display <div> tag
-
-
-
-* Visibility: **private**
-
-
-#### Arguments
-* $attributes **array** - &lt;p&gt;Array of attributes and HTML arguments.&lt;/p&gt;
-* $defaultClass **array** - &lt;p&gt;Array of default attributes class and HTML arguments.&lt;/p&gt;
 
 

@@ -8,7 +8,8 @@ Like Behavior
 fieldオプションの指定がない場合は全データを取得しますが、<br>
 fieldオプションを個別に指定する場合は、Likeモデルのfieldも明示的に指定してください。<br>
 
-#### ContentModel
+#### Sample code
+##### ContentModel
 ```
 class BbsArticle extends BbsesAppModel {
 	public $actsAs = array(
@@ -16,11 +17,11 @@ class BbsArticle extends BbsesAppModel {
 	)
 }
 ```
-#### ContentController
+##### ContentController
 ```
 $bbsArticle = $this->BbsArticle->find('list');
 ```
-#### ResultSample
+##### ResultSample
 ```
 $bbsArticle = array(
 	'BbsArticle' => array(...),
@@ -34,6 +35,8 @@ $bbsArticle = array(
 	)
 )
 ```
+
+設定オプションは[setupメソッド](#setup)を参照
 
 
 * Class name: LikeBehavior
@@ -80,7 +83,8 @@ Methods
 
 SetUp behavior
 
-
+Likeモデル、LikesUserモデルのアソシエーションで、別モデル、別フィールド名を指定することがます。<br>
+デフォルト値は、モデル名が呼び出し元名称(aliasが正しいと思う→要調査)、フィールド名が"key"になっています。
 
 * Visibility: **public**
 
