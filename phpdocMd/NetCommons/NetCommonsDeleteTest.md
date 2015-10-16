@@ -177,3 +177,22 @@ Fixtures load
 * $dataName **string** - &lt;p&gt;The dataName parameter on PHPUnit_Framework_TestCase::__construct()&lt;/p&gt;
 
 
+
+### _testReflectionMethod
+
+    void NetCommonsCakeTestCase::_testReflectionMethod(\Instance $instance, string $mockMethod, array $params)
+
+privateおよびprotectedメソッドのテスト
+
+
+
+* Visibility: **protected**
+* This method is defined by [NetCommonsCakeTestCase](NetCommonsCakeTestCase.md)
+
+
+#### Arguments
+* $instance **Instance** - &lt;p&gt;インスタンス&lt;/p&gt;
+* $mockMethod **string** - &lt;p&gt;Mockのメソッド&lt;/p&gt;
+* $params **array** - &lt;p&gt;Mockのメソッドのパラメータ&lt;/p&gt;
+
+

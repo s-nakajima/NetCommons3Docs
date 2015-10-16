@@ -41,9 +41,21 @@ Validation rules
 * Visibility: **public**
 
 
+### $__useDbConfig
+
+    private array $__useDbConfig
+
+use useDbConfig
+
+
+
+* Visibility: **private**
+* This property is **static**.
+
+
 ### $actsAs
 
-    public array $actsAs = array('NetCommons.DateTime', 'NetCommons.Trackable')
+    public array $actsAs = array('NetCommons.Trackable')
 
 use behaviors
 

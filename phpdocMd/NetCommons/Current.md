@@ -75,6 +75,18 @@ Current data
 * This property is **static**.
 
 
+### $m17n
+
+    public array $m17n = array()
+
+M17n data
+
+
+
+* Visibility: **public**
+* This property is **static**.
+
+
 Methods
 -------
 
@@ -100,7 +112,7 @@ setup current data
 
     array|null Current::read(string|null $key)
 
-Get the current data.
+現在のデータ取得
 
 
 
@@ -109,7 +121,26 @@ Get the current data.
 
 
 #### Arguments
-* $key **string|null** - &lt;p&gt;field to retrieve. Leave null to get entire Current data&lt;/p&gt;
+* $key **string|null** - &lt;p&gt;Hashクラスのpath&lt;/p&gt;
+
+
+
+### readM17n
+
+    mixed Current::readM17n(string|null $languageId, string|null $model, string|null $field)
+
+多言語のデータ取得
+
+
+
+* Visibility: **public**
+* This method is **static**.
+
+
+#### Arguments
+* $languageId **string|null** - &lt;p&gt;言語ID&lt;/p&gt;
+* $model **string|null** - &lt;p&gt;モデル名&lt;/p&gt;
+* $field **string|null** - &lt;p&gt;フィールド名&lt;/p&gt;
 
 
 
@@ -117,7 +148,7 @@ Get the current data.
 
     boolean Current::permission(string|array $key)
 
-Get the permission value.
+権限チェック
 
 
 
@@ -126,7 +157,7 @@ Get the permission value.
 
 
 #### Arguments
-* $key **string|array** - &lt;p&gt;field to retrieve. Leave null to get entire Current data&lt;/p&gt;
+* $key **string|array** - &lt;p&gt;Hashクラスのpath&lt;/p&gt;
 
 
 
@@ -134,7 +165,7 @@ Get the permission value.
 
     boolean Current::isLogin()
 
-Is login
+ログインチェック
 
 
 
@@ -148,7 +179,7 @@ Is login
 
     boolean Current::isSettingMode(boolean|null $settingMode)
 
-Check setting mode
+セッティングモードチェック
 
 
 
@@ -157,7 +188,7 @@ Check setting mode
 
 
 #### Arguments
-* $settingMode **boolean|null** - &lt;p&gt;Setting mode&lt;/p&gt;
+* $settingMode **boolean|null** - &lt;p&gt;セッティングモードの状態変更&lt;/p&gt;
 
 
 
@@ -165,7 +196,7 @@ Check setting mode
 
     boolean Current::hasSettingMode()
 
-Has setting mode
+セッティングモードの有無
 
 
 
@@ -179,7 +210,7 @@ Has setting mode
 
     boolean Current::isControlPanel()
 
-Check control panel
+コントロールパネルチェック
 
 
 
@@ -193,12 +224,29 @@ Check control panel
 
     boolean Current::hasControlPanel()
 
-Has Control panel
+コントロールパネルの有無
 
 
 
 * Visibility: **public**
 * This method is **static**.
 
+
+
+
+### allowSystemPlugin
+
+    boolean Current::allowSystemPlugin(string $pluginKey)
+
+管理系プラグインの許可
+
+
+
+* Visibility: **public**
+* This method is **static**.
+
+
+#### Arguments
+* $pluginKey **string** - &lt;p&gt;プラグインkey&lt;/p&gt;
 
 

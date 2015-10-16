@@ -98,3 +98,21 @@ tearDown method
 
 
 
+
+### _testReflectionMethod
+
+    void NetCommonsCakeTestCase::_testReflectionMethod(\Instance $instance, string $mockMethod, array $params)
+
+privateおよびprotectedメソッドのテスト
+
+
+
+* Visibility: **protected**
+
+
+#### Arguments
+* $instance **Instance** - &lt;p&gt;インスタンス&lt;/p&gt;
+* $mockMethod **string** - &lt;p&gt;Mockのメソッド&lt;/p&gt;
+* $params **array** - &lt;p&gt;Mockのメソッドのパラメータ&lt;/p&gt;
+
+
