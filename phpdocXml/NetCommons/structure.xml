@@ -10261,7 +10261,7 @@ key 'url' and optionally 'status' and 'exit'.</long-description>
     </class>
     <source>eJzVVm1v2zYQ/mz/ihsQQHLqyuuwT0mTLctWtNhWDFs6DHAMh5HOEheKEihqjrHlv+/Io17sxi32cR+CiLy75+6ee6Fff1MX9XRxejqFU7ipHlC/RVWjoaO7+Tat6p2ReWHhuv/66stXX8/hPdrrqiwr3cAvpvoTU+sNRGuLysCPVYESbtCIvE0LCa8fbPdNmN5Mo00qk196MyX1AxTW1meLxXa7TUgY1JzOMWdKpqgbPG64CBqJfbRjkJ/4mkAW0+lVXZ+dtQ02cfSmMiUTEM0h+l3idhGOs/Ox3h+lcgofrFTS7pzwKIeLaapE04wFgI8WddbA4A7+7hF+RdsaDWtvAMIYsUu6ctTCiBJK+YgZnJRVhgpuCgT+0qJE2BD520KmBdjCn0qQDdyj1DlkuJEaswR+K6pWZQ4RQOpUtRl69Vq1udQDUDh7+CYBTPIE7q4rbUVqfxZa5GiScLxLGO7dBkSI2jmuKXWKVWiKt6qtdOQLk7clauvkWNZ2N/fO2WYrlaJwofVmDQSjAf1uI1SDd6CrkDahOOVkRJCH+qexxmV9QtERxAej4Mp/QWvUR9pwYh3fbyQqKsxVl0K1gQ1f2Qpy1NTEFomzurWNo2gORJNu1XOAhcyyTyIWwlIryIaY0Pv+n3HGaJ/zea9E+qAcJFw9l4KuLKQG95NgHMN9x0bcfb59J3V7T2MEm1YzfTlaL41DB174YOZjovurcVL95R4xF+wxns3H0bPujMZiMpEbiL+gMjdo40FlxsLJnlGAOj8QvOgk7n4SMQFZNOcjZSGJof4cxGvqKnOow5fuzjt5or++r8dOIoVUwCyCi0vwDetxIi4E2uF+6pEczKbjY0zaechfNmsGHwt7CkamhWxeXq6pRO98eVlxz+qgACEPH4FbR7ZUAxBTEQo9D/lFND8+gaHgM48SjLix4hDVuKzzfgmwfu8w6T0SaXEgxMc8zorWpiGXofk6Y9YO3RuMCP3pcKH6sLpR4C4XREPWTRZHdrBq/+e7YW+mxwSEyTaVpbeUOOiH+z+1jm8/rvN7ejP6EVg/4G7fMtT7YOS5zofzE9ldjb7BIvYWeWvKDgW9a/HYIb0QwzGMg58X3c1LLz0MPmh3US0HzZXruRCVXyWTlB45qVv0Jz8sR8xGC+hp3Jabbpo/astPvPPdA9aPCasW7pNln1ncz5T3yAxxJfuJG6VxklXl91XKL/YF0C+fs7P7VqpssO4XA0fCpSOzLJhFYT2EbiVyR5gvL6njflDovpvvdjcid1zGkVeOuEWG0gcIV3b/2W3AUti0wObwCfC/ZC6Crvd0ZYm4+5aWWuSE3Fq+ZWqD+drjxNEiE1bcLpnM29XtMk5ezG5XC/rR5zHpX/A4tBGTt4zYKFotO5Xlq9XqaBB/CdV2UTwdds1omT1N/wUrmMLG</source>
   </file>
-  <file path="Plugin/NetCommons/Utility/Current.php" generated-path="Plugin.NetCommons.Utility.Current.html" hash="e5763503b33811a44ca67f8c25522b2c" package="Default">
+  <file path="Plugin/NetCommons/Utility/Current.php" generated-path="Plugin.NetCommons.Utility.Current.html" hash="00412020ad8eb6bbc0e7a0ec434441d5" package="Default">
     <docblock line="0">
       <description>Current Utility</description>
       <long-description></long-description>
@@ -10272,95 +10272,301 @@ key 'url' and optionally 'status' and 'exit'.</long-description>
       <tag name="copyright" line="0" description="Copyright 2014, NetCommons Project"/>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <class final="false" abstract="false" namespace="" line="23" package="NetCommons\NetCommons\Utility">
+    <class final="false" abstract="false" namespace="" line="232" package="NetCommons\NetCommons\Utility">
       <extends/>
       <name>Current</name>
       <full_name>\Current</full_name>
-      <docblock line="23">
+      <docblock line="232">
         <description>Current Utility</description>
-        <long-description></long-description>
-        <tag name="author" line="23" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
-        <tag name="package" line="23" description="NetCommons\NetCommons\Utility"/>
+        <long-description>NetCommonsの機能として必要な情報を保持します。&lt;br&gt;
+[NetCommonsAppController::beforeFilter](https://github.com/NetCommons3/NetCommons3Docs/blob/master/phpdocMd/NetCommons/NetCommonsAppController.md#beforefilter)
+で初期処理が呼び出され、値が設定されます。&lt;br&gt;
+値を取得する時は、[readメソッド](#read)を使用します。&lt;br&gt;
+権限を取得する時は、[permissionメソッド](#permission)を使用します。&lt;br&gt;
+
+#### 保持データ
+```
+Array(
+	[User] =&gt; Array(
+		[id] =&gt; 1
+		[username] =&gt; admin
+		[key] =&gt; 640f981d6104fd21463d674f18477348
+		[avatar] =&gt;
+		[avatar_file_id] =&gt;
+		[is_avatar_public] =&gt;
+		[handlename] =&gt; admin
+		[is_handlename_public] =&gt;
+		[is_name_public] =&gt;
+		[email] =&gt;
+		[is_email_public] =&gt;
+
+		・・・
+
+		[Role] =&gt; Array(
+			[id] =&gt; 1
+			[language_id] =&gt; 2
+			[key] =&gt; system_administrator
+			[type] =&gt; 1
+			[name] =&gt; システム管理者
+			[is_systemized] =&gt; 1
+		)
+	)
+
+	[Language] =&gt; Array(
+		[id] =&gt; 2
+		[code] =&gt; ja
+		[weight] =&gt; 2
+		[is_active] =&gt; 1
+	)
+
+	[PluginsRole] =&gt; Array(
+		[13] =&gt; Array(
+			[id] =&gt; 13
+			[role_key] =&gt; system_administrator
+			[plugin_key] =&gt; rooms
+		)
+
+		[20] =&gt; Array(
+			[id] =&gt; 20
+			[role_key] =&gt; system_administrator
+			[plugin_key] =&gt; user_manager
+		)
+
+	)
+
+	[Page] =&gt; Array(
+		[id] =&gt; 1
+		[room_id] =&gt; 1
+		[parent_id] =&gt;
+		[lft] =&gt; 1
+		[rght] =&gt; 2
+		[permalink] =&gt;
+		[slug] =&gt;
+		[is_published] =&gt; 1
+		[from] =&gt;
+		[to] =&gt;
+		[is_container_fluid] =&gt;
+	)
+
+	[Room] =&gt; Array(
+		[id] =&gt; 1
+		[space_id] =&gt; 2
+		[page_id_top] =&gt; 1
+		[root_id] =&gt;
+		[parent_id] =&gt;
+		[lft] =&gt; 1
+		[rght] =&gt; 2
+		[active] =&gt; 1
+		[default_role_key] =&gt; visitor
+		[need_approval] =&gt; 1
+		[default_participation] =&gt; 1
+		[page_layout_permitted] =&gt; 1
+	)
+
+	[ParentPage] =&gt; Array(
+		・・・
+	)
+
+	[RolesRoomsUser] =&gt; Array(
+		・・・
+	)
+
+	[RolesRoom] =&gt; Array(
+		・・・
+	)
+
+・・・
+
+	[Permission] =&gt; Array(
+		[page_editable] =&gt; Array(
+			[id] =&gt; 9
+			[role_key] =&gt; room_administrator
+			[type] =&gt; room_role
+			[permission] =&gt; page_editable
+			[value] =&gt; 1
+			[fixed] =&gt; 1
+			[roles_room_id] =&gt; 1
+		)
+
+		[block_editable] =&gt; Array(
+			・・・
+		)
+
+		[content_readable] =&gt; Array(
+			・・・
+		)
+
+		[content_creatable] =&gt; Array(
+			・・・
+		)
+
+		[content_editable] =&gt; Array(
+			・・・
+		)
+
+		[content_publishable] =&gt; Array(
+			・・・
+		)
+
+		[content_comment_creatable] =&gt; Array(
+			・・・
+		)
+
+		[content_comment_editable] =&gt; Array(
+			・・・
+		)
+
+		[content_comment_publishable] =&gt; Array(
+			・・・
+		)
+
+		[block_permission_editable] =&gt; Array(
+			・・・
+		)
+
+		[html_not_limited] =&gt; Array(
+			・・・
+		)
+
+	)
+
+	[Plugin] =&gt; Array(
+		[id] =&gt; 5
+		[language_id] =&gt; 2
+		[key] =&gt; announcements
+		[name] =&gt; お知らせ
+		[namespace] =&gt; netcommons/announcements
+		[weight] =&gt;
+		[type] =&gt; 1
+		[default_action] =&gt; announcements/view
+		[default_setting_action] =&gt; announcement_blocks/index
+	)
+
+	[Frame] =&gt; Array(
+		[id] =&gt; 1
+		[language_id] =&gt; 2
+		[room_id] =&gt; 1
+		[box_id] =&gt; 3
+		[plugin_key] =&gt; announcements
+		[block_id] =&gt; 1
+		[key] =&gt; frame_1
+		[name] =&gt; お知らせ
+		[header_type] =&gt; default
+		[translation_engine] =&gt;
+		[is_first_auto_translation] =&gt;
+		[is_auto_translated] =&gt;
+		[weight] =&gt; 1
+		[is_deleted] =&gt;
+	)
+
+	[Box] =&gt; Array(
+		[id] =&gt; 3
+		[container_id] =&gt; 3
+		[type] =&gt; 4
+		[space_id] =&gt;
+		[room_id] =&gt; 1
+		[page_id] =&gt; 1
+		[weight] =&gt; 1
+	)
+
+	[Block] =&gt; Array(
+		[id] =&gt; 1
+		[language_id] =&gt; 2
+		[room_id] =&gt; 1
+		[plugin_key] =&gt; announcements
+		[key] =&gt; block_1
+		[name] =&gt; NetCommons 3! セッティングモードで編集しよう.
+		[public_type] =&gt; 1
+		[from] =&gt;
+		[to] =&gt;
+		[translation_engine] =&gt;
+		[is_auto_translated] =&gt;
+		[is_first_auto_translation] =&gt;
+	)
+)
+```</long-description>
+        <tag name="author" line="232" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+        <tag name="package" line="232" description="NetCommons\NetCommons\Utility"/>
       </docblock>
-      <constant namespace="" line="28" package="NetCommons\NetCommons\Utility">
+      <constant namespace="" line="237" package="NetCommons\NetCommons\Utility">
         <name>SETTING_MODE_WORD</name>
         <full_name>\Current::SETTING_MODE_WORD</full_name>
         <value>'setting'</value>
-        <docblock line="28">
+        <docblock line="237">
           <description>Constant setting mode value</description>
           <long-description></long-description>
         </docblock>
       </constant>
-      <property static="true" visibility="private" namespace="" line="35" package="NetCommons\NetCommons\Utility">
+      <property static="true" visibility="private" namespace="" line="244" package="NetCommons\NetCommons\Utility">
         <name>$__isSettingMode</name>
         <full_name>\Current::__isSettingMode</full_name>
         <default>null</default>
-        <docblock line="35">
+        <docblock line="244">
           <description>is setting mode true</description>
           <long-description></long-description>
-          <tag name="var" line="35" description="" type="boolean" variable="">
+          <tag name="var" line="244" description="" type="boolean" variable="">
             <type>boolean</type>
           </tag>
         </docblock>
       </property>
-      <property static="true" visibility="private" namespace="" line="42" package="NetCommons\NetCommons\Utility">
+      <property static="true" visibility="private" namespace="" line="251" package="NetCommons\NetCommons\Utility">
         <name>$__request</name>
         <full_name>\Current::__request</full_name>
         <default></default>
-        <docblock line="42">
+        <docblock line="251">
           <description>Request object</description>
           <long-description></long-description>
-          <tag name="var" line="42" description="" type="mixed" variable="">
+          <tag name="var" line="251" description="" type="mixed" variable="">
             <type>mixed</type>
           </tag>
         </docblock>
       </property>
-      <property static="true" visibility="private" namespace="" line="49" package="NetCommons\NetCommons\Utility">
+      <property static="true" visibility="private" namespace="" line="258" package="NetCommons\NetCommons\Utility">
         <name>$__instance</name>
         <full_name>\Current::__instance</full_name>
         <default></default>
-        <docblock line="49">
+        <docblock line="258">
           <description>Instance object</description>
           <long-description></long-description>
-          <tag name="var" line="49" description="" type="mixed" variable="">
+          <tag name="var" line="258" description="" type="mixed" variable="">
             <type>mixed</type>
           </tag>
         </docblock>
       </property>
-      <property static="true" visibility="public" namespace="" line="56" package="NetCommons\NetCommons\Utility">
+      <property static="true" visibility="public" namespace="" line="265" package="NetCommons\NetCommons\Utility">
         <name>$current</name>
         <full_name>\Current::current</full_name>
         <default>array()</default>
-        <docblock line="56">
+        <docblock line="265">
           <description>Current data</description>
           <long-description></long-description>
-          <tag name="var" line="56" description="" type="array" variable="">
+          <tag name="var" line="265" description="" type="array" variable="">
             <type>array</type>
           </tag>
         </docblock>
       </property>
-      <property static="true" visibility="public" namespace="" line="63" package="NetCommons\NetCommons\Utility">
+      <property static="true" visibility="public" namespace="" line="272" package="NetCommons\NetCommons\Utility">
         <name>$m17n</name>
         <full_name>\Current::m17n</full_name>
         <default>array()</default>
-        <docblock line="63">
+        <docblock line="272">
           <description>M17n data</description>
           <long-description></long-description>
-          <tag name="var" line="63" description="" type="array" variable="">
+          <tag name="var" line="272" description="" type="array" variable="">
             <type>array</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="71" package="NetCommons\NetCommons\Utility">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="280" package="NetCommons\NetCommons\Utility">
         <name>initialize</name>
         <full_name>\Current::initialize()</full_name>
-        <docblock line="71">
+        <docblock line="280">
           <description>setup current data</description>
           <long-description></long-description>
-          <tag name="param" line="71" description="&lt;p&gt;CakeRequest&lt;/p&gt;" type="\CakeRequest" variable="$request">
+          <tag name="param" line="280" description="&lt;p&gt;CakeRequest&lt;/p&gt;" type="\CakeRequest" variable="$request">
             <type>\CakeRequest</type>
           </tag>
-          <tag name="return" line="71" description="" type="void">
+          <tag name="return" line="280" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -10370,17 +10576,20 @@ key 'url' and optionally 'status' and 'exit'.</long-description>
           <type>\CakeRequest</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="93" package="NetCommons\NetCommons\Utility">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="307" package="NetCommons\NetCommons\Utility">
         <name>read</name>
         <full_name>\Current::read()</full_name>
-        <docblock line="93">
-          <description>現在のデータ取得</description>
-          <long-description></long-description>
-          <tag name="param" line="93" description="&lt;p&gt;Hashクラスのpath&lt;/p&gt;" type="string|null" variable="$key">
+        <docblock line="307">
+          <description>指定された$keyの値を返します。</description>
+          <long-description>現在のBlockKeyを取得したい場合
+```
+Cuurent::read('Block.key')
+```</long-description>
+          <tag name="param" line="307" description="&lt;p&gt;Hashクラスのpath&lt;/p&gt;" type="string|null" variable="$key">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="return" line="93" description="Current data." type="array|null">
+          <tag name="return" line="307" description="Current data." type="array|null">
             <type>array</type>
             <type>null</type>
           </tag>
@@ -10391,25 +10600,25 @@ key 'url' and optionally 'status' and 'exit'.</long-description>
           <type>string|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="112" package="NetCommons\NetCommons\Utility">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="326" package="NetCommons\NetCommons\Utility">
         <name>readM17n</name>
         <full_name>\Current::readM17n()</full_name>
-        <docblock line="112">
+        <docblock line="326">
           <description>多言語のデータ取得</description>
           <long-description></long-description>
-          <tag name="param" line="112" description="&lt;p&gt;言語ID&lt;/p&gt;" type="string|null" variable="$languageId">
+          <tag name="param" line="326" description="&lt;p&gt;言語ID&lt;/p&gt;" type="string|null" variable="$languageId">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="param" line="112" description="&lt;p&gt;モデル名&lt;/p&gt;" type="string|null" variable="$model">
+          <tag name="param" line="326" description="&lt;p&gt;モデル名&lt;/p&gt;" type="string|null" variable="$model">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="param" line="112" description="&lt;p&gt;フィールド名&lt;/p&gt;" type="string|null" variable="$field">
+          <tag name="param" line="326" description="&lt;p&gt;フィールド名&lt;/p&gt;" type="string|null" variable="$field">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="return" line="112" description="Current data." type="mixed">
+          <tag name="return" line="326" description="Current data." type="mixed">
             <type>mixed</type>
           </tag>
         </docblock>
@@ -10429,17 +10638,19 @@ key 'url' and optionally 'status' and 'exit'.</long-description>
           <type>string|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="146" package="NetCommons\NetCommons\Utility">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="364" package="NetCommons\NetCommons\Utility">
         <name>permission</name>
         <full_name>\Current::permission()</full_name>
-        <docblock line="146">
-          <description>権限チェック</description>
-          <long-description></long-description>
-          <tag name="param" line="146" description="&lt;p&gt;Hashクラスのpath&lt;/p&gt;" type="string|array" variable="$key">
+        <docblock line="364">
+          <description>指定された$key(権限名文字列)の値を返します。</description>
+          <long-description>```
+Current::permission('content_publishable')
+```</long-description>
+          <tag name="param" line="364" description="&lt;p&gt;Hashクラスのpath&lt;/p&gt;" type="string|array" variable="$key">
             <type>string</type>
             <type>array</type>
           </tag>
-          <tag name="return" line="146" description="permission value" type="boolean">
+          <tag name="return" line="364" description="permission value" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
@@ -10449,28 +10660,28 @@ key 'url' and optionally 'status' and 'exit'.</long-description>
           <type>string|array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="169" package="NetCommons\NetCommons\Utility">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="387" package="NetCommons\NetCommons\Utility">
         <name>isLogin</name>
         <full_name>\Current::isLogin()</full_name>
-        <docblock line="169">
+        <docblock line="387">
           <description>ログインチェック</description>
           <long-description></long-description>
-          <tag name="return" line="169" description="" type="boolean">
+          <tag name="return" line="387" description="" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="179" package="NetCommons\NetCommons\Utility">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="397" package="NetCommons\NetCommons\Utility">
         <name>isSettingMode</name>
         <full_name>\Current::isSettingMode()</full_name>
-        <docblock line="179">
+        <docblock line="397">
           <description>セッティングモードチェック</description>
           <long-description></long-description>
-          <tag name="param" line="179" description="&lt;p&gt;セッティングモードの状態変更&lt;/p&gt;" type="boolean|null" variable="$settingMode">
+          <tag name="param" line="397" description="&lt;p&gt;セッティングモードの状態変更&lt;/p&gt;" type="boolean|null" variable="$settingMode">
             <type>boolean</type>
             <type>null</type>
           </tag>
-          <tag name="return" line="179" description="" type="boolean">
+          <tag name="return" line="397" description="" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
@@ -10480,49 +10691,49 @@ key 'url' and optionally 'status' and 'exit'.</long-description>
           <type>boolean|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="203" package="NetCommons\NetCommons\Utility">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="421" package="NetCommons\NetCommons\Utility">
         <name>hasSettingMode</name>
         <full_name>\Current::hasSettingMode()</full_name>
-        <docblock line="203">
+        <docblock line="421">
           <description>セッティングモードの有無</description>
           <long-description></long-description>
-          <tag name="return" line="203" description="" type="boolean">
+          <tag name="return" line="421" description="" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="212" package="NetCommons\NetCommons\Utility">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="430" package="NetCommons\NetCommons\Utility">
         <name>isControlPanel</name>
         <full_name>\Current::isControlPanel()</full_name>
-        <docblock line="212">
+        <docblock line="430">
           <description>コントロールパネルチェック</description>
           <long-description></long-description>
-          <tag name="return" line="212" description="" type="boolean">
+          <tag name="return" line="430" description="" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="233" package="NetCommons\NetCommons\Utility">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="451" package="NetCommons\NetCommons\Utility">
         <name>hasControlPanel</name>
         <full_name>\Current::hasControlPanel()</full_name>
-        <docblock line="233">
+        <docblock line="451">
           <description>コントロールパネルの有無</description>
           <long-description></long-description>
-          <tag name="return" line="233" description="" type="boolean">
+          <tag name="return" line="451" description="" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="247" package="NetCommons\NetCommons\Utility">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="465" package="NetCommons\NetCommons\Utility">
         <name>allowSystemPlugin</name>
         <full_name>\Current::allowSystemPlugin()</full_name>
-        <docblock line="247">
+        <docblock line="465">
           <description>管理系プラグインの許可</description>
           <long-description></long-description>
-          <tag name="param" line="247" description="&lt;p&gt;プラグインkey&lt;/p&gt;" type="string" variable="$pluginKey">
+          <tag name="param" line="465" description="&lt;p&gt;プラグインkey&lt;/p&gt;" type="string" variable="$pluginKey">
             <type>string</type>
           </tag>
-          <tag name="return" line="247" description="" type="boolean">
+          <tag name="return" line="465" description="" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
@@ -10533,7 +10744,7 @@ key 'url' and optionally 'status' and 'exit'.</long-description>
         </argument>
       </method>
     </class>
-    <source>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</source>
+    <source>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</source>
   </file>
   <file path="Plugin/NetCommons/Test/Case/Controller/NetCommons/NetCommonsControllerCsrfTokenTest.php" generated-path="Plugin.NetCommons.Test.Case.Controller.NetCommons.NetCommonsControllerCsrfTokenTest.html" hash="6192ac50b9bc20938264893feff42e07" package="Default">
     <docblock line="0">
