@@ -910,64 +910,64 @@ will inherit them.</long-description>
           </tag>
         </docblock>
       </property>
-      <property static="true" visibility="private" namespace="" line="35" package="NetCommons\NetCommons\Model">
+      <property static="true" visibility="private" namespace="" line="39" package="NetCommons\NetCommons\Model">
         <name>$__useDbConfig</name>
         <full_name>\NetCommonsAppModel::__useDbConfig</full_name>
         <default></default>
-        <docblock line="35">
+        <docblock line="39">
           <description>use useDbConfig</description>
           <long-description></long-description>
-          <tag name="var" line="35" description="" type="array" variable="">
+          <tag name="var" line="39" description="" type="array" variable="">
             <type>array</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="" line="42" package="NetCommons\NetCommons\Model">
+      <property static="false" visibility="public" namespace="" line="46" package="NetCommons\NetCommons\Model">
         <name>$actsAs</name>
         <full_name>\NetCommonsAppModel::actsAs</full_name>
         <default>array('NetCommons.Trackable')</default>
-        <docblock line="42">
+        <docblock line="46">
           <description>use behaviors</description>
           <long-description></long-description>
-          <tag name="var" line="42" description="" type="array" variable="">
+          <tag name="var" line="46" description="" type="array" variable="">
             <type>array</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="" line="51" package="NetCommons\NetCommons\Model">
+      <property static="false" visibility="public" namespace="" line="55" package="NetCommons\NetCommons\Model">
         <name>$validate</name>
         <full_name>\NetCommonsAppModel::validate</full_name>
         <default>array()</default>
-        <docblock line="51">
+        <docblock line="55">
           <description>Validation rules</description>
           <long-description></long-description>
-          <tag name="var" line="51" description="" type="array" variable="">
+          <tag name="var" line="55" description="" type="array" variable="">
             <type>array</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="65" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="69" package="NetCommons\NetCommons\Model">
         <name>__construct</name>
         <full_name>\NetCommonsAppModel::__construct()</full_name>
-        <docblock line="65">
+        <docblock line="69">
           <description>Constructor. DataSourceの選択</description>
           <long-description>接続先DBをランダムに選択します。</long-description>
-          <tag name="param" line="65" description="&lt;p&gt;Set this ID for this model on startup,&#10;can also be an array of options, see above.&lt;/p&gt;" type="boolean|integer|string|array" variable="$id">
+          <tag name="param" line="69" description="&lt;p&gt;Set this ID for this model on startup,&#10;can also be an array of options, see above.&lt;/p&gt;" type="boolean|integer|string|array" variable="$id">
             <type>boolean</type>
             <type>integer</type>
             <type>string</type>
             <type>array</type>
           </tag>
-          <tag name="param" line="65" description="&lt;p&gt;Name of database table to use.&lt;/p&gt;" type="string" variable="$table">
+          <tag name="param" line="69" description="&lt;p&gt;Name of database table to use.&lt;/p&gt;" type="string" variable="$table">
             <type>string</type>
           </tag>
-          <tag name="param" line="65" description="&lt;p&gt;DataSource connection name.&lt;/p&gt;" type="string" variable="$ds">
+          <tag name="param" line="69" description="&lt;p&gt;DataSource connection name.&lt;/p&gt;" type="string" variable="$ds">
             <type>string</type>
           </tag>
-          <tag name="return" line="65" description="" type="void">
+          <tag name="return" line="69" description="" type="void">
             <type>void</type>
           </tag>
-          <tag name="SuppressWarnings" line="65" description="(PHPMD.BooleanArgumentFlag)"/>
+          <tag name="SuppressWarnings" line="69" description="(PHPMD.BooleanArgumentFlag)"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$id</name>
@@ -986,21 +986,21 @@ will inherit them.</long-description>
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="149" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="153" package="NetCommons\NetCommons\Model">
         <name>setDataSource</name>
         <full_name>\NetCommonsAppModel::setDataSource()</full_name>
-        <docblock line="149">
+        <docblock line="153">
           <description>Sets the DataSource to which this model is bound.&lt;br&gt;
 データの書き込み時はMaterDBに対して行うため、接続先DBを変更しているが、&lt;br&gt;
 Test実行時は唯一のDBに対して行うようにOverrideしています。</description>
           <long-description></long-description>
-          <tag name="param" line="149" description="&lt;p&gt;The name of the DataSource, as defined in app/Config/database.php&lt;/p&gt;" type="string" variable="$dataSource">
+          <tag name="param" line="153" description="&lt;p&gt;The name of the DataSource, as defined in app/Config/database.php&lt;/p&gt;" type="string" variable="$dataSource">
             <type>string</type>
           </tag>
-          <tag name="return" line="149" description="" type="void">
+          <tag name="return" line="153" description="" type="void">
             <type>void</type>
           </tag>
-          <tag name="throws" line="149" description="" type="\MissingConnectionException">
+          <tag name="throws" line="153" description="" type="\MissingConnectionException">
             <type>\MissingConnectionException</type>
           </tag>
         </docblock>
@@ -1011,10 +1011,10 @@ Test実行時は唯一のDBに対して行うようにOverrideしています。
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="181" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="185" package="NetCommons\NetCommons\Model">
         <name>create</name>
         <full_name>\NetCommonsAppModel::create()</full_name>
-        <docblock line="181">
+        <docblock line="185">
           <description>NetCommonsで使用する共通の値がセットされた結果を返します。&lt;br&gt;
 CakePHPのSchemaは、not null指定されたカラムのdefaultがnullになっているため、&lt;br&gt;
 ''(長さ0の文字列)に書き換えています。&lt;br&gt;
@@ -1029,18 +1029,18 @@ https://github.com/NetCommons3/NetCommons3/issues/7</description>
 'frame_key' =&gt; Current::read('Frame.key'),
 'plugin_key' =&gt; Inflector::underscore($this-&gt;plugin),
 ```</long-description>
-          <tag name="param" line="181" description="&lt;p&gt;Optional data array to assign to the model after it is created. If null or false,&#10;  schema data defaults are not merged.&lt;/p&gt;" type="boolean|array" variable="$data">
+          <tag name="param" line="185" description="&lt;p&gt;Optional data array to assign to the model after it is created. If null or false,&#10;  schema data defaults are not merged.&lt;/p&gt;" type="boolean|array" variable="$data">
             <type>boolean</type>
             <type>array</type>
           </tag>
-          <tag name="param" line="181" description="&lt;p&gt;If true, overwrites any primary key input with an empty value&lt;/p&gt;" type="boolean" variable="$filterKey">
+          <tag name="param" line="185" description="&lt;p&gt;If true, overwrites any primary key input with an empty value&lt;/p&gt;" type="boolean" variable="$filterKey">
             <type>boolean</type>
           </tag>
-          <tag name="return" line="181" description="The current Model::data; after merging $data and/or defaults from database" type="array">
+          <tag name="return" line="185" description="The current Model::data; after merging $data and/or defaults from database" type="array">
             <type>array</type>
           </tag>
-          <tag name="link" line="181" description="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array" link="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array"/>
-          <tag name="SuppressWarnings" line="181" description="(PHPMD.BooleanArgumentFlag)"/>
+          <tag name="link" line="185" description="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array" link="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array"/>
+          <tag name="SuppressWarnings" line="185" description="(PHPMD.BooleanArgumentFlag)"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$data</name>
@@ -1054,25 +1054,25 @@ https://github.com/NetCommons3/NetCommons3/issues/7</description>
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="203" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="207" package="NetCommons\NetCommons\Model">
         <name>createAll</name>
         <full_name>\NetCommonsAppModel::createAll()</full_name>
-        <docblock line="203">
+        <docblock line="207">
           <description>Initializes the model for writing a new record, loading the default values
 for those fields that are not defined in $data, and clearing previous validation errors.</description>
           <long-description>Especially helpful for saving data in loops.</long-description>
-          <tag name="param" line="203" description="&lt;p&gt;Optional data array to assign to the model after it is created. If null or false,&#10;  schema data defaults are not merged.&lt;/p&gt;" type="boolean|array" variable="$data">
+          <tag name="param" line="207" description="&lt;p&gt;Optional data array to assign to the model after it is created. If null or false,&#10;  schema data defaults are not merged.&lt;/p&gt;" type="boolean|array" variable="$data">
             <type>boolean</type>
             <type>array</type>
           </tag>
-          <tag name="param" line="203" description="&lt;p&gt;If true, overwrites any primary key input with an empty value&lt;/p&gt;" type="boolean" variable="$filterKey">
+          <tag name="param" line="207" description="&lt;p&gt;If true, overwrites any primary key input with an empty value&lt;/p&gt;" type="boolean" variable="$filterKey">
             <type>boolean</type>
           </tag>
-          <tag name="return" line="203" description="The current Model::data; after merging $data and/or defaults from database" type="array">
+          <tag name="return" line="207" description="The current Model::data; after merging $data and/or defaults from database" type="array">
             <type>array</type>
           </tag>
-          <tag name="link" line="203" description="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array" link="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array"/>
-          <tag name="SuppressWarnings" line="203" description="(PHPMD.BooleanArgumentFlag)"/>
+          <tag name="link" line="207" description="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array" link="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array"/>
+          <tag name="SuppressWarnings" line="207" description="(PHPMD.BooleanArgumentFlag)"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$data</name>
@@ -1086,43 +1086,43 @@ for those fields that are not defined in $data, and clearing previous validation
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="241" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="245" package="NetCommons\NetCommons\Model">
         <name>begin</name>
         <full_name>\NetCommonsAppModel::begin()</full_name>
-        <docblock line="241">
+        <docblock line="245">
           <description>transaction begin</description>
           <long-description></long-description>
-          <tag name="return" line="241" description="" type="void">
+          <tag name="return" line="245" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="254" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="258" package="NetCommons\NetCommons\Model">
         <name>commit</name>
         <full_name>\NetCommonsAppModel::commit()</full_name>
-        <docblock line="254">
+        <docblock line="258">
           <description>transaction commit</description>
           <long-description></long-description>
-          <tag name="return" line="254" description="" type="void">
+          <tag name="return" line="258" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="266" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="270" package="NetCommons\NetCommons\Model">
         <name>rollback</name>
         <full_name>\NetCommonsAppModel::rollback()</full_name>
-        <docblock line="266">
+        <docblock line="270">
           <description>transaction rollback</description>
           <long-description></long-description>
-          <tag name="param" line="266" description="&lt;p&gt;Exception&lt;/p&gt;" type="mixed" variable="$ex">
+          <tag name="param" line="270" description="&lt;p&gt;Exception&lt;/p&gt;" type="mixed" variable="$ex">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="266" description="" type="void">
+          <tag name="return" line="270" description="" type="void">
             <type>void</type>
           </tag>
-          <tag name="throws" line="266" description="" type="\Exception">
+          <tag name="throws" line="270" description="" type="\Exception">
             <type>\Exception</type>
           </tag>
         </docblock>
@@ -1133,19 +1133,19 @@ for those fields that are not defined in $data, and clearing previous validation
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="282" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="286" package="NetCommons\NetCommons\Model">
         <name>loadModels</name>
         <full_name>\NetCommonsAppModel::loadModels()</full_name>
-        <docblock line="282">
+        <docblock line="286">
           <description>Load models</description>
           <long-description></long-description>
-          <tag name="param" line="282" description="&lt;p&gt;models to load&lt;/p&gt;" type="array" variable="$models">
+          <tag name="param" line="286" description="&lt;p&gt;models to load&lt;/p&gt;" type="array" variable="$models">
             <type>array</type>
           </tag>
-          <tag name="param" line="282" description="&lt;p&gt;data source&lt;/p&gt;" type="string" variable="$source">
+          <tag name="param" line="286" description="&lt;p&gt;data source&lt;/p&gt;" type="string" variable="$source">
             <type>string</type>
           </tag>
-          <tag name="return" line="282" description="" type="void">
+          <tag name="return" line="286" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -1161,19 +1161,19 @@ for those fields that are not defined in $data, and clearing previous validation
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="298" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="302" package="NetCommons\NetCommons\Model">
         <name>equalToField</name>
         <full_name>\NetCommonsAppModel::equalToField()</full_name>
-        <docblock line="298">
+        <docblock line="302">
           <description>Check field1 matches field2</description>
           <long-description></long-description>
-          <tag name="param" line="298" description="&lt;p&gt;field1 parameters&lt;/p&gt;" type="array" variable="$field1">
+          <tag name="param" line="302" description="&lt;p&gt;field1 parameters&lt;/p&gt;" type="array" variable="$field1">
             <type>array</type>
           </tag>
-          <tag name="param" line="298" description="&lt;p&gt;field2 key&lt;/p&gt;" type="string" variable="$field2">
+          <tag name="param" line="302" description="&lt;p&gt;field2 key&lt;/p&gt;" type="string" variable="$field2">
             <type>string</type>
           </tag>
-          <tag name="return" line="298" description="" type="boolean">
+          <tag name="return" line="302" description="" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
@@ -1189,16 +1189,16 @@ for those fields that are not defined in $data, and clearing previous validation
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="309" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="313" package="NetCommons\NetCommons\Model">
         <name>_getDefaultValue</name>
         <full_name>\NetCommonsAppModel::_getDefaultValue()</full_name>
-        <docblock line="309">
+        <docblock line="313">
           <description>全カラムのデフォルト値をセットした配列を返す。</description>
           <long-description></long-description>
-          <tag name="param" line="309" description="&lt;p&gt;デフォルトを上書きするカラム配列&lt;/p&gt;" type="array" variable="$data">
+          <tag name="param" line="313" description="&lt;p&gt;デフォルトを上書きするカラム配列&lt;/p&gt;" type="array" variable="$data">
             <type>array</type>
           </tag>
-          <tag name="return" line="309" description="デフォルト値をセットした配列" type="array">
+          <tag name="return" line="313" description="デフォルト値をセットした配列" type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -1209,13 +1209,13 @@ for those fields that are not defined in $data, and clearing previous validation
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="335" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="339" package="NetCommons\NetCommons\Model">
         <name>_getCurrentValue</name>
         <full_name>\NetCommonsAppModel::_getCurrentValue()</full_name>
-        <docblock line="335">
+        <docblock line="339">
           <description>Currentで取れる値を返す。</description>
           <long-description></long-description>
-          <tag name="return" line="335" description="" type="array">
+          <tag name="return" line="339" description="" type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -1280,7 +1280,7 @@ for those fields that are not defined in $data, and clearing previous validation
     </class>
     <source>eJyVUl1v00AQfLZ/xSJVshMlMUU8uSVAw0MlEEJQ+oIQujqb+Mj57rhbJ61Q/zt7/ogjkUYgWT7f7s7s7owvX9vSxtl4HMMYvki9VkhG30rcXSlTbK6pUteoLDog9ASF8Ah3/OLygHhTGPvg5LokWOy/Xjw/fzmBj0gLU1VGe/jkzE8sqAGImkrj4L0pUcINOrGui1LC5Yb6b+ZsYBppZtx63sCU1BsoiWyeZbvdbsbJrizUPNVMyQI1T/wkMOsqZnRPhyQf2jCTZHH81to8rz36NAnCJBNoz9HFYeqUeAEysM9CRdZlmGQvf11Vwj3AivU5xXbDTlwFI45ZksWFEt7/GwHeE+qlh4XYYAguQvD3fqA9tBkpdOtt3wo3ZJuukXWGWHdcgidBsoCzHwP+FehaqWFVj/TVQoX8Lyx7TodUOw1bI5cdY33H9sCq1gVJo1tQOuIBo8gKh5ryvIsxcxSdbblfaMXv0DqEu+h0LqzlVdOkPcOywZThditUjckhwuGvOgjcEgaJPreRNOwygZVQHo8ApnMeTlT+W9IFcJl8Z5bzppRK6afz4+50rU5Zlza92n3lCtJn0rMEqUe1yvMDxUetTNFfCe7RjdtcfRjqMeant4ZQuHdmp//XnR7XGVTrMNfJddsteicH/EUzzmP8B4jzguk=</source>
   </file>
-  <file path="Plugin/NetCommons/Model/NetCommonsAppModel.php" generated-path="Plugin.NetCommons.Model.NetCommonsAppModel.html" hash="d129dcc44e0eb1bad376cc1f750e6abf" package="Default">
+  <file path="Plugin/NetCommons/Model/NetCommonsAppModel.php" generated-path="Plugin.NetCommons.Model.NetCommonsAppModel.html" hash="539f228d013c1c70f544d7700a33870d" package="Default">
     <docblock line="0">
       <description>NetCommonsApp Model</description>
       <long-description></long-description>
@@ -1291,80 +1291,84 @@ for those fields that are not defined in $data, and clearing previous validation
       <tag name="copyright" line="0" description="Copyright 2014, NetCommons Project"/>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <class final="false" abstract="false" namespace="" line="28" package="NetCommons\NetCommons\Model">
+    <class final="false" abstract="false" namespace="" line="32" package="NetCommons\NetCommons\Model">
       <extends>\Model</extends>
       <name>NetCommonsAppModel</name>
       <full_name>\NetCommonsAppModel</full_name>
-      <docblock line="28">
+      <docblock line="32">
         <description>NetCommonsApp Model</description>
-        <long-description>CakePHPのModelクラスを継承してます。
-#### Overrideしているメソッド
+        <long-description>CakePHPのModelクラスを継承してます。&lt;br&gt;
+ドキュメントルートのapp.Mode.AppModelはこのクラスを継承しているので、&lt;br&gt;
+全モデルの基底クラスになります。&lt;br&gt;
+Overrideしているメソッドもあり、CakePHPの通常動作と異なるものがありますので注意して下さい。
+
+#### CakePHPのModel処理をOverrideしているメソッドです。
 [__construct](#__construct)&lt;br&gt;
 [setDataSource](#setdatasource)&lt;br&gt;
 [create](#create)&lt;br&gt;</long-description>
-        <tag name="author" line="28" description="Jun Nishikawa" link="mailto:topaz2@m0n0m0n0.com"/>
-        <tag name="author" line="28" description="Takako Miyagawa" link="mailto:nekoget@gmail.com"/>
-        <tag name="package" line="28" description="NetCommons\NetCommons\Model"/>
-        <tag name="SuppressWarnings" line="28" description="(PHPMD.NumberOfChildren)"/>
+        <tag name="author" line="32" description="Jun Nishikawa" link="mailto:topaz2@m0n0m0n0.com"/>
+        <tag name="author" line="32" description="Takako Miyagawa" link="mailto:nekoget@gmail.com"/>
+        <tag name="package" line="32" description="NetCommons\NetCommons\Model"/>
+        <tag name="SuppressWarnings" line="32" description="(PHPMD.NumberOfChildren)"/>
       </docblock>
-      <property static="true" visibility="private" namespace="" line="35" package="NetCommons\NetCommons\Model">
+      <property static="true" visibility="private" namespace="" line="39" package="NetCommons\NetCommons\Model">
         <name>$__useDbConfig</name>
         <full_name>\NetCommonsAppModel::__useDbConfig</full_name>
         <default></default>
-        <docblock line="35">
+        <docblock line="39">
           <description>use useDbConfig</description>
           <long-description></long-description>
-          <tag name="var" line="35" description="" type="array" variable="">
+          <tag name="var" line="39" description="" type="array" variable="">
             <type>array</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="" line="42" package="NetCommons\NetCommons\Model">
+      <property static="false" visibility="public" namespace="" line="46" package="NetCommons\NetCommons\Model">
         <name>$actsAs</name>
         <full_name>\NetCommonsAppModel::actsAs</full_name>
         <default>array('NetCommons.Trackable')</default>
-        <docblock line="42">
+        <docblock line="46">
           <description>use behaviors</description>
           <long-description></long-description>
-          <tag name="var" line="42" description="" type="array" variable="">
+          <tag name="var" line="46" description="" type="array" variable="">
             <type>array</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="" line="51" package="NetCommons\NetCommons\Model">
+      <property static="false" visibility="public" namespace="" line="55" package="NetCommons\NetCommons\Model">
         <name>$validate</name>
         <full_name>\NetCommonsAppModel::validate</full_name>
         <default>array()</default>
-        <docblock line="51">
+        <docblock line="55">
           <description>Validation rules</description>
           <long-description></long-description>
-          <tag name="var" line="51" description="" type="array" variable="">
+          <tag name="var" line="55" description="" type="array" variable="">
             <type>array</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="65" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="69" package="NetCommons\NetCommons\Model">
         <name>__construct</name>
         <full_name>\NetCommonsAppModel::__construct()</full_name>
-        <docblock line="65">
+        <docblock line="69">
           <description>Constructor. DataSourceの選択</description>
           <long-description>接続先DBをランダムに選択します。</long-description>
-          <tag name="param" line="65" description="&lt;p&gt;Set this ID for this model on startup,&#10;can also be an array of options, see above.&lt;/p&gt;" type="boolean|integer|string|array" variable="$id">
+          <tag name="param" line="69" description="&lt;p&gt;Set this ID for this model on startup,&#10;can also be an array of options, see above.&lt;/p&gt;" type="boolean|integer|string|array" variable="$id">
             <type>boolean</type>
             <type>integer</type>
             <type>string</type>
             <type>array</type>
           </tag>
-          <tag name="param" line="65" description="&lt;p&gt;Name of database table to use.&lt;/p&gt;" type="string" variable="$table">
+          <tag name="param" line="69" description="&lt;p&gt;Name of database table to use.&lt;/p&gt;" type="string" variable="$table">
             <type>string</type>
           </tag>
-          <tag name="param" line="65" description="&lt;p&gt;DataSource connection name.&lt;/p&gt;" type="string" variable="$ds">
+          <tag name="param" line="69" description="&lt;p&gt;DataSource connection name.&lt;/p&gt;" type="string" variable="$ds">
             <type>string</type>
           </tag>
-          <tag name="return" line="65" description="" type="void">
+          <tag name="return" line="69" description="" type="void">
             <type>void</type>
           </tag>
-          <tag name="SuppressWarnings" line="65" description="(PHPMD.BooleanArgumentFlag)"/>
+          <tag name="SuppressWarnings" line="69" description="(PHPMD.BooleanArgumentFlag)"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$id</name>
@@ -1382,21 +1386,21 @@ for those fields that are not defined in $data, and clearing previous validation
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="149" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="153" package="NetCommons\NetCommons\Model">
         <name>setDataSource</name>
         <full_name>\NetCommonsAppModel::setDataSource()</full_name>
-        <docblock line="149">
+        <docblock line="153">
           <description>Sets the DataSource to which this model is bound.&lt;br&gt;
 データの書き込み時はMaterDBに対して行うため、接続先DBを変更しているが、&lt;br&gt;
 Test実行時は唯一のDBに対して行うようにOverrideしています。</description>
           <long-description></long-description>
-          <tag name="param" line="149" description="&lt;p&gt;The name of the DataSource, as defined in app/Config/database.php&lt;/p&gt;" type="string" variable="$dataSource">
+          <tag name="param" line="153" description="&lt;p&gt;The name of the DataSource, as defined in app/Config/database.php&lt;/p&gt;" type="string" variable="$dataSource">
             <type>string</type>
           </tag>
-          <tag name="return" line="149" description="" type="void">
+          <tag name="return" line="153" description="" type="void">
             <type>void</type>
           </tag>
-          <tag name="throws" line="149" description="" type="\MissingConnectionException">
+          <tag name="throws" line="153" description="" type="\MissingConnectionException">
             <type>\MissingConnectionException</type>
           </tag>
         </docblock>
@@ -1406,10 +1410,10 @@ Test実行時は唯一のDBに対して行うようにOverrideしています。
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="181" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="185" package="NetCommons\NetCommons\Model">
         <name>create</name>
         <full_name>\NetCommonsAppModel::create()</full_name>
-        <docblock line="181">
+        <docblock line="185">
           <description>NetCommonsで使用する共通の値がセットされた結果を返します。&lt;br&gt;
 CakePHPのSchemaは、not null指定されたカラムのdefaultがnullになっているため、&lt;br&gt;
 ''(長さ0の文字列)に書き換えています。&lt;br&gt;
@@ -1424,18 +1428,18 @@ https://github.com/NetCommons3/NetCommons3/issues/7</description>
 'frame_key' =&gt; Current::read('Frame.key'),
 'plugin_key' =&gt; Inflector::underscore($this-&gt;plugin),
 ```</long-description>
-          <tag name="param" line="181" description="&lt;p&gt;Optional data array to assign to the model after it is created. If null or false,&#10;  schema data defaults are not merged.&lt;/p&gt;" type="boolean|array" variable="$data">
+          <tag name="param" line="185" description="&lt;p&gt;Optional data array to assign to the model after it is created. If null or false,&#10;  schema data defaults are not merged.&lt;/p&gt;" type="boolean|array" variable="$data">
             <type>boolean</type>
             <type>array</type>
           </tag>
-          <tag name="param" line="181" description="&lt;p&gt;If true, overwrites any primary key input with an empty value&lt;/p&gt;" type="boolean" variable="$filterKey">
+          <tag name="param" line="185" description="&lt;p&gt;If true, overwrites any primary key input with an empty value&lt;/p&gt;" type="boolean" variable="$filterKey">
             <type>boolean</type>
           </tag>
-          <tag name="return" line="181" description="The current Model::data; after merging $data and/or defaults from database" type="array">
+          <tag name="return" line="185" description="The current Model::data; after merging $data and/or defaults from database" type="array">
             <type>array</type>
           </tag>
-          <tag name="link" line="181" description="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array" link="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array"/>
-          <tag name="SuppressWarnings" line="181" description="(PHPMD.BooleanArgumentFlag)"/>
+          <tag name="link" line="185" description="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array" link="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array"/>
+          <tag name="SuppressWarnings" line="185" description="(PHPMD.BooleanArgumentFlag)"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$data</name>
@@ -1448,25 +1452,25 @@ https://github.com/NetCommons3/NetCommons3/issues/7</description>
           <type>boolean</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="203" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="207" package="NetCommons\NetCommons\Model">
         <name>createAll</name>
         <full_name>\NetCommonsAppModel::createAll()</full_name>
-        <docblock line="203">
+        <docblock line="207">
           <description>Initializes the model for writing a new record, loading the default values
 for those fields that are not defined in $data, and clearing previous validation errors.</description>
           <long-description>Especially helpful for saving data in loops.</long-description>
-          <tag name="param" line="203" description="&lt;p&gt;Optional data array to assign to the model after it is created. If null or false,&#10;  schema data defaults are not merged.&lt;/p&gt;" type="boolean|array" variable="$data">
+          <tag name="param" line="207" description="&lt;p&gt;Optional data array to assign to the model after it is created. If null or false,&#10;  schema data defaults are not merged.&lt;/p&gt;" type="boolean|array" variable="$data">
             <type>boolean</type>
             <type>array</type>
           </tag>
-          <tag name="param" line="203" description="&lt;p&gt;If true, overwrites any primary key input with an empty value&lt;/p&gt;" type="boolean" variable="$filterKey">
+          <tag name="param" line="207" description="&lt;p&gt;If true, overwrites any primary key input with an empty value&lt;/p&gt;" type="boolean" variable="$filterKey">
             <type>boolean</type>
           </tag>
-          <tag name="return" line="203" description="The current Model::data; after merging $data and/or defaults from database" type="array">
+          <tag name="return" line="207" description="The current Model::data; after merging $data and/or defaults from database" type="array">
             <type>array</type>
           </tag>
-          <tag name="link" line="203" description="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array" link="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array"/>
-          <tag name="SuppressWarnings" line="203" description="(PHPMD.BooleanArgumentFlag)"/>
+          <tag name="link" line="207" description="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array" link="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array"/>
+          <tag name="SuppressWarnings" line="207" description="(PHPMD.BooleanArgumentFlag)"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$data</name>
@@ -1479,41 +1483,41 @@ for those fields that are not defined in $data, and clearing previous validation
           <type>boolean</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="241" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="245" package="NetCommons\NetCommons\Model">
         <name>begin</name>
         <full_name>\NetCommonsAppModel::begin()</full_name>
-        <docblock line="241">
+        <docblock line="245">
           <description>transaction begin</description>
           <long-description></long-description>
-          <tag name="return" line="241" description="" type="void">
+          <tag name="return" line="245" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="254" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="258" package="NetCommons\NetCommons\Model">
         <name>commit</name>
         <full_name>\NetCommonsAppModel::commit()</full_name>
-        <docblock line="254">
+        <docblock line="258">
           <description>transaction commit</description>
           <long-description></long-description>
-          <tag name="return" line="254" description="" type="void">
+          <tag name="return" line="258" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="266" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="270" package="NetCommons\NetCommons\Model">
         <name>rollback</name>
         <full_name>\NetCommonsAppModel::rollback()</full_name>
-        <docblock line="266">
+        <docblock line="270">
           <description>transaction rollback</description>
           <long-description></long-description>
-          <tag name="param" line="266" description="&lt;p&gt;Exception&lt;/p&gt;" type="mixed" variable="$ex">
+          <tag name="param" line="270" description="&lt;p&gt;Exception&lt;/p&gt;" type="mixed" variable="$ex">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="266" description="" type="void">
+          <tag name="return" line="270" description="" type="void">
             <type>void</type>
           </tag>
-          <tag name="throws" line="266" description="" type="\Exception">
+          <tag name="throws" line="270" description="" type="\Exception">
             <type>\Exception</type>
           </tag>
         </docblock>
@@ -1523,19 +1527,19 @@ for those fields that are not defined in $data, and clearing previous validation
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="282" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="286" package="NetCommons\NetCommons\Model">
         <name>loadModels</name>
         <full_name>\NetCommonsAppModel::loadModels()</full_name>
-        <docblock line="282">
+        <docblock line="286">
           <description>Load models</description>
           <long-description></long-description>
-          <tag name="param" line="282" description="&lt;p&gt;models to load&lt;/p&gt;" type="array" variable="$models">
+          <tag name="param" line="286" description="&lt;p&gt;models to load&lt;/p&gt;" type="array" variable="$models">
             <type>array</type>
           </tag>
-          <tag name="param" line="282" description="&lt;p&gt;data source&lt;/p&gt;" type="string" variable="$source">
+          <tag name="param" line="286" description="&lt;p&gt;data source&lt;/p&gt;" type="string" variable="$source">
             <type>string</type>
           </tag>
-          <tag name="return" line="282" description="" type="void">
+          <tag name="return" line="286" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -1550,19 +1554,19 @@ for those fields that are not defined in $data, and clearing previous validation
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="298" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="302" package="NetCommons\NetCommons\Model">
         <name>equalToField</name>
         <full_name>\NetCommonsAppModel::equalToField()</full_name>
-        <docblock line="298">
+        <docblock line="302">
           <description>Check field1 matches field2</description>
           <long-description></long-description>
-          <tag name="param" line="298" description="&lt;p&gt;field1 parameters&lt;/p&gt;" type="array" variable="$field1">
+          <tag name="param" line="302" description="&lt;p&gt;field1 parameters&lt;/p&gt;" type="array" variable="$field1">
             <type>array</type>
           </tag>
-          <tag name="param" line="298" description="&lt;p&gt;field2 key&lt;/p&gt;" type="string" variable="$field2">
+          <tag name="param" line="302" description="&lt;p&gt;field2 key&lt;/p&gt;" type="string" variable="$field2">
             <type>string</type>
           </tag>
-          <tag name="return" line="298" description="" type="boolean">
+          <tag name="return" line="302" description="" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
@@ -1577,16 +1581,16 @@ for those fields that are not defined in $data, and clearing previous validation
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="309" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="313" package="NetCommons\NetCommons\Model">
         <name>_getDefaultValue</name>
         <full_name>\NetCommonsAppModel::_getDefaultValue()</full_name>
-        <docblock line="309">
+        <docblock line="313">
           <description>全カラムのデフォルト値をセットした配列を返す。</description>
           <long-description></long-description>
-          <tag name="param" line="309" description="&lt;p&gt;デフォルトを上書きするカラム配列&lt;/p&gt;" type="array" variable="$data">
+          <tag name="param" line="313" description="&lt;p&gt;デフォルトを上書きするカラム配列&lt;/p&gt;" type="array" variable="$data">
             <type>array</type>
           </tag>
-          <tag name="return" line="309" description="デフォルト値をセットした配列" type="array">
+          <tag name="return" line="313" description="デフォルト値をセットした配列" type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -1596,19 +1600,19 @@ for those fields that are not defined in $data, and clearing previous validation
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="335" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="339" package="NetCommons\NetCommons\Model">
         <name>_getCurrentValue</name>
         <full_name>\NetCommonsAppModel::_getCurrentValue()</full_name>
-        <docblock line="335">
+        <docblock line="339">
           <description>Currentで取れる値を返す。</description>
           <long-description></long-description>
-          <tag name="return" line="335" description="" type="array">
+          <tag name="return" line="339" description="" type="array">
             <type>array</type>
           </tag>
         </docblock>
       </method>
     </class>
-    <source>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</source>
+    <source>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</source>
   </file>
   <file path="Plugin/NetCommons/Test/Case/Model/SiteSettingTest.php" generated-path="Plugin.NetCommons.Test.Case.Model.SiteSettingTest.html" hash="c9ae3d1f848729eed06056dc9926c499" package="Default">
     <docblock line="0">
@@ -2658,38 +2662,38 @@ will inherit them.</long-description>
         <tag name="package" line="18" description="Default"/>
         <tag name="inherited_from" description="\AppModel" refers="\AppModel" link="/classes/AppModel.html"/>
       </docblock>
-      <property static="true" visibility="private" namespace="" line="35" package="NetCommons\NetCommons\Model">
+      <property static="true" visibility="private" namespace="" line="39" package="NetCommons\NetCommons\Model">
         <name>$__useDbConfig</name>
         <full_name>\NetCommonsAppModel::__useDbConfig</full_name>
         <default></default>
-        <docblock line="35">
+        <docblock line="39">
           <description>use useDbConfig</description>
           <long-description></long-description>
-          <tag name="var" line="35" description="" type="array" variable="">
+          <tag name="var" line="39" description="" type="array" variable="">
             <type>array</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="" line="42" package="NetCommons\NetCommons\Model">
+      <property static="false" visibility="public" namespace="" line="46" package="NetCommons\NetCommons\Model">
         <name>$actsAs</name>
         <full_name>\NetCommonsAppModel::actsAs</full_name>
         <default>array('NetCommons.Trackable')</default>
-        <docblock line="42">
+        <docblock line="46">
           <description>use behaviors</description>
           <long-description></long-description>
-          <tag name="var" line="42" description="" type="array" variable="">
+          <tag name="var" line="46" description="" type="array" variable="">
             <type>array</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="" line="51" package="NetCommons\NetCommons\Model">
+      <property static="false" visibility="public" namespace="" line="55" package="NetCommons\NetCommons\Model">
         <name>$validate</name>
         <full_name>\NetCommonsAppModel::validate</full_name>
         <default>array()</default>
-        <docblock line="51">
+        <docblock line="55">
           <description>Validation rules</description>
           <long-description></long-description>
-          <tag name="var" line="51" description="" type="array" variable="">
+          <tag name="var" line="55" description="" type="array" variable="">
             <type>array</type>
           </tag>
         </docblock>
@@ -2745,28 +2749,28 @@ will inherit them.</long-description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="65" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="69" package="NetCommons\NetCommons\Model">
         <name>__construct</name>
         <full_name>\NetCommonsAppModel::__construct()</full_name>
-        <docblock line="65">
+        <docblock line="69">
           <description>Constructor. DataSourceの選択</description>
           <long-description>接続先DBをランダムに選択します。</long-description>
-          <tag name="param" line="65" description="&lt;p&gt;Set this ID for this model on startup,&#10;can also be an array of options, see above.&lt;/p&gt;" type="boolean|integer|string|array" variable="$id">
+          <tag name="param" line="69" description="&lt;p&gt;Set this ID for this model on startup,&#10;can also be an array of options, see above.&lt;/p&gt;" type="boolean|integer|string|array" variable="$id">
             <type>boolean</type>
             <type>integer</type>
             <type>string</type>
             <type>array</type>
           </tag>
-          <tag name="param" line="65" description="&lt;p&gt;Name of database table to use.&lt;/p&gt;" type="string" variable="$table">
+          <tag name="param" line="69" description="&lt;p&gt;Name of database table to use.&lt;/p&gt;" type="string" variable="$table">
             <type>string</type>
           </tag>
-          <tag name="param" line="65" description="&lt;p&gt;DataSource connection name.&lt;/p&gt;" type="string" variable="$ds">
+          <tag name="param" line="69" description="&lt;p&gt;DataSource connection name.&lt;/p&gt;" type="string" variable="$ds">
             <type>string</type>
           </tag>
-          <tag name="return" line="65" description="" type="void">
+          <tag name="return" line="69" description="" type="void">
             <type>void</type>
           </tag>
-          <tag name="SuppressWarnings" line="65" description="(PHPMD.BooleanArgumentFlag)"/>
+          <tag name="SuppressWarnings" line="69" description="(PHPMD.BooleanArgumentFlag)"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$id</name>
@@ -2785,21 +2789,21 @@ will inherit them.</long-description>
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="149" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="153" package="NetCommons\NetCommons\Model">
         <name>setDataSource</name>
         <full_name>\NetCommonsAppModel::setDataSource()</full_name>
-        <docblock line="149">
+        <docblock line="153">
           <description>Sets the DataSource to which this model is bound.&lt;br&gt;
 データの書き込み時はMaterDBに対して行うため、接続先DBを変更しているが、&lt;br&gt;
 Test実行時は唯一のDBに対して行うようにOverrideしています。</description>
           <long-description></long-description>
-          <tag name="param" line="149" description="&lt;p&gt;The name of the DataSource, as defined in app/Config/database.php&lt;/p&gt;" type="string" variable="$dataSource">
+          <tag name="param" line="153" description="&lt;p&gt;The name of the DataSource, as defined in app/Config/database.php&lt;/p&gt;" type="string" variable="$dataSource">
             <type>string</type>
           </tag>
-          <tag name="return" line="149" description="" type="void">
+          <tag name="return" line="153" description="" type="void">
             <type>void</type>
           </tag>
-          <tag name="throws" line="149" description="" type="\MissingConnectionException">
+          <tag name="throws" line="153" description="" type="\MissingConnectionException">
             <type>\MissingConnectionException</type>
           </tag>
         </docblock>
@@ -2810,10 +2814,10 @@ Test実行時は唯一のDBに対して行うようにOverrideしています。
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="181" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="185" package="NetCommons\NetCommons\Model">
         <name>create</name>
         <full_name>\NetCommonsAppModel::create()</full_name>
-        <docblock line="181">
+        <docblock line="185">
           <description>NetCommonsで使用する共通の値がセットされた結果を返します。&lt;br&gt;
 CakePHPのSchemaは、not null指定されたカラムのdefaultがnullになっているため、&lt;br&gt;
 ''(長さ0の文字列)に書き換えています。&lt;br&gt;
@@ -2828,18 +2832,18 @@ https://github.com/NetCommons3/NetCommons3/issues/7</description>
 'frame_key' =&gt; Current::read('Frame.key'),
 'plugin_key' =&gt; Inflector::underscore($this-&gt;plugin),
 ```</long-description>
-          <tag name="param" line="181" description="&lt;p&gt;Optional data array to assign to the model after it is created. If null or false,&#10;  schema data defaults are not merged.&lt;/p&gt;" type="boolean|array" variable="$data">
+          <tag name="param" line="185" description="&lt;p&gt;Optional data array to assign to the model after it is created. If null or false,&#10;  schema data defaults are not merged.&lt;/p&gt;" type="boolean|array" variable="$data">
             <type>boolean</type>
             <type>array</type>
           </tag>
-          <tag name="param" line="181" description="&lt;p&gt;If true, overwrites any primary key input with an empty value&lt;/p&gt;" type="boolean" variable="$filterKey">
+          <tag name="param" line="185" description="&lt;p&gt;If true, overwrites any primary key input with an empty value&lt;/p&gt;" type="boolean" variable="$filterKey">
             <type>boolean</type>
           </tag>
-          <tag name="return" line="181" description="The current Model::data; after merging $data and/or defaults from database" type="array">
+          <tag name="return" line="185" description="The current Model::data; after merging $data and/or defaults from database" type="array">
             <type>array</type>
           </tag>
-          <tag name="link" line="181" description="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array" link="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array"/>
-          <tag name="SuppressWarnings" line="181" description="(PHPMD.BooleanArgumentFlag)"/>
+          <tag name="link" line="185" description="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array" link="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array"/>
+          <tag name="SuppressWarnings" line="185" description="(PHPMD.BooleanArgumentFlag)"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$data</name>
@@ -2853,25 +2857,25 @@ https://github.com/NetCommons3/NetCommons3/issues/7</description>
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="203" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="207" package="NetCommons\NetCommons\Model">
         <name>createAll</name>
         <full_name>\NetCommonsAppModel::createAll()</full_name>
-        <docblock line="203">
+        <docblock line="207">
           <description>Initializes the model for writing a new record, loading the default values
 for those fields that are not defined in $data, and clearing previous validation errors.</description>
           <long-description>Especially helpful for saving data in loops.</long-description>
-          <tag name="param" line="203" description="&lt;p&gt;Optional data array to assign to the model after it is created. If null or false,&#10;  schema data defaults are not merged.&lt;/p&gt;" type="boolean|array" variable="$data">
+          <tag name="param" line="207" description="&lt;p&gt;Optional data array to assign to the model after it is created. If null or false,&#10;  schema data defaults are not merged.&lt;/p&gt;" type="boolean|array" variable="$data">
             <type>boolean</type>
             <type>array</type>
           </tag>
-          <tag name="param" line="203" description="&lt;p&gt;If true, overwrites any primary key input with an empty value&lt;/p&gt;" type="boolean" variable="$filterKey">
+          <tag name="param" line="207" description="&lt;p&gt;If true, overwrites any primary key input with an empty value&lt;/p&gt;" type="boolean" variable="$filterKey">
             <type>boolean</type>
           </tag>
-          <tag name="return" line="203" description="The current Model::data; after merging $data and/or defaults from database" type="array">
+          <tag name="return" line="207" description="The current Model::data; after merging $data and/or defaults from database" type="array">
             <type>array</type>
           </tag>
-          <tag name="link" line="203" description="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array" link="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array"/>
-          <tag name="SuppressWarnings" line="203" description="(PHPMD.BooleanArgumentFlag)"/>
+          <tag name="link" line="207" description="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array" link="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array"/>
+          <tag name="SuppressWarnings" line="207" description="(PHPMD.BooleanArgumentFlag)"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$data</name>
@@ -2885,43 +2889,43 @@ for those fields that are not defined in $data, and clearing previous validation
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="241" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="245" package="NetCommons\NetCommons\Model">
         <name>begin</name>
         <full_name>\NetCommonsAppModel::begin()</full_name>
-        <docblock line="241">
+        <docblock line="245">
           <description>transaction begin</description>
           <long-description></long-description>
-          <tag name="return" line="241" description="" type="void">
+          <tag name="return" line="245" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="254" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="258" package="NetCommons\NetCommons\Model">
         <name>commit</name>
         <full_name>\NetCommonsAppModel::commit()</full_name>
-        <docblock line="254">
+        <docblock line="258">
           <description>transaction commit</description>
           <long-description></long-description>
-          <tag name="return" line="254" description="" type="void">
+          <tag name="return" line="258" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="266" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="270" package="NetCommons\NetCommons\Model">
         <name>rollback</name>
         <full_name>\NetCommonsAppModel::rollback()</full_name>
-        <docblock line="266">
+        <docblock line="270">
           <description>transaction rollback</description>
           <long-description></long-description>
-          <tag name="param" line="266" description="&lt;p&gt;Exception&lt;/p&gt;" type="mixed" variable="$ex">
+          <tag name="param" line="270" description="&lt;p&gt;Exception&lt;/p&gt;" type="mixed" variable="$ex">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="266" description="" type="void">
+          <tag name="return" line="270" description="" type="void">
             <type>void</type>
           </tag>
-          <tag name="throws" line="266" description="" type="\Exception">
+          <tag name="throws" line="270" description="" type="\Exception">
             <type>\Exception</type>
           </tag>
         </docblock>
@@ -2932,19 +2936,19 @@ for those fields that are not defined in $data, and clearing previous validation
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="282" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="286" package="NetCommons\NetCommons\Model">
         <name>loadModels</name>
         <full_name>\NetCommonsAppModel::loadModels()</full_name>
-        <docblock line="282">
+        <docblock line="286">
           <description>Load models</description>
           <long-description></long-description>
-          <tag name="param" line="282" description="&lt;p&gt;models to load&lt;/p&gt;" type="array" variable="$models">
+          <tag name="param" line="286" description="&lt;p&gt;models to load&lt;/p&gt;" type="array" variable="$models">
             <type>array</type>
           </tag>
-          <tag name="param" line="282" description="&lt;p&gt;data source&lt;/p&gt;" type="string" variable="$source">
+          <tag name="param" line="286" description="&lt;p&gt;data source&lt;/p&gt;" type="string" variable="$source">
             <type>string</type>
           </tag>
-          <tag name="return" line="282" description="" type="void">
+          <tag name="return" line="286" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -2960,19 +2964,19 @@ for those fields that are not defined in $data, and clearing previous validation
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="298" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="302" package="NetCommons\NetCommons\Model">
         <name>equalToField</name>
         <full_name>\NetCommonsAppModel::equalToField()</full_name>
-        <docblock line="298">
+        <docblock line="302">
           <description>Check field1 matches field2</description>
           <long-description></long-description>
-          <tag name="param" line="298" description="&lt;p&gt;field1 parameters&lt;/p&gt;" type="array" variable="$field1">
+          <tag name="param" line="302" description="&lt;p&gt;field1 parameters&lt;/p&gt;" type="array" variable="$field1">
             <type>array</type>
           </tag>
-          <tag name="param" line="298" description="&lt;p&gt;field2 key&lt;/p&gt;" type="string" variable="$field2">
+          <tag name="param" line="302" description="&lt;p&gt;field2 key&lt;/p&gt;" type="string" variable="$field2">
             <type>string</type>
           </tag>
-          <tag name="return" line="298" description="" type="boolean">
+          <tag name="return" line="302" description="" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
@@ -2988,16 +2992,16 @@ for those fields that are not defined in $data, and clearing previous validation
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="309" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="313" package="NetCommons\NetCommons\Model">
         <name>_getDefaultValue</name>
         <full_name>\NetCommonsAppModel::_getDefaultValue()</full_name>
-        <docblock line="309">
+        <docblock line="313">
           <description>全カラムのデフォルト値をセットした配列を返す。</description>
           <long-description></long-description>
-          <tag name="param" line="309" description="&lt;p&gt;デフォルトを上書きするカラム配列&lt;/p&gt;" type="array" variable="$data">
+          <tag name="param" line="313" description="&lt;p&gt;デフォルトを上書きするカラム配列&lt;/p&gt;" type="array" variable="$data">
             <type>array</type>
           </tag>
-          <tag name="return" line="309" description="デフォルト値をセットした配列" type="array">
+          <tag name="return" line="313" description="デフォルト値をセットした配列" type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -3008,13 +3012,13 @@ for those fields that are not defined in $data, and clearing previous validation
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="335" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="339" package="NetCommons\NetCommons\Model">
         <name>_getCurrentValue</name>
         <full_name>\NetCommonsAppModel::_getCurrentValue()</full_name>
-        <docblock line="335">
+        <docblock line="339">
           <description>Currentで取れる値を返す。</description>
           <long-description></long-description>
-          <tag name="return" line="335" description="" type="array">
+          <tag name="return" line="339" description="" type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -8057,64 +8061,64 @@ will inherit them.</long-description>
         <tag name="codeCoverageIgnore" line="35" description=""/>
         <tag name="inherited_from" description="\NetCommonsAppModel" refers="\NetCommonsAppModel" link="/classes/NetCommonsAppModel.html"/>
       </docblock>
-      <property static="true" visibility="private" namespace="" line="35" package="NetCommons\NetCommons\Model">
+      <property static="true" visibility="private" namespace="" line="39" package="NetCommons\NetCommons\Model">
         <name>$__useDbConfig</name>
         <full_name>\NetCommonsAppModel::__useDbConfig</full_name>
         <default></default>
-        <docblock line="35">
+        <docblock line="39">
           <description>use useDbConfig</description>
           <long-description></long-description>
-          <tag name="var" line="35" description="" type="array" variable="">
+          <tag name="var" line="39" description="" type="array" variable="">
             <type>array</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="" line="42" package="NetCommons\NetCommons\Model">
+      <property static="false" visibility="public" namespace="" line="46" package="NetCommons\NetCommons\Model">
         <name>$actsAs</name>
         <full_name>\NetCommonsAppModel::actsAs</full_name>
         <default>array('NetCommons.Trackable')</default>
-        <docblock line="42">
+        <docblock line="46">
           <description>use behaviors</description>
           <long-description></long-description>
-          <tag name="var" line="42" description="" type="array" variable="">
+          <tag name="var" line="46" description="" type="array" variable="">
             <type>array</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="" line="51" package="NetCommons\NetCommons\Model">
+      <property static="false" visibility="public" namespace="" line="55" package="NetCommons\NetCommons\Model">
         <name>$validate</name>
         <full_name>\NetCommonsAppModel::validate</full_name>
         <default>array()</default>
-        <docblock line="51">
+        <docblock line="55">
           <description>Validation rules</description>
           <long-description></long-description>
-          <tag name="var" line="51" description="" type="array" variable="">
+          <tag name="var" line="55" description="" type="array" variable="">
             <type>array</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="65" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="69" package="NetCommons\NetCommons\Model">
         <name>__construct</name>
         <full_name>\NetCommonsAppModel::__construct()</full_name>
-        <docblock line="65">
+        <docblock line="69">
           <description>Constructor. DataSourceの選択</description>
           <long-description>接続先DBをランダムに選択します。</long-description>
-          <tag name="param" line="65" description="&lt;p&gt;Set this ID for this model on startup,&#10;can also be an array of options, see above.&lt;/p&gt;" type="boolean|integer|string|array" variable="$id">
+          <tag name="param" line="69" description="&lt;p&gt;Set this ID for this model on startup,&#10;can also be an array of options, see above.&lt;/p&gt;" type="boolean|integer|string|array" variable="$id">
             <type>boolean</type>
             <type>integer</type>
             <type>string</type>
             <type>array</type>
           </tag>
-          <tag name="param" line="65" description="&lt;p&gt;Name of database table to use.&lt;/p&gt;" type="string" variable="$table">
+          <tag name="param" line="69" description="&lt;p&gt;Name of database table to use.&lt;/p&gt;" type="string" variable="$table">
             <type>string</type>
           </tag>
-          <tag name="param" line="65" description="&lt;p&gt;DataSource connection name.&lt;/p&gt;" type="string" variable="$ds">
+          <tag name="param" line="69" description="&lt;p&gt;DataSource connection name.&lt;/p&gt;" type="string" variable="$ds">
             <type>string</type>
           </tag>
-          <tag name="return" line="65" description="" type="void">
+          <tag name="return" line="69" description="" type="void">
             <type>void</type>
           </tag>
-          <tag name="SuppressWarnings" line="65" description="(PHPMD.BooleanArgumentFlag)"/>
+          <tag name="SuppressWarnings" line="69" description="(PHPMD.BooleanArgumentFlag)"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$id</name>
@@ -8133,21 +8137,21 @@ will inherit them.</long-description>
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="149" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="153" package="NetCommons\NetCommons\Model">
         <name>setDataSource</name>
         <full_name>\NetCommonsAppModel::setDataSource()</full_name>
-        <docblock line="149">
+        <docblock line="153">
           <description>Sets the DataSource to which this model is bound.&lt;br&gt;
 データの書き込み時はMaterDBに対して行うため、接続先DBを変更しているが、&lt;br&gt;
 Test実行時は唯一のDBに対して行うようにOverrideしています。</description>
           <long-description></long-description>
-          <tag name="param" line="149" description="&lt;p&gt;The name of the DataSource, as defined in app/Config/database.php&lt;/p&gt;" type="string" variable="$dataSource">
+          <tag name="param" line="153" description="&lt;p&gt;The name of the DataSource, as defined in app/Config/database.php&lt;/p&gt;" type="string" variable="$dataSource">
             <type>string</type>
           </tag>
-          <tag name="return" line="149" description="" type="void">
+          <tag name="return" line="153" description="" type="void">
             <type>void</type>
           </tag>
-          <tag name="throws" line="149" description="" type="\MissingConnectionException">
+          <tag name="throws" line="153" description="" type="\MissingConnectionException">
             <type>\MissingConnectionException</type>
           </tag>
         </docblock>
@@ -8158,10 +8162,10 @@ Test実行時は唯一のDBに対して行うようにOverrideしています。
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="181" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="185" package="NetCommons\NetCommons\Model">
         <name>create</name>
         <full_name>\NetCommonsAppModel::create()</full_name>
-        <docblock line="181">
+        <docblock line="185">
           <description>NetCommonsで使用する共通の値がセットされた結果を返します。&lt;br&gt;
 CakePHPのSchemaは、not null指定されたカラムのdefaultがnullになっているため、&lt;br&gt;
 ''(長さ0の文字列)に書き換えています。&lt;br&gt;
@@ -8176,18 +8180,18 @@ https://github.com/NetCommons3/NetCommons3/issues/7</description>
 'frame_key' =&gt; Current::read('Frame.key'),
 'plugin_key' =&gt; Inflector::underscore($this-&gt;plugin),
 ```</long-description>
-          <tag name="param" line="181" description="&lt;p&gt;Optional data array to assign to the model after it is created. If null or false,&#10;  schema data defaults are not merged.&lt;/p&gt;" type="boolean|array" variable="$data">
+          <tag name="param" line="185" description="&lt;p&gt;Optional data array to assign to the model after it is created. If null or false,&#10;  schema data defaults are not merged.&lt;/p&gt;" type="boolean|array" variable="$data">
             <type>boolean</type>
             <type>array</type>
           </tag>
-          <tag name="param" line="181" description="&lt;p&gt;If true, overwrites any primary key input with an empty value&lt;/p&gt;" type="boolean" variable="$filterKey">
+          <tag name="param" line="185" description="&lt;p&gt;If true, overwrites any primary key input with an empty value&lt;/p&gt;" type="boolean" variable="$filterKey">
             <type>boolean</type>
           </tag>
-          <tag name="return" line="181" description="The current Model::data; after merging $data and/or defaults from database" type="array">
+          <tag name="return" line="185" description="The current Model::data; after merging $data and/or defaults from database" type="array">
             <type>array</type>
           </tag>
-          <tag name="link" line="181" description="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array" link="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array"/>
-          <tag name="SuppressWarnings" line="181" description="(PHPMD.BooleanArgumentFlag)"/>
+          <tag name="link" line="185" description="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array" link="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array"/>
+          <tag name="SuppressWarnings" line="185" description="(PHPMD.BooleanArgumentFlag)"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$data</name>
@@ -8201,25 +8205,25 @@ https://github.com/NetCommons3/NetCommons3/issues/7</description>
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="203" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="207" package="NetCommons\NetCommons\Model">
         <name>createAll</name>
         <full_name>\NetCommonsAppModel::createAll()</full_name>
-        <docblock line="203">
+        <docblock line="207">
           <description>Initializes the model for writing a new record, loading the default values
 for those fields that are not defined in $data, and clearing previous validation errors.</description>
           <long-description>Especially helpful for saving data in loops.</long-description>
-          <tag name="param" line="203" description="&lt;p&gt;Optional data array to assign to the model after it is created. If null or false,&#10;  schema data defaults are not merged.&lt;/p&gt;" type="boolean|array" variable="$data">
+          <tag name="param" line="207" description="&lt;p&gt;Optional data array to assign to the model after it is created. If null or false,&#10;  schema data defaults are not merged.&lt;/p&gt;" type="boolean|array" variable="$data">
             <type>boolean</type>
             <type>array</type>
           </tag>
-          <tag name="param" line="203" description="&lt;p&gt;If true, overwrites any primary key input with an empty value&lt;/p&gt;" type="boolean" variable="$filterKey">
+          <tag name="param" line="207" description="&lt;p&gt;If true, overwrites any primary key input with an empty value&lt;/p&gt;" type="boolean" variable="$filterKey">
             <type>boolean</type>
           </tag>
-          <tag name="return" line="203" description="The current Model::data; after merging $data and/or defaults from database" type="array">
+          <tag name="return" line="207" description="The current Model::data; after merging $data and/or defaults from database" type="array">
             <type>array</type>
           </tag>
-          <tag name="link" line="203" description="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array" link="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array"/>
-          <tag name="SuppressWarnings" line="203" description="(PHPMD.BooleanArgumentFlag)"/>
+          <tag name="link" line="207" description="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array" link="http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array"/>
+          <tag name="SuppressWarnings" line="207" description="(PHPMD.BooleanArgumentFlag)"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$data</name>
@@ -8233,43 +8237,43 @@ for those fields that are not defined in $data, and clearing previous validation
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="241" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="245" package="NetCommons\NetCommons\Model">
         <name>begin</name>
         <full_name>\NetCommonsAppModel::begin()</full_name>
-        <docblock line="241">
+        <docblock line="245">
           <description>transaction begin</description>
           <long-description></long-description>
-          <tag name="return" line="241" description="" type="void">
+          <tag name="return" line="245" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="254" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="258" package="NetCommons\NetCommons\Model">
         <name>commit</name>
         <full_name>\NetCommonsAppModel::commit()</full_name>
-        <docblock line="254">
+        <docblock line="258">
           <description>transaction commit</description>
           <long-description></long-description>
-          <tag name="return" line="254" description="" type="void">
+          <tag name="return" line="258" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="266" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="270" package="NetCommons\NetCommons\Model">
         <name>rollback</name>
         <full_name>\NetCommonsAppModel::rollback()</full_name>
-        <docblock line="266">
+        <docblock line="270">
           <description>transaction rollback</description>
           <long-description></long-description>
-          <tag name="param" line="266" description="&lt;p&gt;Exception&lt;/p&gt;" type="mixed" variable="$ex">
+          <tag name="param" line="270" description="&lt;p&gt;Exception&lt;/p&gt;" type="mixed" variable="$ex">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="266" description="" type="void">
+          <tag name="return" line="270" description="" type="void">
             <type>void</type>
           </tag>
-          <tag name="throws" line="266" description="" type="\Exception">
+          <tag name="throws" line="270" description="" type="\Exception">
             <type>\Exception</type>
           </tag>
         </docblock>
@@ -8280,19 +8284,19 @@ for those fields that are not defined in $data, and clearing previous validation
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="282" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="286" package="NetCommons\NetCommons\Model">
         <name>loadModels</name>
         <full_name>\NetCommonsAppModel::loadModels()</full_name>
-        <docblock line="282">
+        <docblock line="286">
           <description>Load models</description>
           <long-description></long-description>
-          <tag name="param" line="282" description="&lt;p&gt;models to load&lt;/p&gt;" type="array" variable="$models">
+          <tag name="param" line="286" description="&lt;p&gt;models to load&lt;/p&gt;" type="array" variable="$models">
             <type>array</type>
           </tag>
-          <tag name="param" line="282" description="&lt;p&gt;data source&lt;/p&gt;" type="string" variable="$source">
+          <tag name="param" line="286" description="&lt;p&gt;data source&lt;/p&gt;" type="string" variable="$source">
             <type>string</type>
           </tag>
-          <tag name="return" line="282" description="" type="void">
+          <tag name="return" line="286" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -8308,19 +8312,19 @@ for those fields that are not defined in $data, and clearing previous validation
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="298" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="302" package="NetCommons\NetCommons\Model">
         <name>equalToField</name>
         <full_name>\NetCommonsAppModel::equalToField()</full_name>
-        <docblock line="298">
+        <docblock line="302">
           <description>Check field1 matches field2</description>
           <long-description></long-description>
-          <tag name="param" line="298" description="&lt;p&gt;field1 parameters&lt;/p&gt;" type="array" variable="$field1">
+          <tag name="param" line="302" description="&lt;p&gt;field1 parameters&lt;/p&gt;" type="array" variable="$field1">
             <type>array</type>
           </tag>
-          <tag name="param" line="298" description="&lt;p&gt;field2 key&lt;/p&gt;" type="string" variable="$field2">
+          <tag name="param" line="302" description="&lt;p&gt;field2 key&lt;/p&gt;" type="string" variable="$field2">
             <type>string</type>
           </tag>
-          <tag name="return" line="298" description="" type="boolean">
+          <tag name="return" line="302" description="" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
@@ -8336,16 +8340,16 @@ for those fields that are not defined in $data, and clearing previous validation
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="309" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="313" package="NetCommons\NetCommons\Model">
         <name>_getDefaultValue</name>
         <full_name>\NetCommonsAppModel::_getDefaultValue()</full_name>
-        <docblock line="309">
+        <docblock line="313">
           <description>全カラムのデフォルト値をセットした配列を返す。</description>
           <long-description></long-description>
-          <tag name="param" line="309" description="&lt;p&gt;デフォルトを上書きするカラム配列&lt;/p&gt;" type="array" variable="$data">
+          <tag name="param" line="313" description="&lt;p&gt;デフォルトを上書きするカラム配列&lt;/p&gt;" type="array" variable="$data">
             <type>array</type>
           </tag>
-          <tag name="return" line="309" description="デフォルト値をセットした配列" type="array">
+          <tag name="return" line="313" description="デフォルト値をセットした配列" type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -8356,13 +8360,13 @@ for those fields that are not defined in $data, and clearing previous validation
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="335" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="339" package="NetCommons\NetCommons\Model">
         <name>_getCurrentValue</name>
         <full_name>\NetCommonsAppModel::_getCurrentValue()</full_name>
-        <docblock line="335">
+        <docblock line="339">
           <description>Currentで取れる値を返す。</description>
           <long-description></long-description>
-          <tag name="return" line="335" description="" type="array">
+          <tag name="return" line="339" description="" type="array">
             <type>array</type>
           </tag>
         </docblock>
