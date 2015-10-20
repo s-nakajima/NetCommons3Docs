@@ -5706,7 +5706,7 @@ e.g.) packagist', 'charset' =&gt; 'utf8'), 'weight' =&gt; array('type' =&gt; 'in
     </class>
     <source>eJylVE1vGjEQPcOv8KGSF5Swpe2JJrQJStSoSdoD6QVFkdkddl2MvbVnQ1CV/97xfgEBoqq9mdn3nue9GXPyKUuzdtjttlmXja2I5mKq4BxS8SiNZcI5E0mB0miG4JBFwgFBPfpzZLKVlUmKbNSc3r3tfzhit4Ajs1gY7dh3a35ChAVB5JiS6FeTgmRjsCLJo1SykznWZ9IsaBqwZ2wyLGhK6jlLEbNBGC6Xyx59rGAec+gyJSPQDg4TwwrRwyfcFLkuyyQStttnWTYY5A5cwHfSGVMg55QHP2J8ze/5cjiienhjYlBhDQ8bAd752D6Y+ZmP3GsUDUSKRrALurIWklyJogcGTwg63gOrO2S/1/eVU1SKLYwFhqnQzOiotNvK8imlwma5jpqZjwh8Q9gxQb8RMuiQXKv1BlPpjocL7/F4WN9IFWVEHGwFsuW7YZIxsDi2OQSSjhhsK05BGZ24sZmskx9ZEGgsv++Q0v8I3WWxoKWrhJ6309EGWSocwxrNZhJUfDihW4NfhGvELz26Tol2x96YaM5OWdVWAugLl8YW+7GxWHcFlmq0UcJasQo49VHI8cpxLXc8hKeMVt3VZoVeBZ0OQVpkHOidxZvksr6UStV4C5hb/UMoSm0mlINONRx/g292fdNM6vh8dRUH/d3ULz21jt1T/nJar/G2hrMmPvi/jwYUcBn7h/eevwzGiUcoNf/J0cWvnHoLeJ/UdzprBnQ/4bRekhYjfvAganb/IimTSP3q6lx7xN5HFfkAIahWgfyy0yHrk2mUSK/J/+IzY6bC8q2IK3oRRFm34HKF6x2sEC9zoNyFB5VwMk4dVn53X+7FIsNVUHAmvGx1M4u9qe5FU85leX+iz+0/DAcxKQ==</source>
   </file>
-  <file path="Plugin/NetCommons/Controller/Component/PermissionComponent.php" generated-path="Plugin.NetCommons.Controller.Component.PermissionComponent.html" hash="1c54ca87a057d9d76fa79a5acd995ba4" package="Default">
+  <file path="Plugin/NetCommons/Controller/Component/PermissionComponent.php" generated-path="Plugin.NetCommons.Controller.Component.PermissionComponent.html" hash="ceefce3869e49134d50679ba7e802e84" package="Default">
     <docblock line="0">
       <description>Permission Component</description>
       <long-description></long-description>
@@ -5717,49 +5717,38 @@ e.g.) packagist', 'charset' =&gt; 'utf8'), 'weight' =&gt; array('type' =&gt; 'in
       <tag name="copyright" line="0" description="Copyright 2014, NetCommons Project"/>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <class final="false" abstract="false" namespace="" line="28" package="NetCommons\NetCommons\Controller\Component">
+    <class final="false" abstract="false" namespace="" line="29" package="NetCommons\NetCommons\Controller\Component">
       <extends>\Component</extends>
       <name>PermissionComponent</name>
       <full_name>\PermissionComponent</full_name>
-      <docblock line="28">
+      <docblock line="29">
         <description>Permission Component</description>
         <long-description>リクエストされたController、もしくは、actionのアクセス許可を、&lt;br&gt;
-Currentオブジェクトの権限から判定します。
+[Currentオブジェクト](https://github.com/NetCommons3/NetCommons3Docs/blob/master/phpdocMd/NetCommons/Current.md#current)
+の権限から判定します。&lt;br&gt;
 チェックタイプと許可アクションリストを渡してください。
 
 [チェックタイプ](#type)&lt;br&gt;
 [許可アクションリスト](#allow)</long-description>
-        <tag name="author" line="28" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
-        <tag name="package" line="28" description="NetCommons\NetCommons\Controller\Component"/>
+        <tag name="author" line="29" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
+        <tag name="package" line="29" description="NetCommons\NetCommons\Controller\Component"/>
       </docblock>
-      <constant namespace="" line="35" package="NetCommons\NetCommons\Controller\Component">
+      <constant namespace="" line="36" package="NetCommons\NetCommons\Controller\Component">
         <name>READABLE_PERMISSION</name>
         <full_name>\PermissionComponent::READABLE_PERMISSION</full_name>
         <value>'content_readable'</value>
-        <docblock line="35">
+        <docblock line="36">
           <description>コンテンツReadableの定数</description>
           <long-description></long-description>
-          <tag name="var" line="35" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </constant>
-      <constant namespace="" line="42" package="NetCommons\NetCommons\Controller\Component">
-        <name>CHECK_TYEP_GENERAL_PLUGIN</name>
-        <full_name>\PermissionComponent::CHECK_TYEP_GENERAL_PLUGIN</full_name>
-        <value>'general_plugin'</value>
-        <docblock line="42">
-          <description>チェックタイプの定数</description>
-          <long-description></long-description>
-          <tag name="var" line="42" description="" type="string" variable="">
+          <tag name="var" line="36" description="" type="string" variable="">
             <type>string</type>
           </tag>
         </docblock>
       </constant>
       <constant namespace="" line="43" package="NetCommons\NetCommons\Controller\Component">
-        <name>CHECK_TYEP_CONTROL_PANEL</name>
-        <full_name>\PermissionComponent::CHECK_TYEP_CONTROL_PANEL</full_name>
-        <value>'control_panel'</value>
+        <name>CHECK_TYEP_GENERAL_PLUGIN</name>
+        <full_name>\PermissionComponent::CHECK_TYEP_GENERAL_PLUGIN</full_name>
+        <value>'general_plugin'</value>
         <docblock line="43">
           <description>チェックタイプの定数</description>
           <long-description></long-description>
@@ -5769,9 +5758,9 @@ Currentオブジェクトの権限から判定します。
         </docblock>
       </constant>
       <constant namespace="" line="44" package="NetCommons\NetCommons\Controller\Component">
-        <name>CHECK_TYEP_USER_PLUGIN</name>
-        <full_name>\PermissionComponent::CHECK_TYEP_USER_PLUGIN</full_name>
-        <value>'user_plugin'</value>
+        <name>CHECK_TYEP_CONTROL_PANEL</name>
+        <full_name>\PermissionComponent::CHECK_TYEP_CONTROL_PANEL</full_name>
+        <value>'control_panel'</value>
         <docblock line="44">
           <description>チェックタイプの定数</description>
           <long-description></long-description>
@@ -5781,9 +5770,9 @@ Currentオブジェクトの権限から判定します。
         </docblock>
       </constant>
       <constant namespace="" line="45" package="NetCommons\NetCommons\Controller\Component">
-        <name>CHECK_TYEP_ROOM_PLUGIN</name>
-        <full_name>\PermissionComponent::CHECK_TYEP_ROOM_PLUGIN</full_name>
-        <value>'room_plugin'</value>
+        <name>CHECK_TYEP_USER_PLUGIN</name>
+        <full_name>\PermissionComponent::CHECK_TYEP_USER_PLUGIN</full_name>
+        <value>'user_plugin'</value>
         <docblock line="45">
           <description>チェックタイプの定数</description>
           <long-description></long-description>
@@ -5793,9 +5782,9 @@ Currentオブジェクトの権限から判定します。
         </docblock>
       </constant>
       <constant namespace="" line="46" package="NetCommons\NetCommons\Controller\Component">
-        <name>CHECK_TYEP_SYSTEM_PLUGIN</name>
-        <full_name>\PermissionComponent::CHECK_TYEP_SYSTEM_PLUGIN</full_name>
-        <value>'system_plugin'</value>
+        <name>CHECK_TYEP_ROOM_PLUGIN</name>
+        <full_name>\PermissionComponent::CHECK_TYEP_ROOM_PLUGIN</full_name>
+        <value>'room_plugin'</value>
         <docblock line="46">
           <description>チェックタイプの定数</description>
           <long-description></long-description>
@@ -5804,11 +5793,23 @@ Currentオブジェクトの権限から判定します。
           </tag>
         </docblock>
       </constant>
-      <property static="false" visibility="public" namespace="" line="71" package="NetCommons\NetCommons\Controller\Component">
+      <constant namespace="" line="47" package="NetCommons\NetCommons\Controller\Component">
+        <name>CHECK_TYEP_SYSTEM_PLUGIN</name>
+        <full_name>\PermissionComponent::CHECK_TYEP_SYSTEM_PLUGIN</full_name>
+        <value>'system_plugin'</value>
+        <docblock line="47">
+          <description>チェックタイプの定数</description>
+          <long-description></long-description>
+          <tag name="var" line="47" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </constant>
+      <property static="false" visibility="public" namespace="" line="72" package="NetCommons\NetCommons\Controller\Component">
         <name>$type</name>
         <full_name>\PermissionComponent::type</full_name>
         <default>self::CHECK_TYEP_GENERAL_PLUGIN</default>
-        <docblock line="71">
+        <docblock line="72">
           <description>チェックタイプ</description>
           <long-description>* CHECK_TYEP_GENERAL_PLUGIN&lt;br&gt;
 ページに配置するプラグインの場合に使用します。（デフォルト）&lt;br&gt;
@@ -5827,16 +5828,16 @@ Currentオブジェクトの権限から判定します。
 * CHECK_TYEP_SYSTEM_PLUGIN&lt;br&gt;
 ？？？&lt;br&gt;
 ユーザーが使用できるプラグインか否かで判定します。</long-description>
-          <tag name="var" line="71" description="" type="string" variable="">
+          <tag name="var" line="72" description="" type="string" variable="">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="" line="117" package="NetCommons\NetCommons\Controller\Component">
+      <property static="false" visibility="public" namespace="" line="118" package="NetCommons\NetCommons\Controller\Component">
         <name>$allow</name>
         <full_name>\PermissionComponent::allow</full_name>
         <default>array('index,view' =&gt; null)</default>
-        <docblock line="117">
+        <docblock line="118">
           <description>許可アクションリスト</description>
           <long-description>チェックタイプがCHECK_TYEP_GENERAL_PLUGINの場合に使用される判定リストです。&lt;br&gt;
 アクション名 =&gt; 権限名の形式で指定してください。&lt;br&gt;
@@ -5876,21 +5877,21 @@ public $components = array(
 	)
 )
 ```</long-description>
-          <tag name="var" line="117" description="" type="array" variable="">
+          <tag name="var" line="118" description="" type="array" variable="">
             <type>array</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="125" package="NetCommons\NetCommons\Controller\Component">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="126" package="NetCommons\NetCommons\Controller\Component">
         <name>initialize</name>
         <full_name>\PermissionComponent::initialize()</full_name>
-        <docblock line="125">
+        <docblock line="126">
           <description>Called before the Controller::beforeFilter().</description>
           <long-description></long-description>
-          <tag name="param" line="125" description="&lt;p&gt;Instantiating controller&lt;/p&gt;" type="\Controller" variable="$controller">
+          <tag name="param" line="126" description="&lt;p&gt;Instantiating controller&lt;/p&gt;" type="\Controller" variable="$controller">
             <type>\Controller</type>
           </tag>
-          <tag name="return" line="125" description="" type="void">
+          <tag name="return" line="126" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -5900,19 +5901,19 @@ public $components = array(
           <type>\Controller</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="171" package="NetCommons\NetCommons\Controller\Component">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="172" package="NetCommons\NetCommons\Controller\Component">
         <name>startup</name>
         <full_name>\PermissionComponent::startup()</full_name>
-        <docblock line="171">
+        <docblock line="172">
           <description>Called after the Controller::beforeFilter() and before the controller action</description>
           <long-description></long-description>
-          <tag name="param" line="171" description="&lt;p&gt;Controller with components to startup&lt;/p&gt;" type="\Controller" variable="$controller">
+          <tag name="param" line="172" description="&lt;p&gt;Controller with components to startup&lt;/p&gt;" type="\Controller" variable="$controller">
             <type>\Controller</type>
           </tag>
-          <tag name="return" line="171" description="" type="void">
+          <tag name="return" line="172" description="" type="void">
             <type>void</type>
           </tag>
-          <tag name="throws" line="171" description="" type="\ForbiddenException">
+          <tag name="throws" line="172" description="" type="\ForbiddenException">
             <type>\ForbiddenException</type>
           </tag>
         </docblock>
@@ -5923,7 +5924,7 @@ public $components = array(
         </argument>
       </method>
     </class>
-    <source>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</source>
+    <source>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</source>
   </file>
   <file path="Plugin/NetCommons/TestSuite/NetCommonsCakeTestCase.php" generated-path="Plugin.NetCommons.TestSuite.NetCommonsCakeTestCase.html" hash="f951d65dc32d4c2bc1ad1247e26dfd0f" package="Default">
     <docblock line="0">
