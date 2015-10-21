@@ -19,18 +19,6 @@ Properties
 ----------
 
 
-### $__useDbConfig
-
-    private array $__useDbConfig
-
-use useDbConfig
-
-
-
-* Visibility: **private**
-* This property is **static**.
-
-
 ### $actsAs
 
     public array $actsAs = array('NetCommons.Trackable')
@@ -93,6 +81,20 @@ Test実行時は唯一のDBに対して行うようにOverrideしています。
 
 #### Arguments
 * $dataSource **string** - &lt;p&gt;The name of the DataSource, as defined in app/Config/database.php&lt;/p&gt;
+
+
+
+### __setMasterDataSource
+
+    void NetCommonsAppModel::__setMasterDataSource()
+
+MasterDBに切り替える処理
+
+
+
+* Visibility: **private**
+* This method is defined by [NetCommonsAppModel](NetCommonsAppModel.md)
+
 
 
 
@@ -194,7 +196,7 @@ transaction rollback
 
 ### loadModels
 
-    void NetCommonsAppModel::loadModels(array $models, string $source)
+    void NetCommonsAppModel::loadModels(array $models)
 
 Load models
 
@@ -206,7 +208,6 @@ Load models
 
 #### Arguments
 * $models **array** - &lt;p&gt;models to load&lt;/p&gt;
-* $source **string** - &lt;p&gt;data source&lt;/p&gt;
 
 
 
@@ -242,19 +243,5 @@ Check field1 matches field2
 
 #### Arguments
 * $data **array** - &lt;p&gt;デフォルトを上書きするカラム配列&lt;/p&gt;
-
-
-
-### _getCurrentValue
-
-    array NetCommonsAppModel::_getCurrentValue()
-
-Currentで取れる値を返す。
-
-
-
-* Visibility: **protected**
-* This method is defined by [NetCommonsAppModel](NetCommonsAppModel.md)
-
 
 

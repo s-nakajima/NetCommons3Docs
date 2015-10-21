@@ -355,7 +355,7 @@ Cuurent::read('Block.key')
 
 ### permission
 
-    boolean Current::permission(string|array $key)
+    boolean Current::permission(string $key)
 
 指定された$key(権限名文字列)の値を返します。
 
@@ -368,7 +368,7 @@ Current::permission('content_publishable')
 
 
 #### Arguments
-* $key **string|array** - &lt;p&gt;Hashクラスのpath&lt;/p&gt;
+* $key **string** - &lt;p&gt;Hashクラスのpath&lt;/p&gt;
 
 
 

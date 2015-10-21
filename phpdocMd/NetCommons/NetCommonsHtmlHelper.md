@@ -140,3 +140,19 @@ Creates a `<a>` tag for add link. The type attribute defaults
 * $options **array** - &lt;p&gt;Array of options and HTML attributes.&lt;/p&gt;
 
 
+
+### requireTitle
+
+    string NetCommonsHtmlHelper::requireTitle(string $title)
+
+必須ラベルHTMLの出力
+
+
+
+* Visibility: **public**
+
+
+#### Arguments
+* $title **string** - &lt;p&gt;タイトル&lt;/p&gt;
+
+

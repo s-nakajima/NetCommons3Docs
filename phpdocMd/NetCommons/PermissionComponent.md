@@ -6,7 +6,7 @@ Permission Component
 リクエストされたController、もしくは、actionのアクセス許可を、<br>
 [Currentオブジェクト](https://github.com/NetCommons3/NetCommons3Docs/blob/master/phpdocMd/NetCommons/Current.md#current)
 の権限から判定します。<br>
-チェックタイプと許可アクションリストを渡してください。
+チェックタイプと許可アクションリストを指定してください。
 
 [チェックタイプ](#type)<br>
 [許可アクションリスト](#allow)
@@ -46,22 +46,6 @@ Constants
 
 
 
-### CHECK_TYEP_USER_PLUGIN
-
-    const CHECK_TYEP_USER_PLUGIN = 'user_plugin'
-
-
-
-
-
-### CHECK_TYEP_ROOM_PLUGIN
-
-    const CHECK_TYEP_ROOM_PLUGIN = 'room_plugin'
-
-
-
-
-
 ### CHECK_TYEP_SYSTEM_PLUGIN
 
     const CHECK_TYEP_SYSTEM_PLUGIN = 'system_plugin'
@@ -81,22 +65,16 @@ Properties
 チェックタイプ
 
 * CHECK_TYEP_GENERAL_PLUGIN<br>
-ページに配置するプラグインの場合に使用します。（デフォルト）<br>
+ページに配置するプラグインの場合に指定します。（デフォルト）<br>
 許可アクションリストに指定された権限から判定します。
 
 * CHECK_TYEP_CONTROL_PANEL<br>
-コントロールパネルを表示する際に使用します。<br>
+コントロールパネルを表示する際に指定します。<br>
 コントロールパネルで動作するプラグインの有無で判定します。
 
-* CHECK_TYEP_USER_PLUGIN<br>
-？？？
-
-* CHECK_TYEP_ROOM_PLUGIN<br>
-？？？
-
 * CHECK_TYEP_SYSTEM_PLUGIN<br>
-？？？<br>
-ユーザーが使用できるプラグインか否かで判定します。
+管理プラグインを表示・設定する際に指定します。<br>
+ユーザーが使用できる管理プラグインか否かで判定します。
 
 * Visibility: **public**
 
