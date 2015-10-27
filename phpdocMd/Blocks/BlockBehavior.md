@@ -3,7 +3,40 @@ BlockBehavior
 
 Block Behavior
 
+ブロックモデルにアソシエーションがあるモデルのビヘイビアです。<br>
+ブロックデータの内、ブロック編集にかかわる項目（名称、公開期限）を処理します。<br>
 
+#### 設定項目
+##### name
+ブロック名称フィールドを指定すると、ブロックモデルの名称として登録されます。<br>
+お知らせなど名称がない場合でも名称となり得るフィールドを指定してください。
+[NAME_LENGTH](#name_length)の長さで登録されます。<br>
+
+##### loadModels
+他にアソシエーションがあるモデルがある場合は、loadModelsに指定してください。<br>
+ブロックデータ登録後、指定されたモデルのblock_id、block_keyに値がセットされます。<br>
+ブロック削除時には指定されたモデルから削除されます。<br>
+
+#### サンプルコード
+```
+public $actsAs = array(
+	'Blocks.Block' => array(
+		'name' => 'Faq.name',
+		'loadModels' => array(
+			'Category' => 'Categories.Category',
+			'CategoryOrder' => 'Categories.CategoryOrder',
+			'WorkflowComment' => 'Workflow.WorkflowComment',
+		)
+	)
+)
+```
+
+ブロックデータを取得する場合の条件<br>
+[getBlockConditions](https://github.com/kteraguchi/test/blob/master/README.md#getblockconditions)<br>
+[getBlockConditionById](https://github.com/kteraguchi/test/blob/master/README.md#getblockconditionbyid)<br>
+
+登録時は自動的に登録しますが、削除は明示的に呼び出してください。<br>
+[deleteBlock](https://github.com/kteraguchi/test/blob/master/README.md#deleteblock)<br>
 
 
 * Class name: BlockBehavior
@@ -18,7 +51,7 @@ Constants
 
 ### NAME_LENGTH
 
-    const NAME_LENGTH = 50
+    const NAME_LENGTH = 255
 
 
 
@@ -125,9 +158,17 @@ savePrepare
 
     array BlockBehavior::getBlockConditions(\Model $model, array $conditions)
 
-Get conditions
+ブロック一覧データを取得する場合の条件を返します。
 
-
+#### サンプルコード（Faqモデル）
+```
+$this->Paginator->settings = array(
+	'Faq' => array(
+		'order' => array('Block.id' => 'desc'),
+		'conditions' => $this->Faq->getBlockConditions(),
+		)
+	);
+```
 
 * Visibility: **public**
 
@@ -142,9 +183,15 @@ Get conditions
 
     array BlockBehavior::getBlockConditionById(\Model $model, array $conditions)
 
-Get condition by Block.id
+ブロックデータを取得する場合の条件を返します。
 
-
+#### サンプルコード（Faqモデル）
+```
+$faq = $this->find('all', array(
+	'recursive' => -1,
+	'conditions' => $this->getBlockConditionById(),
+));
+```
 
 * Visibility: **public**
 
@@ -159,9 +206,25 @@ Get condition by Block.id
 
     void BlockBehavior::deleteBlock(\Model $model, string $blockKey)
 
-Delete block.
+ブロックデータを削除します。.
 
+#### サンプルコード（Faqモデル）
+```
+public function deleteFaq($data) {
+	$this->begin();
+	try {
+		if (!$this->delete($data[Faq][id])) {
+			throw new InternalErrorException(__d('net_commons', 'Internal Server Error'));
+		}
 
+		$this->deleteBlock($data['Block']['key']);
+
+		$this->commit();
+	} catch (Exception $ex) {
+ 	$this->rollback($ex);
+	}
+}
+```
 
 * Visibility: **public**
 

@@ -127,3 +127,17 @@ Set BlockRolePermissions
 
 
 
+
+### setM17n
+
+    void CurrentFrame::setM17n()
+
+多言語化のデータ取得
+
+
+
+* Visibility: **public**
+* This method is **static**.
+
+
+
