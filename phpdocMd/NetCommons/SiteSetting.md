@@ -45,6 +45,32 @@ Methods
 -------
 
 
+### getSiteTheme
+
+    string SiteSetting::getSiteTheme()
+
+サイトに設定されているテーマを返す
+
+
+
+* Visibility: **public**
+
+
+
+
+### getSiteTimezone
+
+    string SiteSetting::getSiteTimezone()
+
+サイトのデフォルトタイムゾーン（未ログインのゲスト用）を返す
+
+
+
+* Visibility: **public**
+
+
+
+
 ### __construct
 
     void NetCommonsAppModel::__construct(boolean|integer|string|array $id, string $table, string $ds)
@@ -62,19 +88,6 @@ Constructor. DataSourceの選択
 can also be an array of options, see above.&lt;/p&gt;
 * $table **string** - &lt;p&gt;Name of database table to use.&lt;/p&gt;
 * $ds **string** - &lt;p&gt;DataSource connection name.&lt;/p&gt;
-
-
-
-### getSiteTheme
-
-    string SiteSetting::getSiteTheme()
-
-サイトに設定されているテーマを返す
-
-
-
-* Visibility: **public**
-
 
 
 

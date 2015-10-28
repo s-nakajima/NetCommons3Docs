@@ -31,7 +31,7 @@ Fields
 
 ### $records
 
-    public array $records = array(array('id' => 1, 'language_id' => 1, 'key' => 'Lorem ipsum dolor sit amet', 'label' => 'Lorem ipsum dolor sit amet', 'value' => 'Lorem ipsum dolor sit amet', 'weight' => 1, 'created_user' => 1, 'created' => '2014-04-15 02:46:23', 'modified_user' => 1, 'modified' => '2014-04-15 02:46:23'), array('id' => 2, 'language_id' => 2, 'key' => 'theme', 'value' => 'UnitTestTheme', 'label' => 'Theme', 'weight' => 1, 'created_user' => 1, 'created' => '2014-04-15 02:46:23', 'modified_user' => 1, 'modified' => '2014-04-15 02:46:23'))
+    public array $records = array(array('id' => 1, 'language_id' => 1, 'key' => 'Lorem ipsum dolor sit amet', 'label' => 'Lorem ipsum dolor sit amet', 'value' => 'Lorem ipsum dolor sit amet', 'weight' => 1, 'created_user' => 1, 'created' => '2014-04-15 02:46:23', 'modified_user' => 1, 'modified' => '2014-04-15 02:46:23'), array('id' => 2, 'language_id' => 2, 'key' => 'theme', 'value' => 'UnitTestTheme', 'label' => 'Theme', 'weight' => 1, 'created_user' => 1, 'created' => '2014-04-15 02:46:23', 'modified_user' => 1, 'modified' => '2014-04-15 02:46:23'), array('id' => 3, 'language_id' => 2, 'key' => 'site_timezone', 'value' => 'Asia/Tokyo', 'label' => 'SiteTimezone', 'weight' => 1, 'created_user' => 1, 'created' => '2014-04-15 02:46:23', 'modified_user' => 1, 'modified' => '2014-04-15 02:46:23'))
 
 Records
 
