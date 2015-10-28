@@ -3,11 +3,11 @@ VisualCaptchaComponent
 
 VisualCaptcha Component
 
-画像認証画面へのリダイレクト、認証処理を行います。
+画像認証画面へのリダイレクト、認証処理を行います。<br>
 利用方式、対象アクション、認証要素key名称を指定してください。
 
-[利用方式](#type)<br>
-[許可アクションリスト](#allow)
+[利用方式](#operationtype)<br>
+[対象アクション](#operationtype)
 
 
 * Class name: VisualCaptchaComponent
@@ -82,18 +82,13 @@ public $components = array(
 
 
 #### サンプルコード
-##### Controller(明示的に指定)
+##### Controller
 ```
 public $components = array(
 	'VisualCaptcha.VisualCaptcha' => array(
 		'operationType' => VisualCaptchaComponent::OPERATION_EMBEDDING,
+		'identifyKey' => 'VisualCaptcha'
 	)
-)
-```
-##### Controller(デフォルト設定を利用)
-```
-public $components = array(
-	'VisualCaptcha.VisualCaptcha'
 )
 ```
 ##### View
