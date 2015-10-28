@@ -2078,6 +2078,190 @@ key 'url' and optionally 'status' and 'exit'.</long-description>
     </class>
     <source>eJzFk09r20AQxc/Sp9hDYGUTS23pSXFUh0AvLaGQ3EIIm9VY2ni1q+6O6rjF372jP5ZlaCE55SKWefNmnn4rLb/UZR0m83nI5uwG8NpWlTWeXVuDzmoNjoRWW4kGS+vYbWlLUOxGbMSzqgRbmuHkS9uQsioqoXQsbZV1Nq3MhpWIdZok2+02NoCy3xFbV0xX/nD2GSQOLgnGw/+NydAR4wtOh3zvy90QaeudU0WJ9DaH06cPHz+f/3trEoZXdZ2mjQcf8WMLFY80+DmbSPFEmF2Er+L4xlQj+G8d9ztwomhkqdhyg4fzagBDiFo27ww+CaUW3k/EIwQGLwgmn4oneNmfEeITrK2Dr0rjkZ0DbJxhv6zKu0VB3TxRHrZujERlzYkpmtG0IKiFA4NpeipdkHKGpfKL7Ir4LjKhtd1GXHq3vrMbMO19BvsxzVhnFdB15K9ONBqHOGceZOMU7tglGwIQiNoaCklnbUUe8duhh/c5D5ZFVoChS0foJw5+Bz8b8Nh+gNScCxQ0WzgndhEVAv7YvxC7zCbVgG9g19VOpywyAiYqf3+wPdx3nQ+taUaPYU1v8oARfRy1kBjxdjOfTdG2Mn/04JTQ6jfQz9MHmLTuw334FwlPfPc=</source>
   </file>
+  <file path="Plugin/NetCommons/Utility/NetCommonsTime.php" generated-path="Plugin.NetCommons.Utility.NetCommonsTime.html" hash="4da5d6c6c189929bed6d11b851ecb7c4" package="Default">
+    <docblock line="0">
+      <description>NetCommonsTime</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Ryuji AMANO" link="mailto:ryuji@ryus.co.jp"/>
+      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
+      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="24" package="Default">
+      <extends/>
+      <name>NetCommonsTime</name>
+      <full_name>\NetCommonsTime</full_name>
+      <docblock line="24">
+        <description>Class NetCommonsTime</description>
+        <long-description>## テストで時刻を差し替えたいときのサンプルコード
+```
+   $nowProperty = new ReflectionProperty('NetCommonsTime', '_now');
+   $nowProperty-&gt;setAccessible(true);
+   $nowProperty-&gt;setValue(strtotime('2000-01-01 00:00:00'));
+   // test code ..
+   $nowProperty-&gt;setValue(null); // 現在日時変更が他のテストに影響を与えないようにnullにもどしておく
+```</long-description>
+        <tag name="package" line="24" description="Default"/>
+      </docblock>
+      <property static="true" visibility="protected" namespace="" line="29" package="Default">
+        <name>$_now</name>
+        <full_name>\NetCommonsTime::_now</full_name>
+        <default>null</default>
+        <docblock line="29">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="29" description="&lt;p&gt;現在日時 unixtime&lt;/p&gt;" type="integer" variable="">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="36" package="Default">
+        <name>_getSiteTimezone</name>
+        <full_name>\NetCommonsTime::_getSiteTimezone()</full_name>
+        <docblock line="36">
+          <description>サイトのデフォルトタイムゾーンを返す</description>
+          <long-description></long-description>
+          <tag name="return" line="36" description="タイムゾーン" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="62" package="Default">
+        <name>toUserDatetime</name>
+        <full_name>\NetCommonsTime::toUserDatetime()</full_name>
+        <docblock line="62">
+          <description>サーバタイムゾーンの日時をユーザタイムゾーンの日時に変換する</description>
+          <long-description></long-description>
+          <tag name="param" line="62" description="&lt;p&gt;server timezone datetime&lt;/p&gt;" type="string" variable="$serverDatetime">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="62" description="ユーザタイムゾーンの日時" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$serverDatetime</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="77" package="Default">
+        <name>toUserDatetimeArray</name>
+        <full_name>\NetCommonsTime::toUserDatetimeArray()</full_name>
+        <docblock line="77">
+          <description>サーバタイムゾーンの日時が含まれる連想配列から指定された配列添え字の値だけをユーザタイムゾーンに変換した配列を返す</description>
+          <long-description></long-description>
+          <tag name="param" line="77" description="&lt;p&gt;サーバタイムゾーンの日時が含まれた配列&lt;/p&gt;" type="array" variable="$data">
+            <type>array</type>
+          </tag>
+          <tag name="param" line="77" description="&lt;p&gt;ユーザタイムゾーンに変換する配列添え字&lt;/p&gt;" type="array" variable="$convertKeyNameList">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="77" description="ユーザタイムゾーンに変換済みの配列" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$convertKeyNameList</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="98" package="Default">
+        <name>toServerDatetime</name>
+        <full_name>\NetCommonsTime::toServerDatetime()</full_name>
+        <docblock line="98">
+          <description>ユーザタイムゾーンからサーバタイムゾーンに日時を変換する</description>
+          <long-description></long-description>
+          <tag name="param" line="98" description="&lt;p&gt;ユーザタイムゾーンの日時&lt;/p&gt;" type="string" variable="$userDatetime">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="98" description="&lt;p&gt;ユーザタイムゾーンを指定したい時にユーザタイムゾーンを渡す。指定しないとアクセスユーザのタイムゾーンを対象に変換する&lt;/p&gt;" type="null|string" variable="$userTimezone">
+            <type>null</type>
+            <type>string</type>
+          </tag>
+          <tag name="return" line="98" description="サーバタイムゾーンに変換された日時" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$userDatetime</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$userTimezone</name>
+          <default>null</default>
+          <type>null|string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="116" package="Default">
+        <name>toServerDatetimeArray</name>
+        <full_name>\NetCommonsTime::toServerDatetimeArray()</full_name>
+        <docblock line="116">
+          <description>ユーザタイムゾーンの日時が含まれる連想配列から指定された配列添え字の値だけをサーバタイムゾーンに変換した配列を返す</description>
+          <long-description></long-description>
+          <tag name="param" line="116" description="&lt;p&gt;ユーザタイムゾーンの日時が含まれた配列&lt;/p&gt;" type="array" variable="$data">
+            <type>array</type>
+          </tag>
+          <tag name="param" line="116" description="&lt;p&gt;サーバタイムゾーンに変換する配列添え字&lt;/p&gt;" type="array" variable="$convertKeyNameList">
+            <type>array</type>
+          </tag>
+          <tag name="param" line="116" description="&lt;p&gt;ユーザタイムゾーンを指定したい時にユーザタイムゾーンを渡す。指定しないとアクセスユーザのタイムゾーンを対象に変換する&lt;/p&gt;" type="null|string" variable="$userTimezone">
+            <type>null</type>
+            <type>string</type>
+          </tag>
+          <tag name="return" line="116" description="サーバタイムゾーンに変換済みの配列" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$convertKeyNameList</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$userTimezone</name>
+          <default>null</default>
+          <type>null|string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="135" package="Default">
+        <name>getNowDatetime</name>
+        <full_name>\NetCommonsTime::getNowDatetime()</full_name>
+        <docblock line="135">
+          <description>現在日時を返す</description>
+          <long-description></long-description>
+          <tag name="return" line="135" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="148" package="Default">
+        <name>getUserTimezone</name>
+        <full_name>\NetCommonsTime::getUserTimezone()</full_name>
+        <docblock line="148">
+          <description>アクセスしたユーザのタイムゾーンを返す
+ゲストならサイトタイムゾーンを返す</description>
+          <long-description></long-description>
+          <tag name="return" line="148" description="タイムゾーン" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJzVWNtuG0UYvrafYqRa8iZyvIbLbRMSpRdIlBTlgAQIJVtnnGxq71q747gGLGXX0CY0JaWiRCVIaSGUNhGuSoAGBZKHmdo0b8E/s7v2nnwKvSFyfJiZ/5v//M3spbeKy8W4ODwcR8NoCpNJrVDQVGNWKWAYYYPjcoksazpCaLpSWlHQxLsTU1fRJZ39GId3I53V0ivFMb42r6jX0TIhRUkUy+VyWsUkayOmNX3JswF6T9dWcJY4UlmsGrizoOisSJMbxAtyxR4GEDEenygWJalkYENITpZ0HaskmULJ9ur0HFHyCqkkhy7GXYsn87JhRNt94QKitZvU+pPW1qn5c/OB1Vg/pta9xos6NbebO6fUhPFdan5OzSfUvEPNOrV+p7VDWtumtQNqwZe/aG2DYS0sLLAP+EuoWhlML2KdVNAoUnEZTeNcHjyhaKo7IST9GjE75kGQaR6GGRkzMJnIZrFhKNfyWCB6CXde+L6cL2HBIDrRCEALyTczmcxI5g14oUxG4q/kUEteFBHBBkFZbRGjdLo7qlrK54cuMpl/tk4a3z9pbv/E3La30dz5jZqbL4+/ZU5qO/Wg8ffzs91TcOrLo6+4O/eZOy34chNmGRx8UMui5lPwOTUfU/NLam61XSrGsxERRJ+2Ajy+KutIUYlPI1RSlRvEDrUYjxlEJkoWFXWNQBzwIkowZ7PogALtXGHRtfa44mDELVq7T62nLNIwYp3yqYfUOuFRPwSbXp1+Q80HbhXpmJR0FYHjFXUJhQVsVdo65Eoqzwk0v4TJjEIwM+wTTcXCEJgXiyUMzxjoOqmpOWWppGNJ0rG8KCS9MixxYjElh4SA2KhtpA0ZSzCZGUwIU3HULo5pvKSA0hVJUlSFeDMz7VltbxBSygs4MhYyhMt4FC/rMB3QPIV8oFymCv+OP32TMFeNx2Oi2LcbRdGNflB1O/ZsQQ+3wYr/6jgOMbDrQKrK3zu4QhT5tC9/WardjchWs25XBqQtrT1mg9Yf3ZZB6UJVb+1AglPrtpvjRVmXC26KJwysr2L9skwwKzVk/0TENXHRmYiqjj5UcOqldA2ooR1los0Z7T2FgA5O5QBH6F5Pk2XF4C6e80zY2ZlgWjp9mqHMRqCmfLMfMtnk3Owkb6IuBG+SLejQep9KQ3xnN6i2dE7TCzIk0QcjhZFF9LakSAbPnOpg0TU3G3cPqHlCrU0I29naj83a4dkXdxrr0FtvU2ujuXmrUf+OmvfZAnPXnmq+OIbe3PgF1tQba3vUfEjNr3slSis/tls4oZZop4us63KF2ykPboSLHcbLairEiLyDK1NyAV+BUuyeVr6EDhjuTVEbvh+o5hEwBZwS6i0VeybsBAMXPB5JdTbHk8yu+GXmw1FbkuUQZA2Ws8tICK+SDZS4juEIMoYSq4y8HQpgzU4x5vmugjPjTIX3+ohBfNwuoShjbIxUpAW8/1cRzhvY2YJvr7rbA3q0oKvRoCq5FvGNOY3wNy+fBAH9RdYt7KyAuibwQavH9m6eXjX67YcuBqOmz7xArWbXDci651b/tn2stft8D5GjR8yKNcsju+8cia0fqPWMWsf8tOeCsENyBE7j2cmr54/CtBI+N3XzryvstK/uRDHja+L+EkmhIEm0T0n8OOCfDZyiBuCXakeO8avTmzH6ZJoWM52DYfo6GLxWhukr2oMxzKBGDMYwfSnciWF6Ve//uHwd1uzDPX2ypr96HarpwZjdqjpwpuvMpBHrzsWlYZwwdUUa2ZlPA/a9DnodXMu2gmFdohk3vIev7Xgv7t1v1f7bfCBloP1OaeWWlu1ebuB8TpKcK7+/k/umkC0XuH+y5ulvminkEQue0T01Zddpr8pqmQvCv7rPTfadk4b9NOK1PXsIe8xPWJG3J+dRm/vUgUmk3Tue57HDOQgzfGMP3v29ctzR1X8BM0wYIQ==</source>
+  </file>
   <file path="Plugin/NetCommons/Test/Case/Model/Behavior/Trackable/TrackableBehaviorTestBase.php" generated-path="Plugin.NetCommons.Test.Case.Model.Behavior.Trackable.TrackableBehaviorTestBase.html" hash="e09bb468d8a0a1c60d29630450b40714" package="Default">
     <docblock line="0">
       <description>TrackableBehavior test case base</description>
@@ -4960,6 +5144,95 @@ Redistributions of files must retain the above copyright notice.</long-descripti
     </docblock>
     <source>eJytUk2P2jAQPTe/YqQe+NDirPZWWqkgWFSkLSDg0lNlnIG4OHZkO6Srqv+945AEKFVP60Mij9+8mXnzPn3O0zyK+/0I+jDOcyUF99JoUHhCBROjvTVKoaX3ANmm0sFeKgT68wt+UMoEQbTwCsPgmylAcA154YErFRj+kzSwqLjHBDL0qUkcpGiR1ZUn/IirL6uuz3owhDXPZQLT0KTJM9QeZpZnWBp7hG7qfT6MY0EZNB0z9tCrGEz+auUh9dAVvYoPNmbvS24RZqbQSdXUA8y1YDck+/ax4Qp0L1KgdtQtPdLA2xTh63zbhANiZkiHQikasanMdQLqjACp98ZmddFcIaeYQwRPTC/zyfNi88z8Tx+Y1phI563cFQHtwOwrgR1khfNg0XOpqzy+Mye8qqeNp2qNhqPLQzhvKAiMlNRHaM/9Cm4WuLLmB4pqtJGTWmCbeI06wSN7Yh9q+rNoN/RlWTKTU9wUlqakKnGNc3Em/aC+MGrhr93E0b9Mf2f3cZLAK5Hfu7axaK27UNw52JEby4dzxsXWLjCVknwgNTla+pCRtTvJuTjyA4YS7KaBWtN61p0xR3alZ/zEHmPU8VUdlvpMvSfyAXENxDVXHMk9dCtxVXGQejhUhieYdDsL9BOTZeSqTq8Hv6J3tA5V0ITr5XILDKYb+oxXq+/T+bq5di59dtoYCXkJLyZB9M7H6DegorW9Fe+S/NowR38AU5GMew==</source>
   </file>
+  <file path="Plugin/NetCommons/View/Helper/NetCommonsTimeHelper.php" generated-path="Plugin.NetCommons.View.Helper.NetCommonsTimeHelper.html" hash="a366e31fab5a2ac56484cc789a803cda" package="Default">
+    <docblock line="0">
+      <description>NetCommonsTimeHelper</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Ryuji AMANO" link="mailto:ryuji@ryus.co.jp"/>
+      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
+      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="16" package="Default">
+      <extends>\AppHelper</extends>
+      <name>NetCommonsTimeHelper</name>
+      <full_name>\NetCommonsTimeHelper</full_name>
+      <docblock line="16">
+        <description>Class NetCommonsTimeHelper</description>
+        <long-description>Add your application-wide methods in the class below, your helpers
+will inherit them.</long-description>
+        <tag name="package" line="16" description="Default"/>
+        <tag name="inherited_from" description="\AppHelper" refers="\AppHelper" link="/classes/AppHelper.html"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="" line="21" package="Default">
+        <name>$_netCommonsTime</name>
+        <full_name>\NetCommonsTimeHelper::_netCommonsTime</full_name>
+        <default>null</default>
+        <docblock line="21">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="21" description="&lt;p&gt;NetCommonsTimeのインスタンス&lt;/p&gt;" type="\NetCommonsTime" variable="">
+            <type>\NetCommonsTime</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="30" package="Default">
+        <name>__construct</name>
+        <full_name>\NetCommonsTimeHelper::__construct()</full_name>
+        <docblock line="30">
+          <description>コンストラクタ</description>
+          <long-description></long-description>
+          <tag name="param" line="30" description="&lt;p&gt;The View this helper is being attached to.&lt;/p&gt;" type="\View" variable="$View">
+            <type>\View</type>
+          </tag>
+          <tag name="param" line="30" description="&lt;p&gt;Configuration settings for the helper.&lt;/p&gt;" type="array" variable="$settings">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="30" description="" type="\NetCommonsTimeHelper">
+            <type>\NetCommonsTimeHelper</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$View</name>
+          <default></default>
+          <type>\View</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$settings</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="42" package="Default">
+        <name>__call</name>
+        <full_name>\NetCommonsTimeHelper::__call()</full_name>
+        <docblock line="42">
+          <description>NetCommonsTime ラップ用マジックメソッド。</description>
+          <long-description></long-description>
+          <tag name="param" line="42" description="&lt;p&gt;メソッド&lt;/p&gt;" type="string" variable="$method">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="42" description="&lt;p&gt;パラメータ&lt;/p&gt;" type="array" variable="$params">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="42" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$method</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$params</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+    </class>
+    <source>eJx1U02P0zAQPSe/Yg6V+qGS3Mvu0qoXDrAgtHCNvKnbuCROZE9oK7QSJBf2iITEDWmlPSwXOOwFJBA/xgf+BnactmlpL5Zn/Oa9mWf75FEWZa7f67nQg3OK4zRJUi4vWEIf0zijQufN0ZDkGKUCAF6s8jmD0dPR+TM4ESYY6lV6YerNs7MKGzP+GiLEbOD7i8XC4xRDy+ulYtaQgecindMQ66qQckmPF/o1wsMlNkme2LQm8V13lGWDQS6p7LT11s7Q7kP7FaMLvw67D5uw3akNdpvxXiKLGa5MydqlcUykPOaV74ZHj4EukfKJhE1j8HbDOnxDxF7VXqjef1PFrSrvVfFTFX/sppJ0MpGitpFOoBXwXY5T4Hkcb7tXxX1NUX5Q5VdVfNdc60vOiCAJGKugVa0XEbUhRkxCZJvWu0vK+AwIIgkjrYqp16gnQpAVtCRF1CgJ45RP2SwXBFnKYZOe6ueEmt+yWgJBMRf8uLlOll/qVwDTnIcVWxCEGoUiD7Gz7bvfUD+1/XS6Xe2247TMJA/ODtiki3d1O/rSHUfPRDkOBk2lfREDvHIPfyMwLpelKj///XSnyi+q+GFC7Xt5o4rf1dG1elfs3oEWMg63Eqq/3QSa2P+drgKpQR8rrRtV/rKXujE0YUs6OeogieNOrdRfs1m36nKDCPRvEYEpC6yhdj3sZ3/deXdLaD26+gdlRp8e</source>
+  </file>
   <file path="Plugin/NetCommons/Test/Fixture/PluginFixture.php" generated-path="Plugin.NetCommons.Test.Fixture.PluginFixture.html" hash="966895a486c3305f86726eae74c40e04" package="Default">
     <docblock line="0">
       <description>PluginFixture</description>
@@ -6411,6 +6684,60 @@ key 'url' and optionally 'status' and 'exit'.</long-description>
     </class>
     <source>eJyFUNFOwjAUfWZfcR9M2IhshDcVEYMaMWqI2w/UrrDKaJf2lomGf7ft5gIPxiZ9uOeee87JmdxURRUkg0EAA7gtS0CmEbThyCySBH+uHDijstorvi4Q3Jt3U0gjmJMNg1SusCaKwYM0IifIpTiHhaAxhAVidZkk1NJW3TKWah156ZKLDXTviGzzOpbXXz4uQ9xGsFTyg1H0h5oLyrrDY9YORvE4vmjlKROancrXdR3LyuLSKMqcS9LydLLlOGyH2EaAl0UGz83si6Il0drVlLmW2CcykWtv74DUtQbf/9RJDBZSwZMR8Mp1wTekJjBBWZGv8Ww7EiP3Yyq3U09XDI0Spx4+S68y7zYraLSlUlgZQV25jVkY2Ry93pkf4BoEq08lwv5vOt2PrjrqcEry3JHuuLJdS7V/Y9QozXcszO7TLIUY+nOiWXPUhmtuLXAIDsEPt43Cgw==</source>
   </file>
+  <file path="Plugin/NetCommons/Test/Case/View/Helper/NetCommonsTimeHelperTest.php" generated-path="Plugin.NetCommons.Test.Case.View.Helper.NetCommonsTimeHelperTest.html" hash="4ee2bb2d513b5078d5e32db554c7022c" package="Default">
+    <docblock line="0">
+      <description>NetCommonsTimeHelper Test Case</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Ryuji AMANO" link="mailto:ryuji@ryus.co.jp"/>
+      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
+      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="17" package="Default">
+      <extends>\CakeTestCase</extends>
+      <name>NetCommonsTimeHelperTest</name>
+      <full_name>\NetCommonsTimeHelperTest</full_name>
+      <docblock line="17">
+        <description>Summary for NetCommonsTimeHelper Test Case</description>
+        <long-description></long-description>
+        <tag name="package" line="17" description="Default"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="24" package="Default">
+        <name>setUp</name>
+        <full_name>\NetCommonsTimeHelperTest::setUp()</full_name>
+        <docblock line="24">
+          <description>setUp method</description>
+          <long-description></long-description>
+          <tag name="return" line="24" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="37" package="Default">
+        <name>tearDown</name>
+        <full_name>\NetCommonsTimeHelperTest::tearDown()</full_name>
+        <docblock line="37">
+          <description>tearDown method</description>
+          <long-description></long-description>
+          <tag name="return" line="37" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="48" package="Default">
+        <name>testWrapMethods</name>
+        <full_name>\NetCommonsTimeHelperTest::testWrapMethods()</full_name>
+        <docblock line="48">
+          <description>NetCommonsTimeHelperでNetCommonsTimeをwrapできてるかのテスト</description>
+          <long-description></long-description>
+          <tag name="return" line="48" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJyVlM9v0zAUx8/tX+FDpaTT2iCO7SirtgOHbUz7xWGakJe+NunaOLKdZdPUQ1o0NrFJAwnBFQ5wQIIDJxATf4zp/4EdO107MqFJVZw8f5/fe5/33IXHoRcWnbm5IppDa8CXSL9PArbl9+EJ9EKgaAsYR0uYgVQo0SKOuEcoQmjjOOr6qLnaXHuKFqj6WJRPVnVJtRs2Um3PDw6Qx3lYc5w4jqsBcFdHqBLamQqI1inpgsuNlwsBg7sdHaOo8iM+fciKNstDnGKxGYa1WsSA2daOD7E1j/Rark9v6Srv2MwDoqQ39qrycsyOdM5Qbkb9PqbHqC1J/RerU3R7mLFcYaqDIw5Bi0n9ASiD8kMnk2AM+HaI+iD70sq6RIFHNECHxG+lEQphtC+poXYUuNwngXayy/KYQiHEFAJeqxlbXZpKqjD0CAXyqV6NlXs+qzRmEzWqvOzt9JjUdYkEbb8TUajVYupzsC1tqfZw0IlwBxTYLra0OKI6o5Kr33atlUy2t2v5LWtPRn1YR46DurhYGExYcMB0mcTBfXFkfoZIJMeI27nlqi7fILvxq0+nkQdDJJ9nzWL4JqY4lHaRXIrkkxi+Eon8fRWjUzH8IUZn90if8WfyrNW0amaqKGkITLLalZ8Fi5NtBnQZc+AyvjVvjJtAD2+Z99IqJd47Kvlz/Vskp//UI0YfxWgkht9E8kUkb0XyLq3oTJam8glm9KvEPZCpGcod4Mpw+9bJscjK0ORLISUyB35s5m4D2j1IKaybjfy+yfF6Phtfz9rkvEpD9rzpusCYv98Dm9MIchQ7uBfBXSFyKiznk1RbkuP46kIk78dXl+Pzy7TzH8TwWiEcnYvkYvz6l0i+j1/+VCyHF2pGkhdmTCYzUijIfxnArofsScMxy6jpSchDX2nAUSjJsawYzO0H5XKloR2zw1IE+Te/0jgxooFtxR5RVzj2MNcrBGal6d32SKyBD9RFGRT/At/PSjU=</source>
+  </file>
   <file path="Plugin/NetCommons/View/Helper/BackToPageHelper.php" generated-path="Plugin.NetCommons.View.Helper.BackToPageHelper.html" hash="ec4be95eae6df2be1e43c1eaa08f89bc" package="Default">
     <docblock line="0">
       <description>後で削除
@@ -6659,6 +6986,116 @@ will inherit them.</long-description>
       </method>
     </class>
     <source>eJydUrFu2zAQna2vuMGAZMOR2qKT67hO0rE1CsRbEhg0fZZoS6RAUrWNIkumbAE6tMi3BMjPFG5/oyfRslWgRYEu5PEd37t3Rw7e5knuRd2uB114xyxORIZwjgn7JJQmsMRHrLCJ0jBWWqwUnGkmYMBoHUkhQsbDZT5s3rtMVIICxmzFliJjMJD7yCSqoMwozphIQ64yR0uFXEFibd6PovV6HUq0lMuUNKHSMYzRXrgjfNRqidzuWRylwb8To/2N0G5sU+S9gysRrvKtFnFi4eIQvXrx8nXvz1UjzzvL836/MGgC/4OaY1rPyu+BA/zOG++fE80ZX7EYoVHmuhFWQtfnuKhJ/znbyOMpM+bgo7YBuLEo5wZ+awE+H4z/fHj+8Xi3u3/6fvdl9/B19/zt6FyzzPGgnVWbOxRGyBhsIgzMjt3WBGN1mW7bbY4woaXKabSFlnVSqnXQqVy38mJGrweLQnIrlIQY7VityxaCZuneXvAU/Dm1aCnvd6iNVqs9nxHaLu2cDIlNE2CXqtAcg/J96AJX6cRxmdZsO81QxxhUceAvlM6Ytah9OB06cb9D1eazkyERi0yaq6r0DamRWFmZlMotqBCxAKc1XeF2ihthrKll6avU1TvO7UGAszSd0u/S07L1oL521TB0c2TXsO9c3JZ97UdaCRJI2K33C6d0TYk=</source>
+  </file>
+  <file path="Plugin/NetCommons/Controller/Component/NetCommonsTimeComponent.php" generated-path="Plugin.NetCommons.Controller.Component.NetCommonsTimeComponent.html" hash="02e34163ccc20b25b71f024b51940320" package="Default">
+    <docblock line="0">
+      <description>NetCommonsTimeComponent</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Ryuji AMANO" link="mailto:ryuji@ryus.co.jp"/>
+      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
+      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="29" package="Default">
+      <extends>\Component</extends>
+      <name>NetCommonsTimeComponent</name>
+      <full_name>\NetCommonsTimeComponent</full_name>
+      <docblock line="29">
+        <description>Class NetCommonsTimeComponent</description>
+        <long-description>NetCommonsFormHelper::input()で、typeをdatetimeに指定された項目の値を
+サーバータイムゾーン（UTC）に変換します。
+
+#### サンプルコード(Viewテンプレート)
+```
+&lt;?php
+	echo $this-&gt;NetCommonsForm-&gt;input(
+		'publish_start',
+		array('type' =&gt; 'datetime')
+	);
+?&gt;
+```</long-description>
+        <tag name="package" line="29" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="" line="34" package="Default">
+        <name>$_netCommonsTime</name>
+        <full_name>\NetCommonsTimeComponent::_netCommonsTime</full_name>
+        <default></default>
+        <docblock line="34">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="34" description="&lt;p&gt;NetCommonsTimeのインスタンス&lt;/p&gt;" type="\NetCommonsTime" variable="">
+            <type>\NetCommonsTime</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="42" package="Default">
+        <name>initialize</name>
+        <full_name>\NetCommonsTimeComponent::initialize()</full_name>
+        <docblock line="42">
+          <description>コントローラの beforeFilter メソッドの前に呼び出されます。</description>
+          <long-description></long-description>
+          <tag name="param" line="42" description="&lt;p&gt;コントローラ&lt;/p&gt;" type="\Controller" variable="$controller">
+            <type>\Controller</type>
+          </tag>
+          <tag name="return" line="42" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$controller</name>
+          <default></default>
+          <type>\Controller</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="54" package="Default">
+        <name>__call</name>
+        <full_name>\NetCommonsTimeComponent::__call()</full_name>
+        <docblock line="54">
+          <description>ラップ用マジックメソッド。</description>
+          <long-description></long-description>
+          <tag name="param" line="54" description="&lt;p&gt;メソッド&lt;/p&gt;" type="string" variable="$method">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="54" description="&lt;p&gt;パラメータ&lt;/p&gt;" type="array" variable="$params">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="54" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$method</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$params</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="65" package="Default">
+        <name>_convertTimezone</name>
+        <full_name>\NetCommonsTimeComponent::_convertTimezone()</full_name>
+        <docblock line="65">
+          <description>ユーザタイムゾーンからサーバータイムゾーンへの自動変換
+NetCommonsFormと連携している</description>
+          <long-description></long-description>
+          <tag name="param" line="65" description="&lt;p&gt;コントローラ&lt;/p&gt;" type="\Controller" variable="$controller">
+            <type>\Controller</type>
+          </tag>
+          <tag name="return" line="65" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$controller</name>
+          <default></default>
+          <type>\Controller</type>
+        </argument>
+      </method>
+    </class>
+    <source>eJytVd9PG0cQfrb/ipVq6c7IP94dMCAq1IeWVs2Plyg6LucFLz3fXffWGBMhcXdJwSJVSdUIJZFaUBGlpaUPVqs0ovSPGZk0T/kXOrt35mxDqKLEss67szPf7Hzz3Xh80qt72fLYWJaMkTkqZtxGw3X8G6xBcem5DnUEHsnTKbMp6i4nhHzebi4xMv3J9NynZJzLzRQ+/ZLllpa8qvK1mfMFqQvhVcrlVqtVcqiwYuiSyxcHMpHPuLtELZFEWdTx6ZsDy4lHSayIQZCPYzOClLPZac+rVJo+9XVtuCKtQAYspZuC2Uy0tfy1bJ+BGdv0/f/hIT2ddXnjI2p7lFcqzPGaQs9D8BOsB6LtUQi/rZmCCkSA4Ojs4Ubv+CkEjyF8CMEPr3YfvHx2DMFxb30fHSUshH9AdALRtnyG/0C4D9EuhKfK2H19snnzxszrkw5i9fY7Z988g2AHglMInsB6mNzsA/zEOF2IdiA6grCrwjv6LUZbEH3VP/lVmTfzMmp+fl7+jCsl4CJDrbpLcqLO/GJ1uNhiNS5TuWU0r3nXZn7d8IXJhVaIrSbnZlvXJAUamagSrc+CprJlkG38maymqVXXrKuYJ3RFUKfmk9Ry77xnU8smHwkc2SLPis4uhH9JatVCZc143BWoPlojOcMZCkpFoVjE7yZEvynefkZAcpcuuJzOMltQTiDag/BviCLkWna187Xs06MTCLq9jRf9tg93a8ozudnAkhzBXdtGlJyVri8mVTGciiZ3yLLLakkBsgcWWWg6lmCuQ5jDBDNttkr1y5HzSF0mk7R3pGYyQRzaGmFPx46lAQi0TLmQB6vYCX0QGf3WUtaQJsnHzsvvDiH6HsLnchv+PkTVKBm+4MxZJLkGxVFTG6J1wEtJjOTUxkenRyrXXvziDNLUYCv0DTwZhmXatp5kKvTRYnaScOlh4CDhhgwzYmXHz8v5K/Rvnk8BR0g5ULf88+IbDsEWhJ2rpwAEz1Fd/2780tt6HE+BiwMJgsNX6z+ebb9QA+IAgvsQbr1fyZ2/Mymbo7K4SntsgejM96kYFE+xyumXTeqLYhUHhnlbM0Zm953bmmqFSFJod/IxXCYn7f3MKOF3Q72mIJN6Zhm1cexM4ADybLdGda2AfyJvmSDBMhYUGN77PMXlILKES+VVrAr3OuUI9mEyU6eVGCXcFXiF8/O0pMQ2yJy0qKutScWuZf8DMPY/PQ==</source>
   </file>
   <file path="Plugin/NetCommons/TestSuite/NetCommonsTestSuite.php" generated-path="Plugin.NetCommons.TestSuite.NetCommonsTestSuite.html" hash="bb6541c30c83ecadcd6e02282ceb53cb" package="Default">
     <docblock line="0">
@@ -9297,6 +9734,149 @@ Note that value stored in this variable overrides session data.</long-descriptio
       </method>
     </class>
     <source>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</source>
+  </file>
+  <file path="Plugin/NetCommons/Test/Case/Utility/NetCommonsTimeTest.php" generated-path="Plugin.NetCommons.Test.Case.Utility.NetCommonsTimeTest.html" hash="f075b89d982307912e117bec7f32d6d8" package="Default">
+    <docblock line="0">
+      <description>NetCommonsTimeTest</description>
+      <long-description></long-description>
+      <tag name="author" line="0" description="Ryuji AMANO" link="mailto:ryuji@ryus.co.jp"/>
+      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
+      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="18" package="Default">
+      <extends>\CakeTestCase</extends>
+      <name>NetCommonsTimeTest</name>
+      <full_name>\NetCommonsTimeTest</full_name>
+      <docblock line="18">
+        <description>Class NetCommonsTimeTest</description>
+        <long-description></long-description>
+        <tag name="package" line="18" description="Default"/>
+      </docblock>
+      <property static="false" visibility="public" namespace="" line="25" package="Default">
+        <name>$fixtures</name>
+        <full_name>\NetCommonsTimeTest::fixtures</full_name>
+        <default>array('plugin.net_commons.site_setting', 'plugin.users.user')</default>
+        <docblock line="25">
+          <description>Fixtures</description>
+          <long-description></long-description>
+          <tag name="var" line="25" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="35" package="Default">
+        <name>setUp</name>
+        <full_name>\NetCommonsTimeTest::setUp()</full_name>
+        <docblock line="35">
+          <description>setUp method</description>
+          <long-description></long-description>
+          <tag name="return" line="35" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="48" package="Default">
+        <name>tearDown</name>
+        <full_name>\NetCommonsTimeTest::tearDown()</full_name>
+        <docblock line="48">
+          <description>tearDown method</description>
+          <long-description></long-description>
+          <tag name="return" line="48" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="59" package="Default">
+        <name>_restoreSystemTimezone</name>
+        <full_name>\NetCommonsTimeTest::_restoreSystemTimezone()</full_name>
+        <docblock line="59">
+          <description>Restored the original system timezone</description>
+          <long-description></long-description>
+          <tag name="return" line="59" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="68" package="Default">
+        <name>testOutRangeUnixtimeConvert</name>
+        <full_name>\NetCommonsTimeTest::testOutRangeUnixtimeConvert()</full_name>
+        <docblock line="68">
+          <description>DateTimeクラスがUnixtime範囲外の日時でもタイムゾーン変換できることを確認</description>
+          <long-description></long-description>
+          <tag name="return" line="68" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="85" package="Default">
+        <name>testNowStatic</name>
+        <full_name>\NetCommonsTimeTest::testNowStatic()</full_name>
+        <docblock line="85">
+          <description>同一セッション中は別インスタンスでも同じ日時を返すことを確認</description>
+          <long-description></long-description>
+          <tag name="return" line="85" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="109" package="Default">
+        <name>testNowInjection</name>
+        <full_name>\NetCommonsTimeTest::testNowInjection()</full_name>
+        <docblock line="109">
+          <description>テストのために現在日時を差し替えられることを確認</description>
+          <long-description></long-description>
+          <tag name="return" line="109" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="135" package="Default">
+        <name>testToUserDatetimeArray</name>
+        <full_name>\NetCommonsTimeTest::testToUserDatetimeArray()</full_name>
+        <docblock line="135">
+          <description>配列中の指定されたキーの値をユーザタイムゾーンに変換するテスト</description>
+          <long-description></long-description>
+          <tag name="return" line="135" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="155" package="Default">
+        <name>testToServerDatetimeArray</name>
+        <full_name>\NetCommonsTimeTest::testToServerDatetimeArray()</full_name>
+        <docblock line="155">
+          <description>配列中の指定されたキーの値をサーバタイムゾーンに変換するテスト</description>
+          <long-description></long-description>
+          <tag name="return" line="155" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="175" package="Default">
+        <name>testGetSiteTimezone</name>
+        <full_name>\NetCommonsTimeTest::testGetSiteTimezone()</full_name>
+        <docblock line="175">
+          <description>SiteTimezoneの取得テスト</description>
+          <long-description></long-description>
+          <tag name="return" line="175" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="200" package="Default">
+        <name>testGuestConvertCallGetSiteTimezone</name>
+        <full_name>\NetCommonsTimeTest::testGuestConvertCallGetSiteTimezone()</full_name>
+        <docblock line="200">
+          <description>ゲストでUser.timezoneが取得できないときは、NetCommonsTime::_getSiteTimezone()でサイトタイムゾーンを得るのを確認</description>
+          <long-description></long-description>
+          <tag name="return" line="200" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>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</source>
   </file>
   <file path="Plugin/NetCommons/TestSuite/NetCommonsControllerTestCase.php" generated-path="Plugin.NetCommons.TestSuite.NetCommonsControllerTestCase.html" hash="844390797542a13f97a601b7b69dd487" package="Default">
     <docblock line="0">
@@ -15490,575 +16070,6 @@ will inherit them.</long-description>
       </method>
     </class>
     <source>eJytVt+T2jYQfoa/Qr1hYnMF3HbyxIGbzGXa67ST3kyvfSE3HsUWWIeQPJIMISn/e1e/bEMhN2n6Asa7++3u961WzH6syqqfXF/30TW6FZtKKCJRSVhFJLwyb1/lotpLuio1OISnH777/uUIvSUaYjaCK3QvxRPJtQ3AtS6FRL+KklD0QCRe1XlJ0WytwzNg2jBO9ETIVWrDGOVrVGpdTZNkt9tNwOjdjM+lZIzmhCtyOTDxHhP9QXdBfnOvASTp919X1XRaK6LiCB7vbP/RCEV/UbJL/M/hTdftJ8qI8fhTU0b1/sR6i9fkntUryo3PrZDEODxDtOftj9IS9xav8RPdYDTj/kmVogbLq9UGUzaBFh1vFc7XeEU6vb3rPJoO3t2FPEk/Z1ippgJnQOSDJrxQqOkdfWqKrQ259qUKhW6xRFhKvLeIvap+DxyjgfdCc2eM+71edKc3LOr3Os07WlAeOCiwxpeAJd1iTdAgyyobpVqYn4lGuiQNzuRJCR5wKizxBiktKV+hgYsNiSusS+skia4l915/27StMlvManJcxbLmuaaCoyxbWX6tZ+zhh0BZrzdYwljcQwYgoZ2B6dQkjX/hSwZjK+R0muMNYfQjaaKHaIKio16im4AHWJzskJm4uEkwtOZccFBOG86tZZxKgot42MSO05wBpH+jS6rGacPmwmd/hHCTMitILgpIEmBHSMuamNjD54lHlFPdMPRFMhw7rcm+HQ348WVKuUFshDoj08ilAEZrxpxmdInibxBViuj4IkND59tSeG4EDMcHJ4svDmS5hHjTSZ2ZamJTWcjjW26QFsZoYw6IMDiSZ718AefE4hpTDhUpmDq0hDXD8F7U+j9I5fgfiMpwrNDv9jsc468S67VdgKqjVUgSVoqnZ+BWpWr5PSt15N0iN/0B7NuAFsFue8CrCM3TZtC9JsF5EXweT4Tx0I5x+EiSQQm7DiqKZjVDds3OrxhVekw5XG0EqQ1mDC2BQjLGRTF2VV6l7qCH4M6vSdOd2aLjVONVHDFqbpQZ0CtAKZ+mfAkwsEGyrIgjh5ttMIdbwd5ijtdYDSO7ZmaJi07B5omwOJaHqJCiKsSOj0vYJObas6yE9j5T03k0uqUtCswdwXmJ4kZArAKV4YBx4Kchwqrhj6ZzW0RSwM0Lcrx4YYZMCyZ2RvRT83wOIAXZEibs7e3ge42fyROZzVfGJ++AJOsK1xeaqQrzQLNV8Co9eqfh7hwXmAPVVgMf2bsgxeJNqOgx6uQBSQAz9V+u9cOF/kuxIRXgRc1S8qSdamP+UJ32NkJncBrhNJZwkJxy2XuG+drUTFSOK/JANRBrTEsMC8gJerSN2jL+TWnb0XNzZEHaVRq8gaKaOWbCETSmC1fT/7HtvmKRvQHKJLUb5OT/QdFanlteHVe3wHxBZWxmq92RHb+hv6oP/X8A2G++rg==</source>
-  </file>
-  <file path="Plugin/NetCommons/Controller/Component/NetCommonsTimeComponent.php" generated-path="Plugin.NetCommons.Controller.Component.NetCommonsTimeComponent.html" hash="408d7725385619def93b8d89a7eb28a2" package="Default">
-    <docblock line="0">
-      <description>NetCommonsTimeComponent</description>
-      <long-description></long-description>
-      <tag name="author" line="0" description="Ryuji AMANO" link="mailto:ryuji@ryus.co.jp"/>
-      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
-      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="" line="15" package="Default">
-      <extends>\Component</extends>
-      <name>NetCommonsTimeComponent</name>
-      <full_name>\NetCommonsTimeComponent</full_name>
-      <docblock line="15">
-        <description>Class NetCommonsTimeComponent</description>
-        <long-description></long-description>
-        <tag name="package" line="15" description="Default"/>
-      </docblock>
-      <property static="false" visibility="protected" namespace="" line="20" package="Default">
-        <name>$_netCommonsTime</name>
-        <full_name>\NetCommonsTimeComponent::_netCommonsTime</full_name>
-        <default></default>
-        <docblock line="20">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="20" description="&lt;p&gt;NetCommonsTimeのインスタンス&lt;/p&gt;" type="\NetCommonsTime" variable="">
-            <type>\NetCommonsTime</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="28" package="Default">
-        <name>initialize</name>
-        <full_name>\NetCommonsTimeComponent::initialize()</full_name>
-        <docblock line="28">
-          <description>コントローラの beforeFilter メソッドの前に呼び出されます。</description>
-          <long-description></long-description>
-          <tag name="param" line="28" description="&lt;p&gt;コントローラ&lt;/p&gt;" type="\Controller" variable="$controller">
-            <type>\Controller</type>
-          </tag>
-          <tag name="return" line="28" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$controller</name>
-          <default></default>
-          <type>\Controller</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="40" package="Default">
-        <name>__call</name>
-        <full_name>\NetCommonsTimeComponent::__call()</full_name>
-        <docblock line="40">
-          <description>ラップ用マジックメソッド。</description>
-          <long-description></long-description>
-          <tag name="param" line="40" description="&lt;p&gt;メソッド&lt;/p&gt;" type="string" variable="$method">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="40" description="&lt;p&gt;パラメータ&lt;/p&gt;" type="array" variable="$params">
-            <type>array</type>
-          </tag>
-          <tag name="return" line="40" description="" type="mixed">
-            <type>mixed</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$method</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$params</name>
-          <default></default>
-          <type>array</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="51" package="Default">
-        <name>_convertTimezone</name>
-        <full_name>\NetCommonsTimeComponent::_convertTimezone()</full_name>
-        <docblock line="51">
-          <description>ユーザタイムゾーンからサーバータイムゾーンへの自動変換
-NetCommonsFormと連携している</description>
-          <long-description></long-description>
-          <tag name="param" line="51" description="&lt;p&gt;コントローラ&lt;/p&gt;" type="\Controller" variable="$controller">
-            <type>\Controller</type>
-          </tag>
-          <tag name="return" line="51" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$controller</name>
-          <default></default>
-          <type>\Controller</type>
-        </argument>
-      </method>
-    </class>
-    <source>eJytVFtrE0EUfk5+xTwEsim5vPcSGyp90ipenkpZtptJM3Wzs85OmrZS6O4KNVSxBUsRQSyWUhX1IShVavtjDqn6L5zZ3WQ32zQg+rLMnDnnO+d859szec2qW+nS2FgajaE5zGdoo0FN+x5pYHG0qIlNLp7k67TW5HXKEEJ31prLBFVuVuZuoUkmL9Piaxd1Wly2yr6vQcwHqM65NV4qtVqtoom5HkAXKVuKZUK3GV3GOg+jdGza+OrAUuhR5Ks8DnIjMAuQUjpdsazx8aaNbSU72FE2j2KW4n1ODMLXsrmJdI+BGUOz7RE8lNL6KA+EVzk2qzaKLI/62NMrGksEJq7gfAL3ELwOuN/APQ8OftaUxSgXLOEqyqjmQFBUPLgdGeI9Ae8jeKfgvROAaBHXKMOzxOCYIfAOwP0BngdeWzx228/A+dDdPQWn0936Ds4euE/BOQPnJWy6vblbGtMaoiWTM2oYAiWjR+fLSf0YhnmTmWiFkmrYQHNRzA7VmqbOCTURMQknmkHWsTIcOSeoS6UyvE7sQjnRM5pCJm4l2FPEHKMAAbSCGZcP62ISShxZ+G1ErAmaJB/7P18cg/ca3BN5dT8PUJUkw+aMmEso08Dil6gO0Brz0hjT1lDGv9jCadfPdSBpcs/jNDXIKr6CJ1XVNcNQwkz5HlrAThguPVQheKbKMNVPqwTf4fzle5XnIsAEKUd+lV+lDKUk34B75o+3A842uG1wv/jXnaCZSz4nQl2/tt53t/e6h+2L568G18ssZQ1wjn9vvr3YEarbB+cInMfgbv9fyfX/mYjNpCxGaY/UkEJsG/O4eAplhh82sc0L5arGtfmsmtgxC/NZfxQ8TJFdyAVwqYy09zILCf8b6oQPGfYzS7Ah1s6UWECWQatYyebFsvvLBCGWWvPBRN39FMNBZAtD5VUoc3oXMwF2XeNYllzxxSjhRuDl++9RS6Etzpy0+KVtSMVupP8AOoCnBw==</source>
-  </file>
-  <file path="Plugin/NetCommons/View/Helper/NetCommonsTimeHelper.php" generated-path="Plugin.NetCommons.View.Helper.NetCommonsTimeHelper.html" hash="a366e31fab5a2ac56484cc789a803cda" package="Default">
-    <docblock line="0">
-      <description>NetCommonsTimeHelper</description>
-      <long-description></long-description>
-      <tag name="author" line="0" description="Ryuji AMANO" link="mailto:ryuji@ryus.co.jp"/>
-      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
-      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="" line="16" package="Default">
-      <extends>\AppHelper</extends>
-      <name>NetCommonsTimeHelper</name>
-      <full_name>\NetCommonsTimeHelper</full_name>
-      <docblock line="16">
-        <description>Class NetCommonsTimeHelper</description>
-        <long-description>Add your application-wide methods in the class below, your helpers
-will inherit them.</long-description>
-        <tag name="package" line="16" description="Default"/>
-        <tag name="inherited_from" description="\AppHelper" refers="\AppHelper" link="/classes/AppHelper.html"/>
-      </docblock>
-      <property static="false" visibility="protected" namespace="" line="21" package="Default">
-        <name>$_netCommonsTime</name>
-        <full_name>\NetCommonsTimeHelper::_netCommonsTime</full_name>
-        <default>null</default>
-        <docblock line="21">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="21" description="&lt;p&gt;NetCommonsTimeのインスタンス&lt;/p&gt;" type="\NetCommonsTime" variable="">
-            <type>\NetCommonsTime</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="30" package="Default">
-        <name>__construct</name>
-        <full_name>\NetCommonsTimeHelper::__construct()</full_name>
-        <docblock line="30">
-          <description>コンストラクタ</description>
-          <long-description></long-description>
-          <tag name="param" line="30" description="&lt;p&gt;The View this helper is being attached to.&lt;/p&gt;" type="\View" variable="$View">
-            <type>\View</type>
-          </tag>
-          <tag name="param" line="30" description="&lt;p&gt;Configuration settings for the helper.&lt;/p&gt;" type="array" variable="$settings">
-            <type>array</type>
-          </tag>
-          <tag name="return" line="30" description="" type="\NetCommonsTimeHelper">
-            <type>\NetCommonsTimeHelper</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$View</name>
-          <default></default>
-          <type>\View</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$settings</name>
-          <default>array()</default>
-          <type>array</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="42" package="Default">
-        <name>__call</name>
-        <full_name>\NetCommonsTimeHelper::__call()</full_name>
-        <docblock line="42">
-          <description>NetCommonsTime ラップ用マジックメソッド。</description>
-          <long-description></long-description>
-          <tag name="param" line="42" description="&lt;p&gt;メソッド&lt;/p&gt;" type="string" variable="$method">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="42" description="&lt;p&gt;パラメータ&lt;/p&gt;" type="array" variable="$params">
-            <type>array</type>
-          </tag>
-          <tag name="return" line="42" description="" type="mixed">
-            <type>mixed</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$method</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$params</name>
-          <default></default>
-          <type>array</type>
-        </argument>
-      </method>
-    </class>
-    <source>eJx1U02P0zAQPSe/Yg6V+qGS3Mvu0qoXDrAgtHCNvKnbuCROZE9oK7QSJBf2iITEDWmlPSwXOOwFJBA/xgf+BnactmlpL5Zn/Oa9mWf75FEWZa7f67nQg3OK4zRJUi4vWEIf0zijQufN0ZDkGKUCAF6s8jmD0dPR+TM4ESYY6lV6YerNs7MKGzP+GiLEbOD7i8XC4xRDy+ulYtaQgecindMQ66qQckmPF/o1wsMlNkme2LQm8V13lGWDQS6p7LT11s7Q7kP7FaMLvw67D5uw3akNdpvxXiKLGa5MydqlcUykPOaV74ZHj4EukfKJhE1j8HbDOnxDxF7VXqjef1PFrSrvVfFTFX/sppJ0MpGitpFOoBXwXY5T4Hkcb7tXxX1NUX5Q5VdVfNdc60vOiCAJGKugVa0XEbUhRkxCZJvWu0vK+AwIIgkjrYqp16gnQpAVtCRF1CgJ45RP2SwXBFnKYZOe6ueEmt+yWgJBMRf8uLlOll/qVwDTnIcVWxCEGoUiD7Gz7bvfUD+1/XS6Xe2247TMJA/ODtiki3d1O/rSHUfPRDkOBk2lfREDvHIPfyMwLpelKj///XSnyi+q+GFC7Xt5o4rf1dG1elfs3oEWMg63Eqq/3QSa2P+drgKpQR8rrRtV/rKXujE0YUs6OeogieNOrdRfs1m36nKDCPRvEYEpC6yhdj3sZ3/deXdLaD26+gdlRp8e</source>
-  </file>
-  <file path="Plugin/NetCommons/Test/Case/View/Helper/NetCommonsTimeHelperTest.php" generated-path="Plugin.NetCommons.Test.Case.View.Helper.NetCommonsTimeHelperTest.html" hash="4ee2bb2d513b5078d5e32db554c7022c" package="Default">
-    <docblock line="0">
-      <description>NetCommonsTimeHelper Test Case</description>
-      <long-description></long-description>
-      <tag name="author" line="0" description="Ryuji AMANO" link="mailto:ryuji@ryus.co.jp"/>
-      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
-      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="" line="17" package="Default">
-      <extends>\CakeTestCase</extends>
-      <name>NetCommonsTimeHelperTest</name>
-      <full_name>\NetCommonsTimeHelperTest</full_name>
-      <docblock line="17">
-        <description>Summary for NetCommonsTimeHelper Test Case</description>
-        <long-description></long-description>
-        <tag name="package" line="17" description="Default"/>
-      </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="24" package="Default">
-        <name>setUp</name>
-        <full_name>\NetCommonsTimeHelperTest::setUp()</full_name>
-        <docblock line="24">
-          <description>setUp method</description>
-          <long-description></long-description>
-          <tag name="return" line="24" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="37" package="Default">
-        <name>tearDown</name>
-        <full_name>\NetCommonsTimeHelperTest::tearDown()</full_name>
-        <docblock line="37">
-          <description>tearDown method</description>
-          <long-description></long-description>
-          <tag name="return" line="37" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="48" package="Default">
-        <name>testWrapMethods</name>
-        <full_name>\NetCommonsTimeHelperTest::testWrapMethods()</full_name>
-        <docblock line="48">
-          <description>NetCommonsTimeHelperでNetCommonsTimeをwrapできてるかのテスト</description>
-          <long-description></long-description>
-          <tag name="return" line="48" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-      </method>
-    </class>
-    <source>eJyVlM9v0zAUx8/tX+FDpaTT2iCO7SirtgOHbUz7xWGakJe+NunaOLKdZdPUQ1o0NrFJAwnBFQ5wQIIDJxATf4zp/4EdO107MqFJVZw8f5/fe5/33IXHoRcWnbm5IppDa8CXSL9PArbl9+EJ9EKgaAsYR0uYgVQo0SKOuEcoQmjjOOr6qLnaXHuKFqj6WJRPVnVJtRs2Um3PDw6Qx3lYc5w4jqsBcFdHqBLamQqI1inpgsuNlwsBg7sdHaOo8iM+fciKNstDnGKxGYa1WsSA2daOD7E1j/Rark9v6Srv2MwDoqQ39qrycsyOdM5Qbkb9PqbHqC1J/RerU3R7mLFcYaqDIw5Bi0n9ASiD8kMnk2AM+HaI+iD70sq6RIFHNECHxG+lEQphtC+poXYUuNwngXayy/KYQiHEFAJeqxlbXZpKqjD0CAXyqV6NlXs+qzRmEzWqvOzt9JjUdYkEbb8TUajVYupzsC1tqfZw0IlwBxTYLra0OKI6o5Kr33atlUy2t2v5LWtPRn1YR46DurhYGExYcMB0mcTBfXFkfoZIJMeI27nlqi7fILvxq0+nkQdDJJ9nzWL4JqY4lHaRXIrkkxi+Eon8fRWjUzH8IUZn90if8WfyrNW0amaqKGkITLLalZ8Fi5NtBnQZc+AyvjVvjJtAD2+Z99IqJd47Kvlz/Vskp//UI0YfxWgkht9E8kUkb0XyLq3oTJam8glm9KvEPZCpGcod4Mpw+9bJscjK0ORLISUyB35s5m4D2j1IKaybjfy+yfF6Phtfz9rkvEpD9rzpusCYv98Dm9MIchQ7uBfBXSFyKiznk1RbkuP46kIk78dXl+Pzy7TzH8TwWiEcnYvkYvz6l0i+j1/+VCyHF2pGkhdmTCYzUijIfxnArofsScMxy6jpSchDX2nAUSjJsawYzO0H5XKloR2zw1IE+Te/0jgxooFtxR5RVzj2MNcrBGal6d32SKyBD9RFGRT/At/PSjU=</source>
-  </file>
-  <file path="Plugin/NetCommons/Test/Case/Utility/NetCommonsTimeTest.php" generated-path="Plugin.NetCommons.Test.Case.Utility.NetCommonsTimeTest.html" hash="f075b89d982307912e117bec7f32d6d8" package="Default">
-    <docblock line="0">
-      <description>NetCommonsTimeTest</description>
-      <long-description></long-description>
-      <tag name="author" line="0" description="Ryuji AMANO" link="mailto:ryuji@ryus.co.jp"/>
-      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
-      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="" line="18" package="Default">
-      <extends>\CakeTestCase</extends>
-      <name>NetCommonsTimeTest</name>
-      <full_name>\NetCommonsTimeTest</full_name>
-      <docblock line="18">
-        <description>Class NetCommonsTimeTest</description>
-        <long-description></long-description>
-        <tag name="package" line="18" description="Default"/>
-      </docblock>
-      <property static="false" visibility="public" namespace="" line="25" package="Default">
-        <name>$fixtures</name>
-        <full_name>\NetCommonsTimeTest::fixtures</full_name>
-        <default>array('plugin.net_commons.site_setting', 'plugin.users.user')</default>
-        <docblock line="25">
-          <description>Fixtures</description>
-          <long-description></long-description>
-          <tag name="var" line="25" description="" type="array" variable="">
-            <type>array</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="35" package="Default">
-        <name>setUp</name>
-        <full_name>\NetCommonsTimeTest::setUp()</full_name>
-        <docblock line="35">
-          <description>setUp method</description>
-          <long-description></long-description>
-          <tag name="return" line="35" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="48" package="Default">
-        <name>tearDown</name>
-        <full_name>\NetCommonsTimeTest::tearDown()</full_name>
-        <docblock line="48">
-          <description>tearDown method</description>
-          <long-description></long-description>
-          <tag name="return" line="48" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="59" package="Default">
-        <name>_restoreSystemTimezone</name>
-        <full_name>\NetCommonsTimeTest::_restoreSystemTimezone()</full_name>
-        <docblock line="59">
-          <description>Restored the original system timezone</description>
-          <long-description></long-description>
-          <tag name="return" line="59" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="68" package="Default">
-        <name>testOutRangeUnixtimeConvert</name>
-        <full_name>\NetCommonsTimeTest::testOutRangeUnixtimeConvert()</full_name>
-        <docblock line="68">
-          <description>DateTimeクラスがUnixtime範囲外の日時でもタイムゾーン変換できることを確認</description>
-          <long-description></long-description>
-          <tag name="return" line="68" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="85" package="Default">
-        <name>testNowStatic</name>
-        <full_name>\NetCommonsTimeTest::testNowStatic()</full_name>
-        <docblock line="85">
-          <description>同一セッション中は別インスタンスでも同じ日時を返すことを確認</description>
-          <long-description></long-description>
-          <tag name="return" line="85" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="109" package="Default">
-        <name>testNowInjection</name>
-        <full_name>\NetCommonsTimeTest::testNowInjection()</full_name>
-        <docblock line="109">
-          <description>テストのために現在日時を差し替えられることを確認</description>
-          <long-description></long-description>
-          <tag name="return" line="109" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="135" package="Default">
-        <name>testToUserDatetimeArray</name>
-        <full_name>\NetCommonsTimeTest::testToUserDatetimeArray()</full_name>
-        <docblock line="135">
-          <description>配列中の指定されたキーの値をユーザタイムゾーンに変換するテスト</description>
-          <long-description></long-description>
-          <tag name="return" line="135" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="155" package="Default">
-        <name>testToServerDatetimeArray</name>
-        <full_name>\NetCommonsTimeTest::testToServerDatetimeArray()</full_name>
-        <docblock line="155">
-          <description>配列中の指定されたキーの値をサーバタイムゾーンに変換するテスト</description>
-          <long-description></long-description>
-          <tag name="return" line="155" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="175" package="Default">
-        <name>testGetSiteTimezone</name>
-        <full_name>\NetCommonsTimeTest::testGetSiteTimezone()</full_name>
-        <docblock line="175">
-          <description>SiteTimezoneの取得テスト</description>
-          <long-description></long-description>
-          <tag name="return" line="175" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="200" package="Default">
-        <name>testGuestConvertCallGetSiteTimezone</name>
-        <full_name>\NetCommonsTimeTest::testGuestConvertCallGetSiteTimezone()</full_name>
-        <docblock line="200">
-          <description>ゲストでUser.timezoneが取得できないときは、NetCommonsTime::_getSiteTimezone()でサイトタイムゾーンを得るのを確認</description>
-          <long-description></long-description>
-          <tag name="return" line="200" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-      </method>
-    </class>
-    <source>eJzVWG1vE0cQ/mz/ivuAdA5K7CTfcCAlhJcikVDlpVIbRdFhr51LLnfu7V4ct0LizrQEEQSlLWlIVaoqEAoiqUAUSqvwYxYn9F90dvfW7NnnJA60VaPIOs/OzM488+zsnI9+UJouJTOHDye1w9owIoPO3Jxj4zFzDo0hTEDKFo4bHpl2XE3TRirejKkNDA0Mn9eOuuzLcfjE6ZyTnin1c13LtGe1aUJK2UymXC6nbURywmvacYvKJtpHrjODciS0yiEbo9aGmVAjTRaI6uScEIOTTDKZHCiVslkPI5zSo9nonZoiSY8T0zJJRe/oU00GjVkklVtoeK6LbNLam8Ry0DIwjkc0k8y1WNTQAkF2Hms8EBAMGgDJF3Wnp80F4rkIy7LMG65muK5R4V4TJe8CgKQdKoRq2jGxmkomEnrJ8oqmzUCdkqhik6ApjAgx7aLeqShBri7mn0ysZAXK4yVtDgEb8jIIF8FmtjbvmPlIGAXPzhHTsYVRqgPySCRKBoMvmw1lfSA6RKZN3NXPMICAbVTWZBki61O4ggmaY/LPHRudzYMfs2AiF4zyBiSSRwXDs8gUCTWmiogID4OOXTCLgEg2W3YhZygjl6Qtwy56RpHXe8bQhbKocDZ7KCeeJvRzUm1yQjfz+iTs2NunZTLajJFMXKyDQ5DhnnTKdrv4SLsGiN6KWVgecJykFKwi2ECxieOi0QhE3PBteCNCJ6+RaaQ5rgmFNixNoKpJ0FoH7ToEziqY1+NutSvPIr4kSg4t6xmN+iT4YTo02KTVX2jwO/WXxm0gOMh2Ni/XVp/U1m5Tf2N7+d72SkD9dRoENHhFgzVa/YkGW7T6J60+ra1d3b6xylb96zS4Rv1vqP+ABrd2fn755uH1NiqFyXmPjAAfkAwCqDSPXLJn2vr42CBvEFA1J/QR8l3mmNK74a+ruwf+te7uLP8Hbqo6nzKIhS/BAOmrqx92qReh2WQAm0ZmzJmtONJS1AE6EYR/6jPPsHA0gCP1AJRNCo47Z0A2n3TNdeW1D7NmFnN/u6Z1BP7+07TUANpKS2Fi7ebS6xeXaPAHrVZp8JxW14FYr188pv5mbfEeJ9xTxk8gn3jgXAQr6n8fsjO49ebVt9RfeRf+DTvlUWIQMxcyDtqQ+K7lDMtiAGBiuARqEL1fslnoh2DM4CP15oothEqpHv4Mnnp21m/VtiDijQafRoEgtwejHHjYp+u4QojYAHnVn2AP7A7Vpf4y9e834Mac2ZEde0KKReMI9y2YLiZnbdjKziERb6N5V3/bETd6DTkfddy7W1yQrWPndw2sNy6wvSJr8hvlLa1+xdhYXYSqUv8uDXzqP9q5sVX74UGdlrXnsLS8vfqK+os0uEqDpXfskhDFWZsNdyAIidqQ6m5I2XHY7KNmw079xPfGdlLmuU636NaATgjKSlBb/KMJlGthYDC0lmCrShj/CCpYIk25EDd5ToGhXs9NavLeNpDLIYzNCxZKEddD8UofG5aHUpi4xOGpx6bXoR6kJmCb4dPgKo3k6N8Nc/cfUf9hDAMY3HuUDhvYnDWQshGrJNlf/fYoXrNvmbHSrcK225BXOB2EebW3717NTnaC2JrZnmVFz+NfX16vLS7zi2Nje+lKbeMO9b9jJ46dzcdsXvE3apfWAHVavc++Br81DzSQipxpVlih5Blv65COOeOQvUxkgL8qtH1WYeIxYH0CnhP6CcspnrKJW9G1Y/1CltCJSSzEBfoYf+wU8gtOvtIj5CfgUYp5pHga5afyYWRCJ7Y4zGQSPiZbjO4sQTa2y1GMD+/q0CBq5wkcjLiuQ2JQ4ll3hm9XcRHvMov0xo9YMoQJBUQIPMb35IH5FDzj7Ln5j/FpFLnz/09GHflXGRWH0/viVPd74NSoKWZsliCjz43bta3lg5HiDCKqt5AOyit5HlmIvZOrWrocSA9yR++baOI9vekiH+LiVIMjdosXo7noqpsWl/nbioHxkJObPe24Qw7krI4JaeZ1VP4Qo03ojRtNdjBadvWjhRLEiOU7tAPzHtw/Yk2EkWqyDZfLpmVJO1E4cUE1vkHxS1yxZwSWGZr2vDOLGpFpPaKqvtn9rbgNjfbyzH5l6a2t/rizCnXeVGBitf8aWtvT2pWXrN/Bve5f3iexlNk4eCJn43V2sNOkTvqlkPTiNwPuns1C7HmTXvIbh4JGbqQ6+CDyjPfZxZiGC/GDdzZjbRxsxD7jsR8Ixa8PgzD4tDho++xgbE6JH4zjc1tiVeEV+FW+LWxS/w6vKbCcD30q7WOm4onmAzUpaQEWTWxHC0aOWJVUbyPjm89l+5QXOzZ25haDdp9qoU4HrfUvJi/+DTRGfzY=</source>
-  </file>
-  <file path="Plugin/NetCommons/Utility/NetCommonsTime.php" generated-path="Plugin.NetCommons.Utility.NetCommonsTime.html" hash="4da5d6c6c189929bed6d11b851ecb7c4" package="Default">
-    <docblock line="0">
-      <description>NetCommonsTime</description>
-      <long-description></long-description>
-      <tag name="author" line="0" description="Ryuji AMANO" link="mailto:ryuji@ryus.co.jp"/>
-      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
-      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="" line="24" package="Default">
-      <extends/>
-      <name>NetCommonsTime</name>
-      <full_name>\NetCommonsTime</full_name>
-      <docblock line="24">
-        <description>Class NetCommonsTime</description>
-        <long-description>## テストで時刻を差し替えたいときのサンプルコード
-```
-   $nowProperty = new ReflectionProperty('NetCommonsTime', '_now');
-   $nowProperty-&gt;setAccessible(true);
-   $nowProperty-&gt;setValue(strtotime('2000-01-01 00:00:00'));
-   // test code ..
-   $nowProperty-&gt;setValue(null); // 現在日時変更が他のテストに影響を与えないようにnullにもどしておく
-```</long-description>
-        <tag name="package" line="24" description="Default"/>
-      </docblock>
-      <property static="true" visibility="protected" namespace="" line="29" package="Default">
-        <name>$_now</name>
-        <full_name>\NetCommonsTime::_now</full_name>
-        <default>null</default>
-        <docblock line="29">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="29" description="&lt;p&gt;現在日時 unixtime&lt;/p&gt;" type="integer" variable="">
-            <type>integer</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="36" package="Default">
-        <name>_getSiteTimezone</name>
-        <full_name>\NetCommonsTime::_getSiteTimezone()</full_name>
-        <docblock line="36">
-          <description>サイトのデフォルトタイムゾーンを返す</description>
-          <long-description></long-description>
-          <tag name="return" line="36" description="タイムゾーン" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="62" package="Default">
-        <name>toUserDatetime</name>
-        <full_name>\NetCommonsTime::toUserDatetime()</full_name>
-        <docblock line="62">
-          <description>サーバタイムゾーンの日時をユーザタイムゾーンの日時に変換する</description>
-          <long-description></long-description>
-          <tag name="param" line="62" description="&lt;p&gt;server timezone datetime&lt;/p&gt;" type="string" variable="$serverDatetime">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="62" description="ユーザタイムゾーンの日時" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$serverDatetime</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="77" package="Default">
-        <name>toUserDatetimeArray</name>
-        <full_name>\NetCommonsTime::toUserDatetimeArray()</full_name>
-        <docblock line="77">
-          <description>サーバタイムゾーンの日時が含まれる連想配列から指定された配列添え字の値だけをユーザタイムゾーンに変換した配列を返す</description>
-          <long-description></long-description>
-          <tag name="param" line="77" description="&lt;p&gt;サーバタイムゾーンの日時が含まれた配列&lt;/p&gt;" type="array" variable="$data">
-            <type>array</type>
-          </tag>
-          <tag name="param" line="77" description="&lt;p&gt;ユーザタイムゾーンに変換する配列添え字&lt;/p&gt;" type="array" variable="$convertKeyNameList">
-            <type>array</type>
-          </tag>
-          <tag name="return" line="77" description="ユーザタイムゾーンに変換済みの配列" type="array">
-            <type>array</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$data</name>
-          <default></default>
-          <type>array</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$convertKeyNameList</name>
-          <default></default>
-          <type>array</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="98" package="Default">
-        <name>toServerDatetime</name>
-        <full_name>\NetCommonsTime::toServerDatetime()</full_name>
-        <docblock line="98">
-          <description>ユーザタイムゾーンからサーバタイムゾーンに日時を変換する</description>
-          <long-description></long-description>
-          <tag name="param" line="98" description="&lt;p&gt;ユーザタイムゾーンの日時&lt;/p&gt;" type="string" variable="$userDatetime">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="98" description="&lt;p&gt;ユーザタイムゾーンを指定したい時にユーザタイムゾーンを渡す。指定しないとアクセスユーザのタイムゾーンを対象に変換する&lt;/p&gt;" type="null|string" variable="$userTimezone">
-            <type>null</type>
-            <type>string</type>
-          </tag>
-          <tag name="return" line="98" description="サーバタイムゾーンに変換された日時" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$userDatetime</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$userTimezone</name>
-          <default>null</default>
-          <type>null|string</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="116" package="Default">
-        <name>toServerDatetimeArray</name>
-        <full_name>\NetCommonsTime::toServerDatetimeArray()</full_name>
-        <docblock line="116">
-          <description>ユーザタイムゾーンの日時が含まれる連想配列から指定された配列添え字の値だけをサーバタイムゾーンに変換した配列を返す</description>
-          <long-description></long-description>
-          <tag name="param" line="116" description="&lt;p&gt;ユーザタイムゾーンの日時が含まれた配列&lt;/p&gt;" type="array" variable="$data">
-            <type>array</type>
-          </tag>
-          <tag name="param" line="116" description="&lt;p&gt;サーバタイムゾーンに変換する配列添え字&lt;/p&gt;" type="array" variable="$convertKeyNameList">
-            <type>array</type>
-          </tag>
-          <tag name="param" line="116" description="&lt;p&gt;ユーザタイムゾーンを指定したい時にユーザタイムゾーンを渡す。指定しないとアクセスユーザのタイムゾーンを対象に変換する&lt;/p&gt;" type="null|string" variable="$userTimezone">
-            <type>null</type>
-            <type>string</type>
-          </tag>
-          <tag name="return" line="116" description="サーバタイムゾーンに変換済みの配列" type="array">
-            <type>array</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$data</name>
-          <default></default>
-          <type>array</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$convertKeyNameList</name>
-          <default></default>
-          <type>array</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$userTimezone</name>
-          <default>null</default>
-          <type>null|string</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="135" package="Default">
-        <name>getNowDatetime</name>
-        <full_name>\NetCommonsTime::getNowDatetime()</full_name>
-        <docblock line="135">
-          <description>現在日時を返す</description>
-          <long-description></long-description>
-          <tag name="return" line="135" description="" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="148" package="Default">
-        <name>getUserTimezone</name>
-        <full_name>\NetCommonsTime::getUserTimezone()</full_name>
-        <docblock line="148">
-          <description>アクセスしたユーザのタイムゾーンを返す
-ゲストならサイトタイムゾーンを返す</description>
-          <long-description></long-description>
-          <tag name="return" line="148" description="タイムゾーン" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </method>
-    </class>
-    <source>eJzVWNtuG0UYvrafYqRa8iZyvIbLbRMSpRdIlBTlgAQIJVtnnGxq71q747gGLGXX0CY0JaWiRCVIaSGUNhGuSoAGBZKHmdo0b8E/s7v2nnwKvSFyfJiZ/5v//M3spbeKy8W4ODwcR8NoCpNJrVDQVGNWKWAYYYPjcoksazpCaLpSWlHQxLsTU1fRJZ39GId3I53V0ivFMb42r6jX0TIhRUkUy+VyWsUkayOmNX3JswF6T9dWcJY4UlmsGrizoOisSJMbxAtyxR4GEDEenygWJalkYENITpZ0HaskmULJ9ur0HFHyCqkkhy7GXYsn87JhRNt94QKitZvU+pPW1qn5c/OB1Vg/pta9xos6NbebO6fUhPFdan5OzSfUvEPNOrV+p7VDWtumtQNqwZe/aG2DYS0sLLAP+EuoWhlML2KdVNAoUnEZTeNcHjyhaKo7IST9GjE75kGQaR6GGRkzMJnIZrFhKNfyWCB6CXde+L6cL2HBIDrRCEALyTczmcxI5g14oUxG4q/kUEteFBHBBkFZbRGjdLo7qlrK54cuMpl/tk4a3z9pbv/E3La30dz5jZqbL4+/ZU5qO/Wg8ffzs91TcOrLo6+4O/eZOy34chNmGRx8UMui5lPwOTUfU/NLam61XSrGsxERRJ+2Ajy+KutIUYlPI1RSlRvEDrUYjxlEJkoWFXWNQBzwIkowZ7PogALtXGHRtfa44mDELVq7T62nLNIwYp3yqYfUOuFRPwSbXp1+Q80HbhXpmJR0FYHjFXUJhQVsVdo65Eoqzwk0v4TJjEIwM+wTTcXCEJgXiyUMzxjoOqmpOWWppGNJ0rG8KCS9MixxYjElh4SA2KhtpA0ZSzCZGUwIU3HULo5pvKSA0hVJUlSFeDMz7VltbxBSygs4MhYyhMt4FC/rMB3QPIV8oFymCv+OP32TMFeNx2Oi2LcbRdGNflB1O/ZsQQ+3wYr/6jgOMbDrQKrK3zu4QhT5tC9/WardjchWs25XBqQtrT1mg9Yf3ZZB6UJVb+1AglPrtpvjRVmXC26KJwysr2L9skwwKzVk/0TENXHRmYiqjj5UcOqldA2ooR1los0Z7T2FgA5O5QBH6F5Pk2XF4C6e80zY2ZlgWjp9mqHMRqCmfLMfMtnk3Owkb6IuBG+SLejQep9KQ3xnN6i2dE7TCzIk0QcjhZFF9LakSAbPnOpg0TU3G3cPqHlCrU0I29naj83a4dkXdxrr0FtvU2ujuXmrUf+OmvfZAnPXnmq+OIbe3PgF1tQba3vUfEjNr3slSis/tls4oZZop4us63KF2ykPboSLHcbLairEiLyDK1NyAV+BUuyeVr6EDhjuTVEbvh+o5hEwBZwS6i0VeybsBAMXPB5JdTbHk8yu+GXmw1FbkuUQZA2Ws8tICK+SDZS4juEIMoYSq4y8HQpgzU4x5vmugjPjTIX3+ohBfNwuoShjbIxUpAW8/1cRzhvY2YJvr7rbA3q0oKvRoCq5FvGNOY3wNy+fBAH9RdYt7KyAuibwQavH9m6eXjX67YcuBqOmz7xArWbXDci651b/tn2stft8D5GjR8yKNcsju+8cia0fqPWMWsf8tOeCsENyBE7j2cmr54/CtBI+N3XzryvstK/uRDHja+L+EkmhIEm0T0n8OOCfDZyiBuCXakeO8avTmzH6ZJoWM52DYfo6GLxWhukr2oMxzKBGDMYwfSnciWF6Ve//uHwd1uzDPX2ypr96HarpwZjdqjpwpuvMpBHrzsWlYZwwdUUa2ZlPA/a9DnodXMu2gmFdohk3vIev7Xgv7t1v1f7bfCBloP1OaeWWlu1ebuB8TpKcK7+/k/umkC0XuH+y5ulvminkEQue0T01Zddpr8pqmQvCv7rPTfadk4b9NOK1PXsIe8xPWJG3J+dRm/vUgUmk3Tue57HDOQgzfGMP3v29ctzR1X8BM0wYIQ==</source>
   </file>
   <package name="Croogo.Croogo.Model.Behavior" full_name="Croogo.Croogo.Model.Behavior"/>
   <package name="Default" full_name="Default"/>

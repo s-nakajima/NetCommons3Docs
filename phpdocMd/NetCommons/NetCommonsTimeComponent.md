@@ -3,7 +3,18 @@ NetCommonsTimeComponent
 
 Class NetCommonsTimeComponent
 
+NetCommonsFormHelper::input()で、typeをdatetimeに指定された項目の値を
+サーバータイムゾーン（UTC）に変換します。
 
+#### サンプルコード(Viewテンプレート)
+```
+<?php
+	echo $this->NetCommonsForm->input(
+		'publish_start',
+		array('type' => 'datetime')
+	);
+?>
+```
 
 
 * Class name: NetCommonsTimeComponent
