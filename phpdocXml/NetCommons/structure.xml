@@ -1150,44 +1150,16 @@ for those fields that are not defined in $data, and clearing previous validation
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="296" package="NetCommons\NetCommons\Model">
-        <name>equalToField</name>
-        <full_name>\NetCommonsAppModel::equalToField()</full_name>
-        <docblock line="296">
-          <description>Check field1 matches field2</description>
-          <long-description></long-description>
-          <tag name="param" line="296" description="&lt;p&gt;field1 parameters&lt;/p&gt;" type="array" variable="$field1">
-            <type>array</type>
-          </tag>
-          <tag name="param" line="296" description="&lt;p&gt;field2 key&lt;/p&gt;" type="string" variable="$field2">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="296" description="" type="boolean">
-            <type>boolean</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$field1</name>
-          <default></default>
-          <type>array</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$field2</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <inherited_from>\NetCommonsAppModel</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="307" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="295" package="NetCommons\NetCommons\Model">
         <name>_getDefaultValue</name>
         <full_name>\NetCommonsAppModel::_getDefaultValue()</full_name>
-        <docblock line="307">
+        <docblock line="295">
           <description>全カラムのデフォルト値をセットした配列を返す。</description>
           <long-description></long-description>
-          <tag name="param" line="307" description="&lt;p&gt;デフォルトを上書きするカラム配列&lt;/p&gt;" type="array" variable="$data">
+          <tag name="param" line="295" description="&lt;p&gt;デフォルトを上書きするカラム配列&lt;/p&gt;" type="array" variable="$data">
             <type>array</type>
           </tag>
-          <tag name="return" line="307" description="デフォルト値をセットした配列" type="array">
+          <tag name="return" line="295" description="デフォルト値をセットした配列" type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -1257,7 +1229,7 @@ for those fields that are not defined in $data, and clearing previous validation
     </class>
     <source>eJyVUl1v00AQfLZ/xSJVshMlMUU8uSVAw0MlEEJQ+oIQujqb+Mj57rhbJ61Q/zt7/ogjkUYgWT7f7s7s7owvX9vSxtl4HMMYvki9VkhG30rcXSlTbK6pUteoLDog9ASF8Ah3/OLygHhTGPvg5LokWOy/Xjw/fzmBj0gLU1VGe/jkzE8sqAGImkrj4L0pUcINOrGui1LC5Yb6b+ZsYBppZtx63sCU1BsoiWyeZbvdbsbJrizUPNVMyQI1T/wkMOsqZnRPhyQf2jCTZHH81to8rz36NAnCJBNoz9HFYeqUeAEysM9CRdZlmGQvf11Vwj3AivU5xXbDTlwFI45ZksWFEt7/GwHeE+qlh4XYYAguQvD3fqA9tBkpdOtt3wo3ZJuukXWGWHdcgidBsoCzHwP+FehaqWFVj/TVQoX8Lyx7TodUOw1bI5cdY33H9sCq1gVJo1tQOuIBo8gKh5ryvIsxcxSdbblfaMXv0DqEu+h0LqzlVdOkPcOywZThditUjckhwuGvOgjcEgaJPreRNOwygZVQHo8ApnMeTlT+W9IFcJl8Z5bzppRK6afz4+50rU5Zlza92n3lCtJn0rMEqUe1yvMDxUetTNFfCe7RjdtcfRjqMeant4ZQuHdmp//XnR7XGVTrMNfJddsteicH/EUzzmP8B4jzguk=</source>
   </file>
-  <file path="Plugin/NetCommons/Model/NetCommonsAppModel.php" generated-path="Plugin.NetCommons.Model.NetCommonsAppModel.html" hash="9346f8570f852a4c27dac83b04c11eaf" package="Default">
+  <file path="Plugin/NetCommons/Model/NetCommonsAppModel.php" generated-path="Plugin.NetCommons.Model.NetCommonsAppModel.html" hash="dddf3ce2e9591b5d12d0bca4444a0368" package="Default">
     <docblock line="0">
       <description>NetCommonsApp Model</description>
       <long-description></long-description>
@@ -1519,43 +1491,16 @@ for those fields that are not defined in $data, and clearing previous validation
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="296" package="NetCommons\NetCommons\Model">
-        <name>equalToField</name>
-        <full_name>\NetCommonsAppModel::equalToField()</full_name>
-        <docblock line="296">
-          <description>Check field1 matches field2</description>
-          <long-description></long-description>
-          <tag name="param" line="296" description="&lt;p&gt;field1 parameters&lt;/p&gt;" type="array" variable="$field1">
-            <type>array</type>
-          </tag>
-          <tag name="param" line="296" description="&lt;p&gt;field2 key&lt;/p&gt;" type="string" variable="$field2">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="296" description="" type="boolean">
-            <type>boolean</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$field1</name>
-          <default></default>
-          <type>array</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$field2</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="307" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="295" package="NetCommons\NetCommons\Model">
         <name>_getDefaultValue</name>
         <full_name>\NetCommonsAppModel::_getDefaultValue()</full_name>
-        <docblock line="307">
+        <docblock line="295">
           <description>全カラムのデフォルト値をセットした配列を返す。</description>
           <long-description></long-description>
-          <tag name="param" line="307" description="&lt;p&gt;デフォルトを上書きするカラム配列&lt;/p&gt;" type="array" variable="$data">
+          <tag name="param" line="295" description="&lt;p&gt;デフォルトを上書きするカラム配列&lt;/p&gt;" type="array" variable="$data">
             <type>array</type>
           </tag>
-          <tag name="return" line="307" description="デフォルト値をセットした配列" type="array">
+          <tag name="return" line="295" description="デフォルト値をセットした配列" type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -1566,7 +1511,7 @@ for those fields that are not defined in $data, and clearing previous validation
         </argument>
       </method>
     </class>
-    <source>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</source>
+    <source>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</source>
   </file>
   <file path="Plugin/NetCommons/Test/Case/Model/SiteSettingTest.php" generated-path="Plugin.NetCommons.Test.Case.Model.SiteSettingTest.html" hash="e5d531267b28d64b9ad7067a084dc830" package="Default">
     <docblock line="0">
@@ -2078,7 +2023,7 @@ key 'url' and optionally 'status' and 'exit'.</long-description>
     </class>
     <source>eJzFk09r20AQxc/Sp9hDYGUTS23pSXFUh0AvLaGQ3EIIm9VY2ni1q+6O6rjF372jP5ZlaCE55SKWefNmnn4rLb/UZR0m83nI5uwG8NpWlTWeXVuDzmoNjoRWW4kGS+vYbWlLUOxGbMSzqgRbmuHkS9uQsioqoXQsbZV1Nq3MhpWIdZok2+02NoCy3xFbV0xX/nD2GSQOLgnGw/+NydAR4wtOh3zvy90QaeudU0WJ9DaH06cPHz+f/3trEoZXdZ2mjQcf8WMLFY80+DmbSPFEmF2Er+L4xlQj+G8d9ztwomhkqdhyg4fzagBDiFo27ww+CaUW3k/EIwQGLwgmn4oneNmfEeITrK2Dr0rjkZ0DbJxhv6zKu0VB3TxRHrZujERlzYkpmtG0IKiFA4NpeipdkHKGpfKL7Ir4LjKhtd1GXHq3vrMbMO19BvsxzVhnFdB15K9ONBqHOGceZOMU7tglGwIQiNoaCklnbUUe8duhh/c5D5ZFVoChS0foJw5+Bz8b8Nh+gNScCxQ0WzgndhEVAv7YvxC7zCbVgG9g19VOpywyAiYqf3+wPdx3nQ+taUaPYU1v8oARfRy1kBjxdjOfTdG2Mn/04JTQ6jfQz9MHmLTuw334FwlPfPc=</source>
   </file>
-  <file path="Plugin/NetCommons/Utility/NetCommonsTime.php" generated-path="Plugin.NetCommons.Utility.NetCommonsTime.html" hash="4da5d6c6c189929bed6d11b851ecb7c4" package="Default">
+  <file path="Plugin/NetCommons/Utility/NetCommonsTime.php" generated-path="Plugin.NetCommons.Utility.NetCommonsTime.html" hash="886b4d2b32aab27da124ee241e3146a9" package="Default">
     <docblock line="0">
       <description>NetCommonsTime</description>
       <long-description></long-description>
@@ -2087,13 +2032,19 @@ key 'url' and optionally 'status' and 'exit'.</long-description>
       <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <class final="false" abstract="false" namespace="" line="24" package="Default">
+    <class final="false" abstract="false" namespace="" line="30" package="Default">
       <extends/>
       <name>NetCommonsTime</name>
       <full_name>\NetCommonsTime</full_name>
-      <docblock line="24">
+      <docblock line="30">
         <description>Class NetCommonsTime</description>
-        <long-description>## テストで時刻を差し替えたいときのサンプルコード
+        <long-description>タイムゾーンを考慮した日時を算出します。
+コンポーネントとヘルパーを提供しています。
+
+[NetCommonsTimeComponent](./NetCommonsTimeComponent.md#netcommonstimecomponent)
+[NetCommonsTimeHelper](./NetCommonsTimeHelper.md#netcommonstimehelper)
+
+## テストで時刻を差し替えたいときのサンプルコード
 ```
    $nowProperty = new ReflectionProperty('NetCommonsTime', '_now');
    $nowProperty-&gt;setAccessible(true);
@@ -2101,41 +2052,41 @@ key 'url' and optionally 'status' and 'exit'.</long-description>
    // test code ..
    $nowProperty-&gt;setValue(null); // 現在日時変更が他のテストに影響を与えないようにnullにもどしておく
 ```</long-description>
-        <tag name="package" line="24" description="Default"/>
+        <tag name="package" line="30" description="Default"/>
       </docblock>
-      <property static="true" visibility="protected" namespace="" line="29" package="Default">
+      <property static="true" visibility="protected" namespace="" line="35" package="Default">
         <name>$_now</name>
         <full_name>\NetCommonsTime::_now</full_name>
         <default>null</default>
-        <docblock line="29">
+        <docblock line="35">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="29" description="&lt;p&gt;現在日時 unixtime&lt;/p&gt;" type="integer" variable="">
+          <tag name="var" line="35" description="&lt;p&gt;現在日時 unixtime&lt;/p&gt;" type="integer" variable="">
             <type>integer</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="36" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="42" package="Default">
         <name>_getSiteTimezone</name>
         <full_name>\NetCommonsTime::_getSiteTimezone()</full_name>
-        <docblock line="36">
+        <docblock line="42">
           <description>サイトのデフォルトタイムゾーンを返す</description>
           <long-description></long-description>
-          <tag name="return" line="36" description="タイムゾーン" type="string">
+          <tag name="return" line="42" description="タイムゾーン" type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="62" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="68" package="Default">
         <name>toUserDatetime</name>
         <full_name>\NetCommonsTime::toUserDatetime()</full_name>
-        <docblock line="62">
+        <docblock line="68">
           <description>サーバタイムゾーンの日時をユーザタイムゾーンの日時に変換する</description>
           <long-description></long-description>
-          <tag name="param" line="62" description="&lt;p&gt;server timezone datetime&lt;/p&gt;" type="string" variable="$serverDatetime">
+          <tag name="param" line="68" description="&lt;p&gt;server timezone datetime&lt;/p&gt;" type="string" variable="$serverDatetime">
             <type>string</type>
           </tag>
-          <tag name="return" line="62" description="ユーザタイムゾーンの日時" type="string">
+          <tag name="return" line="68" description="ユーザタイムゾーンの日時" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -2145,19 +2096,19 @@ key 'url' and optionally 'status' and 'exit'.</long-description>
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="77" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="83" package="Default">
         <name>toUserDatetimeArray</name>
         <full_name>\NetCommonsTime::toUserDatetimeArray()</full_name>
-        <docblock line="77">
+        <docblock line="83">
           <description>サーバタイムゾーンの日時が含まれる連想配列から指定された配列添え字の値だけをユーザタイムゾーンに変換した配列を返す</description>
           <long-description></long-description>
-          <tag name="param" line="77" description="&lt;p&gt;サーバタイムゾーンの日時が含まれた配列&lt;/p&gt;" type="array" variable="$data">
+          <tag name="param" line="83" description="&lt;p&gt;サーバタイムゾーンの日時が含まれた配列&lt;/p&gt;" type="array" variable="$data">
             <type>array</type>
           </tag>
-          <tag name="param" line="77" description="&lt;p&gt;ユーザタイムゾーンに変換する配列添え字&lt;/p&gt;" type="array" variable="$convertKeyNameList">
+          <tag name="param" line="83" description="&lt;p&gt;ユーザタイムゾーンに変換する配列添え字&lt;/p&gt;" type="array" variable="$convertKeyNameList">
             <type>array</type>
           </tag>
-          <tag name="return" line="77" description="ユーザタイムゾーンに変換済みの配列" type="array">
+          <tag name="return" line="83" description="ユーザタイムゾーンに変換済みの配列" type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -2172,20 +2123,20 @@ key 'url' and optionally 'status' and 'exit'.</long-description>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="98" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="104" package="Default">
         <name>toServerDatetime</name>
         <full_name>\NetCommonsTime::toServerDatetime()</full_name>
-        <docblock line="98">
+        <docblock line="104">
           <description>ユーザタイムゾーンからサーバタイムゾーンに日時を変換する</description>
           <long-description></long-description>
-          <tag name="param" line="98" description="&lt;p&gt;ユーザタイムゾーンの日時&lt;/p&gt;" type="string" variable="$userDatetime">
+          <tag name="param" line="104" description="&lt;p&gt;ユーザタイムゾーンの日時&lt;/p&gt;" type="string" variable="$userDatetime">
             <type>string</type>
           </tag>
-          <tag name="param" line="98" description="&lt;p&gt;ユーザタイムゾーンを指定したい時にユーザタイムゾーンを渡す。指定しないとアクセスユーザのタイムゾーンを対象に変換する&lt;/p&gt;" type="null|string" variable="$userTimezone">
+          <tag name="param" line="104" description="&lt;p&gt;ユーザタイムゾーンを指定したい時にユーザタイムゾーンを渡す。指定しないとアクセスユーザのタイムゾーンを対象に変換する&lt;/p&gt;" type="null|string" variable="$userTimezone">
             <type>null</type>
             <type>string</type>
           </tag>
-          <tag name="return" line="98" description="サーバタイムゾーンに変換された日時" type="string">
+          <tag name="return" line="104" description="サーバタイムゾーンに変換された日時" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -2200,23 +2151,23 @@ key 'url' and optionally 'status' and 'exit'.</long-description>
           <type>null|string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="116" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="122" package="Default">
         <name>toServerDatetimeArray</name>
         <full_name>\NetCommonsTime::toServerDatetimeArray()</full_name>
-        <docblock line="116">
+        <docblock line="122">
           <description>ユーザタイムゾーンの日時が含まれる連想配列から指定された配列添え字の値だけをサーバタイムゾーンに変換した配列を返す</description>
           <long-description></long-description>
-          <tag name="param" line="116" description="&lt;p&gt;ユーザタイムゾーンの日時が含まれた配列&lt;/p&gt;" type="array" variable="$data">
+          <tag name="param" line="122" description="&lt;p&gt;ユーザタイムゾーンの日時が含まれた配列&lt;/p&gt;" type="array" variable="$data">
             <type>array</type>
           </tag>
-          <tag name="param" line="116" description="&lt;p&gt;サーバタイムゾーンに変換する配列添え字&lt;/p&gt;" type="array" variable="$convertKeyNameList">
+          <tag name="param" line="122" description="&lt;p&gt;サーバタイムゾーンに変換する配列添え字&lt;/p&gt;" type="array" variable="$convertKeyNameList">
             <type>array</type>
           </tag>
-          <tag name="param" line="116" description="&lt;p&gt;ユーザタイムゾーンを指定したい時にユーザタイムゾーンを渡す。指定しないとアクセスユーザのタイムゾーンを対象に変換する&lt;/p&gt;" type="null|string" variable="$userTimezone">
+          <tag name="param" line="122" description="&lt;p&gt;ユーザタイムゾーンを指定したい時にユーザタイムゾーンを渡す。指定しないとアクセスユーザのタイムゾーンを対象に変換する&lt;/p&gt;" type="null|string" variable="$userTimezone">
             <type>null</type>
             <type>string</type>
           </tag>
-          <tag name="return" line="116" description="サーバタイムゾーンに変換済みの配列" type="array">
+          <tag name="return" line="122" description="サーバタイムゾーンに変換済みの配列" type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -2236,31 +2187,31 @@ key 'url' and optionally 'status' and 'exit'.</long-description>
           <type>null|string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="135" package="Default">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="141" package="Default">
         <name>getNowDatetime</name>
         <full_name>\NetCommonsTime::getNowDatetime()</full_name>
-        <docblock line="135">
+        <docblock line="141">
           <description>現在日時を返す</description>
           <long-description></long-description>
-          <tag name="return" line="135" description="" type="string">
+          <tag name="return" line="141" description="" type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="148" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="154" package="Default">
         <name>getUserTimezone</name>
         <full_name>\NetCommonsTime::getUserTimezone()</full_name>
-        <docblock line="148">
+        <docblock line="154">
           <description>アクセスしたユーザのタイムゾーンを返す
 ゲストならサイトタイムゾーンを返す</description>
           <long-description></long-description>
-          <tag name="return" line="148" description="タイムゾーン" type="string">
+          <tag name="return" line="154" description="タイムゾーン" type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
     </class>
-    <source>eJzVWNtuG0UYvrafYqRa8iZyvIbLbRMSpRdIlBTlgAQIJVtnnGxq71q747gGLGXX0CY0JaWiRCVIaSGUNhGuSoAGBZKHmdo0b8E/s7v2nnwKvSFyfJiZ/5v//M3spbeKy8W4ODwcR8NoCpNJrVDQVGNWKWAYYYPjcoksazpCaLpSWlHQxLsTU1fRJZ39GId3I53V0ivFMb42r6jX0TIhRUkUy+VyWsUkayOmNX3JswF6T9dWcJY4UlmsGrizoOisSJMbxAtyxR4GEDEenygWJalkYENITpZ0HaskmULJ9ur0HFHyCqkkhy7GXYsn87JhRNt94QKitZvU+pPW1qn5c/OB1Vg/pta9xos6NbebO6fUhPFdan5OzSfUvEPNOrV+p7VDWtumtQNqwZe/aG2DYS0sLLAP+EuoWhlML2KdVNAoUnEZTeNcHjyhaKo7IST9GjE75kGQaR6GGRkzMJnIZrFhKNfyWCB6CXde+L6cL2HBIDrRCEALyTczmcxI5g14oUxG4q/kUEteFBHBBkFZbRGjdLo7qlrK54cuMpl/tk4a3z9pbv/E3La30dz5jZqbL4+/ZU5qO/Wg8ffzs91TcOrLo6+4O/eZOy34chNmGRx8UMui5lPwOTUfU/NLam61XSrGsxERRJ+2Ajy+KutIUYlPI1RSlRvEDrUYjxlEJkoWFXWNQBzwIkowZ7PogALtXGHRtfa44mDELVq7T62nLNIwYp3yqYfUOuFRPwSbXp1+Q80HbhXpmJR0FYHjFXUJhQVsVdo65Eoqzwk0v4TJjEIwM+wTTcXCEJgXiyUMzxjoOqmpOWWppGNJ0rG8KCS9MixxYjElh4SA2KhtpA0ZSzCZGUwIU3HULo5pvKSA0hVJUlSFeDMz7VltbxBSygs4MhYyhMt4FC/rMB3QPIV8oFymCv+OP32TMFeNx2Oi2LcbRdGNflB1O/ZsQQ+3wYr/6jgOMbDrQKrK3zu4QhT5tC9/WardjchWs25XBqQtrT1mg9Yf3ZZB6UJVb+1AglPrtpvjRVmXC26KJwysr2L9skwwKzVk/0TENXHRmYiqjj5UcOqldA2ooR1los0Z7T2FgA5O5QBH6F5Pk2XF4C6e80zY2ZlgWjp9mqHMRqCmfLMfMtnk3Owkb6IuBG+SLejQep9KQ3xnN6i2dE7TCzIk0QcjhZFF9LakSAbPnOpg0TU3G3cPqHlCrU0I29naj83a4dkXdxrr0FtvU2ujuXmrUf+OmvfZAnPXnmq+OIbe3PgF1tQba3vUfEjNr3slSis/tls4oZZop4us63KF2ykPboSLHcbLairEiLyDK1NyAV+BUuyeVr6EDhjuTVEbvh+o5hEwBZwS6i0VeybsBAMXPB5JdTbHk8yu+GXmw1FbkuUQZA2Ws8tICK+SDZS4juEIMoYSq4y8HQpgzU4x5vmugjPjTIX3+ohBfNwuoShjbIxUpAW8/1cRzhvY2YJvr7rbA3q0oKvRoCq5FvGNOY3wNy+fBAH9RdYt7KyAuibwQavH9m6eXjX67YcuBqOmz7xArWbXDci651b/tn2stft8D5GjR8yKNcsju+8cia0fqPWMWsf8tOeCsENyBE7j2cmr54/CtBI+N3XzryvstK/uRDHja+L+EkmhIEm0T0n8OOCfDZyiBuCXakeO8avTmzH6ZJoWM52DYfo6GLxWhukr2oMxzKBGDMYwfSnciWF6Ve//uHwd1uzDPX2ypr96HarpwZjdqjpwpuvMpBHrzsWlYZwwdUUa2ZlPA/a9DnodXMu2gmFdohk3vIev7Xgv7t1v1f7bfCBloP1OaeWWlu1ebuB8TpKcK7+/k/umkC0XuH+y5ulvminkEQue0T01Zddpr8pqmQvCv7rPTfadk4b9NOK1PXsIe8xPWJG3J+dRm/vUgUmk3Tue57HDOQgzfGMP3v29ctzR1X8BM0wYIQ==</source>
+    <source>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</source>
   </file>
   <file path="Plugin/NetCommons/Test/Case/Model/Behavior/Trackable/TrackableBehaviorTestBase.php" generated-path="Plugin.NetCommons.Test.Case.Model.Behavior.Trackable.TrackableBehaviorTestBase.html" hash="e09bb468d8a0a1c60d29630450b40714" package="Default">
     <docblock line="0">
@@ -2501,7 +2452,7 @@ key 'url' and optionally 'status' and 'exit'.</long-description>
     </class>
     <source>eJytlE1r20AQhs/Wr9hDQbUxUlN6KImTOnUJhLauSQKlJ7NZja2x9kPdna0tSv97Vx/+CMTggy9i9c7MM+/OSjv6VOZllA4GERuwHxaXqLn8CtUdbshbCGodGHNPubFsaiwWht1ajmzEw3OsERMuklV5c5j3mJsckE15wVeoOBvpbuVy40NkvFQcZSKMasuEKavQOyc22a3ev7v4MGRToIlRymjHZtasQFBTIFEXLCcqL9N0vV4nGki0aYmxy+NVArSD44Vpl5HQhg4h31o5QNJoO6xHrxS3FVuE/T5ZLgr+LGE/tjQSkju3m+lPDJPxtB8tgw2Bzhyb8AKewNFW/7trcYcgM7c9gz/cMm4trxp6r/TPwS17s2iS2HUbexv1ejFmMbu+6YSYqhKa9xg1wRJsPGSx9lI24oJLB0HIYMG9pEarg0EqoGrrSov1VuP+sKabZkfzczRpgYQk4XWYI4t6+YJF1h9HCQucIJt7FxycbO8U5Ou0LIQIFZyOUybDcGRntbhlnssj6gw24A5wQe3Fs4f777cPvw67CCO90p3trO7gNf72beeLfijrjrj+OWbhxlBAYN0LRM6tg9ZC7GnxsaYErgy29+I8cIXJYC6wjoMOn2AXvtfafPkch2b9q+hf9B/cjoAd</source>
   </file>
-  <file path="Plugin/NetCommons/Test/Case/View/Helper/DateHelperTest.php" generated-path="Plugin.NetCommons.Test.Case.View.Helper.DateHelperTest.html" hash="f388f01d81195287829cf1f4e6faf1bb" package="Default">
+  <file path="Plugin/NetCommons/Test/Case/View/Helper/DateHelperTest.php" generated-path="Plugin.NetCommons.Test.Case.View.Helper.DateHelperTest.html" hash="aa744df88525596450af21dd107d7c22" package="Default">
     <docblock line="0">
       <description>DateHelper Test Case</description>
       <long-description></long-description>
@@ -2589,19 +2540,19 @@ key 'url' and optionally 'status' and 'exit'.</long-description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="111" package="NetCommons\NetCommons\Test\View\Helper">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="114" package="NetCommons\NetCommons\Test\View\Helper">
         <name>testDateFormatIncrrectDate</name>
         <full_name>\DateHelperTest::testDateFormatIncrrectDate()</full_name>
-        <docblock line="111">
+        <docblock line="114">
           <description>testDateFormatIncrrectDate method</description>
           <long-description></long-description>
-          <tag name="return" line="111" description="" type="void">
+          <tag name="return" line="114" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
       </method>
     </class>
-    <source>eJytVGFP2zAQ/dz+CgtVSoraZFT7FFgHKmNMQ9WkwSQECHmJm7pN7My+0FYT/33nJE7TAlMRSFWanN+9u/fO9tHnbJq1/f39NtknpxTYOUsypsgl00BGVDOMm6VjmsNUKjKWis8lOVGUkyOKz2PBuUdDb5YNm7jvEqiS5FzOaUTJ0bz49KbF53GcUp54oUzLlISLOZkCZIHvLxYLTzDAtVQK7UkVkzGDUflJfig5YyFUWSETmr2c6FcID5bQJLkowwVJKLOV4vEUtdZvgw8HH3vPV/Xb7ZMsC4JcM+06vzhbOD1S/ncPm0trJw1gzeUZrF+tbKaMcqWYgC38FfCEw2oLuwZc8pS9nGIH+zNPU6pWZIKT2WHIrxleRsM5jVnDr9vGq6lwazTfliULD8OEat3oo2iDLYGJSGM7c2YCpi3yt1ZwxpeQK6Ztpw9UEaoUXRWMrSz/jdMmnUkFI5/KVbfdajlZksdcmN1xb7eH5sDuNQPgInZ6DRD6q3TxNOGGhQi+ykjK0KDINqEYFhPkQfJoo41JLkLgUpRJbhd1tFoZNeMNgiqGzK3WSIoJj7HhIFgobAl3QRHxEiriHG01o51RM0oElxskCDph+XbjXFjY3Y3DI+cOZQ8Oie+TGTX0HeM8xgQ+zatb8HRgynV/aPyv1tajcIsUA3uslQOj6lQuxGvF27xKf45nDtxG8dICa8savVVcgwGfSZVSeH0LzeyqkY7YOD2VB5tHyjolI7pCwFZKfxgzGMuFoYYt9BVuHRt/LhNkE+GWSaUVHduuyVv71B9GawkbeLbM8F5iEeINxHW+Bhx3jAYFssHeLNi1pQp6PIdMwZc/OU20W9P1SN3J/4YxlnCJLNc4uLfNpUFkRxSVLjh4Fw/6xY8cDILi5xzualVUb7KnTl37qR9teWU1v59FF7Tq8k3+WBZrTkJr7ZWYftqPyHnAA70haa9PDhCy0nvd7s6uWfaXnHviW53wfr59EyHecOE7eNdksv7t4ILDq7xCtNO8NzeEiTxJnmh6bP8DDob9Ow==</source>
+    <source>eJytVGtP2zAU/dz+CgtVSoraZFT7FFgHKmNMQ9WkwSQECHmJm5omdmbf0FYT/33XeTRuCxMVSFWa2OfcxznXPvqcTbO2v7/fJvvklAI7Z0nGFLlkGsiIaobrZuuY5jCVioyl4jNJThTl5Iji81hw7tHQe8iGNu67BKokOZczGlFyNCs+vWnxeRynlCdeKNOSknAxI1OALPD9+XzuCQa4l0qhPaliMmYwKj/JDyUfWAgVK2RCs5eJfoXwYAF2kItyuQgSymypeDzFXldvgw8HH3vPZ/Xb7ZMsC4JcM+06vzibOz1S/ncP7a1GSQNoYnkG61c765RRrhQTsIG/Ap5wWG5gG8AlT9nLlNrYn3maUrUkE3TmFSbvYl5GwxmNmaXXrfVqMtyanm/LlIWGYUK1tuooymALYCLSWM6MmQVTFvm76uCMLyBXTNeVPlJFqFJ0WURsZflvdJt0JhWMfCp33Xar5WRJHnNhpuO+Hg/Ngd1rBsBF7PQsEOqrdPE0y5aECL7KSMpQoKguQjFMJsij5NFaGZNchMClKEluF/totTJq7A2Cag0jt1ojKSY8xoKDYK6wJJyCYsVLqIhzlNVY+0CNlQguByQIOmH5duNc1LC7G4dHzh22PTgkvk8eqAnfMcrjmsCneXWLOB2Yct0fGv2rvcYKt6AY2NOqc2BUncq52LX5mlf1n+OZA9dKXkpQy9KgN5JrMOAzqVIKu5dgs6tCOmLt9FQarB+pWikZ0SUCNij9YcxgLOcmNGygr3B06vXnmCBthFuSSik6dbmG1+jUH0ZNC2t4tsjwXmIR4g3Edb4GHCdGgwJpRbcTdutURXg8h0zBlz85TbS7Ctcjq0r+Z8ZYwiVGuUbj3uaLFai2KCpVcPAuHvSLHzkYBMXPOXytVNFqyLaVuvZTP9rQqu75/SS6oFWVb9KnjrL7/CZ0pVLVdj/tR+Q84IFea36vTw4QstR73Ya56yjX2XaY5g3Klk1bJm3W9Y5mfRMhXqvhOxhmR6pNe4UaDq94RfOOfVmvNSbyJNnq6an9D7xLJag=</source>
   </file>
   <file path="Test/Case/Controller/Component/AssetComponentTest.php" generated-path="Test.Case.Controller.Component.AssetComponentTest.html" hash="7ffad16f5218c3fb141b3d456fdab17b" package="Default">
     <docblock line="0">
@@ -3086,44 +3037,16 @@ for those fields that are not defined in $data, and clearing previous validation
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="296" package="NetCommons\NetCommons\Model">
-        <name>equalToField</name>
-        <full_name>\NetCommonsAppModel::equalToField()</full_name>
-        <docblock line="296">
-          <description>Check field1 matches field2</description>
-          <long-description></long-description>
-          <tag name="param" line="296" description="&lt;p&gt;field1 parameters&lt;/p&gt;" type="array" variable="$field1">
-            <type>array</type>
-          </tag>
-          <tag name="param" line="296" description="&lt;p&gt;field2 key&lt;/p&gt;" type="string" variable="$field2">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="296" description="" type="boolean">
-            <type>boolean</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$field1</name>
-          <default></default>
-          <type>array</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$field2</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <inherited_from>\NetCommonsAppModel</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="307" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="295" package="NetCommons\NetCommons\Model">
         <name>_getDefaultValue</name>
         <full_name>\NetCommonsAppModel::_getDefaultValue()</full_name>
-        <docblock line="307">
+        <docblock line="295">
           <description>全カラムのデフォルト値をセットした配列を返す。</description>
           <long-description></long-description>
-          <tag name="param" line="307" description="&lt;p&gt;デフォルトを上書きするカラム配列&lt;/p&gt;" type="array" variable="$data">
+          <tag name="param" line="295" description="&lt;p&gt;デフォルトを上書きするカラム配列&lt;/p&gt;" type="array" variable="$data">
             <type>array</type>
           </tag>
-          <tag name="return" line="307" description="デフォルト値をセットした配列" type="array">
+          <tag name="return" line="295" description="デフォルト値をセットした配列" type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -6936,57 +6859,6 @@ will inherit them.</long-description>
     </class>
     <source>eJyNkk9v00AQxc/xp5gDkp0ojQFxSdoGKqsqtKhENDeEkGNPYzebXbM7WzdC/e7Mrv+QRBRxG8++95udtz57XxVVEI9GAYzg2igJSbrBxccFEG4rkRJyYQiy1CBLnOpDpqqdLtcFQdJXb1+/eTeGW6REbbdKGlho9YAZeUNqqVAablSBJSxRp2ubFSWcbairmeltEmmi9HrubaKUGyiIqlkc13U94cNW5jQvDRNlhtLgy8a4VUzoifYhn5s2Q+IguKiq2cwaNFGYKElaCYE6HMP+1/D0QMa5fUVTMQqdkMm10hun+v984yATqTFeuWwFS3eOT4QyN97tGgnr4VdPdgxP3yJHnXcvpZGslvCoytzDB5Vd8fZwb2VGJcs7XzRk2GAQx/CJoDSwQuK3AY33qFFmCFdKrQXC9d2XW7ijHZdXtsyRPa90uzScg8Qa9nOIeHlWZH1mnaZvRNIKMYYecmw4mT+WWCc+lHMI3V1DL5Hp1k0M3QZNx1BK1qum02nTYqoV5Htd2eqPpxikiP+RKs0oCh3bPWFDdFXrDofD06OVDyicVc47hX/+qsmlwC1KMvGDu3pjd+WF1umO/a7+kWOmcox67sl8pfJdNBwDaesycS4qSnMy5yBQ0+VPmwoT+RQ4vR74rbn792bO3xzNToceN/xfnnb7Q1MXifc9B8Fz8BuevWln</source>
   </file>
-  <file path="Plugin/NetCommons/Model/Behavior/DateTimeBehavior.php" generated-path="Plugin.NetCommons.Model.Behavior.DateTimeBehavior.html" hash="c558a89a3cccf927df47addbc425fd62" package="Default">
-    <docblock line="0">
-      <description>DateTime Behavior</description>
-      <long-description></long-description>
-      <tag name="author" line="0" description="Noriko Arai" link="mailto:arai@nii.ac.jp"/>
-      <tag name="author" line="0" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
-      <tag name="link" line="0" description="NetCommons Project" link="http://www.netcommons.org"/>
-      <tag name="license" line="0" description="NetCommons License" link="http://www.netcommons.org/license.txt"/>
-      <tag name="copyright" line="0" description="Copyright 2014, NetCommons Project"/>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="" line="20" package="NetCommons\NetCommons\Model\Befavior">
-      <extends>\ModelBehavior</extends>
-      <name>DateTimeBehavior</name>
-      <full_name>\DateTimeBehavior</full_name>
-      <docblock line="20">
-        <description>DateTime Behavior</description>
-        <long-description></long-description>
-        <tag name="package" line="20" description="NetCommons\NetCommons\Model\Befavior"/>
-        <tag name="author" line="20" description="Shohei Nakajima" link="mailto:nakajimashouhei@gmail.com"/>
-      </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="29" package="NetCommons\NetCommons\Model\Befavior">
-        <name>getNowTime</name>
-        <full_name>\DateTimeBehavior::getNowTime()</full_name>
-        <docblock line="29">
-          <description>現時刻を取得</description>
-          <long-description></long-description>
-          <tag name="param" line="29" description="&lt;p&gt;Model using this behavior&lt;/p&gt;" type="\Model" variable="$model">
-            <type>\Model</type>
-          </tag>
-          <tag name="param" line="29" description="&lt;p&gt;Type&lt;/p&gt;" type="string" variable="$type">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="29" description="now()" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$model</name>
-          <default></default>
-          <type>\Model</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$type</name>
-          <default>'datetime'</default>
-          <type>string</type>
-        </argument>
-      </method>
-    </class>
-    <source>eJydUrFu2zAQna2vuMGAZMOR2qKT67hO0rE1CsRbEhg0fZZoS6RAUrWNIkumbAE6tMi3BMjPFG5/oyfRslWgRYEu5PEd37t3Rw7e5knuRd2uB114xyxORIZwjgn7JJQmsMRHrLCJ0jBWWqwUnGkmYMBoHUkhQsbDZT5s3rtMVIICxmzFliJjMJD7yCSqoMwozphIQ64yR0uFXEFibd6PovV6HUq0lMuUNKHSMYzRXrgjfNRqidzuWRylwb8To/2N0G5sU+S9gysRrvKtFnFi4eIQvXrx8nXvz1UjzzvL836/MGgC/4OaY1rPyu+BA/zOG++fE80ZX7EYoVHmuhFWQtfnuKhJ/znbyOMpM+bgo7YBuLEo5wZ+awE+H4z/fHj+8Xi3u3/6fvdl9/B19/zt6FyzzPGgnVWbOxRGyBhsIgzMjt3WBGN1mW7bbY4woaXKabSFlnVSqnXQqVy38mJGrweLQnIrlIQY7VityxaCZuneXvAU/Dm1aCnvd6iNVqs9nxHaLu2cDIlNE2CXqtAcg/J96AJX6cRxmdZsO81QxxhUceAvlM6Ytah9OB06cb9D1eazkyERi0yaq6r0DamRWFmZlMotqBCxAKc1XeF2ihthrKll6avU1TvO7UGAszSd0u/S07L1oL521TB0c2TXsO9c3JZ97UdaCRJI2K33C6d0TYk=</source>
-  </file>
   <file path="Plugin/NetCommons/Controller/Component/NetCommonsTimeComponent.php" generated-path="Plugin.NetCommons.Controller.Component.NetCommonsTimeComponent.html" hash="02e34163ccc20b25b71f024b51940320" package="Default">
     <docblock line="0">
       <description>NetCommonsTimeComponent</description>
@@ -7152,7 +7024,7 @@ NetCommonsFormと連携している</description>
     </class>
     <source>eJy1U0tr20AQPku/Yg4GP7DltvRQmtgNuAQKJYQkx142q5G08WpX7M7aMcX/vaOVIquQHnsQmp39XjNC19+aqknXi0UKC7hD2tm6tsY/oafHoAi53d7ciECVdfBY2QoV3Im9eFG1gGvTV76ygW9uyloonUlbbyNNK7OHiqj5ul4fj8fMIMnOIbOuHBnCvbMvKKlnSTQe/01c94iMXmks8rNrRxFpm5NTZUWwG6pPHz5+Xr7vuk7/3xYaIfeixJHyr1E5dmlj57izB3RM+FEa6zCGk1p4/140wFdCk3vYiT1eur+Hce51KJUBI+phjINw4MkpU0btpAnPvFBuCeLXpImMq0HhAWVwXh1Qn0DkbCW0BqoQCqXRA4sLyJXjPVp3ArLxjjgK+DZL9mbbCCfq3hgmF8YTwy8nH57JIbY6bBZ1PBTO1lkUcUjBGThYlf8VvghGkrKmJbVr+P4mOKSfjSw3MM2mc95Skkxurc7RccvgEbrDCDq/ajHdpBvowattG3FmgtZLIBdwCdMImTKc8QV/NiErmPVE4SFWnWOiCpjxmLyJDrCE1Zc5bDacqo2e8S/Zh2NrqpRfbfupbhndcWKu5JzG55ym5/QPwME+BA==</source>
   </file>
-  <file path="Plugin/NetCommons/View/Helper/NetCommonsHtmlHelper.php" generated-path="Plugin.NetCommons.View.Helper.NetCommonsHtmlHelper.html" hash="609e399a1c831ded2a6ad8c255b05ebb" package="Default">
+  <file path="Plugin/NetCommons/View/Helper/NetCommonsHtmlHelper.php" generated-path="Plugin.NetCommons.View.Helper.NetCommonsHtmlHelper.html" hash="f2e9550f8a858f2543cb25c25bd4e92f" package="Default">
     <docblock line="0">
       <description>NetCommonsFormHelper</description>
       <long-description></long-description>
@@ -7186,24 +7058,51 @@ will inherit them.</long-description>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="37" package="NetCommons\NetCommons\View\Helper">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="35" package="NetCommons\NetCommons\View\Helper">
+        <name>__call</name>
+        <full_name>\NetCommonsHtmlHelper::__call()</full_name>
+        <docblock line="35">
+          <description>HtmlHelperラップ用マジックメソッド。</description>
+          <long-description></long-description>
+          <tag name="param" line="35" description="&lt;p&gt;メソッド&lt;/p&gt;" type="string" variable="$method">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="35" description="&lt;p&gt;パラメータ&lt;/p&gt;" type="array" variable="$params">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="35" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$method</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$params</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="48" package="NetCommons\NetCommons\View\Helper">
         <name>script</name>
         <full_name>\NetCommonsHtmlHelper::script()</full_name>
-        <docblock line="37">
+        <docblock line="48">
           <description>Overwrite HtmlHelper::script()</description>
           <long-description></long-description>
-          <tag name="param" line="37" description="&lt;p&gt;String or array of javascript files to include&lt;/p&gt;" type="string|array" variable="$url">
+          <tag name="param" line="48" description="&lt;p&gt;String or array of javascript files to include&lt;/p&gt;" type="string|array" variable="$url">
             <type>string</type>
             <type>array</type>
           </tag>
-          <tag name="param" line="37" description="&lt;p&gt;Array of options, and html attributes see above. If boolean sets $options['inline'] = value&lt;/p&gt;" type="array|boolean" variable="$options">
+          <tag name="param" line="48" description="&lt;p&gt;Array of options, and html attributes see above. If boolean sets $options['inline'] = value&lt;/p&gt;" type="array|boolean" variable="$options">
             <type>array</type>
             <type>boolean</type>
           </tag>
-          <tag name="return" line="37" description="String of `&lt;script /&gt;` tags or null if $inline is false or if $once is true and the file has been&#10;  included before." type="mixed">
+          <tag name="return" line="48" description="String of `&lt;script /&gt;` tags or null if $inline is false or if $once is true and the file has been&#10;  included before." type="mixed">
             <type>mixed</type>
           </tag>
-          <tag name="link" line="37" description="http://book.cakephp.org/2.0/en/core-libraries/helpers/html.html#HtmlHelper::script" link="http://book.cakephp.org/2.0/en/core-libraries/helpers/html.html#HtmlHelper::script"/>
+          <tag name="link" line="48" description="http://book.cakephp.org/2.0/en/core-libraries/helpers/html.html#HtmlHelper::script" link="http://book.cakephp.org/2.0/en/core-libraries/helpers/html.html#HtmlHelper::script"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$url</name>
@@ -7216,23 +7115,23 @@ will inherit them.</long-description>
           <type>array|boolean</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="57" package="NetCommons\NetCommons\View\Helper">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="68" package="NetCommons\NetCommons\View\Helper">
         <name>css</name>
         <full_name>\NetCommonsHtmlHelper::css()</full_name>
-        <docblock line="57">
+        <docblock line="68">
           <description>Overwrite HtmlHelper::css()</description>
           <long-description></long-description>
-          <tag name="param" line="57" description="&lt;p&gt;The name of a CSS style sheet or an array containing names of&#10;CSS stylesheets. If &lt;code&gt;$path&lt;/code&gt; is prefixed with '/', the path will be relative to the webroot&#10;of your application. Otherwise, the path will be relative to your CSS path, usually webroot/css.&lt;/p&gt;" type="string|array" variable="$path">
+          <tag name="param" line="68" description="&lt;p&gt;The name of a CSS style sheet or an array containing names of&#10;CSS stylesheets. If &lt;code&gt;$path&lt;/code&gt; is prefixed with '/', the path will be relative to the webroot&#10;of your application. Otherwise, the path will be relative to your CSS path, usually webroot/css.&lt;/p&gt;" type="string|array" variable="$path">
             <type>string</type>
             <type>array</type>
           </tag>
-          <tag name="param" line="57" description="&lt;p&gt;Array of options and HTML arguments.&lt;/p&gt;" type="array" variable="$options">
+          <tag name="param" line="68" description="&lt;p&gt;Array of options and HTML arguments.&lt;/p&gt;" type="array" variable="$options">
             <type>array</type>
           </tag>
-          <tag name="return" line="57" description="CSS &lt;link /&gt; or &lt;style /&gt; tag, depending on the type of link." type="string">
+          <tag name="return" line="68" description="CSS &lt;link /&gt; or &lt;style /&gt; tag, depending on the type of link." type="string">
             <type>string</type>
           </tag>
-          <tag name="link" line="57" description="http://book.cakephp.org/2.0/en/core-libraries/helpers/html.html#HtmlHelper::css" link="http://book.cakephp.org/2.0/en/core-libraries/helpers/html.html#HtmlHelper::css"/>
+          <tag name="link" line="68" description="http://book.cakephp.org/2.0/en/core-libraries/helpers/html.html#HtmlHelper::css" link="http://book.cakephp.org/2.0/en/core-libraries/helpers/html.html#HtmlHelper::css"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$path</name>
@@ -7245,22 +7144,22 @@ will inherit them.</long-description>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="76" package="NetCommons\NetCommons\View\Helper">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="87" package="NetCommons\NetCommons\View\Helper">
         <name>json</name>
         <full_name>\NetCommonsHtmlHelper::json()</full_name>
-        <docblock line="76">
+        <docblock line="87">
           <description>Json CakePHP template.</description>
           <long-description>It is better reference Google JSON Style Guid</long-description>
-          <tag name="param" line="76" description="&lt;p&gt;results data&lt;/p&gt;" type="array" variable="$results">
+          <tag name="param" line="87" description="&lt;p&gt;results data&lt;/p&gt;" type="array" variable="$results">
             <type>array</type>
           </tag>
-          <tag name="param" line="76" description="&lt;p&gt;message&lt;/p&gt;" type="string" variable="$name">
+          <tag name="param" line="87" description="&lt;p&gt;message&lt;/p&gt;" type="string" variable="$name">
             <type>string</type>
           </tag>
-          <tag name="param" line="76" description="&lt;p&gt;status code&lt;/p&gt;" type="integer" variable="$status">
+          <tag name="param" line="87" description="&lt;p&gt;status code&lt;/p&gt;" type="integer" variable="$status">
             <type>integer</type>
           </tag>
-          <tag name="return" line="76" description="json format data" type="string">
+          <tag name="return" line="87" description="json format data" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -7280,25 +7179,25 @@ will inherit them.</long-description>
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="99" package="NetCommons\NetCommons\View\Helper">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="110" package="NetCommons\NetCommons\View\Helper">
         <name>editLink</name>
         <full_name>\NetCommonsHtmlHelper::editLink()</full_name>
-        <docblock line="99">
+        <docblock line="110">
           <description>Creates a `&lt;a&gt;` tag for add link. The type attribute defaults</description>
           <long-description></long-description>
-          <tag name="param" line="99" description="&lt;p&gt;The anchor's caption. Not automatically HTML encoded&lt;/p&gt;" type="string" variable="$title">
+          <tag name="param" line="110" description="&lt;p&gt;The anchor's caption. Not automatically HTML encoded&lt;/p&gt;" type="string" variable="$title">
             <type>string</type>
           </tag>
-          <tag name="param" line="99" description="&lt;p&gt;Link url&lt;/p&gt;" type="mixed" variable="$url">
+          <tag name="param" line="110" description="&lt;p&gt;Link url&lt;/p&gt;" type="mixed" variable="$url">
             <type>mixed</type>
           </tag>
-          <tag name="param" line="99" description="&lt;p&gt;Array of options and HTML attributes.&lt;/p&gt;" type="array" variable="$options">
+          <tag name="param" line="110" description="&lt;p&gt;Array of options and HTML attributes.&lt;/p&gt;" type="array" variable="$options">
             <type>array</type>
           </tag>
-          <tag name="return" line="99" description="A HTML button tag." type="string">
+          <tag name="return" line="110" description="A HTML button tag." type="string">
             <type>string</type>
           </tag>
-          <tag name="link" line="99" description="http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#FormHelper::button" link="http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#FormHelper::button"/>
+          <tag name="link" line="110" description="http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#FormHelper::button" link="http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#FormHelper::button"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$title</name>
@@ -7316,22 +7215,22 @@ will inherit them.</long-description>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="133" package="NetCommons\NetCommons\View\Helper">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="144" package="NetCommons\NetCommons\View\Helper">
         <name>url</name>
         <full_name>\NetCommonsHtmlHelper::url()</full_name>
-        <docblock line="133">
+        <docblock line="144">
           <description>Creates a `&lt;a&gt;` tag for add link. The type attribute defaults</description>
           <long-description></long-description>
-          <tag name="param" line="133" description="&lt;p&gt;Link url&lt;/p&gt;" type="mixed" variable="$url">
+          <tag name="param" line="144" description="&lt;p&gt;Link url&lt;/p&gt;" type="mixed" variable="$url">
             <type>mixed</type>
           </tag>
-          <tag name="param" line="133" description="&lt;p&gt;Array of options and HTML attributes.&lt;/p&gt;" type="array" variable="$options">
+          <tag name="param" line="144" description="&lt;p&gt;Array of options and HTML attributes.&lt;/p&gt;" type="array" variable="$options">
             <type>array</type>
           </tag>
-          <tag name="return" line="133" description="A HTML button tag." type="string">
+          <tag name="return" line="144" description="A HTML button tag." type="string">
             <type>string</type>
           </tag>
-          <tag name="link" line="133" description="http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#FormHelper::button" link="http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#FormHelper::button"/>
+          <tag name="link" line="144" description="http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#FormHelper::button" link="http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#FormHelper::button"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$url</name>
@@ -7344,25 +7243,25 @@ will inherit them.</long-description>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="167" package="NetCommons\NetCommons\View\Helper">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="178" package="NetCommons\NetCommons\View\Helper">
         <name>link</name>
         <full_name>\NetCommonsHtmlHelper::link()</full_name>
-        <docblock line="167">
+        <docblock line="178">
           <description>Creates a `&lt;a&gt;` tag for add link. The type attribute defaults</description>
           <long-description></long-description>
-          <tag name="param" line="167" description="&lt;p&gt;The anchor's caption. Not automatically HTML encoded&lt;/p&gt;" type="string" variable="$title">
+          <tag name="param" line="178" description="&lt;p&gt;The anchor's caption. Not automatically HTML encoded&lt;/p&gt;" type="string" variable="$title">
             <type>string</type>
           </tag>
-          <tag name="param" line="167" description="&lt;p&gt;Link url&lt;/p&gt;" type="mixed" variable="$url">
+          <tag name="param" line="178" description="&lt;p&gt;Link url&lt;/p&gt;" type="mixed" variable="$url">
             <type>mixed</type>
           </tag>
-          <tag name="param" line="167" description="&lt;p&gt;Array of options and HTML attributes.&lt;/p&gt;" type="array" variable="$options">
+          <tag name="param" line="178" description="&lt;p&gt;Array of options and HTML attributes.&lt;/p&gt;" type="array" variable="$options">
             <type>array</type>
           </tag>
-          <tag name="return" line="167" description="A HTML button tag." type="string">
+          <tag name="return" line="178" description="A HTML button tag." type="string">
             <type>string</type>
           </tag>
-          <tag name="link" line="167" description="http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#FormHelper::button" link="http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#FormHelper::button"/>
+          <tag name="link" line="178" description="http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#FormHelper::button" link="http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#FormHelper::button"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$title</name>
@@ -7380,16 +7279,16 @@ will inherit them.</long-description>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="179" package="NetCommons\NetCommons\View\Helper">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="190" package="NetCommons\NetCommons\View\Helper">
         <name>requireTitle</name>
         <full_name>\NetCommonsHtmlHelper::requireTitle()</full_name>
-        <docblock line="179">
+        <docblock line="190">
           <description>必須ラベルHTMLの出力</description>
           <long-description></long-description>
-          <tag name="param" line="179" description="&lt;p&gt;タイトル&lt;/p&gt;" type="string" variable="$title">
+          <tag name="param" line="190" description="&lt;p&gt;タイトル&lt;/p&gt;" type="string" variable="$title">
             <type>string</type>
           </tag>
-          <tag name="return" line="179" description="HTMLタグ." type="string">
+          <tag name="return" line="190" description="HTMLタグ." type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -7400,7 +7299,7 @@ will inherit them.</long-description>
         </argument>
       </method>
     </class>
-    <source>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</source>
+    <source>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</source>
   </file>
   <file path="Plugin/NetCommons/Test/Case/Controller/NetCommonsApp/NetCommonsAppControllerTest.php" generated-path="Plugin.NetCommons.Test.Case.Controller.NetCommonsApp.NetCommonsAppControllerTest.html" hash="9d64af43ec30305b00e16640f1fb88c4" package="Default">
     <docblock line="0">
@@ -8692,44 +8591,16 @@ for those fields that are not defined in $data, and clearing previous validation
         </argument>
         <inherited_from>\NetCommonsAppModel</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="296" package="NetCommons\NetCommons\Model">
-        <name>equalToField</name>
-        <full_name>\NetCommonsAppModel::equalToField()</full_name>
-        <docblock line="296">
-          <description>Check field1 matches field2</description>
-          <long-description></long-description>
-          <tag name="param" line="296" description="&lt;p&gt;field1 parameters&lt;/p&gt;" type="array" variable="$field1">
-            <type>array</type>
-          </tag>
-          <tag name="param" line="296" description="&lt;p&gt;field2 key&lt;/p&gt;" type="string" variable="$field2">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="296" description="" type="boolean">
-            <type>boolean</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$field1</name>
-          <default></default>
-          <type>array</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$field2</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <inherited_from>\NetCommonsAppModel</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="307" package="NetCommons\NetCommons\Model">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="295" package="NetCommons\NetCommons\Model">
         <name>_getDefaultValue</name>
         <full_name>\NetCommonsAppModel::_getDefaultValue()</full_name>
-        <docblock line="307">
+        <docblock line="295">
           <description>全カラムのデフォルト値をセットした配列を返す。</description>
           <long-description></long-description>
-          <tag name="param" line="307" description="&lt;p&gt;デフォルトを上書きするカラム配列&lt;/p&gt;" type="array" variable="$data">
+          <tag name="param" line="295" description="&lt;p&gt;デフォルトを上書きするカラム配列&lt;/p&gt;" type="array" variable="$data">
             <type>array</type>
           </tag>
-          <tag name="return" line="307" description="デフォルト値をセットした配列" type="array">
+          <tag name="return" line="295" description="デフォルト値をセットした配列" type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -8925,7 +8796,7 @@ You can change it to a different value by using `$options['type']`.</description
     </class>
     <source>eJztV0FvG0UUPtu/4jWJuk4V75aKkxubpoWSSqGJ1ICE2gqP12Pv1Ls7q5nZOgblQMqF/9ALEmcuiAsXfowl+Bu8NzO7WSdOW0oBIbjYs29m3vvmm/e+t7v7QZEU7ejGjTbcgLssnh1L2OdpwRUayHaHlSaRCh5KJWYS9hQTsMvw904uRMji8FkxaK57lMiEC3jIZuyZyBjs5n6kE1nizJ1pxkQaxjJz21KRzyAxpuhF0Xw+D3NucC6TuQ6lmsJDbu65RzhS8hmPjd8V81zzqzdGfkVoTkzTyYEzWyexLBZKTBMD9+rRrZvvvb+zPmrUbu8VRa9Xaq47AQ4dT8EOBJ8JPo/84/bt9pvw+Ud5KtAXm/IGtCeNIQF4UseJ2nHKtPbxnRn4ieH5WEMNHL6qgR6aBJ8Ta9aABxzDaAH7JktXsT9nCphSbGGDtIpyhDTDVrWx7yY7Ae0kXu5LlTUJuac4M1wDg+HuqDRG5oMhGDYN4TjhYBYFB2aMEjjHYcwnrEyNBiNhSHP9DV2OMmE2huTrc1lCzHKIE5YjL8LQOgZjMZlwxXMDz1lacjpHqUU+heGWLIxAsh4H5Cx4Ogz9sTY3N+HQzfW8CWDIdcwKPoQu7B9/cgDoUZgF/sVyjFAR7hYaUg5yYp/ccUL4sIF6wlLMwGYUTDKRsxQ8FB+qVCnFIQ5wCCIHmcfI7OycDVzZgqGIZU4rH+A/BRghS0IXKVvgjZGpBgIdmacLWqMLHovJws5hVhiY8cVcqjEBn6aiSDSNRlIabRQrADOukDkeV2+fB30kvrRUBAEIbV352wGNM9CDdAoR6Ax/TnSVLQXKRAbolej3bB3XCAON12dpCFFcDGBdyIwZEbMUgXvOiezxGmdE02voqrbYlITq8lHA6BFPXBlYPnbR6s06tNsVN6XKq5B7bpFnl3L2knwhh7MwZjOOkmo16FZ4M+J5FEvFu6kYKaYE15GvlmiCxREmWCmbVCau0Ho9F2ClviZlHhNWH7zjqNyxLOycn6yqvu1trOxWK4ro4pZf//Dry29/++Y7tGyR4aOUZ1QdfbzL22gUE+hcw0vV3HTOK4RWBk+9p9ZFO21WPJPPuXVx6t1cWnatT1EqJxei7+qCqpeEqr8xTRdFQgugHnUDCCG5jAmtwcZgN6LtA7AAWmW+Fn4FLoqWL14uz35ZvvhxefbT8uz75dnPxAfl7h7e+goZ66ig9KfQ16/DuokLB224TTrByLijrPV4JfrG/GmbsPp6O7xw2bTf6Rn0kQ1fWjvWbLn1doPZg0CqqqUxisBskso5WHQVaLc1n3ZRWNgo5WPnQGPvwDKwnrcrqigBq0NfwrePnazXy7ia8s6F2Z0GeBvLVu9KoL5RJXfnaAW+vN2CVMbMqkai+ATjPAksfpMI3R1Q4+kOEJbHhrmC8+Rlu86GLZEX5ZsCrW6Fmlir5SXBB6Oy7Q6qomymdwh1jTaDEYTTuhmObHc+wqZ+14nKx9LaSLRJYQtq93NszK7dFGmJvQMSplH2eQ4ToVDMa/l3rWTzii7TojbzT3QPeNf9w/562yvP0HCRiROctU3jgPQaB2/VINS0pOtd1x/WCzZ1h7v/i/Z/VrRfoTQN+XZvmjazrcTZ18bXSviKapMqXxQrlyQrGB6vxHpand2VFh3cDes7WNU7J66U01eqnUvuv1Hz3q1Q/IVSQCc7WCMHVwiBFat+42vvU5Xiy2FNHz527DWtXtFrBedfdR2VC5/y9wVPx3DkQBh6OcFviKocmKN5Qmvc56T7/sN2s+HXfOHWbAB+ftc2rGKDQaq5d/7hsD4bRD7mJ+vSYeWoqE+r0IO3S5gHFI0yZsX9n0if0/bvF9Dxkg==</source>
   </file>
-  <file path="Plugin/NetCommons/TestSuite/NetCommonsSaveTest.php" generated-path="Plugin.NetCommons.TestSuite.NetCommonsSaveTest.html" hash="d1d893dcd0095dc7a34db318b877482a" package="Default">
+  <file path="Plugin/NetCommons/TestSuite/NetCommonsSaveTest.php" generated-path="Plugin.NetCommons.TestSuite.NetCommonsSaveTest.html" hash="aac05f060618f6f5557f772e3e2731cf" package="Default">
     <docblock line="0">
       <description>NetCommonsSaveTest</description>
       <long-description></long-description>
@@ -9026,23 +8897,23 @@ You can change it to a different value by using `$options['type']`.</description
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="104" package="NetCommons\NetCommons\TestSuite">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="107" package="NetCommons\NetCommons\TestSuite">
         <name>testSaveOnExceptionError</name>
         <full_name>\NetCommonsSaveTest::testSaveOnExceptionError()</full_name>
-        <docblock line="104">
+        <docblock line="107">
           <description>SaveのExceptionErrorテスト</description>
           <long-description></long-description>
-          <tag name="param" line="104" description="&lt;p&gt;登録データ&lt;/p&gt;" type="array" variable="$data">
+          <tag name="param" line="107" description="&lt;p&gt;登録データ&lt;/p&gt;" type="array" variable="$data">
             <type>array</type>
           </tag>
-          <tag name="param" line="104" description="&lt;p&gt;Mockのモデル&lt;/p&gt;" type="string" variable="$mockModel">
+          <tag name="param" line="107" description="&lt;p&gt;Mockのモデル&lt;/p&gt;" type="string" variable="$mockModel">
             <type>string</type>
           </tag>
-          <tag name="param" line="104" description="&lt;p&gt;Mockのメソッド&lt;/p&gt;" type="string" variable="$mockMethod">
+          <tag name="param" line="107" description="&lt;p&gt;Mockのメソッド&lt;/p&gt;" type="string" variable="$mockMethod">
             <type>string</type>
           </tag>
-          <tag name="dataProvider" line="104" description="dataProviderSaveOnExceptionError"/>
-          <tag name="return" line="104" description="" type="void">
+          <tag name="dataProvider" line="107" description="dataProviderSaveOnExceptionError"/>
+          <tag name="return" line="107" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -9062,23 +8933,23 @@ You can change it to a different value by using `$options['type']`.</description
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="123" package="NetCommons\NetCommons\TestSuite">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="126" package="NetCommons\NetCommons\TestSuite">
         <name>testSaveOnValidationError</name>
         <full_name>\NetCommonsSaveTest::testSaveOnValidationError()</full_name>
-        <docblock line="123">
+        <docblock line="126">
           <description>SaveのValidationErrorテスト</description>
           <long-description></long-description>
-          <tag name="param" line="123" description="&lt;p&gt;登録データ&lt;/p&gt;" type="array" variable="$data">
+          <tag name="param" line="126" description="&lt;p&gt;登録データ&lt;/p&gt;" type="array" variable="$data">
             <type>array</type>
           </tag>
-          <tag name="param" line="123" description="&lt;p&gt;Mockのモデル&lt;/p&gt;" type="string" variable="$mockModel">
+          <tag name="param" line="126" description="&lt;p&gt;Mockのモデル&lt;/p&gt;" type="string" variable="$mockModel">
             <type>string</type>
           </tag>
-          <tag name="param" line="123" description="&lt;p&gt;Mockのメソッド&lt;/p&gt;" type="string" variable="$mockMethod">
+          <tag name="param" line="126" description="&lt;p&gt;Mockのメソッド&lt;/p&gt;" type="string" variable="$mockMethod">
             <type>string</type>
           </tag>
-          <tag name="dataProvider" line="123" description="dataProviderSaveOnValidationError"/>
-          <tag name="return" line="123" description="" type="void">
+          <tag name="dataProvider" line="126" description="dataProviderSaveOnValidationError"/>
+          <tag name="return" line="126" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -9098,29 +8969,29 @@ You can change it to a different value by using `$options['type']`.</description
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="143" package="NetCommons\NetCommons\TestSuite">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="146" package="NetCommons\NetCommons\TestSuite">
         <name>testValidationError</name>
         <full_name>\NetCommonsSaveTest::testValidationError()</full_name>
-        <docblock line="143">
+        <docblock line="146">
           <description>Validatesのテスト</description>
           <long-description></long-description>
-          <tag name="param" line="143" description="&lt;p&gt;登録データ&lt;/p&gt;" type="array" variable="$data">
+          <tag name="param" line="146" description="&lt;p&gt;登録データ&lt;/p&gt;" type="array" variable="$data">
             <type>array</type>
           </tag>
-          <tag name="param" line="143" description="&lt;p&gt;フィールド名&lt;/p&gt;" type="string" variable="$field">
+          <tag name="param" line="146" description="&lt;p&gt;フィールド名&lt;/p&gt;" type="string" variable="$field">
             <type>string</type>
           </tag>
-          <tag name="param" line="143" description="&lt;p&gt;セットする値&lt;/p&gt;" type="string" variable="$value">
+          <tag name="param" line="146" description="&lt;p&gt;セットする値&lt;/p&gt;" type="string" variable="$value">
             <type>string</type>
           </tag>
-          <tag name="param" line="143" description="&lt;p&gt;エラーメッセージ&lt;/p&gt;" type="string" variable="$message">
+          <tag name="param" line="146" description="&lt;p&gt;エラーメッセージ&lt;/p&gt;" type="string" variable="$message">
             <type>string</type>
           </tag>
-          <tag name="param" line="143" description="&lt;p&gt;上書きするデータ&lt;/p&gt;" type="array" variable="$overwrite">
+          <tag name="param" line="146" description="&lt;p&gt;上書きするデータ&lt;/p&gt;" type="array" variable="$overwrite">
             <type>array</type>
           </tag>
-          <tag name="dataProvider" line="143" description="dataProviderValidationError"/>
-          <tag name="return" line="143" description="" type="void">
+          <tag name="dataProvider" line="146" description="dataProviderValidationError"/>
+          <tag name="return" line="146" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -9283,7 +9154,7 @@ You can change it to a different value by using `$options['type']`.</description
         <inherited_from>\NetCommonsCakeTestCase</inherited_from>
       </method>
     </class>
-    <source>eJzVV1tvG0UUfrZ/xTxY2nXkxC3iyWlDIU1ERZMigvoSomiye2xPvbuzzMw6iVAkYkttgVb0gYsqHlAAcVGlIvEUFC4/ZjGBf8FcdtfrW5xYjVDfdmfO9TvfzDlz7bWwGRarc3NFNIfWQSxT36cB38BteBe4kKtq4waORJMytNGkTSBoHbfwPeJjdC1IvniTRnLnRsPHxFtwqL+k1TwStFBTiLBWre7u7i4EIBzjYIGyRs4fepvRe+CIRMuBgMNkxWoisSD2RN7IbbOsjTg03Gek0RRoOft65crVVyvjvVaLxdfDsFaLOHDb6ousURc8hcQy5mBVUG5rQS1vRESAVV4sXhqGIXZauAE5w+/lPrMYdA6OhzkfEwKCPQGBm98aSAx9kMWv11GAfUjjbmOGMGN4X7sohIwKiRm4qLTtK+F1KYuuI8vqg7AGMlX33Fa09BgzKvz48HncvR93fo27D1NbIWbYN9ZQycUCo9OnJ/8++iXuPoi7v8WdP7WU2pAFbhMXGMr/KLNagoGIWIDalLhJVNGOpBaqR4EjCA2QUOhKaVt7KUuYCoWSTlpGWhJNwueX+iAs6l2Tem47y04mVihUq3H3MO78EHe7cefn089+zILuffpF748vpQipI5twDsK43UwsGcfzS9gjmG9tWsS1tsompkJpB+qUQd9tKlwngWtbdcK4kOzVkNlKoWAxcCLGSRssdH0JzV+tmGWHBi5RyXO9bjSUL/U3PR5tpVxWUByk6SbV6z3/+p+jRwojBjzyxGiwCXgJ2hpOIyBZDUysU7Hih2LfTgyUE0CJq0nSR3VGDIku2zRxnRoCT5+avtqgQgPEbczFrUDFfeumnQdkiKtZ2UvYERH2zl/D8SWcUkHi6hqVDXizwGTCHC8qg39TXmS1GgOfqnNzlrC8TeU/qRNwLQ3Q5djelnc6Mw4G6vYifTkMsLicNBLTuSxe4hIoD4pzQwpNzFcJeJLlLdi3UqYVzuSkklQB3ZG9nQTYewv234AmbhPKarUGBMAkbHJx2JdqSpXhIybju7mzTIM6aRgYDnK36kQszNFKzrYUh71Q97Qp4PnAGmBPdaBP8xkQqFO8eAG3ac3OFh9hxKWZz5Ni4J5feV9yivctyWoZnql4Doang5U9B0J13a0wRtmMs4KR4oKRoIFkxE7LzEFr8ks3l2+0/LNJwqbpZ9JHced31Yq6H02fRO4EgxlcbDIZ1jb3eCWXQyUf4gsZYfpaTmuVsnd0rKuyZLL6ft7lqPu8vuw6K0mFsxxs61YggMnjrLPJ1q38NDBxXBjhxl1JOrn5MpNjKIWLsmNIfQo91PzdNhrArf+fLLPPiomHbFDMceNumuDsT4vBItdV60Jx9/O4860S6j6Tte09eTxGVIIbAYo7J5oAD+PDp3Hnk96H342jDnCu3n1xRz4RftJ2j/R4e6IDOR4NV16/bJfJtyD66/jjv786jg8fGwfnfBfNTLVJJNPAVJKsK1lKlXyoWRedzrZsXt0OIs+zjdl0WIiC3BSrlbY2TQBbo6PfOCnlU1vM2rku/2DTTjPL4k/fIOmp6T34/vTJ/f5TZ5C0WYhnczs7gvZ0Yk9qnmMtphXiadKbV7b6dUmOyUHxP2ROQqY=</source>
+    <source>eJzVV1tvG0UUfrZ/xTxY2nXkxC3iyWlDIU1ERJNWBPUlRNFk99ieem/MzDqJUKTGltoCregDF1U8oADiokpF4ikoXH7MYgL/grnszffEaoT6tjtz5pzvfOebmTPX3giaQbE6N1dEc2gD+LLvur7HNnEb3gPGxaicuIFD3vQp2mz6TSBoA7fwPeJidM2Lv1jTD8XMjYaLibNg+e6SWuYQr4WanAe1anVvb2/BA27pAAs+beTioTvUvwcWj1dZ4DEYv7AaWyzwfZ53cksPKyeWHxxQ0mhytJx+vXbl6uuV0VGrxeKbQVCrhQyYaWQm674NjmRiGTMwKig3tSCHN0PCwSgvFi+NwwBbLdyAnOP3c58pBpWD5WDGRkBAsM/Bs/NTfYmhD1P8ahx52IUEdxtThCnFBypEIaA+F5yBjUo7rjTeELboOjKMjIR1EKna5/airEe4kfCjoxdR90HU+TXqPkp8BZhiV3tDJRtzjM6enf77+Jeo+zDq/hZ1/lRWckIUuE1soCj/I90qCwo8pB5q+8SOUYW7QlqoHnoWJ76HuGRXWJsqSlnQVCiUVNICaYk3CZtfykhYVLM69dx0mp1IrFCoVqPuUdT5Iep2o87PZ5/9mILuffpF748vhQmpI5MwBlyH3Yo96cDzS9ghmG1vGcQ2tssaU6G0C3WfQhY2Ma4TzzaNOqGMC/Uqyky5oGBQsELKSBsMdH0JzV+t6GHL92wik2dqXK+QseTfdDzKS7ksqThM0o2r13vx9T/HjyVHFFjo8GGwMXkx24pObSBUDZRv+HzFDfiBGTsox4QSW4kkY3VGDokq2zRzlRoCR+2abFn/ggbwW5jxNU/iXrtp5gkZ0Gpa9hK2eIid89dwdAmnVJDYqkZlTd4sNGmYo00F+LfFQVarUXB9uW8mGYvTVPyTOgHbUARdju8dcaZTHaCvbi8zlkUB88tJI3ady+IVLoGMIDU3sKCJ2SoBR6i8BQdGorTCRE1KSwnotrjbiYedd+DgLWjiNvFprdYAD6igTQwOxpKXUmVwiwl8N3eXfa9OGpqGw9ypOpYLvbXivS3MYT9Qd9oU8lygDTCnBlC7eQIFaj5/omdbXJ/CcpsvXgBXUtTJ5kOSuTT3edX0XQQrHwjRscyTKKcWosRzONg+rOxbEMjzcIVSn87YTGgrxinxGkggtlq6UVoXX+r2+UbZPx9nrLuC1Po46vwu76ruR9NbldtefwYXa10GV+uDvpLLoZKH+FJ6nGyV1Vr16bsK66oomai+mw85HD6/XlxLK3GF0xxMY83jQMV+V9mk40a+XRjbTwxp464QnZh8lcUxkMJF1TGwfIo8ZIPe1iuAGf+/WGZvJuMIaSeZ08bdJMHZ3x79Ra7Luw1F3c+jzrfSqPtc1Lb39MkIU0FuCCjqnCoBPIqOnkWdT3r3vxslHWBMPgyjjnhD/KT8Hqv+91QBORmGK45fukfFYxH9dfLx31+dREdPdIBzPpxmlto4kSliKnHWlTSlSh5qes1OV1va0O54oeOY2m3STYRers1Vi7a3NIDt4d5wlJWMqTym970qf/+tnmSW4k8eKcmu6T38/uzpg+wt1C/aFOJkbadb0Jwu7HGX50iPSYVYkvTWle2sLvE2OSz+B3ldSK0=</source>
   </file>
   <file path="Plugin/NetCommons/Test/test_app/Plugin/TestNetCommons/Controller/TestNetCommonsController.php" generated-path="Plugin.NetCommons.Test.test_app.Plugin.TestNetCommons.Controller.TestNetCommonsController.html" hash="158cc5f0bc6558b81745ae9bd5dc18cd" package="Default">
     <docblock line="0">

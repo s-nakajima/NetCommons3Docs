@@ -50,7 +50,6 @@ API Index
 * [BackToPageHelper](BackToPageHelper.md)
 * [SingletonViewBlockHtmlHelperTest](SingletonViewBlockHtmlHelperTest.md)
 * [JsonTemplateTest](JsonTemplateTest.md)
-* [DateTimeBehavior](DateTimeBehavior.md)
 * [NetCommonsTimeComponent](NetCommonsTimeComponent.md)
 * [NetCommonsTestSuite](NetCommonsTestSuite.md)
 * [NetCommonsHtmlHelper](NetCommonsHtmlHelper.md)

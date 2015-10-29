@@ -34,6 +34,23 @@ Methods
 -------
 
 
+### __call
+
+    mixed NetCommonsHtmlHelper::__call(string $method, array $params)
+
+HtmlHelperラップ用マジックメソッド。
+
+
+
+* Visibility: **public**
+
+
+#### Arguments
+* $method **string** - &lt;p&gt;メソッド&lt;/p&gt;
+* $params **array** - &lt;p&gt;パラメータ&lt;/p&gt;
+
+
+
 ### script
 
     mixed NetCommonsHtmlHelper::script(string|array $url, array|boolean $options)

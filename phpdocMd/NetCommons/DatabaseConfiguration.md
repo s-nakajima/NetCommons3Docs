@@ -222,24 +222,6 @@ Load models
 
 
 
-### equalToField
-
-    boolean NetCommonsAppModel::equalToField(array $field1, string $field2)
-
-Check field1 matches field2
-
-
-
-* Visibility: **public**
-* This method is defined by [NetCommonsAppModel](NetCommonsAppModel.md)
-
-
-#### Arguments
-* $field1 **array** - &lt;p&gt;field1 parameters&lt;/p&gt;
-* $field2 **string** - &lt;p&gt;field2 key&lt;/p&gt;
-
-
-
 ### _getDefaultValue
 
     array NetCommonsAppModel::_getDefaultValue(array $data)
