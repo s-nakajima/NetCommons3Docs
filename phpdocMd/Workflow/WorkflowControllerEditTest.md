@@ -53,7 +53,7 @@ Fixture merge
 
 ### $_fixtures
 
-    protected array $_fixtures = array('plugin.blocks.block', 'plugin.blocks.block_role_permission', 'plugin.boxes.box', 'plugin.boxes.boxes_page', 'plugin.containers.container', 'plugin.containers.containers_page', 'plugin.frames.frame', 'plugin.m17n.language', 'plugin.net_commons.site_setting', 'plugin.pages.languages_page', 'plugin.pages.page', 'plugin.plugin_manager.plugin', 'plugin.plugin_manager.plugins_role', 'plugin.plugin_manager.plugins_room', 'plugin.roles.default_role_permission', 'plugin.roles.role', 'plugin.rooms.roles_room', 'plugin.rooms.roles_rooms_user', 'plugin.rooms.room', 'plugin.rooms.room_role_permission', 'plugin.rooms.space', 'plugin.users.user')
+    protected array $_fixtures = array('plugin.blocks.block', 'plugin.blocks.block_role_permission', 'plugin.boxes.box', 'plugin.boxes.boxes_page', 'plugin.containers.container', 'plugin.containers.containers_page', 'plugin.frames.frame', 'plugin.m17n.language', 'plugin.net_commons.site_setting', 'plugin.pages.languages_page', 'plugin.pages.page', 'plugin.plugin_manager.plugin', 'plugin.plugin_manager.plugins_role', 'plugin.plugin_manager.plugins_room', 'plugin.roles.default_role_permission', 'plugin.roles.role', 'plugin.rooms.roles_room', 'plugin.rooms.roles_rooms_user', 'plugin.rooms.room', 'plugin.rooms.room_role', 'plugin.rooms.room_role_permission', 'plugin.rooms.space', 'plugin.users.user')
 
 Fixtures
 
@@ -359,6 +359,24 @@ addアクションのValidateionErrorテスト
 * $data **array** - &lt;p&gt;POSTデータ&lt;/p&gt;
 * $urlOptions **array** - &lt;p&gt;URLオプション&lt;/p&gt;
 * $validationError **string|null** - &lt;p&gt;ValidationError&lt;/p&gt;
+
+
+
+### _mockForReturnFalse
+
+    void NetCommonsControllerTestCase::_mockForReturnFalse(string $mockModel, string $mockMethod)
+
+ExceptionErrorのMockセット
+
+
+
+* Visibility: **protected**
+* This method is defined by [NetCommonsControllerTestCase](NetCommonsControllerTestCase.md)
+
+
+#### Arguments
+* $mockModel **string** - &lt;p&gt;Mockのモデル&lt;/p&gt;
+* $mockMethod **string** - &lt;p&gt;Mockのメソッド&lt;/p&gt;
 
 
 

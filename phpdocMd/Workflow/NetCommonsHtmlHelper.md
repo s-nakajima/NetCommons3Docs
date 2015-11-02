@@ -34,6 +34,23 @@ Methods
 -------
 
 
+### __call
+
+    mixed NetCommonsHtmlHelper::__call(string $method, array $params)
+
+HtmlHelperラップ用マジックメソッド。
+
+
+
+* Visibility: **public**
+
+
+#### Arguments
+* $method **string** - &lt;p&gt;メソッド&lt;/p&gt;
+* $params **array** - &lt;p&gt;パラメータ&lt;/p&gt;
+
+
+
 ### script
 
     mixed NetCommonsHtmlHelper::script(string|array $url, array|boolean $options)
@@ -138,5 +155,21 @@ Creates a `<a>` tag for add link. The type attribute defaults
 * $title **string** - &lt;p&gt;The anchor&#039;s caption. Not automatically HTML encoded&lt;/p&gt;
 * $url **mixed** - &lt;p&gt;Link url&lt;/p&gt;
 * $options **array** - &lt;p&gt;Array of options and HTML attributes.&lt;/p&gt;
+
+
+
+### requireTitle
+
+    string NetCommonsHtmlHelper::requireTitle(string $title)
+
+必須ラベルHTMLの出力
+
+
+
+* Visibility: **public**
+
+
+#### Arguments
+* $title **string** - &lt;p&gt;タイトル&lt;/p&gt;
 
 

@@ -76,11 +76,12 @@ setup current data
 
     void CurrentControlPanel::setLanguage()
 
-Set Language
+言語データをCurrentにセット
 
 
 
 * Visibility: **public**
+* This method is **static**.
 
 
 

@@ -14,6 +14,19 @@ Summary for DateHelper Test Case
 
 
 
+Properties
+----------
+
+
+### $fixtures
+
+    public array $fixtures = array('plugin.net_commons.site_setting', 'plugin.users.user')
+
+Fixtures
+
+
+
+* Visibility: **public**
 
 
 Methods

@@ -12,6 +12,32 @@ Workflow Behavior
 
 
 
+Constants
+----------
+
+
+### PUBLIC_TYPE_PRIVATE
+
+    const PUBLIC_TYPE_PRIVATE = '0'
+
+
+
+
+
+### PUBLIC_TYPE_PUBLIC
+
+    const PUBLIC_TYPE_PUBLIC = '1'
+
+
+
+
+
+### PUBLIC_TYPE_LIMITED
+
+    const PUBLIC_TYPE_LIMITED = '2'
+
+
+
 
 
 Properties
@@ -199,5 +225,21 @@ Check deletable permission
 #### Arguments
 * $model **Model** - &lt;p&gt;Model using this behavior&lt;/p&gt;
 * $data **array** - &lt;p&gt;Check content data&lt;/p&gt;
+
+
+
+### _getPublicTypeConditions
+
+    array WorkflowBehavior::_getPublicTypeConditions(\Model $model)
+
+時限公開のconditionsを返す
+
+
+
+* Visibility: **protected**
+
+
+#### Arguments
+* $model **Model** - &lt;p&gt;対象モデル&lt;/p&gt;
 
 

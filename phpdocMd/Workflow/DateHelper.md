@@ -21,7 +21,7 @@ Properties
 
 ### $helpers
 
-    public array $helpers = array('Time')
+    public array $helpers = array('NetCommons.NetCommonsTime', 'Time')
 
 use helpers
 
@@ -47,5 +47,37 @@ Date Format
 
 #### Arguments
 * $date **datetime** - &lt;p&gt;datetime&lt;/p&gt;
+
+
+
+### _isToday
+
+    boolean DateHelper::_isToday(string $date)
+
+ユーザタイムゾーンで今日の日付かの判定
+
+
+
+* Visibility: **protected**
+
+
+#### Arguments
+* $date **string** - &lt;p&gt;user timezone datetime&lt;/p&gt;
+
+
+
+### _isThisYear
+
+    boolean DateHelper::_isThisYear(string $date)
+
+ユーザタイムゾーンで今年の日時かの判定
+
+
+
+* Visibility: **protected**
+
+
+#### Arguments
+* $date **string** - &lt;p&gt;user timezone datetime&lt;/p&gt;
 
 

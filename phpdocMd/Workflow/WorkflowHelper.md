@@ -87,7 +87,7 @@ Output workflow buttons
 
 ### inputComment
 
-    string WorkflowHelper::inputComment(string $statusFieldName, string $displayBlockKey)
+    string WorkflowHelper::inputComment(string $statusFieldName, boolean $displayBlockKey)
 
 Output workflow input comment
 
@@ -98,7 +98,7 @@ Output workflow input comment
 
 #### Arguments
 * $statusFieldName **string** - &lt;p&gt;ステータスのフィールド名&lt;/p&gt;
-* $displayBlockKey **string** - &lt;p&gt;block_keyを含めるかどうか&lt;/p&gt;
+* $displayBlockKey **boolean** - &lt;p&gt;block_keyを含めるかどうか&lt;/p&gt;
 
 
 

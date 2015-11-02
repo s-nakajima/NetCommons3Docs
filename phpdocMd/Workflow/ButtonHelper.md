@@ -142,9 +142,9 @@ You can change it to a different value by using `$options['type']`.
 
 ### cancelAndSave
 
-    string ButtonHelper::cancelAndSave(string $cancelTitle, string $saveTitle, string $cancelUrl, array $options)
+    string ButtonHelper::cancelAndSave(string $cancelTitle, string $saveTitle, string $cancelUrl, array $cancelOptions, array $saveOptions)
 
-Creates a `<button>` tag for cacnel and save.
+キャンセル、決定ボタン
 
 
 
@@ -152,9 +152,10 @@ Creates a `<button>` tag for cacnel and save.
 
 
 #### Arguments
-* $cancelTitle **string** - &lt;p&gt;The button&#039;s caption. Not automatically HTML encoded&lt;/p&gt;
-* $saveTitle **string** - &lt;p&gt;The button&#039;s caption. Not automatically HTML encoded&lt;/p&gt;
-* $cancelUrl **string** - &lt;p&gt;The url in onclick attribute&lt;/p&gt;
-* $options **array** - &lt;p&gt;Array of options and HTML attributes.&lt;/p&gt;
+* $cancelTitle **string** - &lt;p&gt;キャンセルボタンのラベル&lt;/p&gt;
+* $saveTitle **string** - &lt;p&gt;決定ボタンのラベル&lt;/p&gt;
+* $cancelUrl **string** - &lt;p&gt;キャンセルボタン押下のURL&lt;/p&gt;
+* $cancelOptions **array** - &lt;p&gt;キャンセルボタンのオプション&lt;/p&gt;
+* $saveOptions **array** - &lt;p&gt;決定ボタンのオプション&lt;/p&gt;
 
 
