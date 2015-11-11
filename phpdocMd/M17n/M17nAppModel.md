@@ -21,7 +21,7 @@ Properties
 
 ### $actsAs
 
-    public array $actsAs = array('NetCommons.DateTime', 'NetCommons.Trackable')
+    public array $actsAs = array('NetCommons.Trackable')
 
 use behaviors
 
@@ -41,6 +41,30 @@ Validation rules
 * Visibility: **public**
 
 
+### $__changeDbConfig
+
+    private string $__changeDbConfig
+
+接続先DB　master slave変更用
+
+
+
+* Visibility: **private**
+* This property is **static**.
+
+
+### $__oldSlaveDbConfig
+
+    private string $__oldSlaveDbConfig
+
+接続先DB　古いslave保存用
+
+
+
+* Visibility: **private**
+* This property is **static**.
+
+
 Methods
 -------
 
@@ -49,9 +73,9 @@ Methods
 
     void NetCommonsAppModel::__construct(boolean|integer|string|array $id, string $table, string $ds)
 
-Constructor. Binds the model's database table to the object.
+Constructor. DataSourceの選択
 
-
+接続先DBをランダムに選択します。
 
 * Visibility: **public**
 * This method is defined by [NetCommonsAppModel](NetCommonsAppModel.md)
@@ -65,11 +89,25 @@ can also be an array of options, see above.&lt;/p&gt;
 
 
 
-### setDataSource
+### __getRandomlySlave
 
-    void NetCommonsAppModel::setDataSource(string $dataSource)
+    string NetCommonsAppModel::__getRandomlySlave()
 
-Sets the DataSource to which this model is bound.
+Find the slaves we have
+
+
+
+* Visibility: **private**
+* This method is defined by [NetCommonsAppModel](NetCommonsAppModel.md)
+
+
+
+
+### setMasterDataSource
+
+    void NetCommonsAppModel::setMasterDataSource()
+
+Masterの接続先に変更する。
 
 
 
@@ -77,8 +115,47 @@ Sets the DataSource to which this model is bound.
 * This method is defined by [NetCommonsAppModel](NetCommonsAppModel.md)
 
 
-#### Arguments
-* $dataSource **string** - &lt;p&gt;The name of the DataSource, as defined in app/Config/database.php&lt;/p&gt;
+
+
+### setSlaveDataSource
+
+    void NetCommonsAppModel::setSlaveDataSource()
+
+以前のSlaveの接続先に戻す。なければ、ランダムに選択
+
+
+
+* Visibility: **public**
+* This method is defined by [NetCommonsAppModel](NetCommonsAppModel.md)
+
+
+
+
+### getDataSource
+
+    \DataSource NetCommonsAppModel::getDataSource()
+
+Gets the DataSource to which this model is bound.
+
+
+
+* Visibility: **public**
+* This method is defined by [NetCommonsAppModel](NetCommonsAppModel.md)
+
+
+
+
+### __changeMasterDataSource
+
+    void NetCommonsAppModel::__changeMasterDataSource()
+
+MasterDBに切り替える処理
+
+
+
+* Visibility: **private**
+* This method is defined by [NetCommonsAppModel](NetCommonsAppModel.md)
+
 
 
 
@@ -86,10 +163,21 @@ Sets the DataSource to which this model is bound.
 
     array NetCommonsAppModel::create(boolean|array $data, boolean $filterKey)
 
-Initializes the model for writing a new record, loading the default values
-for those fields that are not defined in $data, and clearing previous validation errors.
+NetCommonsで使用する共通の値がセットされた結果を返します。<br>
+CakePHPのSchemaは、not null指定されたカラムのdefaultがnullになっているため、<br>
+''(長さ0の文字列)に書き換えています。<br>
+https://github.com/NetCommons3/NetCommons3/issues/7
 
-Especially helpful for saving data in loops.
+#### セットされるデータ
+```
+'room_id' => Current::read('Room.id'),
+'language_id' => Current::read('Language.id'),
+'block_id' => Current::read('Block.id'),
+'block_key' => Current::read('Block.key'),
+'frame_id' => Current::read('Frame.id'),
+'frame_key' => Current::read('Frame.key'),
+'plugin_key' => Inflector::underscore($this->plugin),
+```
 
 * Visibility: **public**
 * This method is defined by [NetCommonsAppModel](NetCommonsAppModel.md)
@@ -169,7 +257,7 @@ transaction rollback
 
 ### loadModels
 
-    void NetCommonsAppModel::loadModels(array $models, string $source)
+    void NetCommonsAppModel::loadModels(array $models)
 
 Load models
 
@@ -181,50 +269,14 @@ Load models
 
 #### Arguments
 * $models **array** - &lt;p&gt;models to load&lt;/p&gt;
-* $source **string** - &lt;p&gt;data source&lt;/p&gt;
-
-
-
-### equalToField
-
-    boolean NetCommonsAppModel::equalToField(array $field1, string $field2)
-
-Check field1 matches field2
-
-
-
-* Visibility: **public**
-* This method is defined by [NetCommonsAppModel](NetCommonsAppModel.md)
-
-
-#### Arguments
-* $field1 **array** - &lt;p&gt;field1 parameters&lt;/p&gt;
-* $field2 **string** - &lt;p&gt;field2 key&lt;/p&gt;
 
 
 
 ### _getDefaultValue
 
-    array NetCommonsAppModel::_getDefaultValue(array $data)
+    array NetCommonsAppModel::_getDefaultValue()
 
 全カラムのデフォルト値をセットした配列を返す。
-
-
-
-* Visibility: **protected**
-* This method is defined by [NetCommonsAppModel](NetCommonsAppModel.md)
-
-
-#### Arguments
-* $data **array** - &lt;p&gt;デフォルトを上書きするカラム配列&lt;/p&gt;
-
-
-
-### _getCurrentValue
-
-    array NetCommonsAppModel::_getCurrentValue()
-
-Currentで取れる値を返す。
 
 
 
