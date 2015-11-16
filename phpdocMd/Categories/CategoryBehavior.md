@@ -3,7 +3,14 @@ CategoryBehavior
 
 Category Behavior
 
+該当ブロックのカテゴリーを登録します。
 
+#### サンプルコード
+```
+public $actsAs = array(
+	'Categories.Category'
+)
+```
 
 
 * Class name: CategoryBehavior
@@ -39,11 +46,12 @@ will allow you to make the validation fail.
 
 
 
-### afterSave
+### beforeSave
 
-    boolean CategoryBehavior::afterSave(\Model $model, boolean $created, array $options)
+    mixed CategoryBehavior::beforeSave(\Model $model, array $options)
 
-afterSave is called after a model is saved.
+beforeSave is called before a model is saved. Returning false from a beforeSave callback
+will abort the save operation.
 
 
 
@@ -52,7 +60,6 @@ afterSave is called after a model is saved.
 
 #### Arguments
 * $model **Model** - &lt;p&gt;Model using this behavior&lt;/p&gt;
-* $created **boolean** - &lt;p&gt;True if this save created a new record&lt;/p&gt;
 * $options **array** - &lt;p&gt;Options passed from Model::save().&lt;/p&gt;
 
 

@@ -1,7 +1,7 @@
 SiteSettingTest
 ===============
 
-Summary for SiteSetting Test Case
+Summary for SiteSettings Test Case
 
 
 
@@ -22,7 +22,7 @@ Properties
 
     public array $fixtures = array('plugin.net_commons.site_setting', 'plugin.users.user')
 
-Fixtures
+
 
 
 
@@ -64,6 +64,19 @@ tearDown method
     void SiteSettingTest::testGetSiteTheme()
 
 getSiteTheme サイト用テーマ名の取得
+
+
+
+* Visibility: **public**
+
+
+
+
+### testGetTimezone
+
+    void SiteSettingTest::testGetTimezone()
+
+test getTimezone
 
 
 

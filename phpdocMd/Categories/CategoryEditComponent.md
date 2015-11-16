@@ -3,7 +3,19 @@ CategoryEditComponent
 
 Categories Component
 
+該当ブロックのカテゴリーをViewにセットします。
 
+#### サンプルコード
+##### コントローラー
+```
+public $components = array(
+	'Categories.CategoryEdit'
+)
+```
+##### ビュー
+```
+<?php echo $this->element('Categories.edit_form'); ?>
+```
 
 
 * Class name: CategoryEditComponent

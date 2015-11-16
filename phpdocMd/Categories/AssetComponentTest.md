@@ -21,7 +21,7 @@ Properties
 
 ### $fixtures
 
-    public array $fixtures = array('plugin.net_commons.site_setting')
+    public array $fixtures = array('plugin.net_commons.site_setting', 'plugin.users.user')
 
 Fixtures
 
