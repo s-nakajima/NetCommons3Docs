@@ -28,11 +28,11 @@ do
     rm -r phpdoc/$plugin
   fi
   echo "phpdoc ${APP_ROOT}/Plugin/$plugin"
-  phpdoc run -d "$PHPDOC_OPTIONS,${APP_ROOT}/Plugin/$plugin" -t phpdoc/$plugin --force --ansi | tee $LOG
+  phpdoc run -d "$PHPDOC_OPTIONS,${APP_ROOT}/Plugin/$plugin" -t phpdoc/$plugin --force --ansi > tee $LOG
 
-  if [ `grep -c '\[37;41m' $LOG` -ne 0 ]; then
-    cat $LOG
-  fi
+#  if [ `grep -c '\[37;41m' $LOG` -ne 0 ]; then
+#    cat $LOG
+#  fi
 
   git add -A
   git commit -m "Update phpdoc $plugin"
