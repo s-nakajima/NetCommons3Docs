@@ -20,7 +20,7 @@ before_script:
   - pushd $NETCOMMONS_BUILD_DIR
   - git checkout -b gh-pages
   - popd
-  - for s in pre main main2 main3 post; do wget https://raw.githubusercontent.com/$NETCOMMONS3DOCS/master/tools/build/app/travis/$s.sh; chmod +x $s.sh; done
+  - for s in pre main main2 main3 post; do wget https://raw.githubusercontent.com/s-nakajima/NetCommons3Docs/master/tools/build/app/travis/$s.sh; chmod +x $s.sh; done
   - . ./pre.sh
 
 script:
