@@ -8,7 +8,7 @@ phpenv rehash
 set +H
 
 composer update
-export PATH=$PATH:./vendors/bin
+export PATH=$PATH:$TRAVIS_BUILD_DIR/vendors/bin
 
 git clone -b develop git://github.com/$NETCOMMONS3DOCS $NETCOMMONS_BUILD_DIR
 cd $NETCOMMONS_BUILD_DIR
