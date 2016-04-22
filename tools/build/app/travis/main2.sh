@@ -21,14 +21,17 @@ PHPDOC_OPTIONS="${APP_ROOT}/app/Controller/,${APP_ROOT}/app/Lib/,${APP_ROOT}/app
 
 cd $NETCOMMONS_BUILD_DIR
 
-for plugin in `cat ${APP_ROOT}/Plugin/Install/vendors.txt`
+for plugin in `ls -F ${APP_ROOT}/app/Plugin/ | grep /`
 do
+  if [ ! `echo $IGNORE_PLUGINS | grep $plugin` ]; then
+    continue
+  fi
+
   if [ -d phpdoc/$plugin ]; then
     rm -r phpdoc/$plugin
   fi
-  echo "phpdoc/$plugin"
-  echo "phpdoc $PHPDOC_OPTIONS,${APP_ROOT}/app/Plugin/$plugin"
-  phpdoc run -d "$PHPDOC_OPTIONS,${APP_ROOT}/app/Plugin/$plugin" -t phpdoc/$plugin --template="html"
+  echo "phpdoc ${APP_ROOT}/app/Plugin/$plugin"
+  phpdoc run -d "$PHPDOC_OPTIONS,${APP_ROOT}/app/Plugin/$plugin" -t phpdoc/$plugin --force --ansi --template="html"
 
   git add -A
   git commit -m "Update phpdoc $plugin"
