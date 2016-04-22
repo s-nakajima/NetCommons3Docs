@@ -3,7 +3,6 @@
 APP=`basename $CLASS_DOC_SOURCE_URI | perl -pi -e 's/([^\/]+)\.git$/$1/'`
 CLASS_DOC_SOURCE_ROOT=$WORKSPACE/$APP
 APP_ROOT=$CLASS_DOC_SOURCE_ROOT/app
-export PATH=$PATH:./vendors/bin
 
 # Clear previous build
 rm -rf $APP

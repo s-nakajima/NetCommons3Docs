@@ -6,6 +6,7 @@ mkdir -p build/logs
 composer global require phpdocumentor/phpdocumentor:2.*
 phpenv rehash
 set +H
+export PATH=$PATH:./vendors/bin
 
 WORKSPACE=$TRAVIS_BUILD_DIR
 
