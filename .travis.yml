@@ -17,15 +17,11 @@ before_script:
   - export CLASS_DOC_SOURCE_URI=https://github.com/NetCommons3/NetCommons3.git
   - export NETCOMMONS_BUILD_DIR=`dirname $TRAVIS_BUILD_DIR`/docs
   - export NETCOMMONS3DOCS=s-nakajima/NetCommons3Docs
-  - git clone -b develop git://github.com/$NETCOMMONS3DOCS $NETCOMMONS_BUILD_DIR
-  - pushd $NETCOMMONS_BUILD_DIR
-  - git checkout -b gh-pages
-  - popd
   - for s in pre main main2 main3 post; do wget https://raw.githubusercontent.com/$NETCOMMONS3DOCS/develop/tools/build/app/travis/$s.sh; chmod +x $s.sh; done
   - . ./pre.sh
 
 script:
-  - travis_wait . ./main.sh
+  - . ./main.sh
   - travis_wait . ./main2.sh
   - travis_wait . ./main3.sh
 
