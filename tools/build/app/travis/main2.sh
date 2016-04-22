@@ -23,7 +23,7 @@ cd $NETCOMMONS_BUILD_DIR
 
 for plugin in `ls -F ${APP_ROOT}/Plugin/ | grep /`
 do
-  if [ ! `echo $IGNORE_PLUGINS | grep $plugin` ]; then
+  if [ `echo $IGNORE_PLUGINS | grep $plugin` ]; then
     continue
   fi
 

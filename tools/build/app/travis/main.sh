@@ -7,10 +7,6 @@ APP_ROOT=$CLASS_DOC_SOURCE_ROOT/app
 # Clear previous build
 rm -rf $APP
 
-# Generate sphinx docs
-cd $WORKSPACE/sphinx
-make html
-[ $? -ne 0 ] && exit 1
 cd -
 
 # Install all plugins

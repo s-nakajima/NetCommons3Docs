@@ -3,7 +3,6 @@
 WORKSPACE=$TRAVIS_BUILD_DIR
 
 sudo apt-get install graphviz
-sudo pip install sphinx
 mkdir -p build/logs
 phpenv rehash
 set +H
