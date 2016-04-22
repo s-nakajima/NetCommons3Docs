@@ -6,7 +6,7 @@ rm -rf $APP
 cd -
 
 # Install all plugins
-git clone $CLASS_DOC_SOURCE_URI
+git clone $CLASS_DOC_SOURCE_URI $CLASS_DOC_SOURCE_ROOT
 cd $CLASS_DOC_SOURCE_ROOT
 cp composer.json .
 composer update --prefer-dist
