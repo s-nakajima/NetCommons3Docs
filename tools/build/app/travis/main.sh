@@ -1,9 +1,5 @@
 #!/bin/bash -ex
 
-APP=`basename $CLASS_DOC_SOURCE_URI | perl -pi -e 's/([^\/]+)\.git$/$1/'`
-CLASS_DOC_SOURCE_ROOT=$WORKSPACE/$APP
-APP_ROOT=$CLASS_DOC_SOURCE_ROOT/app
-
 # Clear previous build
 rm -rf $APP
 

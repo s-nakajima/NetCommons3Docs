@@ -1,8 +1,5 @@
 #!/bin/bash -ex
 
-APP=`basename $CLASS_DOC_SOURCE_URI | perl -pi -e 's/([^\/]+)\.git$/$1/'`
-CLASS_DOC_SOURCE_ROOT=$WORKSPACE/$APP
-APP_ROOT=$CLASS_DOC_SOURCE_ROOT/app
 LOG=/var/log/phpdoc.log
 
 sudo touch $LOG
@@ -31,7 +28,9 @@ do
     rm -r phpdoc/$plugin
   fi
   echo "phpdoc ${APP_ROOT}/Plugin/$plugin"
-  phpdoc run -d "$PHPDOC_OPTIONS,${APP_ROOT}/Plugin/$plugin" -t phpdoc/$plugin --force --ansi --template="html"
+  phpdoc run -d "$PHPDOC_OPTIONS,${APP_ROOT}/Plugin/$plugin" -t phpdoc/$plugin --force --ansi | tee $LOG
+
+  [ `grep -c '\[37;41m' $LOG` -ne 0 ] && cat $LOG
 
   git add -A
   git commit -m "Update phpdoc $plugin"
