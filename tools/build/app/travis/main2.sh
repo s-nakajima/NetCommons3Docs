@@ -6,6 +6,9 @@ LOG2=/var/log/phpdoc2.log
 sudo touch $LOG
 sudo chmod a+w $LOG
 
+sudo touch $LOG
+sudo chmod a+w $LOG
+
 cd $CLASS_DOC_SOURCE_ROOT
 
 # Init phpdoc options
