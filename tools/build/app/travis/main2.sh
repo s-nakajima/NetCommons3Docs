@@ -1,6 +1,7 @@
 #!/bin/bash -ex
 
 LOG=/var/log/phpdoc.log
+LOG2=/var/log/phpdoc2.log
 
 sudo touch $LOG
 sudo chmod a+w $LOG
@@ -28,7 +29,7 @@ do
     rm -r phpdoc/$plugin
   fi
   echo "phpdoc ${APP_ROOT}/Plugin/$plugin"
-  phpdoc run -d "$PHPDOC_OPTIONS,${APP_ROOT}/Plugin/$plugin" -t phpdoc/$plugin --force --ansi > $LOG
+  phpdoc run -d "$PHPDOC_OPTIONS,${APP_ROOT}/Plugin/$plugin" -t phpdoc/$plugin --force --ansi --log $LOG2 > $LOG
 
 #  if [ `grep -c '\[37;41m' $LOG` -ne 0 ]; then
 #    cat $LOG
