@@ -17,11 +17,11 @@ do
 done
 IGNORE_PLUGINS=`echo $IGNORE_PLUGINS | cut -c 2-`
 
-PHPDOC_OPTIONS="${APP_ROOT}/app/Controller/,${APP_ROOT}/app/Lib/,${APP_ROOT}/app/Locale/,${APP_ROOT}/app/Model/,${APP_ROOT}/app/Test/,${APP_ROOT}/app/Vendor/,${APP_ROOT}/app/View/,${APP_ROOT}/app/Plugin/NetCommons/"
+PHPDOC_OPTIONS="${APP_ROOT}/Controller/,${APP_ROOT}/Lib/,${APP_ROOT}/Locale/,${APP_ROOT}/Model/,${APP_ROOT}/Test/,${APP_ROOT}/Vendor/,${APP_ROOT}/View/,${APP_ROOT}/Plugin/NetCommons/"
 
 cd $NETCOMMONS_BUILD_DIR
 
-for plugin in `ls -F ${APP_ROOT}/app/Plugin/ | grep /`
+for plugin in `ls -F ${APP_ROOT}/Plugin/ | grep /`
 do
   if [ ! `echo $IGNORE_PLUGINS | grep $plugin` ]; then
     continue
@@ -30,8 +30,8 @@ do
   if [ -d phpdoc/$plugin ]; then
     rm -r phpdoc/$plugin
   fi
-  echo "phpdoc ${APP_ROOT}/app/Plugin/$plugin"
-  phpdoc run -d "$PHPDOC_OPTIONS,${APP_ROOT}/app/Plugin/$plugin" -t phpdoc/$plugin --force --ansi --template="html"
+  echo "phpdoc ${APP_ROOT}/Plugin/$plugin"
+  phpdoc run -d "$PHPDOC_OPTIONS,${APP_ROOT}/Plugin/$plugin" -t phpdoc/$plugin --force --ansi --template="html"
 
   git add -A
   git commit -m "Update phpdoc $plugin"
