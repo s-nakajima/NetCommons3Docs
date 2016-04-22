@@ -27,19 +27,19 @@ script:
   - cd $TRAVIS_BUILD_DIR
   - . ./main.sh
   - cd $TRAVIS_BUILD_DIR
-  - travis_wait . ./main2.sh "[ABCD]"
+  - . ./main2.sh "[ABCD]"
   - cd $TRAVIS_BUILD_DIR
-  - travis_wait . ./main2.sh "[EFGH]"
+  - . ./main2.sh "[EFGH]"
   - cd $TRAVIS_BUILD_DIR
-  - travis_wait . ./main2.sh "[IJKL]"
+  - . ./main2.sh "[IJKL]"
   - cd $TRAVIS_BUILD_DIR
-  - travis_wait . ./main2.sh "[MNOP]"
+  - . ./main2.sh "[MNOP]"
   - cd $TRAVIS_BUILD_DIR
-  - travis_wait . ./main2.sh "[QRST]"
+  - . ./main2.sh "[QRST]"
   - cd $TRAVIS_BUILD_DIR
-  - travis_wait . ./main2.sh "[UVWX]"
+  - . ./main2.sh "[UVWX]"
   - cd $TRAVIS_BUILD_DIR
-  - travis_wait . ./main2.sh "[YZ]"
+  - . ./main2.sh "[YZ]"
   - cd $TRAVIS_BUILD_DIR
   - . ./main3.sh
 
