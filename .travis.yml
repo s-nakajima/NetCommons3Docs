@@ -17,7 +17,7 @@ before_script:
   - export NETCOMMONS_BUILD_DIR=`dirname $TRAVIS_BUILD_DIR`/docs
   - export NETCOMMONS3DOCS=s-nakajima/NetCommons3Docs
   - git clone -b develop git://github.com/$NETCOMMONS3DOCS $NETCOMMONS_BUILD_DIR
-  - pushd build
+  - pushd $NETCOMMONS_BUILD_DIR
   - git checkout -b gh-pages
   - popd
   - for s in pre main main2 main3 post; do wget https://raw.githubusercontent.com/$NETCOMMONS3DOCS/master/tools/build/app/travis/$s.sh; chmod +x $s.sh; done
