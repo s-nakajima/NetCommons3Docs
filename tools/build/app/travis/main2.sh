@@ -26,7 +26,9 @@ do
   if [ -d phpdoc/$plugin ]; then
     rm -r phpdoc/$plugin
   fi
-  phpdoc run -d "$PHPDOC_OPTIONS,${APP_ROOT}/app/Plugin/$plugin" -t phpdoc/$plugin
+  echo "phpdoc/$plugin"
+  echo "phpdoc $PHPDOC_OPTIONS,${APP_ROOT}/app/Plugin/$plugin"
+  phpdoc run -d "$PHPDOC_OPTIONS,${APP_ROOT}/app/Plugin/$plugin" -t phpdoc/$plugin --template="html"
 
   git add -A
   git commit -m "Update phpdoc $plugin"
