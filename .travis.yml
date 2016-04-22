@@ -15,7 +15,9 @@ sudo: required
 
 before_script:
   - export CLASS_DOC_SOURCE_URI=https://github.com/NetCommons3/NetCommons3.git
-  - export NETCOMMONS_BUILD_DIR=`dirname $TRAVIS_BUILD_DIR`/NetCommons3Docs
+  - export CLASS_DOC_SOURCE_ROOT=`dirname $TRAVIS_BUILD_DIR`/build/NetCommons3
+  - export APP_ROOT=$CLASS_DOC_SOURCE_ROOT/app
+  - export NETCOMMONS_BUILD_DIR=`dirname $TRAVIS_BUILD_DIR`/build/NetCommons3Docs
   - export NETCOMMONS3DOCS=s-nakajima/NetCommons3Docs
   - cd $TRAVIS_BUILD_DIR
   - for s in pre main main2 main3 post; do wget https://raw.githubusercontent.com/$NETCOMMONS3DOCS/develop/tools/build/app/travis/$s.sh; chmod +x $s.sh; done
@@ -23,12 +25,12 @@ before_script:
 
 script:
   - cd $TRAVIS_BUILD_DIR; . ./main.sh
-  - cd $TRAVIS_BUILD_DIR; travis_wait . ./main2.sh "[A-E]"
-  - cd $TRAVIS_BUILD_DIR; travis_wait . ./main2.sh "[F-J]"
-  - cd $TRAVIS_BUILD_DIR; travis_wait . ./main2.sh "[K-O]"
-  - cd $TRAVIS_BUILD_DIR; travis_wait . ./main2.sh "[P-T]"
-  - cd $TRAVIS_BUILD_DIR; travis_wait . ./main2.sh "[U-Z]"
-  - cd $TRAVIS_BUILD_DIR; travis_wait . ./main3.sh
+  - cd $TRAVIS_BUILD_DIR; . ./main2.sh "[A-E]"
+  - cd $TRAVIS_BUILD_DIR; . ./main2.sh "[F-J]"
+  - cd $TRAVIS_BUILD_DIR; . ./main2.sh "[K-O]"
+  - cd $TRAVIS_BUILD_DIR; . ./main2.sh "[P-T]"
+  - cd $TRAVIS_BUILD_DIR; . ./main2.sh "[U-Z]"
+  - cd $TRAVIS_BUILD_DIR; . ./main3.sh
 
 after_script:
   - cd $TRAVIS_BUILD_DIR; . ./post.sh
