@@ -18,7 +18,7 @@ PHPDOC_OPTIONS="${APP_ROOT}/Controller/,${APP_ROOT}/Lib/,${APP_ROOT}/Locale/,${A
 
 cd $NETCOMMONS_BUILD_DIR
 
-for plugin in `ls -F ${APP_ROOT}/Plugin/ | grep /`
+for plugin in `ls -F ${APP_ROOT}/Plugin/ | grep ^$1.*/`
 do
   if [ `echo $IGNORE_PLUGINS | grep $plugin` ]; then
     continue

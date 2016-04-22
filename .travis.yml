@@ -23,7 +23,11 @@ before_script:
 
 script:
   - cd $TRAVIS_BUILD_DIR; . ./main.sh
-  - cd $TRAVIS_BUILD_DIR; travis_wait . ./main2.sh
+  - cd $TRAVIS_BUILD_DIR; travis_wait . ./main2.sh "[A-E]"
+  - cd $TRAVIS_BUILD_DIR; travis_wait . ./main2.sh "[F-J]"
+  - cd $TRAVIS_BUILD_DIR; travis_wait . ./main2.sh "[K-O]"
+  - cd $TRAVIS_BUILD_DIR; travis_wait . ./main2.sh "[P-T]"
+  - cd $TRAVIS_BUILD_DIR; travis_wait . ./main2.sh "[U-Z]"
   - cd $TRAVIS_BUILD_DIR; travis_wait . ./main3.sh
 
 after_script:
