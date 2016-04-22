@@ -5,7 +5,7 @@ WORKSPACE=$TRAVIS_BUILD_DIR
 sudo apt-get install graphviz
 sudo pip install sphinx
 mkdir -p build/logs
-composer global require phpdocumentor/phpdocumentor:2.*
+composer update
 phpenv rehash
 set +H
 
