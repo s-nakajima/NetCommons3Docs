@@ -29,7 +29,7 @@ do
   fi
   phpdoc run -d $PHPDOC_OPTIONS,${APP_ROOT}/app/Plugin/$plugin -t phpdoc/$plugin --force --ansi
 
-  git add -a
+  git add -A
   git commit -m "Update phpdoc $plugin"
 done
 
