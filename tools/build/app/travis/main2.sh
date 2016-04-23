@@ -27,15 +27,13 @@ do
     continue
   fi
 
+  git pull
+
   if [ -d phpdoc/$plugin ]; then
     rm -r phpdoc/$plugin
   fi
   echo "phpdoc ${APP_ROOT}/Plugin/$plugin"
   phpdoc run -d "$PHPDOC_OPTIONS,${APP_ROOT}/Plugin/$plugin" -t phpdoc/$plugin -i "$IGNORE_PLUGINS,${APP_ROOT}/Plugin/$plugin/Test/*" --force --ansi --log $LOG2 > $LOG
-
-#  if [ `grep -c '\[37;41m' $LOG` -ne 0 ]; then
-#    cat $LOG
-#  fi
 
   if [ "$TRAVIS_BRANCH" == "master" ]; then
     git add -A
