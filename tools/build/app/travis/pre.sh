@@ -7,11 +7,6 @@ mkdir -p build/logs
 phpenv rehash
 set +H
 
-export GIT_COMMITTER_NAME=s-nakajima
-export GIT_COMMITTER_EMAIL=nakajimashouhei@gmail.com
-export GIT_AUTHOR_NAME=s-nakajima
-export GIT_AUTHOR_EMAIL=nakajimashouhei@gmail.com
-
 composer update
 export PATH=$PATH:$TRAVIS_BUILD_DIR/vendors/bin
 
