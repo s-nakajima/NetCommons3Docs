@@ -16,6 +16,7 @@ for p in `cat app/Config/vendors.txt`
 do
   IGNORE_PLUGINS="$IGNORE_PLUGINS,${APP_ROOT}/Plugin/$p/*"
 done
+IGNORE_PLUGINS=`echo $IGNORE_PLUGINS | cut -c 2-`
 
 PHPDOC_OPTIONS="${APP_ROOT}/Controller/,${APP_ROOT}/Lib/,${APP_ROOT}/Locale/,${APP_ROOT}/Model/,${APP_ROOT}/Test/,${APP_ROOT}/Vendor/,${APP_ROOT}/View/,${APP_ROOT}/Plugin/NetCommons/"
 
