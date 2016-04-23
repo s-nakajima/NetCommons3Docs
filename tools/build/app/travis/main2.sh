@@ -39,7 +39,7 @@ do
     git add -A
     git commit -m "Update phpdoc $plugin"
 
-    [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/$NETCOMMONS3DOCS.git gh-pages
+    [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/$NETCOMMONS3DOCS.git gh-pages 2> /dev/null
   fi
 done
 
