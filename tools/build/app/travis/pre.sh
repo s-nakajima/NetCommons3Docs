@@ -15,5 +15,5 @@ export GIT_AUTHOR_EMAIL=nakajimashouhei@gmail.com
 composer update
 export PATH=$PATH:$TRAVIS_BUILD_DIR/vendors/bin
 
-git clone -b gh-pages $TRAVIS_BRANCH git://github.com/$NETCOMMONS3DOCS $NETCOMMONS_BUILD_DIR
+git clone -b "gh-pages" $TRAVIS_BRANCH git://github.com/$NETCOMMONS3DOCS $NETCOMMONS_BUILD_DIR
 cd $NETCOMMONS_BUILD_DIR
