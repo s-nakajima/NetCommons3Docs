@@ -31,14 +31,17 @@ do
     rm -r phpdoc/$plugin
   fi
   echo "phpdoc ${APP_ROOT}/Plugin/$plugin"
-  phpdoc run -d "$PHPDOC_OPTIONS,${APP_ROOT}/Plugin/$plugin" -t phpdoc/$plugin -i "$IGNORE_PLUGINS,${APP_ROOT}/Plugin/$plugin/Test/*" --force --ansi --log $LOG2 > $LOG
+  if [ "$TRAVIS_BRANCH" == "master" ]; then
+    phpdoc run -d "$PHPDOC_OPTIONS,${APP_ROOT}/Plugin/$plugin" -t phpdoc/$plugin -i "$IGNORE_PLUGINS,${APP_ROOT}/Plugin/$plugin/Test/*" --force --ansi --log $LOG2 > $LOG
+    git add -A
+    git commit -m "Update phpdoc $plugin"
+    [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/$NETCOMMONS3DOCS.git gh-pages
+  else
+    phpdoc parse -d "$PHPDOC_OPTIONS,${APP_ROOT}/Plugin/$plugin" -t phpdoc/$plugin -i "$IGNORE_PLUGINS,${APP_ROOT}/Plugin/$plugin/Test/*" --force --ansi | tee $LOG
+  fi
 
 #  if [ `grep -c '\[37;41m' $LOG` -ne 0 ]; then
 #    cat $LOG
 #  fi
-
-  git add -A
-  git commit -m "Update phpdoc $plugin"
-  [ "$TRAVIS_BRANCH" == "master" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/$NETCOMMONS3DOCS.git gh-pages 2> /dev/null
 done
 

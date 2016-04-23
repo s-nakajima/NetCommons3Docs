@@ -5,7 +5,7 @@ php:
 
 env:
   global:
-    - secure: "PFTtZ+Bs63b++QNvbwjeD/zBzqjW29S9EEKYDIZEXL67RaFQTxARzZL4rQ4dc4fOvDO43cExZgNoJnB9UA9cBy1P/aI9bBlcVZndFdAOWk/wnwnew9ZchBYpzdLIAzdDEhCTM11djcq5ZYylV94aSyKwcm7bRVZGLvO6ZkPfqo0="
+    - secure: "GY3VdUYHmX1op0IRPfP+t239fTxcIAly64wqw6q6f6Q//mZf4/0WTZvfa1Hbkm/YsthVEx2TA+Jfp1n1gQ+4FPk06VYBD2xCWKy4C1pz77Uf4QLuLf1tcKo7WH92GghY/9qUdc6BPt38TlD4Y40k31rHtxAYfOhizrMsfEtkBNhIvZL9cr7FVy2PcSfP0DHY+vGPDaGZjOvVG4ZT+H4twZaFhRMuDYxD3n3I0kX7WgTQldmNPUJeNx85U0SiQH3D9PmMlLlkFYEAvH/8fJf+9q6c4DFska3C3e0PzdcqliSYaG4vj+/L6jlC1aaHQvPRlgr3f/fRM7RExaW+hSTYooXamkFkEE2a2GlLnPGdQcUA35PntH9W3ZEnAzbN1Pn78uwyyZrWyAg3BE4zQGiZwlz4L8c97ENOLsGiVYAlekgHDQ1SHWE5O0Q5PGejbxiWqYJAGD8antX61D9qPLxUJo1NlWYKNKEergN7k92kNmNu5csZUi/DeSGpxsGC91exEjYmXVYw3cuWTK4qQ4UAWu7NtLH13jKmLXFFRYehhyipqjIastVvnHkhYkGTOLJ+6tGUdKR419+03wAzOtXCv7egzexXAm6n3n9E4S0Sjw09F3HtrckB2R2nXK4G4HmFtiKvOh10q9a8PsDC9MXbokWfzfJv5MalePoGcODCE5o="
 
 sudo: required
 
@@ -14,7 +14,8 @@ before_script:
   - export CLASS_DOC_SOURCE_ROOT=`dirname $TRAVIS_BUILD_DIR`/build/NetCommons3
   - export APP_ROOT=$CLASS_DOC_SOURCE_ROOT/app
   - export NETCOMMONS_BUILD_DIR=`dirname $TRAVIS_BUILD_DIR`/build/NetCommons3Docs
-  - export NETCOMMONS3DOCS=NetCommons3/NetCommons3Docs
+  - export NETCOMMONS3DOCS=s-nakajima/NetCommons3Docs
+  - git clone git://github.com/$NETCOMMONS3DOCS $NETCOMMONS_BUILD_DIR
   - cd $TRAVIS_BUILD_DIR
   - for s in pre main main2 main3 post; do wget https://raw.githubusercontent.com/$NETCOMMONS3DOCS/develop/tools/build/app/travis/$s.sh; chmod +x $s.sh; done
   - . ./pre.sh
