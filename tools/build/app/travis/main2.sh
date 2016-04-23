@@ -14,9 +14,8 @@ cd $CLASS_DOC_SOURCE_ROOT
 # Init phpdoc options
 for p in `cat app/Config/vendors.txt`
 do
-  IGNORE_PLUGINS="$IGNORE_PLUGINS,*/app/Plugin/$p/*"
+  IGNORE_PLUGINS="$IGNORE_PLUGINS,${APP_ROOT}/Plugin/$p/*"
 done
-IGNORE_PLUGINS=`echo $IGNORE_PLUGINS | cut -c 2-`
 
 PHPDOC_OPTIONS="${APP_ROOT}/Controller/,${APP_ROOT}/Lib/,${APP_ROOT}/Locale/,${APP_ROOT}/Model/,${APP_ROOT}/Test/,${APP_ROOT}/Vendor/,${APP_ROOT}/View/,${APP_ROOT}/Plugin/NetCommons/"
 
@@ -32,7 +31,7 @@ do
     rm -r phpdoc/$plugin
   fi
   echo "phpdoc ${APP_ROOT}/Plugin/$plugin"
-  phpdoc run -d "$PHPDOC_OPTIONS,${APP_ROOT}/Plugin/$plugin" -t phpdoc/$plugin --force --ansi --log $LOG2 > $LOG
+  phpdoc run -d "$PHPDOC_OPTIONS,${APP_ROOT}/Plugin/$plugin" -t phpdoc/$plugin -i "$IGNORE_PLUGINS,${APP_ROOT}/Plugin/$plugin/Test/*" --force --ansi --log $LOG2 > $LOG
 
 #  if [ `grep -c '\[37;41m' $LOG` -ne 0 ]; then
 #    cat $LOG
@@ -40,6 +39,6 @@ do
 
   git add -A
   git commit -m "Update phpdoc $plugin"
-  [ "$TRAVIS_BRANCH" == "develop" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/$NETCOMMONS3DOCS.git gh-pages 2> /dev/null
+  [ "$TRAVIS_BRANCH" == "master" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/$NETCOMMONS3DOCS.git gh-pages 2> /dev/null
 done
 

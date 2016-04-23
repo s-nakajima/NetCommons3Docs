@@ -12,17 +12,9 @@
             "homepage": "https://github.com/NetCommons3/NetCommons3/graphs/contributors"
         }
     ],
-    "extra": {
-        "installer-paths": {
-            "app/Plugin/{$name}": ["type:cakephp-plugin"]
-        }
-    },
     "require": {
         "phpdocumentor/phpdocumentor":  "2.*"
     },
-    "bin": [
-        "lib/Cake/Console/cake"
-    ],
     "config": {
         "vendor-dir": "vendors",
         "process-timeout": 3000
